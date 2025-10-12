@@ -1,0 +1,1450 @@
+{
+  "set": {
+    "id": "jabbas_palace",
+    "name": "Jabba's Palace",
+    "abbreviation": "JP",
+    "releaseDate": "1998-04-01"
+  },
+  "cards": [
+    {
+      "number": 1,
+      "id": "jp_1_abyssin",
+      "name": "Abyssin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 2,
+      "id": "jp_2_amanaman",
+      "name": "Amanaman",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 3,
+      "id": "jp_3_amanin",
+      "name": "Amanin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 4,
+      "id": "jp_4_aqualish",
+      "name": "Aqualish",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 5,
+      "id": "jp_5_bane_malar",
+      "name": "Bane Malar",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 6,
+      "id": "jp_6_barada",
+      "name": "Barada",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 7,
+      "id": "jp_7_beedo",
+      "name": "Beedo",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 8,
+      "id": "jp_8_bib_fortuna",
+      "name": "Bib Fortuna",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 9,
+      "id": "jp_9_chevin",
+      "name": "Chevin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 10,
+      "id": "jp_10_cz_4",
+      "name": "CZ-4",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 11,
+      "id": "jp_11_ephant_mon",
+      "name": "Ephant Mon",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 12,
+      "id": "jp_12_ev_9d9",
+      "name": "EV-9D9",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 13,
+      "id": "jp_13_fozec",
+      "name": "Fozec",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 14,
+      "id": "jp_14_gailid",
+      "name": "Gailid",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 15,
+      "id": "jp_15_gamorrean_guard",
+      "name": "Gamorrean Guard",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 16,
+      "id": "jp_16_giran",
+      "name": "Giran",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 17,
+      "id": "jp_17_herat",
+      "name": "Herat",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 18,
+      "id": "jp_18_hermi_odle",
+      "name": "Hermi Odle",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 19,
+      "id": "jp_19_jquille",
+      "name": "J'Quille",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 20,
+      "id": "jp_20_jabba_the_hutt",
+      "name": "Jabba The Hutt",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 21,
+      "id": "jp_21_kithaba",
+      "name": "Kithaba",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 22,
+      "id": "jp_22_klaatu",
+      "name": "Klaatu",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 23,
+      "id": "jp_23_malakili",
+      "name": "Malakili",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 24,
+      "id": "jp_24_murttoc_yine",
+      "name": "Murttoc Yine",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 25,
+      "id": "jp_25_nikto",
+      "name": "Nikto",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 26,
+      "id": "jp_26_nizuc_bek",
+      "name": "Nizuc Bek",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 27,
+      "id": "jp_27_nysad",
+      "name": "Nysad",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 28,
+      "id": "jp_28_ortugg",
+      "name": "Ortugg",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 29,
+      "id": "jp_29_pote_snitkin",
+      "name": "Pote Snitkin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 30,
+      "id": "jp_30_quarren",
+      "name": "Quarren",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 31,
+      "id": "jp_31_ree_yees",
+      "name": "Ree-Yees",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 32,
+      "id": "jp_32_salacious_crumb",
+      "name": "Salacious Crumb",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 33,
+      "id": "jp_33_skrilling",
+      "name": "Skrilling",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 34,
+      "id": "jp_34_taym_dren_garen",
+      "name": "Taym Dren-garen",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 35,
+      "id": "jp_35_thul_fain",
+      "name": "Thul Fain",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 36,
+      "id": "jp_36_trandoshan",
+      "name": "Trandoshan",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 37,
+      "id": "jp_37_vedain",
+      "name": "Vedain",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 38,
+      "id": "jp_38_velken_tezeri",
+      "name": "Velken Tezeri",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 39,
+      "id": "jp_39_vizam",
+      "name": "Vizam",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 40,
+      "id": "jp_40_weequay_guard",
+      "name": "Weequay Guard",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 41,
+      "id": "jp_41_weequay_hunter",
+      "name": "Weequay Hunter",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 42,
+      "id": "jp_42_weequay_marksman",
+      "name": "Weequay Marksman",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 43,
+      "id": "jp_43_weequay_skiff_master",
+      "name": "Weequay Skiff Master",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 44,
+      "id": "jp_44_whiphid",
+      "name": "Whiphid",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 45,
+      "id": "jp_45_wittin",
+      "name": "Wittin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 46,
+      "id": "jp_46_wooof",
+      "name": "Wooof",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 47,
+      "id": "jp_47_yuzzum",
+      "name": "Yuzzum",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 48,
+      "id": "jp_48_bubo",
+      "name": "Bubo",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "U"
+    },
+    {
+      "number": 49,
+      "id": "jp_49_rancor",
+      "name": "Rancor",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "R"
+    },
+    {
+      "number": 50,
+      "id": "jp_50_jet_pack",
+      "name": "Jet Pack",
+      "side": "dark",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 51,
+      "id": "jp_51_all_wrapped_up",
+      "name": "All Wrapped Up",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 52,
+      "id": "jp_52_cane_adiss",
+      "name": "Cane Adiss",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 53,
+      "id": "jp_53_den_of_thieves",
+      "name": "Den Of Thieves",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 54,
+      "id": "jp_54_hutt_bounty",
+      "name": "Hutt Bounty",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 55,
+      "id": "jp_55_information_exchange",
+      "name": "Information Exchange",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 56,
+      "id": "jp_56_quick_reflexes",
+      "name": "Quick Reflexes",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 57,
+      "id": "jp_57_resistance",
+      "name": "Resistance",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 58,
+      "id": "jp_58_sandwhirl",
+      "name": "Sandwhirl",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 59,
+      "id": "jp_59_scum_and_villainy",
+      "name": "Scum And Villainy",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 60,
+      "id": "jp_60_well_guarded",
+      "name": "Well Guarded",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 61,
+      "id": "jp_61_abyssin_ornament",
+      "name": "Abyssin Ornament",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 62,
+      "id": "jp_62_bantha_fodder",
+      "name": "Bantha Fodder",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 63,
+      "id": "jp_63_dune_sea_sabacc",
+      "name": "Dune Sea Sabacc",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 64,
+      "id": "jp_64_hidden_weapons",
+      "name": "Hidden Weapons",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 65,
+      "id": "jp_65_hutt_smooch",
+      "name": "Hutt Smooch",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 66,
+      "id": "jp_66_jabbas_palace_sabacc",
+      "name": "Jabba's Palace Sabacc",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 67,
+      "id": "jp_67_none_shall_pass",
+      "name": "None Shall Pass",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 68,
+      "id": "jp_68_torture",
+      "name": "Torture",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 69,
+      "id": "jp_69_trap_door",
+      "name": "Trap Door",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 70,
+      "id": "jp_70_twilek_advisor",
+      "name": "Twi'lek Advisor",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 71,
+      "id": "jp_71_wounded_wookiee",
+      "name": "Wounded Wookiee",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 72,
+      "id": "jp_72_jabbas_palace_audience_chamber",
+      "name": "Jabba's Palace: Audience Chamber",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 73,
+      "id": "jp_73_jabbas_palace_droid_workshop",
+      "name": "Jabba's Palace: Droid Workshop",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 74,
+      "id": "jp_74_jabbas_palace_dungeon",
+      "name": "Jabba's Palace: Dungeon",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 75,
+      "id": "jp_75_jabbas_palace_entrance_cavern",
+      "name": "Jabba's Palace: Entrance Cavern",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 76,
+      "id": "jp_76_jabbas_palace_rancor_pit",
+      "name": "Jabba's Palace: Rancor Pit",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 77,
+      "id": "jp_77_jabbas_sail_barge_passenger_deck",
+      "name": "Jabba's Sail Barge: Passenger Deck",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 78,
+      "id": "jp_78_nal_hutta",
+      "name": "Nal Hutta",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 79,
+      "id": "jp_79_tatooine_desert",
+      "name": "Tatooine: Desert",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 80,
+      "id": "jp_80_tatooine_great_pit_of_carkoon",
+      "name": "Tatooine: Great Pit Of Carkoon",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 81,
+      "id": "jp_81_tatooine_jabbas_palace",
+      "name": "Tatooine: Jabba's Palace",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 82,
+      "id": "jp_82_jabbas_sail_barge",
+      "name": "Jabba's Sail Barge",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": 83,
+      "id": "jp_83_skiff",
+      "name": "Skiff",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": 84,
+      "id": "jp_84_antipersonnel_laser_cannon",
+      "name": "Antipersonnel Laser Cannon",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "U"
+    },
+    {
+      "number": 85,
+      "id": "jp_85_dengars_modified_riot_gun",
+      "name": "Dengar's Modified Riot Gun",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 86,
+      "id": "jp_86_double_laser_cannon",
+      "name": "Double Laser Cannon",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 87,
+      "id": "jp_87_gamorrean_ax",
+      "name": "Gamorrean Ax",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": 88,
+      "id": "jp_88_mos_eisley_blaster",
+      "name": "Mos Eisley Blaster",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": 89,
+      "id": "jp_89_thermal_detonator",
+      "name": "Thermal Detonator",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 90,
+      "id": "jp_90_vibro_ax",
+      "name": "Vibro-Ax",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": 91,
+      "id": "jp_91_8d8",
+      "name": "8D8",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 92,
+      "id": "jp_92_ardon_vapor_crell",
+      "name": "Ardon \"Vapor\" Crell",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 93,
+      "id": "jp_93_artoo",
+      "name": "Artoo",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 94,
+      "id": "jp_94_attark",
+      "name": "Attark",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 95,
+      "id": "jp_95_aved_luun",
+      "name": "Aved Luun",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 96,
+      "id": "jp_96_bomarr_monk",
+      "name": "B'omarr Monk",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 97,
+      "id": "jp_97_baragwin",
+      "name": "Baragwin",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 98,
+      "id": "jp_98_bg_j38",
+      "name": "BG-J38",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 99,
+      "id": "jp_99_chadra_fan",
+      "name": "Chadra-Fan",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 100,
+      "id": "jp_100_devaronian",
+      "name": "Devaronian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 101,
+      "id": "jp_101_droopy_mccool",
+      "name": "Droopy McCool",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 102,
+      "id": "jp_102_elom",
+      "name": "Elom",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 103,
+      "id": "jp_103_florn_lamproid",
+      "name": "Florn Lamproid",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 104,
+      "id": "jp_104_garon_nas_tal",
+      "name": "Garon Nas Tal",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 105,
+      "id": "jp_105_geezum",
+      "name": "Geezum",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 106,
+      "id": "jp_106_ghoel",
+      "name": "Ghoel",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 107,
+      "id": "jp_107_gran",
+      "name": "Gran",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 108,
+      "id": "jp_108_hnemthe",
+      "name": "H'nemthe",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 109,
+      "id": "jp_109_ishi_tib",
+      "name": "Ishi Tib",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 110,
+      "id": "jp_110_ithorian",
+      "name": "Ithorian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 111,
+      "id": "jp_111_jess",
+      "name": "Jess",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 112,
+      "id": "jp_112_kalit",
+      "name": "Kalit",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 113,
+      "id": "jp_113_kitonak",
+      "name": "Kitonak",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 114,
+      "id": "jp_114_klatooinian_revolutionary",
+      "name": "Klatooinian Revolutionary",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 115,
+      "id": "jp_115_laudica",
+      "name": "Laudica",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 116,
+      "id": "jp_116_leslomy_tacema",
+      "name": "Leslomy Tacema",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 117,
+      "id": "jp_117_loje_nella",
+      "name": "Loje Nella",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 118,
+      "id": "jp_118_max_rebo",
+      "name": "Max Rebo",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 119,
+      "id": "jp_119_oola",
+      "name": "Oola",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 120,
+      "id": "jp_120_ortolan",
+      "name": "Ortolan",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 121,
+      "id": "jp_121_palejo_reshad",
+      "name": "Palejo Reshad",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 122,
+      "id": "jp_122_princess_leia_organa",
+      "name": "Princess Leia Organa",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 123,
+      "id": "jp_123_pucumir_thryss",
+      "name": "Pucumir Thryss",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 124,
+      "id": "jp_124_rkik_dnec_hero_of_the_dune_sea",
+      "name": "R'kik D'nec,Hero Of The Dune Sea",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 125,
+      "id": "jp_125_rayc_ryjerd",
+      "name": "Rayc Ryjerd",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 126,
+      "id": "jp_126_rennek",
+      "name": "Rennek",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 127,
+      "id": "jp_127_saelt_marae",
+      "name": "Saelt-Marae",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 128,
+      "id": "jp_128_sergeant_doallyn",
+      "name": "Sergeant Doallyn",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 129,
+      "id": "jp_129_shasa_tiel",
+      "name": "Shasa Tiel",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 130,
+      "id": "jp_130_sic_six",
+      "name": "Sic-Six",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 131,
+      "id": "jp_131_snivvian",
+      "name": "Snivvian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 132,
+      "id": "jp_132_tamtel_skreej",
+      "name": "Tamtel Skreej",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 133,
+      "id": "jp_133_tanus_spijek",
+      "name": "Tanus Spijek",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 134,
+      "id": "jp_134_tessek",
+      "name": "Tessek",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 135,
+      "id": "jp_135_vul_tazaene",
+      "name": "Vul Tazaene",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 136,
+      "id": "jp_136_yarkora",
+      "name": "Yarkora",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 137,
+      "id": "jp_137_yoxgit",
+      "name": "Yoxgit",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 138,
+      "id": "jp_138_worrt",
+      "name": "Worrt",
+      "side": "light",
+      "type": "Creature",
+      "rarity": "U"
+    },
+    {
+      "number": 139,
+      "id": "jp_139_arc_welder",
+      "name": "Arc Welder",
+      "side": "light",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 140,
+      "id": "jp_140_hidden_compartment",
+      "name": "Hidden Compartment",
+      "side": "light",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 141,
+      "id": "jp_141_holoprojector",
+      "name": "Holoprojector",
+      "side": "light",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 142,
+      "id": "jp_142_a_gift",
+      "name": "A Gift",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 143,
+      "id": "jp_143_bargaining_table",
+      "name": "Bargaining Table",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 144,
+      "id": "jp_144_bo_shuda",
+      "name": "Bo Shuda",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 145,
+      "id": "jp_145_i_must_be_allowed_to_speak",
+      "name": "I Must Be Allowed To Speak",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 146,
+      "id": "jp_146_projection_of_a_skywalker",
+      "name": "Projection Of A Skywalker",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 147,
+      "id": "jp_147_sandwhirl",
+      "name": "Sandwhirl",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 148,
+      "id": "jp_148_ultimatum",
+      "name": "Ultimatum",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 149,
+      "id": "jp_149_yarna_dal_gargan",
+      "name": "Yarna d'al' Gargan",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 150,
+      "id": "jp_150_artoo_i_have_a_bad_feeling_about_this",
+      "name": "Artoo, I Have A Bad Feeling About This",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 151,
+      "id": "jp_151_blaster_deflection",
+      "name": "Blaster Deflection",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 152,
+      "id": "jp_152_choke",
+      "name": "Choke",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 153,
+      "id": "jp_153_corellian_retort",
+      "name": "Corellian Retort",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 154,
+      "id": "jp_154_dont_forget_the_droids",
+      "name": "Don't Forget The Droids",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 155,
+      "id": "jp_155_dune_sea_sabacc",
+      "name": "Dune Sea Sabacc",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 156,
+      "id": "jp_156_fallen_portal",
+      "name": "Fallen Portal",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 157,
+      "id": "jp_157_jabbas_palace_sabacc",
+      "name": "Jabba's Palace Sabacc",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 158,
+      "id": "jp_158_jedi_mind_trick",
+      "name": "Jedi Mind Trick",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 159,
+      "id": "jp_159_ke_chu_ke_kukuta",
+      "name": "Ke Chu Ke Kukuta?",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 160,
+      "id": "jp_160_life_debt",
+      "name": "Life Debt",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 161,
+      "id": "jp_161_mandalorian_mishap",
+      "name": "Mandalorian Mishap",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 162,
+      "id": "jp_162_nar_shaddaa_wind_chimes",
+      "name": "Nar Shaddaa Wind Chimes",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 163,
+      "id": "jp_163_revealed",
+      "name": "Revealed",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 164,
+      "id": "jp_164_skull",
+      "name": "Skull",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 165,
+      "id": "jp_165_someone_who_loves_you",
+      "name": "Someone Who Loves You",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 166,
+      "id": "jp_166_strangle",
+      "name": "Strangle",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 167,
+      "id": "jp_167_the_signal",
+      "name": "The Signal",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 168,
+      "id": "jp_168_unfriendly_fire",
+      "name": "Unfriendly Fire",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 169,
+      "id": "jp_169_weapon_levitation",
+      "name": "Weapon Levitation",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 170,
+      "id": "jp_170_you_will_take_me_to_jabba_now",
+      "name": "You Will Take Me To Jabba Now",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 171,
+      "id": "jp_171_jabbas_palace_audience_chamber",
+      "name": "Jabba's Palace: Audience Chamber",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 172,
+      "id": "jp_172_jabbas_palace_entrance_cavern",
+      "name": "Jabba's Palace: Entrance Cavern",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 173,
+      "id": "jp_173_kiffex",
+      "name": "Kiffex",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 174,
+      "id": "jp_174_kirdo_iii",
+      "name": "Kirdo III",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 175,
+      "id": "jp_175_tatooine_desert",
+      "name": "Tatooine: Desert",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 176,
+      "id": "jp_176_tatooine_hutt_canyon",
+      "name": "Tatooine: Hutt Canyon",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 177,
+      "id": "jp_177_tibrin",
+      "name": "Tibrin",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 178,
+      "id": "jp_178_skiff",
+      "name": "Skiff",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": 179,
+      "id": "jp_179_mos_eisley_blaster",
+      "name": "Mos Eisley Blaster",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": 180,
+      "id": "jp_180_vibro_ax",
+      "name": "Vibro-Ax",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    }
+  ]
+}

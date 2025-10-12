@@ -1,0 +1,116 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTheme } from '../contexts/ThemeContext';
+import { CardListItem } from '../components/CardListItem';
+import { getCardsInSet, updateVariantQuantity } from '../services/database';
+import type { Card } from '../types';
+
+interface SetCardsScreenProps {
+  route: any;
+  navigation: any;
+}
+
+export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigation }) => {
+  const { setId, setName } = route.params;
+  const { colors } = useTheme();
+  const [cards, setCards] = useState<Card[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadCards();
+  }, [setId]);
+
+  const loadCards = async () => {
+    try {
+      const cardsData = await getCardsInSet(setId);
+      setCards(cardsData as Card[]);
+    } catch (error) {
+      console.error('Failed to load cards:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleVariantQuantityChange = async (
+    cardId: string,
+    variantId: string,
+    newQuantity: number
+  ) => {
+    try {
+      // Update database
+      await updateVariantQuantity(variantId, newQuantity);
+
+      // Update local state
+      setCards((prevCards) =>
+        prevCards.map((card) => {
+          if (card.id === cardId) {
+            return {
+              ...card,
+              variants: card.variants.map((variant) =>
+                variant.id === variantId
+                  ? { ...variant, quantity: newQuantity }
+                  : variant
+              ),
+            };
+          }
+          return card;
+        })
+      );
+    } catch (error) {
+      console.error('Failed to update variant quantity:', error);
+    }
+  };
+
+  const styles = StyleSheet.create({
+    safeArea: {
+      flex: 1,
+      backgroundColor: colors.widgetBg,
+    },
+    container: {
+      flex: 1,
+    },
+    scrollView: {
+      flex: 1,
+    },
+    scrollContent: {
+      padding: 16,
+    },
+    loadingContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  });
+
+  if (loading) {
+    return (
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <View style={styles.container}>
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color={colors.accent} />
+          </View>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  return (
+    <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={styles.scrollContent}
+        >
+          {cards.map((card) => (
+            <CardListItem
+              key={card.id}
+              card={card}
+              onVariantQuantityChange={handleVariantQuantityChange}
+            />
+          ))}
+        </ScrollView>
+      </View>
+    </SafeAreaView>
+  );
+};

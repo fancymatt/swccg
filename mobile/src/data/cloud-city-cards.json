@@ -1,0 +1,1450 @@
+{
+  "set": {
+    "id": "cloud_city",
+    "name": "Cloud City",
+    "abbreviation": "CC",
+    "releaseDate": "1997-11-01"
+  },
+  "cards": [
+    {
+      "number": 1,
+      "id": "cc_1_boba_fett",
+      "name": "Boba Fett",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 2,
+      "id": "cc_2_captain_bewil",
+      "name": "Captain Bewil",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 3,
+      "id": "cc_3_chief_retwin",
+      "name": "Chief Retwin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 4,
+      "id": "cc_4_cloud_city_engineer",
+      "name": "Cloud City Engineer",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 5,
+      "id": "cc_5_cloud_city_trooper",
+      "name": "Cloud City Trooper",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 6,
+      "id": "cc_6_commander_desanne",
+      "name": "Commander Desanne",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 7,
+      "id": "cc_7_e_3p0",
+      "name": "E-3P0",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 8,
+      "id": "cc_8_imperial_trooper_guard_dainsom",
+      "name": "Imperial Trooper Guard Dainsom",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 9,
+      "id": "cc_9_lando_calrissian",
+      "name": "Lando Calrissian",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 10,
+      "id": "cc_10_lieutenant_cecius",
+      "name": "Lieutenant Cecius",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 11,
+      "id": "cc_11_lieutenant_sheckil",
+      "name": "Lieutenant Sheckil",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 12,
+      "id": "cc_12_tibanna_gas_miner",
+      "name": "Tibanna Gas Miner",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 13,
+      "id": "cc_13_trooper_jerrol_blendin",
+      "name": "Trooper Jerrol Blendin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 14,
+      "id": "cc_14_ugloste",
+      "name": "Ugloste",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 15,
+      "id": "cc_15_ugnaught",
+      "name": "Ugnaught",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 16,
+      "id": "cc_16_binders",
+      "name": "Binders",
+      "side": "dark",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": 17,
+      "id": "cc_17_carbonite_chamber_console",
+      "name": "Carbonite Chamber Console",
+      "side": "dark",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 18,
+      "id": "cc_18_interrogation_array",
+      "name": "Interrogation Array",
+      "side": "dark",
+      "type": "Device",
+      "rarity": "R"
+    },
+    {
+      "number": 19,
+      "id": "cc_19_mandalorian_armor",
+      "name": "Mandalorian Armor",
+      "side": "dark",
+      "type": "Device",
+      "rarity": "R"
+    },
+    {
+      "number": 20,
+      "id": "cc_20_ability_ability_ability",
+      "name": "Ability, Ability, Ability",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 21,
+      "id": "cc_21_abyss",
+      "name": "Abyss",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 22,
+      "id": "cc_22_all_too_easy",
+      "name": "All Too Easy",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 23,
+      "id": "cc_23_bounty",
+      "name": "Bounty",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 24,
+      "id": "cc_24_carbon_freezing",
+      "name": "Carbon-Freezing",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 25,
+      "id": "cc_25_dark_deal",
+      "name": "Dark Deal",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 26,
+      "id": "cc_26_despair",
+      "name": "Despair",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 27,
+      "id": "cc_27_forced_landing",
+      "name": "Forced Landing",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 28,
+      "id": "cc_28_i_am_your_father",
+      "name": "I Am Your Father",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 29,
+      "id": "cc_29_i_had_no_choice",
+      "name": "I Had No Choice",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 30,
+      "id": "cc_30_imperial_decree",
+      "name": "Imperial Decree",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 31,
+      "id": "cc_31_mostly_armless",
+      "name": "Mostly Armless",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 32,
+      "id": "cc_32_restricted_access",
+      "name": "Restricted Access",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 33,
+      "id": "cc_33_special_delivery",
+      "name": "Special Delivery",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 34,
+      "id": "cc_34_the_emperors_prize",
+      "name": "The Emperor's Prize",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 35,
+      "id": "cc_35_vaders_bounty",
+      "name": "Vader's Bounty",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 36,
+      "id": "cc_36_vaders_cape",
+      "name": "Vader's Cape",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 37,
+      "id": "cc_37_were_the_bait",
+      "name": "We're The Bait",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 38,
+      "id": "cc_38_weather_vane",
+      "name": "Weather Vane",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 39,
+      "id": "cc_39_epic_duel",
+      "name": "Epic Duel",
+      "side": "dark",
+      "type": "Epic Event",
+      "rarity": "R"
+    },
+    {
+      "number": 40,
+      "id": "cc_40_aiiii_aaa_agggggggggg",
+      "name": "Aiiii! Aaa! Agggggggggg!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 41,
+      "id": "cc_41_atmospheric_assault",
+      "name": "Atmospheric Assault",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 42,
+      "id": "cc_42_blasted_droid",
+      "name": "Blasted Droid",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 43,
+      "id": "cc_43_brief_loss_of_control",
+      "name": "Brief Loss Of Control",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 44,
+      "id": "cc_44_cloud_city_sabacc",
+      "name": "Cloud City Sabacc",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 45,
+      "id": "cc_45_dark_strike",
+      "name": "Dark Strike",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 46,
+      "id": "cc_46_double_back",
+      "name": "Double Back",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 47,
+      "id": "cc_47_double_crossing_no_good_swindler",
+      "name": "Double-Crossing, No-Good Swindler",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 48,
+      "id": "cc_48_e_chu_ta",
+      "name": "E Chu Ta",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 49,
+      "id": "cc_49_end_this_destructive_conflict",
+      "name": "End This Destructive Conflict",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 50,
+      "id": "cc_50_flight_escort",
+      "name": "Flight Escort",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 51,
+      "id": "cc_51_focused_attack",
+      "name": "Focused Attack",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 52,
+      "id": "cc_52_force_field",
+      "name": "Force Field",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 53,
+      "id": "cc_53_hes_all_yours_bounty_hunter",
+      "name": "He's All Yours, Bounty Hunter",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 54,
+      "id": "cc_54_heart_of_the_chasm",
+      "name": "Heart Of The Chasm",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 55,
+      "id": "cc_55_human_shield",
+      "name": "Human Shield",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 56,
+      "id": "cc_56_levitation_attack",
+      "name": "Levitation Attack",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 57,
+      "id": "cc_57_point_man",
+      "name": "Point Man",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 58,
+      "id": "cc_58_prepare_the_chamber",
+      "name": "Prepare The Chamber",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 59,
+      "id": "cc_59_projective_telepathy",
+      "name": "Projective Telepathy",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 60,
+      "id": "cc_60_release_your_anger",
+      "name": "Release Your Anger",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 61,
+      "id": "cc_61_rite_of_passage",
+      "name": "Rite Of Passage",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 62,
+      "id": "cc_62_shattered_hope",
+      "name": "Shattered Hope",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 63,
+      "id": "cc_63_shocking_revelation",
+      "name": "Shocking Revelation",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 64,
+      "id": "cc_64_slip_sliding_away",
+      "name": "Slip Sliding Away",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 65,
+      "id": "cc_65_sonic_bombardment",
+      "name": "Sonic Bombardment",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 66,
+      "id": "cc_66_surprise",
+      "name": "Surprise",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 67,
+      "id": "cc_67_this_is_still_wrong",
+      "name": "This Is Still Wrong",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 68,
+      "id": "cc_68_tie_sentry_ships",
+      "name": "TIE Sentry Ships",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 69,
+      "id": "cc_69_trooper_assault",
+      "name": "Trooper Assault",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 70,
+      "id": "cc_70_weapon_levitation",
+      "name": "Weapon Levitation",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 71,
+      "id": "cc_71_weapon_of_an_ungrateful_son",
+      "name": "Weapon Of An Ungrateful Son",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 72,
+      "id": "cc_72_why_didnt_you_tell_me",
+      "name": "Why Didn't You Tell Me?",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 73,
+      "id": "cc_73_you_are_beaten",
+      "name": "You Are Beaten",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 74,
+      "id": "cc_74_bespin",
+      "name": "Bespin",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 75,
+      "id": "cc_75_bespin_cloud_city",
+      "name": "Bespin: Cloud City",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 76,
+      "id": "cc_76_cloud_city_carbonite_chamber",
+      "name": "Cloud City: Carbonite Chamber",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 77,
+      "id": "cc_77_cloud_city_chasm_walkway",
+      "name": "Cloud City: Chasm Walkway",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 78,
+      "id": "cc_78_cloud_city_dining_room",
+      "name": "Cloud City: Dining Room",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 79,
+      "id": "cc_79_cloud_city_east_platform_docking_bay",
+      "name": "Cloud City: East Platform (Docking Bay)",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 80,
+      "id": "cc_80_cloud_city_incinerator",
+      "name": "Cloud City: Incinerator",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 81,
+      "id": "cc_81_cloud_city_lower_corridor",
+      "name": "Cloud City: Lower Corridor",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 82,
+      "id": "cc_82_cloud_city_security_tower",
+      "name": "Cloud City: Security Tower",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 83,
+      "id": "cc_83_cloud_city_upper_plaza_corridor",
+      "name": "Cloud City: Upper Plaza Corridor",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 84,
+      "id": "cc_84_clouds",
+      "name": "Clouds",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 85,
+      "id": "cc_85_obsidian_7",
+      "name": "Obsidian 7",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 86,
+      "id": "cc_86_obsidian_8",
+      "name": "Obsidian 8",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 87,
+      "id": "cc_87_slave_i",
+      "name": "Slave I",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 88,
+      "id": "cc_88_cloud_car",
+      "name": "Cloud Car",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": 89,
+      "id": "cc_89_boba_fetts_blaster_rifle",
+      "name": "Boba Fett's Blaster Rifle",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 90,
+      "id": "cc_90_cloud_city_blaster",
+      "name": "Cloud City Blaster",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": 91,
+      "id": "cc_91_captain_han_solo",
+      "name": "Captain Han Solo",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 92,
+      "id": "cc_92_cloud_city_technician",
+      "name": "Cloud City Technician",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 93,
+      "id": "cc_93_cloud_city_trooper",
+      "name": "Cloud City Trooper",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 94,
+      "id": "cc_94_kebyc",
+      "name": "Kebyc",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 95,
+      "id": "cc_95_lando_calrissian",
+      "name": "Lando Calrissian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 96,
+      "id": "cc_96_lobot",
+      "name": "Lobot",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 97,
+      "id": "cc_97_princess_leia",
+      "name": "Princess Leia",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 98,
+      "id": "cc_98_tibanna_gas_miner",
+      "name": "Tibanna Gas Miner",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 99,
+      "id": "cc_99_treva_horme",
+      "name": "Treva Horme",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 100,
+      "id": "cc_100_trooper_utris_mtoc",
+      "name": "Trooper Utris M'toc",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 101,
+      "id": "cc_101_wiorkettle",
+      "name": "Wiorkettle",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 102,
+      "id": "cc_102_bionic_hand",
+      "name": "Bionic Hand",
+      "side": "light",
+      "type": "Device",
+      "rarity": "R"
+    },
+    {
+      "number": 103,
+      "id": "cc_103_cyborg_construct",
+      "name": "Cyborg Construct",
+      "side": "light",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 104,
+      "id": "cc_104_landos_wrist_comlink",
+      "name": "Lando's Wrist Comlink",
+      "side": "light",
+      "type": "Device",
+      "rarity": "U"
+    },
+    {
+      "number": 105,
+      "id": "cc_105_access_denied",
+      "name": "Access Denied",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 106,
+      "id": "cc_106_advantage",
+      "name": "Advantage",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 107,
+      "id": "cc_107_all_my_urchins",
+      "name": "All My Urchins",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 108,
+      "id": "cc_108_beldons_eye",
+      "name": "Beldon's Eye",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 109,
+      "id": "cc_109_chasm",
+      "name": "Chasm",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 110,
+      "id": "cc_110_civil_disorder",
+      "name": "Civil Disorder",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 111,
+      "id": "cc_111_crack_shot",
+      "name": "Crack Shot",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 112,
+      "id": "cc_112_dismantle_on_sight",
+      "name": "Dismantle On Sight",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 113,
+      "id": "cc_113_frozen_assets",
+      "name": "Frozen Assets",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 114,
+      "id": "cc_114_haven",
+      "name": "Haven",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 115,
+      "id": "cc_115_hero_of_a_thousand_devices",
+      "name": "Hero Of A Thousand Devices",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 116,
+      "id": "cc_116_hindsight",
+      "name": "Hindsight",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 117,
+      "id": "cc_117_hopping_mad",
+      "name": "Hopping Mad",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 118,
+      "id": "cc_118_leia_of_alderaan",
+      "name": "Leia Of Alderaan",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 119,
+      "id": "cc_119_uncontrollable_fury",
+      "name": "Uncontrollable Fury",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 120,
+      "id": "cc_120_weather_vane",
+      "name": "Weather Vane",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 121,
+      "id": "cc_121_ambush",
+      "name": "Ambush",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 122,
+      "id": "cc_122_armed_and_dangerous",
+      "name": "Armed And Dangerous",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 123,
+      "id": "cc_123_artoo_come_back_at_once",
+      "name": "Artoo, Come Back At Once!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 124,
+      "id": "cc_124_as_good_as_gone",
+      "name": "As Good As Gone",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 125,
+      "id": "cc_125_blaster_proficiency",
+      "name": "Blaster Proficiency",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 126,
+      "id": "cc_126_captive_fury",
+      "name": "Captive Fury",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 127,
+      "id": "cc_127_captive_pursuit",
+      "name": "Captive Pursuit",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 128,
+      "id": "cc_128_clash_of_sabers",
+      "name": "Clash Of Sabers",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 129,
+      "id": "cc_129_cloud_city_sabacc",
+      "name": "Cloud City Sabacc",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 130,
+      "id": "cc_130_computer_interface",
+      "name": "Computer Interface",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 131,
+      "id": "cc_131_courage_of_a_skywalker",
+      "name": "Courage Of A Skywalker",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 132,
+      "id": "cc_132_dark_approach",
+      "name": "Dark Approach",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 133,
+      "id": "cc_133_dash",
+      "name": "Dash",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 134,
+      "id": "cc_134_desperate_reach",
+      "name": "Desperate Reach",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 135,
+      "id": "cc_135_dodge",
+      "name": "Dodge",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 136,
+      "id": "cc_136_fall_of_the_empire",
+      "name": "Fall Of The Empire",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 137,
+      "id": "cc_137_fall_of_the_legend",
+      "name": "Fall Of The Legend",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 138,
+      "id": "cc_138_gamblers_luck",
+      "name": "Gambler's Luck",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 139,
+      "id": "cc_139_glancing_blow",
+      "name": "Glancing Blow",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 140,
+      "id": "cc_140_higher_ground",
+      "name": "Higher Ground",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 141,
+      "id": "cc_141_i_dont_need_their_scum_either",
+      "name": "I Don't Need Their Scum, Either",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 142,
+      "id": "cc_142_impressive_most_impressive",
+      "name": "Impressive, Most Impressive",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 143,
+      "id": "cc_143_innocent_scoundrel",
+      "name": "Innocent Scoundrel",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 144,
+      "id": "cc_144_into_the_ventilation_shaft_lefty",
+      "name": "Into The Ventilation Shaft, Lefty",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 145,
+      "id": "cc_145_its_a_trap",
+      "name": "It's A Trap!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 146,
+      "id": "cc_146_keep_your_eyes_open",
+      "name": "Keep Your Eyes Open",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 147,
+      "id": "cc_147_lift_tube_escape",
+      "name": "Lift Tube Escape",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 148,
+      "id": "cc_148_noooooooooooo",
+      "name": "NOOOOOOOOOOOO!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 149,
+      "id": "cc_149_off_the_edge",
+      "name": "Off The Edge",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 150,
+      "id": "cc_150_old_pirates",
+      "name": "Old Pirates",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 151,
+      "id": "cc_151_out_of_somewhere",
+      "name": "Out Of Somewhere",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 152,
+      "id": "cc_152_path_of_least_resistance",
+      "name": "Path Of Least Resistance",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 153,
+      "id": "cc_153_protector",
+      "name": "Protector",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 154,
+      "id": "cc_154_punch_it",
+      "name": "Punch It!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 155,
+      "id": "cc_155_put_that_down",
+      "name": "Put That Down",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 156,
+      "id": "cc_156_rendezvous_point_on_tatooine",
+      "name": "Rendezvous Point On Tatooine",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 157,
+      "id": "cc_157_rescue_in_the_clouds",
+      "name": "Rescue In The Clouds",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 158,
+      "id": "cc_158_shocking_information",
+      "name": "Shocking Information",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 159,
+      "id": "cc_159_smoke_screen",
+      "name": "Smoke Screen",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 160,
+      "id": "cc_160_somersault",
+      "name": "Somersault",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 161,
+      "id": "cc_161_surreptitious_glance",
+      "name": "Surreptitious Glance",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 162,
+      "id": "cc_162_swing_and_a_miss",
+      "name": "Swing-And-A-Miss",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 163,
+      "id": "cc_163_this_is_even_better",
+      "name": "This Is Even Better",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 164,
+      "id": "cc_164_well_find_han",
+      "name": "We'll Find Han",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 165,
+      "id": "cc_165_wookiee_strangle",
+      "name": "Wookiee Strangle",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 166,
+      "id": "cc_166_bespin",
+      "name": "Bespin",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 167,
+      "id": "cc_167_bespin_cloud_city",
+      "name": "Bespin: Cloud City",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 168,
+      "id": "cc_168_cloud_city_carbonite_chamber",
+      "name": "Cloud City: Carbonite Chamber",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 169,
+      "id": "cc_169_cloud_city_chasm_walkway",
+      "name": "Cloud City: Chasm Walkway",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 170,
+      "id": "cc_170_cloud_city_guest_quarters",
+      "name": "Cloud City: Guest Quarters",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 171,
+      "id": "cc_171_cloud_city_incinerator",
+      "name": "Cloud City: Incinerator",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 172,
+      "id": "cc_172_cloud_city_lower_corridor",
+      "name": "Cloud City: Lower Corridor",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 173,
+      "id": "cc_173_cloud_city_platform_327_docking_bay",
+      "name": "Cloud City: Platform 327 (Docking Bay)",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 174,
+      "id": "cc_174_cloud_city_upper_plaza_corridor",
+      "name": "Cloud City: Upper Plaza Corridor",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 175,
+      "id": "cc_175_clouds",
+      "name": "Clouds",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 176,
+      "id": "cc_176_bright_hope",
+      "name": "Bright Hope",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 177,
+      "id": "cc_177_redemption",
+      "name": "Redemption",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 178,
+      "id": "cc_178_cloud_car",
+      "name": "Cloud Car",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": 179,
+      "id": "cc_179_cloud_city_blaster",
+      "name": "Cloud City Blaster",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": 180,
+      "id": "cc_180_lukes_blaster_pistol",
+      "name": "Luke's Blaster Pistol",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "R"
+    }
+  ]
+}

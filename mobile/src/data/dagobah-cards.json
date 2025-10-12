@@ -1,0 +1,1450 @@
+{
+  "set": {
+    "id": "dagobah",
+    "name": "Dagobah",
+    "abbreviation": "DA",
+    "releaseDate": "1997-04-01"
+  },
+  "cards": [
+    {
+      "number": 1,
+      "id": "da_1_4-lom",
+      "name": "4-LOM",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 2,
+      "id": "da_2_bossk",
+      "name": "Bossk",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 3,
+      "id": "da_3_captain_needa",
+      "name": "Captain Needa",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 4,
+      "id": "da_4_comm_chief",
+      "name": "Comm Chief",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 5,
+      "id": "da_5_commander_brandei",
+      "name": "Commander Brandei",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 6,
+      "id": "da_6_commander_gherant",
+      "name": "Commander Gherant",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 7,
+      "id": "da_7_commander_nemet",
+      "name": "Commander Nemet",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 8,
+      "id": "da_8_corporal_derdram",
+      "name": "Corporal Derdram",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 9,
+      "id": "da_9_corporal_vandolay",
+      "name": "Corporal Vandolay",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 10,
+      "id": "da_10_dengar",
+      "name": "Dengar",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 11,
+      "id": "da_11_ig-88",
+      "name": "IG-88",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 12,
+      "id": "da_12_imperial_helmsman",
+      "name": "Imperial Helmsman",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": 13,
+      "id": "da_13_lieutenant_commander_ardan",
+      "name": "Lieutenant Commander Ardan",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 14,
+      "id": "da_14_lieutenant_suba",
+      "name": "Lieutenant Suba",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 15,
+      "id": "da_15_lieutenant_venka",
+      "name": "Lieutenant Venka",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 16,
+      "id": "da_16_warrant_officer_mkae",
+      "name": "Warrant Officer M'Kae",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": 17,
+      "id": "da_17_zuckuss",
+      "name": "Zuckuss",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 18,
+      "id": "da_18_bog-wing",
+      "name": "Bog-wing",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 19,
+      "id": "da_19_dragonsnake",
+      "name": "Dragonsnake",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "R"
+    },
+    {
+      "number": 20,
+      "id": "da_20_mynock",
+      "name": "Mynock",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 21,
+      "id": "da_21_sleen",
+      "name": "Sleen",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 22,
+      "id": "da_22_space_slug",
+      "name": "Space Slug",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "U"
+    },
+    {
+      "number": 23,
+      "id": "da_23_vine_snake",
+      "name": "Vine Snake",
+      "side": "dark",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 24,
+      "id": "da_24_3720_to_1",
+      "name": "3,720 To 1",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 25,
+      "id": "da_25_awwww_cannot_get_your_ship_out",
+      "name": "Awwww, Cannot Get Your Ship Out",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 26,
+      "id": "da_26_bad_feeling_have_i",
+      "name": "Bad Feeling Have I",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 27,
+      "id": "da_27_bombing_run",
+      "name": "Bombing Run",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 28,
+      "id": "da_28_broken_concentration",
+      "name": "Broken Concentration",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 29,
+      "id": "da_29_corrosive_damage",
+      "name": "Corrosive Damage",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 30,
+      "id": "da_30_failure_at_the_cave",
+      "name": "Failure At The Cave",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 31,
+      "id": "da_31_field_promotion",
+      "name": "Field Promotion",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 32,
+      "id": "da_32_flagship",
+      "name": "Flagship",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 33,
+      "id": "da_33_he_is_not_ready",
+      "name": "He Is Not Ready",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 34,
+      "id": "da_34_i_want_that_ship",
+      "name": "I Want That Ship",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 35,
+      "id": "da_35_knowledge_and_defense",
+      "name": "Knowledge And Defense",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 36,
+      "id": "da_36_location_location_location",
+      "name": "Location, Location, Location",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 37,
+      "id": "da_37_lost_in_space",
+      "name": "Lost In Space",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 38,
+      "id": "da_38_much_anger_in_him",
+      "name": "Much Anger In Him",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 39,
+      "id": "da_39_precision_targeting",
+      "name": "Precision Targeting",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 40,
+      "id": "da_40_rogue_asteroid",
+      "name": "Rogue Asteroid",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 41,
+      "id": "da_41_shot_in_the_dark",
+      "name": "Shot In The Dark",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 42,
+      "id": "da_42_sudden_impact",
+      "name": "Sudden Impact",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 43,
+      "id": "da_43_the_dark_path",
+      "name": "The Dark Path",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 44,
+      "id": "da_44_there_is_no_try",
+      "name": "There Is No Try",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 45,
+      "id": "da_45_visage_of_the_emperor",
+      "name": "Visage Of The Emperor",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 46,
+      "id": "da_46_a_dangerous_time",
+      "name": "A Dangerous Time",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 47,
+      "id": "da_47_apology_accepted",
+      "name": "Apology Accepted",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 48,
+      "id": "da_48_close_call",
+      "name": "Close Call",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 49,
+      "id": "da_49_control",
+      "name": "Control",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 50,
+      "id": "da_50_defensive_fire",
+      "name": "Defensive Fire",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 51,
+      "id": "da_51_fear",
+      "name": "Fear",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 52,
+      "id": "da_52_frustration",
+      "name": "Frustration",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 53,
+      "id": "da_53_holonet_transmission",
+      "name": "HoloNet Transmission",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 54,
+      "id": "da_54_imbalance",
+      "name": "Imbalance",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 55,
+      "id": "da_55_lando_system",
+      "name": "Lando System?",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 56,
+      "id": "da_56_res_luk_raauf",
+      "name": "Res Luk Ra'auf",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 57,
+      "id": "da_57_shut_him_up_or_shut_him_down",
+      "name": "Shut Him Up Or Shut Him Down",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 58,
+      "id": "da_58_something_hit_us",
+      "name": "Something Hit Us!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 59,
+      "id": "da_59_take_evasive_action",
+      "name": "Take Evasive Action",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 60,
+      "id": "da_60_those_rebels_wont_escape_us",
+      "name": "Those Rebels Won't Escape Us",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 61,
+      "id": "da_61_uncertain_is_the_future",
+      "name": "Uncertain Is The Future",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 62,
+      "id": "da_62_unexpected_interruption",
+      "name": "Unexpected Interruption",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 63,
+      "id": "da_63_voyeur",
+      "name": "Voyeur",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 64,
+      "id": "da_64_anoat",
+      "name": "Anoat",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 65,
+      "id": "da_65_asteroid_field",
+      "name": "Asteroid Field",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 66,
+      "id": "da_66_big_one",
+      "name": "Big One",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 67,
+      "id": "da_67_big_one_asteroid_cave_or_space_slug_belly",
+      "name": "Big One: Asteroid Cave or Space Slug Belly",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 68,
+      "id": "da_68_dagobah_cave",
+      "name": "Dagobah: Cave",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 69,
+      "id": "da_69_executor_comm_station",
+      "name": "Executor: Comm Station",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 70,
+      "id": "da_70_executor_control_station",
+      "name": "Executor: Control Station",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 71,
+      "id": "da_71_executor_holotheatre",
+      "name": "Executor: Holotheatre",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 72,
+      "id": "da_72_executor_main_corridor",
+      "name": "Executor: Main Corridor",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 73,
+      "id": "da_73_executor_meditation_chamber",
+      "name": "Executor: Meditation Chamber",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 74,
+      "id": "da_74_raithal",
+      "name": "Raithal",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 75,
+      "id": "da_75_star_destroyer_launch_bay",
+      "name": "Star Destroyer: Launch Bay",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 76,
+      "id": "da_76_avenger",
+      "name": "Avenger",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 77,
+      "id": "da_77_executor",
+      "name": "Executor",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 78,
+      "id": "da_78_hounds_tooth",
+      "name": "Hound's Tooth",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 79,
+      "id": "da_79_ig-2000",
+      "name": "IG-2000",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 80,
+      "id": "da_80_mist_hunter",
+      "name": "Mist Hunter",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 81,
+      "id": "da_81_punishing_one",
+      "name": "Punishing One",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": 82,
+      "id": "da_82_tie_avenger",
+      "name": "TIE Avenger",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": 83,
+      "id": "da_83_tie_bomber",
+      "name": "TIE Bomber",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": 84,
+      "id": "da_84_4-loms_concussion_rifle",
+      "name": "4-LOM's Concussion Rifle",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 85,
+      "id": "da_85_bossks_mortar_gun",
+      "name": "Bossk's Mortar Gun",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 86,
+      "id": "da_86_dengars_blaster_carbine",
+      "name": "Dengar's Blaster Carbine",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 87,
+      "id": "da_87_ig-88s_neural_inhibitor",
+      "name": "IG-88's Neural Inhibitor",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 88,
+      "id": "da_88_ig-88s_pulse_cannon",
+      "name": "IG-88's Pulse Cannon",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 89,
+      "id": "da_89_proton_bombs",
+      "name": "Proton Bombs",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "U"
+    },
+    {
+      "number": 90,
+      "id": "da_90_zuckuss_snare_rifle",
+      "name": "Zuckuss' Snare Rifle",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": 91,
+      "id": "da_91_son_of_skywalker",
+      "name": "Son of Skywalker",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 92,
+      "id": "da_92_yoda",
+      "name": "Yoda",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": 93,
+      "id": "da_93_bog-wing",
+      "name": "Bog-wing",
+      "side": "light",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 94,
+      "id": "da_94_mynock",
+      "name": "Mynock",
+      "side": "light",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 95,
+      "id": "da_95_nudj",
+      "name": "Nudj",
+      "side": "light",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 96,
+      "id": "da_96_space_slug",
+      "name": "Space Slug",
+      "side": "light",
+      "type": "Creature",
+      "rarity": "R"
+    },
+    {
+      "number": 97,
+      "id": "da_97_vine_snake",
+      "name": "Vine Snake",
+      "side": "light",
+      "type": "Creature",
+      "rarity": "C"
+    },
+    {
+      "number": 98,
+      "id": "da_98_astromech_translator",
+      "name": "Astromech Translator",
+      "side": "light",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": 99,
+      "id": "da_99_droid_sensorscope",
+      "name": "Droid Sensorscope",
+      "side": "light",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": 100,
+      "id": "da_100_hans_toolkit",
+      "name": "Han's Toolkit",
+      "side": "light",
+      "type": "Device",
+      "rarity": "R"
+    },
+    {
+      "number": 101,
+      "id": "da_101_landing_claw",
+      "name": "Landing Claw",
+      "side": "light",
+      "type": "Device",
+      "rarity": "R"
+    },
+    {
+      "number": 102,
+      "id": "da_102_lukes_backpack",
+      "name": "Luke's Backpack",
+      "side": "light",
+      "type": "Device",
+      "rarity": "R"
+    },
+    {
+      "number": 103,
+      "id": "da_103_portable_fusion_generator",
+      "name": "Portable Fusion Generator",
+      "side": "light",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": 104,
+      "id": "da_104_rebel_flight_suit",
+      "name": "Rebel Flight Suit",
+      "side": "light",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": 105,
+      "id": "da_105_retractable_arm",
+      "name": "Retractable Arm",
+      "side": "light",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": 106,
+      "id": "da_106_anger_fear_aggression",
+      "name": "Anger, Fear, Aggression",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 107,
+      "id": "da_107_asteroid_sanctuary",
+      "name": "Asteroid Sanctuary",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 108,
+      "id": "da_108_asteroids_do_not_concern_me",
+      "name": "Asteroids Do Not Concern Me",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 109,
+      "id": "da_109_at_peace",
+      "name": "At Peace",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 110,
+      "id": "da_110_descent_into_the_dark",
+      "name": "Descent Into The Dark",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 111,
+      "id": "da_111_do_or_do_not",
+      "name": "Do, Or Do Not",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 112,
+      "id": "da_112_encampment",
+      "name": "Encampment",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 113,
+      "id": "da_113_flash_of_insight",
+      "name": "Flash Of Insight",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 114,
+      "id": "da_114_grounded_starfighter",
+      "name": "Grounded Starfighter",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 115,
+      "id": "da_115_hiding_in_the_garbage",
+      "name": "Hiding In The Garbage",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 116,
+      "id": "da_116_ineffective_maneuver",
+      "name": "Ineffective Maneuver",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 117,
+      "id": "da_117_never_tell_me_the_odds",
+      "name": "Never Tell Me The Odds",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 118,
+      "id": "da_118_no_disintegrations",
+      "name": "No Disintegrations!",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 119,
+      "id": "da_119_obi-wans_apparition",
+      "name": "Obi-Wan's Apparition",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 120,
+      "id": "da_120_order_to_engage",
+      "name": "Order To Engage",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 121,
+      "id": "da_121_polarized_negative_power_coupling",
+      "name": "Polarized Negative Power Coupling",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 122,
+      "id": "da_122_quick_draw",
+      "name": "Quick Draw",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 123,
+      "id": "da_123_reflection",
+      "name": "Reflection",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 124,
+      "id": "da_124_report_to_lord_vader",
+      "name": "Report To Lord Vader",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 125,
+      "id": "da_125_rogue_asteroid",
+      "name": "Rogue Asteroid",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": 126,
+      "id": "da_126_rycars_run",
+      "name": "Rycar's Run",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 127,
+      "id": "da_127_scramble",
+      "name": "Scramble",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 128,
+      "id": "da_128_smugglers_blues",
+      "name": "Smuggler's Blues",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 129,
+      "id": "da_129_stone_pile",
+      "name": "Stone Pile",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 130,
+      "id": "da_130_the_professor",
+      "name": "The Professor",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 131,
+      "id": "da_131_wars_not_make_one_great",
+      "name": "Wars Not Make One Great",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 132,
+      "id": "da_132_what_is_thy_bidding_my_master",
+      "name": "What Is Thy Bidding, My Master?",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 133,
+      "id": "da_133_yodas_gimer_stick",
+      "name": "Yoda's Gimer Stick",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": 134,
+      "id": "da_134_yodas_hope",
+      "name": "Yoda's Hope",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": 135,
+      "id": "da_135_away_put_your_weapon",
+      "name": "Away Put Your Weapon",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 136,
+      "id": "da_136_blasted_varmints",
+      "name": "Blasted Varmints",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 137,
+      "id": "da_137_closer",
+      "name": "Closer?!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 138,
+      "id": "da_138_control",
+      "name": "Control",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 139,
+      "id": "da_139_effective_repairs",
+      "name": "Effective Repairs",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 140,
+      "id": "da_140_egregious_pilot_error",
+      "name": "Egregious Pilot Error",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 141,
+      "id": "da_141_found_someone_you_have",
+      "name": "Found Someone You Have",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 142,
+      "id": "da_142_i_have_a_bad_feeling_about_this",
+      "name": "I Have A Bad Feeling About This",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 143,
+      "id": "da_143_jedi_levitation",
+      "name": "Jedi Levitation",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 144,
+      "id": "da_144_levitation",
+      "name": "Levitation",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 145,
+      "id": "da_145_light_maneuvers",
+      "name": "Light Maneuvers",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 146,
+      "id": "da_146_lost_relay",
+      "name": "Lost Relay",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 147,
+      "id": "da_147_moving_to_attack_position",
+      "name": "Moving To Attack Position",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 148,
+      "id": "da_148_recoil_in_fear",
+      "name": "Recoil In Fear",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 149,
+      "id": "da_149_shoo_shoo",
+      "name": "Shoo! Shoo!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 150,
+      "id": "da_150_starship_levitation",
+      "name": "Starship Levitation",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 151,
+      "id": "da_151_theyd_be_crazy_to_follow_us",
+      "name": "They'd Be Crazy To Follow Us",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 152,
+      "id": "da_152_this_is_more_like_it",
+      "name": "This Is More Like It",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 153,
+      "id": "da_153_this_is_no_cave",
+      "name": "This Is No Cave",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 154,
+      "id": "da_154_through_the_force_things_you_will_see",
+      "name": "Through The Force Things You Will See",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 155,
+      "id": "da_155_tight_squeeze",
+      "name": "Tight Squeeze",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 156,
+      "id": "da_156_transmission_terminated",
+      "name": "Transmission Terminated",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 157,
+      "id": "da_157_tunnel_vision",
+      "name": "Tunnel Vision",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 158,
+      "id": "da_158_visored_vision",
+      "name": "Visored Vision",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": 159,
+      "id": "da_159_we_can_still_outmaneuver_them",
+      "name": "We Can Still Outmaneuver Them",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 160,
+      "id": "da_160_we_dont_need_their_scum",
+      "name": "We Don't Need Their Scum",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 161,
+      "id": "da_161_whaaaaaaaaaoooow",
+      "name": "WHAAAAAAAAAOOOOW!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 162,
+      "id": "da_162_yoda_stew",
+      "name": "Yoda Stew",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 163,
+      "id": "da_163_yoda_you_seek_yoda",
+      "name": "Yoda, You Seek Yoda",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": 164,
+      "id": "da_164_you_do_have_your_moments",
+      "name": "You Do Have Your Moments",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": 165,
+      "id": "da_165_a_jedis_strength",
+      "name": "A Jedi's Strength",
+      "side": "light",
+      "type": "Jedi Test",
+      "rarity": "U"
+    },
+    {
+      "number": 166,
+      "id": "da_166_domain_of_evil",
+      "name": "Domain Of Evil",
+      "side": "light",
+      "type": "Jedi Test",
+      "rarity": "U"
+    },
+    {
+      "number": 167,
+      "id": "da_167_great_warrior",
+      "name": "Great Warrior",
+      "side": "light",
+      "type": "Jedi Test",
+      "rarity": "C"
+    },
+    {
+      "number": 168,
+      "id": "da_168_it_is_the_future_you_see",
+      "name": "It Is The Future You See",
+      "side": "light",
+      "type": "Jedi Test",
+      "rarity": "R"
+    },
+    {
+      "number": 169,
+      "id": "da_169_size_matters_not",
+      "name": "Size Matters Not",
+      "side": "light",
+      "type": "Jedi Test",
+      "rarity": "R"
+    },
+    {
+      "number": 170,
+      "id": "da_170_anoat",
+      "name": "Anoat",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 171,
+      "id": "da_171_asteroid_field",
+      "name": "Asteroid Field",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 172,
+      "id": "da_172_big_one",
+      "name": "Big One",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 173,
+      "id": "da_173_big_one_asteroid_cave_or_space_slug_belly",
+      "name": "Big One: Asteroid Cave or Space Slug Belly",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 174,
+      "id": "da_174_dagobah",
+      "name": "Dagobah",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 175,
+      "id": "da_175_dagobah_bog_clearing",
+      "name": "Dagobah: Bog Clearing",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 176,
+      "id": "da_176_dagobah_jungle",
+      "name": "Dagobah: Jungle",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 177,
+      "id": "da_177_dagobah_swamp",
+      "name": "Dagobah: Swamp",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": 178,
+      "id": "da_178_dagobah_training_area",
+      "name": "Dagobah: Training Area",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": 179,
+      "id": "da_179_dagobah_yodas_hut",
+      "name": "Dagobah: Yoda's Hut",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": 180,
+      "id": "da_180_raithal",
+      "name": "Raithal",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    }
+  ]
+}
