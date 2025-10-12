@@ -4,8 +4,16 @@ import * as SQLite from 'expo-sqlite';
 let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
 let collectionDb: SQLite.SQLiteDatabase | null = null;
 
+// Database version for tracking migrations
+const DB_VERSION = 1;
+
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
+  CREATE TABLE IF NOT EXISTS _metadata (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL
+  );
+
   CREATE TABLE IF NOT EXISTS sets (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
@@ -62,15 +70,7 @@ export async function initializeDatabases(): Promise<void> {
     // Initialize encyclopedia database
     encyclopediaDb = await SQLite.openDatabaseAsync('encyclopedia.db');
 
-    // Drop existing tables to ensure clean schema migration
-    await encyclopediaDb.execAsync(`
-      DROP TABLE IF EXISTS variants;
-      DROP TABLE IF EXISTS set_cards;
-      DROP TABLE IF EXISTS cards;
-      DROP TABLE IF EXISTS sets;
-    `);
-
-    // Create tables with new schema
+    // Create tables with schema
     await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
 
     // Initialize collection database
@@ -85,17 +85,43 @@ export async function initializeDatabases(): Promise<void> {
 }
 
 /**
- * Seed the encyclopedia database with initial data
+ * Check if database needs to be seeded
+ */
+async function needsSeeding(): Promise<boolean> {
+  if (!encyclopediaDb) return true;
+
+  try {
+    const result = await encyclopediaDb.getFirstAsync<{ value: string }>(
+      'SELECT value FROM _metadata WHERE key = ?',
+      ['db_version']
+    );
+
+    return !result || parseInt(result.value) < DB_VERSION;
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Seed the encyclopedia database with initial data (only if needed)
  */
 export async function seedEncyclopedia(
   sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string }>,
   cards: Array<{ id: string; name: string; side: string; type: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
   variants: Array<{ id: string; card_id: string; name: string; code: string }>
-): Promise<void> {
+): Promise<boolean> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
   try {
+    // Check if we need to seed
+    if (!(await needsSeeding())) {
+      console.log('Database already seeded, skipping');
+      return false;
+    }
+
+    console.log('Seeding database for the first time...');
+
     // Clear existing data
     await encyclopediaDb.execAsync('DELETE FROM variants; DELETE FROM set_cards; DELETE FROM cards; DELETE FROM sets;');
 
@@ -131,7 +157,14 @@ export async function seedEncyclopedia(
       );
     }
 
+    // Mark database as seeded
+    await encyclopediaDb.runAsync(
+      'INSERT OR REPLACE INTO _metadata (key, value) VALUES (?, ?)',
+      ['db_version', DB_VERSION.toString()]
+    );
+
     console.log('Encyclopedia seeded successfully');
+    return true;
   } catch (error) {
     console.error('Failed to seed encyclopedia:', error);
     throw error;

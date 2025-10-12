@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -9,7 +9,7 @@ interface CardCounterProps {
   max?: number;
 }
 
-export const CardCounter: React.FC<CardCounterProps> = ({
+export const CardCounter: React.FC<CardCounterProps> = React.memo(({
   count,
   onChange,
   min = 0,
@@ -17,19 +17,19 @@ export const CardCounter: React.FC<CardCounterProps> = ({
 }) => {
   const { colors } = useTheme();
 
-  const handleDecrement = () => {
+  const handleDecrement = useCallback(() => {
     if (count > min) {
       onChange(count - 1);
     }
-  };
+  }, [count, min, onChange]);
 
-  const handleIncrement = () => {
+  const handleIncrement = useCallback(() => {
     if (count < max) {
       onChange(count + 1);
     }
-  };
+  }, [count, max, onChange]);
 
-  const styles = StyleSheet.create({
+  const styles = useMemo(() => StyleSheet.create({
     container: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -63,7 +63,7 @@ export const CardCounter: React.FC<CardCounterProps> = ({
       fontWeight: '600',
       color: colors.fg,
     },
-  });
+  }), [colors]);
 
   return (
     <View style={styles.container}>
@@ -92,4 +92,4 @@ export const CardCounter: React.FC<CardCounterProps> = ({
       </TouchableOpacity>
     </View>
   );
-};
+});

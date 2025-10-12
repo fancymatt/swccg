@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardVariantItem } from './CardVariantItem';
@@ -9,7 +9,7 @@ interface CardListItemProps {
   onVariantQuantityChange: (cardId: string, variantId: string, newQuantity: number) => void;
 }
 
-export const CardListItem: React.FC<CardListItemProps> = ({
+export const CardListItem: React.FC<CardListItemProps> = React.memo(({
   card,
   onVariantQuantityChange,
 }) => {
@@ -19,9 +19,19 @@ export const CardListItem: React.FC<CardListItemProps> = ({
     return side === 'light' ? colors.lightSide : colors.darkSide;
   };
 
-  const totalQuantity = card.variants.reduce((sum, v) => sum + v.quantity, 0);
+  const totalQuantity = useMemo(
+    () => card.variants.reduce((sum, v) => sum + v.quantity, 0),
+    [card.variants]
+  );
 
-  const styles = StyleSheet.create({
+  const handleVariantChange = useCallback(
+    (variantId: string, newQuantity: number) => {
+      onVariantQuantityChange(card.id, variantId, newQuantity);
+    },
+    [card.id, onVariantQuantityChange]
+  );
+
+  const styles = useMemo(() => StyleSheet.create({
     container: {
       backgroundColor: colors.cardBg,
       borderRadius: 12,
@@ -79,7 +89,7 @@ export const CardListItem: React.FC<CardListItemProps> = ({
     variantsContainer: {
       marginTop: 4,
     },
-  });
+  }), [colors]);
 
   return (
     <View style={styles.container}>
@@ -106,12 +116,10 @@ export const CardListItem: React.FC<CardListItemProps> = ({
           <CardVariantItem
             key={variant.id}
             variant={variant}
-            onQuantityChange={(variantId, newQuantity) =>
-              onVariantQuantityChange(card.id, variantId, newQuantity)
-            }
+            onQuantityChange={handleVariantChange}
           />
         ))}
       </View>
     </View>
   );
-};
+});

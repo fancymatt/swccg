@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardCounter } from './CardCounter';
@@ -9,13 +9,20 @@ interface CardVariantItemProps {
   onQuantityChange: (variantId: string, newQuantity: number) => void;
 }
 
-export const CardVariantItem: React.FC<CardVariantItemProps> = ({
+export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
   variant,
   onQuantityChange,
 }) => {
   const { colors } = useTheme();
 
-  const styles = StyleSheet.create({
+  const handleChange = useCallback(
+    (newCount: number) => {
+      onQuantityChange(variant.id, newCount);
+    },
+    [variant.id, onQuantityChange]
+  );
+
+  const styles = useMemo(() => StyleSheet.create({
     container: {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -39,7 +46,7 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = ({
       fontSize: 14,
       color: colors.textSecondary,
     },
-  });
+  }), [colors]);
 
   return (
     <View style={styles.container}>
@@ -50,8 +57,8 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = ({
 
       <CardCounter
         count={variant.quantity}
-        onChange={(newCount) => onQuantityChange(variant.id, newCount)}
+        onChange={handleChange}
       />
     </View>
   );
-};
+});
