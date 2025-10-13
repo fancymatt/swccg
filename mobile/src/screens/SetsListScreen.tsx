@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
-import { getAllSets, getSetCompletionStats, SetCompletionStats } from '../services/database';
+import { useCollectionStats } from '../contexts/CollectionStatsContext';
+import { getAllSets, getSetCompletionStats } from '../services/database';
 import { ProgressBar } from '../components/ProgressBar';
 
 interface Set {
@@ -18,21 +19,17 @@ interface SetsListScreenProps {
 
 export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) => {
   const { colors } = useTheme();
+  const { setStats, setAllStats } = useCollectionStats();
   const [sets, setSets] = useState<Set[]>([]);
   const [loading, setLoading] = useState(true);
-  const [setStats, setSetStats] = useState<Record<string, SetCompletionStats>>({});
 
-  useEffect(() => {
-    loadSets();
-  }, []);
-
-  const loadSets = async () => {
+  const loadSets = useCallback(async () => {
     try {
       const setsData = await getAllSets();
       setSets(setsData as Set[]);
 
       // Load stats for each set
-      const statsMap: Record<string, SetCompletionStats> = {};
+      const statsMap: Record<string, import('../services/database').SetCompletionStats> = {};
       for (const set of setsData) {
         try {
           const stats = await getSetCompletionStats(set.id);
@@ -41,16 +38,23 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
           console.error(`Failed to load stats for set ${set.id}:`, error);
         }
       }
-      setSetStats(statsMap);
+      setAllStats(statsMap);
     } catch (error) {
       console.error('Failed to load sets:', error);
     } finally {
       setLoading(false);
     }
-  };
+  }, [setAllStats]);
+
+  useEffect(() => {
+    loadSets();
+  }, [loadSets]);
 
   const handleSetPress = (set: Set) => {
-    navigation.navigate('SetCards', { setId: set.id, setName: set.name });
+    navigation.navigate('SetCards', {
+      setId: set.id,
+      setName: set.name
+    });
   };
 
   const styles = StyleSheet.create({

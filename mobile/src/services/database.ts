@@ -74,11 +74,17 @@ export async function initializeDatabases(): Promise<void> {
     // Create tables with schema
     await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
 
+    // Enable WAL mode for better concurrency (one writer, many readers)
+    await encyclopediaDb.execAsync('PRAGMA journal_mode=WAL');
+
     // Initialize collection database
     collectionDb = await SQLite.openDatabaseAsync('collection.db');
     await collectionDb.execAsync(COLLECTION_SCHEMA);
 
-    console.log('Databases initialized successfully');
+    // Enable WAL mode for collection database too
+    await collectionDb.execAsync('PRAGMA journal_mode=WAL');
+
+    console.log('Databases initialized successfully with WAL mode');
   } catch (error) {
     console.error('Failed to initialize databases:', error);
     throw error;
@@ -183,6 +189,9 @@ export async function seedEncyclopedia(
     } else if (status === 'migration') {
       console.log('Encyclopedia migration complete!');
     }
+
+    // Clear stats cache after reseeding/migration
+    statsCache.invalidateAll();
 
     return status;
   } catch (error) {
@@ -370,6 +379,7 @@ export async function getCardsWithCollection(): Promise<any[]> {
  * Update the quantity for a specific variant in the user's collection
  */
 export async function updateVariantQuantity(variantId: string, quantity: number): Promise<void> {
+  if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
   if (!collectionDb) throw new Error('Collection database not initialized');
 
   try {
@@ -386,6 +396,26 @@ export async function updateVariantQuantity(variantId: string, quantity: number)
            updated_at = CURRENT_TIMESTAMP`,
         [variantId, quantity]
       );
+    }
+
+    // Invalidate cache for all sets that contain this card
+    // Get the card_id from the variant
+    const variant = await encyclopediaDb.getFirstAsync<{ card_id: string }>(
+      'SELECT card_id FROM variants WHERE id = ?',
+      [variantId]
+    );
+
+    if (variant) {
+      // Get all sets that contain this card
+      const sets = await encyclopediaDb.getAllAsync<{ set_id: string }>(
+        'SELECT set_id FROM set_cards WHERE card_id = ?',
+        [variant.card_id]
+      );
+
+      // Invalidate cache for each set
+      for (const set of sets) {
+        statsCache.invalidate(set.set_id);
+      }
     }
   } catch (error) {
     console.error('Failed to update variant quantity:', error);
@@ -440,67 +470,164 @@ export interface SetCompletionStats {
 }
 
 /**
+ * Cache for set completion stats to reduce redundant database queries
+ */
+class StatsCache {
+  private cache = new Map<string, { data: SetCompletionStats; timestamp: number }>();
+  private TTL = 30000; // 30 seconds TTL (balance between freshness and performance)
+
+  get(setId: string): SetCompletionStats | null {
+    const cached = this.cache.get(setId);
+    if (cached && Date.now() - cached.timestamp < this.TTL) {
+      return cached.data;
+    }
+    // Remove stale entry
+    if (cached) {
+      this.cache.delete(setId);
+    }
+    return null;
+  }
+
+  set(setId: string, data: SetCompletionStats): void {
+    this.cache.set(setId, { data, timestamp: Date.now() });
+  }
+
+  invalidate(setId: string): void {
+    this.cache.delete(setId);
+  }
+
+  invalidateAll(): void {
+    this.cache.clear();
+  }
+}
+
+// Global cache instance
+const statsCache = new StatsCache();
+
+// Mutex to prevent concurrent getSetCompletionStats calls
+const statsLocks = new Map<string, Promise<SetCompletionStats>>();
+
+/**
  * Get set completion statistics broken down by rarity
  * For Limited/Unlimited sets, only count the matching variant
+ *
+ * This function uses a cache to avoid redundant database queries.
+ * The cache is invalidated when collection quantities are updated.
  */
 export async function getSetCompletionStats(setId: string): Promise<SetCompletionStats> {
+  // Check cache first
+  const cached = statsCache.get(setId);
+  if (cached) {
+    return cached;
+  }
+
+  // If there's already a stats calculation in progress for this set, wait for it
+  const existingPromise = statsLocks.get(setId);
+  if (existingPromise) {
+    return existingPromise;
+  }
+
+  // Create a new promise for this calculation
+  const statsPromise = calculateSetCompletionStats(setId);
+  statsLocks.set(setId, statsPromise);
+
+  try {
+    const result = await statsPromise;
+    // Store in cache
+    statsCache.set(setId, result);
+    return result;
+  } finally {
+    // Clean up the lock
+    statsLocks.delete(setId);
+  }
+}
+
+/**
+ * Internal function that actually calculates the stats
+ * Optimized to use 2 bulk queries instead of 300+ sequential queries
+ */
+async function calculateSetCompletionStats(setId: string): Promise<SetCompletionStats> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
   if (!collectionDb) throw new Error('Collection database not initialized');
 
   try {
-    // Get all cards in the set with their rarity
-    const cards = await encyclopediaDb.getAllAsync<{ card_id: string; rarity: string | null }>(`
-      SELECT sc.card_id, sc.rarity
-      FROM set_cards sc
-      WHERE sc.set_id = ?
-    `, [setId]);
-
     // Determine which variant suffix to filter by based on set ID
     const variantSuffix = setId.endsWith('-limited') ? '_limited' :
                          setId.endsWith('-unlimited') ? '_unlimited' : null;
 
+    // Query 1: Get all cards in the set with their variants (in bulk)
+    const cardVariants = await encyclopediaDb.getAllAsync<{
+      card_id: string;
+      rarity: string | null;
+      variant_id: string;
+    }>(`
+      SELECT
+        sc.card_id,
+        sc.rarity,
+        v.id as variant_id
+      FROM set_cards sc
+      JOIN variants v ON v.card_id = sc.card_id
+      WHERE sc.set_id = ?
+    `, [setId]);
+
+    // Filter variants based on set type
+    const filteredCardVariants = variantSuffix
+      ? cardVariants.filter(cv => cv.variant_id.endsWith(variantSuffix))
+      : cardVariants;
+
+    // Extract unique variant IDs for collection lookup
+    const variantIds = [...new Set(filteredCardVariants.map(cv => cv.variant_id))];
+
+    // Query 2: Get all owned variants in one query (in bulk)
+    const ownedVariants = new Set<string>();
+    if (variantIds.length > 0) {
+      // Create placeholders for IN clause
+      const placeholders = variantIds.map(() => '?').join(',');
+      const owned = await collectionDb.getAllAsync<{ variant_id: string }>(
+        `SELECT variant_id FROM collection WHERE variant_id IN (${placeholders}) AND quantity > 0`,
+        variantIds
+      );
+      owned.forEach(row => ownedVariants.add(row.variant_id));
+    }
+
+    // Build a map of card_id -> is_owned
+    const cardOwnership = new Map<string, boolean>();
+    for (const cv of filteredCardVariants) {
+      if (ownedVariants.has(cv.variant_id)) {
+        cardOwnership.set(cv.card_id, true);
+      }
+      if (!cardOwnership.has(cv.card_id)) {
+        cardOwnership.set(cv.card_id, false);
+      }
+    }
+
+    // Get unique cards with their rarities
+    const uniqueCards = new Map<string, string | null>();
+    for (const cv of filteredCardVariants) {
+      if (!uniqueCards.has(cv.card_id)) {
+        uniqueCards.set(cv.card_id, cv.rarity);
+      }
+    }
+
     // Initialize stats
     const stats: SetCompletionStats = {
-      total: { owned: 0, total: cards.length },
+      total: { owned: 0, total: uniqueCards.size },
       common: { owned: 0, total: 0 },
       uncommon: { owned: 0, total: 0 },
       rare: { owned: 0, total: 0 },
       other: { owned: 0, total: 0 },
     };
 
-    // Process each card
-    for (const card of cards) {
-      const normalizedRarity = normalizeRarity(card.rarity);
+    // Process cards (just counting, no queries!)
+    for (const [cardId, rarity] of uniqueCards) {
+      const normalizedRarity = normalizeRarity(rarity);
+      const isOwned = cardOwnership.get(cardId) || false;
 
       // Increment total count for this rarity
       if (normalizedRarity === 'Common') stats.common.total++;
       else if (normalizedRarity === 'Uncommon') stats.uncommon.total++;
       else if (normalizedRarity === 'Rare') stats.rare.total++;
       else stats.other.total++;
-
-      // Check if the appropriate variant of this card is owned
-      const variants = await encyclopediaDb.getAllAsync<{ variant_id: string }>(`
-        SELECT v.id as variant_id
-        FROM variants v
-        WHERE v.card_id = ?
-      `, [card.card_id]);
-
-      // Filter variants based on set type
-      const filteredVariants = variantSuffix
-        ? variants.filter((v) => v.variant_id.endsWith(variantSuffix))
-        : variants;
-
-      let isOwned = false;
-      for (const variant of filteredVariants) {
-        const result = await collectionDb.getFirstAsync<{ quantity: number }>(
-          'SELECT quantity FROM collection WHERE variant_id = ? AND quantity > 0',
-          [variant.variant_id]
-        );
-        if (result && result.quantity > 0) {
-          isOwned = true;
-          break;
-        }
-      }
 
       // Increment owned count if card is owned
       if (isOwned) {
@@ -520,6 +647,22 @@ export async function getSetCompletionStats(setId: string): Promise<SetCompletio
 }
 
 /**
+ * Manually invalidate the stats cache for a specific set
+ * Useful for forcing a refresh of stats
+ */
+export function invalidateStatsCache(setId: string): void {
+  statsCache.invalidate(setId);
+}
+
+/**
+ * Clear all cached stats
+ * Useful when doing bulk operations or reseeding the database
+ */
+export function clearStatsCache(): void {
+  statsCache.invalidateAll();
+}
+
+/**
  * Close both databases
  */
 export async function closeDatabases(): Promise<void> {
@@ -532,6 +675,8 @@ export async function closeDatabases(): Promise<void> {
       await collectionDb.closeAsync();
       collectionDb = null;
     }
+    // Clear cache on database close
+    statsCache.invalidateAll();
     console.log('Databases closed successfully');
   } catch (error) {
     console.error('Failed to close databases:', error);

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
+import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { CardListItem } from '../components/CardListItem';
 import { ProgressBar } from '../components/ProgressBar';
 import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, SetCompletionStats } from '../services/database';
@@ -15,6 +16,7 @@ interface SetCardsScreenProps {
 export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigation }) => {
   const { setId, setName } = route.params;
   const { colors } = useTheme();
+  const { updateSetStats } = useCollectionStats();
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<SetCompletionStats | null>(null);
@@ -27,12 +29,15 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       // Load completion stats
       const completionStats = await getSetCompletionStats(setId);
       setStats(completionStats);
+
+      // Update shared collection stats
+      updateSetStats(setId, completionStats);
     } catch (error) {
       console.error('Failed to load cards:', error);
     } finally {
       setLoading(false);
     }
-  }, [setId]);
+  }, [setId, updateSetStats]);
 
   useEffect(() => {
     loadCards();
@@ -76,6 +81,9 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       // Reload stats to update progress bars
       const completionStats = await getSetCompletionStats(setId);
       setStats(completionStats);
+
+      // Update shared collection stats
+      updateSetStats(setId, completionStats);
     } catch (error) {
       console.error('Failed to update variant quantity:', error);
 
@@ -96,7 +104,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
         })
       );
     }
-  }, [setId]);
+  }, [setId, updateSetStats]);
 
   const styles = useMemo(() => StyleSheet.create({
     safeArea: {
