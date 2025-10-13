@@ -1,0 +1,730 @@
+{
+  "set": {
+    "id": "tatooine",
+    "name": "Tatooine",
+    "abbreviation": "TAT",
+    "releaseDate": "2001-06-01"
+  },
+  "cards": [
+    {
+      "number": "1",
+      "id": "tat_001_aurra-sing",
+      "name": "Aurra Sing",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "2",
+      "id": "tat_002_daroe",
+      "name": "Daroe",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "3",
+      "id": "tat_003_darth-maul",
+      "name": "Darth Maul",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "4",
+      "id": "tat_004_gamall-wironicc",
+      "name": "Gamall Wironicc",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "5",
+      "id": "tat_005_ghana-gleemort",
+      "name": "Ghana Gleemort",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "6",
+      "id": "tat_006_gragra",
+      "name": "Gragra",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "7",
+      "id": "tat_007_lathe",
+      "name": "Lathe",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "8",
+      "id": "tat_008_pit-droid",
+      "name": "Pit Droid",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "9",
+      "id": "tat_009_rachalt-hyst",
+      "name": "Rachalt Hyst",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "10",
+      "id": "tat_010_sebulba",
+      "name": "Sebulba",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "11",
+      "id": "tat_011_sith-probe-droid",
+      "name": "Sith Probe Droid",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "12",
+      "id": "tat_012_watto",
+      "name": "Watto",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "13",
+      "id": "tat_013_mauls-electrobinoculars",
+      "name": "Maul's Electrobinoculars",
+      "side": "dark",
+      "type": "Device",
+      "rarity": "C"
+    },
+    {
+      "number": "14",
+      "id": "tat_014_a-million-voices-crying-out",
+      "name": "A Million Voices Crying Out",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "15",
+      "id": "tat_015_fanfare",
+      "name": "Fanfare",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "16",
+      "id": "tat_016_his-name-is-anakin",
+      "name": "His Name Is Anakin",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "17",
+      "id": "tat_017_i-will-find-them-quickly-master",
+      "name": "I Will Find Them Quickly, Master",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "18",
+      "id": "tat_018_im-sorry",
+      "name": "I'm Sorry",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "19",
+      "id": "tat_019_ni-chuba-na",
+      "name": "Ni Chuba Na??",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "20",
+      "id": "tat_020_quietly-observing",
+      "name": "Quietly Observing",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "21",
+      "id": "tat_021_wattos-box",
+      "name": "Watto's Box",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "22",
+      "id": "tat_022_we-shall-double-our-efforts",
+      "name": "We Shall Double Our Efforts!",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "23",
+      "id": "tat_023_you-may-start-your-landing",
+      "name": "You May Start Your Landing",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "24",
+      "id": "tat_024_you-want-this-dont-you",
+      "name": "You Want This, Don't You?",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "25",
+      "id": "tat_025_boonta-eve-podrace",
+      "name": "Boonta Eve Podrace",
+      "side": "dark",
+      "type": "Epic Event",
+      "rarity": "R"
+    },
+    {
+      "number": "26",
+      "id": "tat_026_if-the-trace-was-correct",
+      "name": "If The Trace Was Correct",
+      "side": "dark",
+      "type": "Epic Event",
+      "rarity": "U"
+    },
+    {
+      "number": "27",
+      "id": "tat_027_hit-racer",
+      "name": "Hit Racer",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "28",
+      "id": "tat_028_join-me",
+      "name": "Join Me!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "29",
+      "id": "tat_029_lightsaber-parry",
+      "name": "Lightsaber Parry",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "30",
+      "id": "tat_030_pit-crews",
+      "name": "Pit Crews",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "31",
+      "id": "tat_031_podracer-collision",
+      "name": "Podracer Collision",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "32",
+      "id": "tat_032_sith-fury",
+      "name": "Sith Fury",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "33",
+      "id": "tat_033_start-your-engines",
+      "name": "Start Your Engines!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "34",
+      "id": "tat_034_there-is-no-conflict",
+      "name": "There Is No Conflict",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "35",
+      "id": "tat_035_vaders-anger",
+      "name": "Vader's Anger",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "36",
+      "id": "tat_036_wattos-chance-cube",
+      "name": "Watto's Chance Cube",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "37",
+      "id": "tat_037_you-swindled-me",
+      "name": "You Swindled Me!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "38",
+      "id": "tat_038_tatooine-desert-landing-site",
+      "name": "Tatooine: Desert Landing Site",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "39",
+      "id": "tat_039_tatooine-mos-espa",
+      "name": "Tatooine: Mos Espa",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "40",
+      "id": "tat_040_tatooine-podrace-arena",
+      "name": "Tatooine: Podrace Arena",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "41",
+      "id": "tat_041_ben-quadinaros-podracer",
+      "name": "Ben Quadinaros' Podracer",
+      "side": "dark",
+      "type": "Podracer",
+      "rarity": "C"
+    },
+    {
+      "number": "42",
+      "id": "tat_042_dud-bolt-podracer",
+      "name": "Dud Bolt's Podracer",
+      "side": "dark",
+      "type": "Podracer",
+      "rarity": "C"
+    },
+    {
+      "number": "43",
+      "id": "tat_043_sebulbas-podracer",
+      "name": "Sebulba's Podracer",
+      "side": "dark",
+      "type": "Podracer",
+      "rarity": "R"
+    },
+    {
+      "number": "44",
+      "id": "tat_044_teemto-pagalies-podracer",
+      "name": "Teemto Pagalies' Podracer",
+      "side": "dark",
+      "type": "Podracer",
+      "rarity": "C"
+    },
+    {
+      "number": "45",
+      "id": "tat_045_mauls-lightsaber",
+      "name": "Maul's Lightsaber",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": "46",
+      "id": "tat_046_caldera-righim",
+      "name": "Caldera Righim",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "47",
+      "id": "tat_047_deneb-both",
+      "name": "Deneb Both",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "48",
+      "id": "tat_048_grugnak",
+      "name": "Grugnak",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "49",
+      "id": "tat_049_jar-jar-binks",
+      "name": "Jar Jar Binks",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "50",
+      "id": "tat_050_loci-rosen",
+      "name": "Loci Rosen",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "51",
+      "id": "tat_051_obi-wan-kenobi-padawan-learner",
+      "name": "Obi-wan Kenobi, Padawan Learner",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "52",
+      "id": "tat_052_padme-naberrie",
+      "name": "Padmé Naberrie",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "53",
+      "id": "tat_053_qui-gon-jinn",
+      "name": "Qui-Gon Jinn",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "54",
+      "id": "tat_054_shmi-skywalker",
+      "name": "Shmi Skywalker",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "55",
+      "id": "tat_055_threepio-with-his-parts-showing",
+      "name": "Threepio With His Parts Showing",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "56",
+      "id": "tat_056_yotts-orren",
+      "name": "Yotts Orren",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "57",
+      "id": "tat_057_brisky-morning-munchen",
+      "name": "Brisky Morning Munchen",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "58",
+      "id": "tat_058_dont-do-that-again",
+      "name": "Don't Do That Again",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "59",
+      "id": "tat_059_great-shot-kid",
+      "name": "Great Shot, Kid!",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "60",
+      "id": "tat_060_i-cant-believe-hes-gone",
+      "name": "I Can't Believe He's Gone",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "61",
+      "id": "tat_061_keeping-the-empire-out-forever",
+      "name": "Keeping The Empire Out Forever",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "62",
+      "id": "tat_062_the-camp",
+      "name": "The Camp",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "63",
+      "id": "tat_063_the-shield-is-down",
+      "name": "The Shield Is Down!",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "64",
+      "id": "tat_064_what-was-it",
+      "name": "What Was It?",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "65",
+      "id": "tat_065_boonta-eve-podrace",
+      "name": "Boonta Eve Podrace",
+      "side": "light",
+      "type": "Epic Event",
+      "rarity": "R"
+    },
+    {
+      "number": "66",
+      "id": "tat_066_i-did-it",
+      "name": "I Did It!",
+      "side": "light",
+      "type": "Epic Event",
+      "rarity": "R"
+    },
+    {
+      "number": "67",
+      "id": "tat_067_a-jedis-concentration",
+      "name": "A Jedi's Concentration",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "68",
+      "id": "tat_068_a-jedis-focus",
+      "name": "A Jedi's Focus",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "69",
+      "id": "tat_069_a-jedis-patience",
+      "name": "A Jedi's Patience",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "70",
+      "id": "tat_070_a-jedis-resilience",
+      "name": "A Jedi's Resilience",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "71",
+      "id": "tat_071_a-step-backward",
+      "name": "A Step Backward",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "72",
+      "id": "tat_072_changing-the-odds",
+      "name": "Changing The Odds",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "73",
+      "id": "tat_073_either-way-you-win",
+      "name": "Either Way, You Win",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "74",
+      "id": "tat_074_end-of-a-reign",
+      "name": "End Of A Reign",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "75",
+      "id": "tat_075_entering-the-arena",
+      "name": "Entering The Arena",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "76",
+      "id": "tat_076_eventually-youll-lose",
+      "name": "Eventually You'll Lose",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "77",
+      "id": "tat_077_jedi-escape",
+      "name": "Jedi Escape",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "78",
+      "id": "tat_078_losing-track",
+      "name": "Losing Track",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "79",
+      "id": "tat_079_neck-and-neck",
+      "name": "Neck And Neck",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "80",
+      "id": "tat_080_podrace-prep",
+      "name": "Podrace Prep",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "81",
+      "id": "tat_081_too-close-for-comfort",
+      "name": "Too Close For Comfort",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "82",
+      "id": "tat_082_youll-find-im-full-of-surprises",
+      "name": "You'll Find I'm Full Of Surprises",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "83",
+      "id": "tat_083_tatooine-city-outskirts",
+      "name": "Tatooine: City Outskirts",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "84",
+      "id": "tat_084_tatooine-mos-espa",
+      "name": "Tatooine: Mos Espa",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "85",
+      "id": "tat_085_tatooine-podrace-arena",
+      "name": "Tatooine: Podrace Arena",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "86",
+      "id": "tat_086_tatooine-podracer-bay",
+      "name": "Tatooine: Podracer Bay",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "87",
+      "id": "tat_087_tatooine-slave-quarters",
+      "name": "Tatooine: Slave Quarters",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "88",
+      "id": "tat_088_anakins-podracer",
+      "name": "Anakin's Podracer",
+      "side": "light",
+      "type": "Podracer",
+      "rarity": "R"
+    },
+    {
+      "number": "89",
+      "id": "tat_089_eopie",
+      "name": "Eopie",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": "90",
+      "id": "tat_090_qui-gon-jinns-lightsaber",
+      "name": "Qui-Gon Jinn's Lightsaber",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "R"
+    }
+  ]
+}

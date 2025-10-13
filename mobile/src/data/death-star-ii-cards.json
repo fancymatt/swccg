@@ -1,0 +1,1466 @@
+{
+  "set": {
+    "id": "death-star-ii",
+    "name": "Death Star II",
+    "abbreviation": "DS2",
+    "releaseDate": "2000-07-01"
+  },
+  "cards": [
+    {
+      "number": "1",
+      "id": "ds2_001_battle-deployment",
+      "name": "Battle Deployment",
+      "side": "dark",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "2",
+      "id": "ds2_002_fighter-cover",
+      "name": "Fighter Cover",
+      "side": "dark",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "3",
+      "id": "ds2_003_fighters-coming-in",
+      "name": "Fighters Coming In",
+      "side": "dark",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "4",
+      "id": "ds2_004_intensify-the-forward-batteries",
+      "name": "Intensify The Forward Batteries",
+      "side": "dark",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "5",
+      "id": "ds2_005_were-in-attack-position-now",
+      "name": "We're In Attack Position Now",
+      "side": "dark",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "6",
+      "id": "ds2_006_admiral-chiraneau",
+      "name": "Admiral Chiraneau",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "7",
+      "id": "ds2_007_admiral-piett",
+      "name": "Admiral Piett",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "XR"
+    },
+    {
+      "number": "8",
+      "id": "ds2_008_baron-soontir-fel",
+      "name": "Baron Soontir Fel",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "9",
+      "id": "ds2_009_captain-godherdt",
+      "name": "Captain Godherdt",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "10",
+      "id": "ds2_010_captain-jonus",
+      "name": "Captain Jonus",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "11",
+      "id": "ds2_011_captain-sarkli",
+      "name": "Captain Sarkli",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "12",
+      "id": "ds2_012_captain-yorr",
+      "name": "Captain Yorr",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "13",
+      "id": "ds2_013_colonel-davod-jon",
+      "name": "Colonel Davod Jon",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "14",
+      "id": "ds2_014_colonel-jendon",
+      "name": "Colonel Jendon",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "15",
+      "id": "ds2_015_commander-merrejk",
+      "name": "Commander Merrejk",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "16",
+      "id": "ds2_016_ds-181-3",
+      "name": "DS-181-3",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "17",
+      "id": "ds2_017_ds-181-4",
+      "name": "DS-181-4",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "18",
+      "id": "ds2_018_emperor-palpatine",
+      "name": "Emperor Palpatine",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "UR"
+    },
+    {
+      "number": "19",
+      "id": "ds2_019_janus-greejatus",
+      "name": "Janus Greejatus",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "20",
+      "id": "ds2_020_lieutenant-endicott",
+      "name": "Lieutenant Endicott",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "21",
+      "id": "ds2_021_lieutenant-hebsly",
+      "name": "Lieutenant Hebsly",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "22",
+      "id": "ds2_022_lord-vader",
+      "name": "Lord Vader",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "23",
+      "id": "ds2_023_major-mianda",
+      "name": "Major Mianda",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "24",
+      "id": "ds2_024_major-rhymer",
+      "name": "Major Rhymer",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "25",
+      "id": "ds2_025_major-turr-phennir",
+      "name": "Major Turr Phennir",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "26",
+      "id": "ds2_026_moff-jerjerrod",
+      "name": "Moff Jerjerrod",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "27",
+      "id": "ds2_027_myn-kyneugh",
+      "name": "Myn Kyneugh",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "28",
+      "id": "ds2_028_royal-guard",
+      "name": "Royal Guard",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "29",
+      "id": "ds2_029_sim-aloo",
+      "name": "Sim Aloo",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "30",
+      "id": "ds2_030_combat-response",
+      "name": "Combat Response",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "31",
+      "id": "ds2_031_desperate-counter",
+      "name": "Desperate Counter",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "32",
+      "id": "ds2_032_emperors-power",
+      "name": "Emperor's Power",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "33",
+      "id": "ds2_033_endor-shield",
+      "name": "Endor Shield",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "34",
+      "id": "ds2_034_flagship-operations",
+      "name": "Flagship Operations",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "35",
+      "id": "ds2_035_inconsequential-losses",
+      "name": "Inconsequential Losses",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "36",
+      "id": "ds2_036_insignificant-rebellion",
+      "name": "Insignificant Rebellion",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "37",
+      "id": "ds2_037_leave-them-to-me",
+      "name": "Leave Them To Me",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "38",
+      "id": "ds2_038_mobilization-points",
+      "name": "Mobilization Points",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "39",
+      "id": "ds2_039_overseeing-it-personally",
+      "name": "Overseeing It Personally",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "40",
+      "id": "ds2_040_royal-escort",
+      "name": "Royal Escort",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "41",
+      "id": "ds2_041_something-special-planned-for-them",
+      "name": "Something Special Planned For Them",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "42",
+      "id": "ds2_042_you-cannot-hide-forever",
+      "name": "You Cannot Hide Forever",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "43",
+      "id": "ds2_043_your-destiny",
+      "name": "Your Destiny",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "44",
+      "id": "ds2_044_that-things-operational",
+      "name": "That Thing's Operational",
+      "side": "dark",
+      "type": "Epic Event",
+      "rarity": "R"
+    },
+    {
+      "number": "45",
+      "id": "ds2_045_force-lightning",
+      "name": "Force Lightning",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "46",
+      "id": "ds2_046_imperial-command",
+      "name": "Imperial Command",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "47",
+      "id": "ds2_047_operational-as-planned",
+      "name": "Operational As Planned",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "48",
+      "id": "ds2_048_prepared-defenses",
+      "name": "Prepared Defenses",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "49",
+      "id": "ds2_049_rise-my-friend",
+      "name": "Rise, My Friend",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "50",
+      "id": "ds2_050_young-fool",
+      "name": "Young Fool",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "51",
+      "id": "ds2_051_death-star-ii",
+      "name": "Death Star II",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "52",
+      "id": "ds2_052_death-star-ii-capacitors",
+      "name": "Death Star II: Capacitors",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "53",
+      "id": "ds2_053_death-star-ii-coolant-shaft",
+      "name": "Death Star II: Coolant Shaft",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "54",
+      "id": "ds2_054_death-star-ii-docking-bay",
+      "name": "Death Star II: Docking Bay",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "55",
+      "id": "ds2_055_death-star-ii-reactor-core",
+      "name": "Death Star II: Reactor Core",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "56",
+      "id": "ds2_056_death-star-ii-throne-room",
+      "name": "Death Star II: Throne Room",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "57",
+      "id": "ds2_057_gall",
+      "name": "Gall",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "58",
+      "id": "ds2_058_mon-calamari",
+      "name": "Mon Calamari",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "59",
+      "id": "ds2_059_sullust",
+      "name": "Sullust",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "60",
+      "id": "ds2_060_bring-him-before-me",
+      "name": "Bring Him Before Me/Take Your Father's Place",
+      "side": "dark",
+      "type": "Objective",
+      "rarity": "R"
+    },
+    {
+      "number": "61",
+      "id": "ds2_061_accuser",
+      "name": "Accuser",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "62",
+      "id": "ds2_062_black-11",
+      "name": "Black 11",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "63",
+      "id": "ds2_063_chimaera",
+      "name": "Chimaera",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "64",
+      "id": "ds2_064_dominator",
+      "name": "Dominator",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "65",
+      "id": "ds2_065_emperors-personal-shuttle",
+      "name": "Emperor's Personal Shuttle",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "66",
+      "id": "ds2_066_flagship-executor",
+      "name": "Flagship Executor",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "67",
+      "id": "ds2_067_judicator",
+      "name": "Judicator",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "68",
+      "id": "ds2_068_obsidian-10",
+      "name": "Obsidian 10",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "69",
+      "id": "ds2_069_onyx-1",
+      "name": "Onyx 1",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "70",
+      "id": "ds2_070_onyx-2",
+      "name": "Onyx 2",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "71",
+      "id": "ds2_071_saber-1",
+      "name": "Saber 1",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "72",
+      "id": "ds2_072_saber-2",
+      "name": "Saber 2",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "73",
+      "id": "ds2_073_saber-3",
+      "name": "Saber 3",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "74",
+      "id": "ds2_074_saber-4",
+      "name": "Saber 4",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "75",
+      "id": "ds2_075_scimitar-1",
+      "name": "Scimitar 1",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "76",
+      "id": "ds2_076_scimitar-2",
+      "name": "Scimitar 2",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "77",
+      "id": "ds2_077_scimitar-squadron-tie",
+      "name": "Scimitar Squadron TIE",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "78",
+      "id": "ds2_078_scythe-1",
+      "name": "Scythe 1",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "79",
+      "id": "ds2_079_scythe-3",
+      "name": "Scythe 3",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "80",
+      "id": "ds2_080_scythe-squadron-tie",
+      "name": "Scythe Squadron TIE",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "81",
+      "id": "ds2_081_the-emperors-shield",
+      "name": "The Emperor's Shield",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "82",
+      "id": "ds2_082_the-emperors-sword",
+      "name": "The Emperor's Sword",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "83",
+      "id": "ds2_083_thunderflare",
+      "name": "Thunderflare",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "84",
+      "id": "ds2_084_tie-interceptor",
+      "name": "TIE Interceptor",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "85",
+      "id": "ds2_085_visage",
+      "name": "Visage",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "86",
+      "id": "ds2_086_concussion-missiles",
+      "name": "Concussion Missiles",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "87",
+      "id": "ds2_087_darth-vaders-lightsaber",
+      "name": "Darth Vader's Lightsaber",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": "88",
+      "id": "ds2_088_force-pike",
+      "name": "Force Pike",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "89",
+      "id": "ds2_089_heavy-turbolaser-battery",
+      "name": "Heavy Turbolaser Battery",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "90",
+      "id": "ds2_090_sfs-l-s7-2-tie-cannon",
+      "name": "SFS L-s7.2 TIE Cannon",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "91",
+      "id": "ds2_091_superlaser-mark-ii",
+      "name": "Superlaser Mark II",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "U"
+    },
+    {
+      "number": "92",
+      "id": "ds2_092_capital-support",
+      "name": "Capital Support",
+      "side": "light",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "93",
+      "id": "ds2_093_combined-fleet-action",
+      "name": "Combined Fleet Action",
+      "side": "light",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "94",
+      "id": "ds2_094_concentrate-all-fire",
+      "name": "Concentrate All Fire",
+      "side": "light",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "95",
+      "id": "ds2_095_ill-take-the-leader",
+      "name": "I'll Take The Leader",
+      "side": "light",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "96",
+      "id": "ds2_096_taking-them-with-us",
+      "name": "Taking Them With Us",
+      "side": "light",
+      "type": "Admiral's Order",
+      "rarity": "R"
+    },
+    {
+      "number": "97",
+      "id": "ds2_097_admiral-ackbar",
+      "name": "Admiral Ackbar",
+      "side": "light",
+      "type": "Character",
+      "rarity": "XR"
+    },
+    {
+      "number": "98",
+      "id": "ds2_098_captain-verrack",
+      "name": "Captain Verrack",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "99",
+      "id": "ds2_099_colonel-cracken",
+      "name": "Colonel Cracken",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "100",
+      "id": "ds2_100_colonel-salm",
+      "name": "Colonel Salm",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "101",
+      "id": "ds2_101_corporal-marmor",
+      "name": "Corporal Marmor",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "102",
+      "id": "ds2_102_corporal-midge",
+      "name": "Corporal Midge",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "103",
+      "id": "ds2_103_first-officer-thaneespi",
+      "name": "First Officer Thaneespi",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "104",
+      "id": "ds2_104_general-calrissian",
+      "name": "General Calrissian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "105",
+      "id": "ds2_105_general-walex-blissex",
+      "name": "General Walex Blissex",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "106",
+      "id": "ds2_106_green-leader",
+      "name": "Green Leader",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "107",
+      "id": "ds2_107_green-squadron-pilot",
+      "name": "Green Squadron Pilot",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "108",
+      "id": "ds2_108_gray-squadron-y-wing-pilot",
+      "name": "Gray Squadron Y-wing Pilot",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "109",
+      "id": "ds2_109_karie-neth",
+      "name": "Karie Neth",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "110",
+      "id": "ds2_110_keir-santage",
+      "name": "Keir Santage",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "111",
+      "id": "ds2_111_kin-kian",
+      "name": "Kin Kian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "112",
+      "id": "ds2_112_lieutenant-blount",
+      "name": "Lieutenant Blount",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "113",
+      "id": "ds2_113_lieutenant-stoo-vees",
+      "name": "Lieutenant s'Too Vees",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "114",
+      "id": "ds2_114_lieutenant-telsij",
+      "name": "Lieutenant Telsij",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "115",
+      "id": "ds2_115_luke-skywalker-jedi-knight",
+      "name": "Luke Skywalker, Jedi Knight",
+      "side": "light",
+      "type": "Character",
+      "rarity": "UR"
+    },
+    {
+      "number": "116",
+      "id": "ds2_116_major-haashn",
+      "name": "Major Haash'n",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "117",
+      "id": "ds2_117_major-olander-brit",
+      "name": "Major Olander Brit",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "118",
+      "id": "ds2_118_major-panno",
+      "name": "Major Panno",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "119",
+      "id": "ds2_119_nien-nunb",
+      "name": "Nien Nunb",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "120",
+      "id": "ds2_120_ten-numb",
+      "name": "Ten Numb",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "121",
+      "id": "ds2_121_tycho-celchu",
+      "name": "Tycho Celchu",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "122",
+      "id": "ds2_122_wedge-antilles-red-squadron-leader",
+      "name": "Wedge Antilles, Red Squadron Leader",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "123",
+      "id": "ds2_123_close-air-support",
+      "name": "Close Air Support",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "124",
+      "id": "ds2_124_honor-of-the-jedi",
+      "name": "Honor Of The Jedi",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "125",
+      "id": "ds2_125_i-feel-the-conflict",
+      "name": "I Feel The Conflict",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "126",
+      "id": "ds2_126_im-with-you-too",
+      "name": "I'm With You Too",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "127",
+      "id": "ds2_127_launching-the-assault",
+      "name": "Launching The Assault",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "128",
+      "id": "ds2_128_lets-keep-a-little-optimism-here",
+      "name": "Let's Keep A Little Optimism Here",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "129",
+      "id": "ds2_129_menace-fades",
+      "name": "Menace Fades",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "130",
+      "id": "ds2_130_squadron-assignments",
+      "name": "Squadron Assignments",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "131",
+      "id": "ds2_131_staging-areas",
+      "name": "Staging Areas",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "132",
+      "id": "ds2_132_strike-planning",
+      "name": "Strike Planning",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "133",
+      "id": "ds2_133_strikeforce",
+      "name": "Strikeforce",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "134",
+      "id": "ds2_134_superficial-damage",
+      "name": "Superficial Damage",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "135",
+      "id": "ds2_135_the-time-for-our-attack-has-come",
+      "name": "The Time For Our Attack Has Come",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "136",
+      "id": "ds2_136_the-way-of-things",
+      "name": "The Way Of Things",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "137",
+      "id": "ds2_137_twilight-is-upon-me",
+      "name": "Twilight Is Upon Me",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "138",
+      "id": "ds2_138_your-insight-serves-you-well",
+      "name": "Your Insight Serves You Well",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "139",
+      "id": "ds2_139_anakin-skywalker",
+      "name": "Anakin Skywalker",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "140",
+      "id": "ds2_140_critical-error-revealed",
+      "name": "Critical Error Revealed",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "141",
+      "id": "ds2_141_head-back-to-the-surface",
+      "name": "Head Back To The Surface",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "142",
+      "id": "ds2_142_heading-for-the-medical-frigate",
+      "name": "Heading For The Medical Frigate",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "143",
+      "id": "ds2_143_insertion-planning",
+      "name": "Insertion Planning",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "144",
+      "id": "ds2_144_our-only-hope",
+      "name": "Our Only Hope",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "145",
+      "id": "ds2_145_rebel-leadership",
+      "name": "Rebel Leadership",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "146",
+      "id": "ds2_146_you-must-confront-vader",
+      "name": "You Must Confront Vader",
+      "side": "light",
+      "type": "Jedi Test",
+      "rarity": "R"
+    },
+    {
+      "number": "147",
+      "id": "ds2_147_aquaris",
+      "name": "Aquaris",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "148",
+      "id": "ds2_148_home-one-docking-bay",
+      "name": "Home One: Docking Bay",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "149",
+      "id": "ds2_149_home-one-war-room",
+      "name": "Home One: War Room",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "150",
+      "id": "ds2_150_mon-calamari",
+      "name": "Mon Calamari",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "151",
+      "id": "ds2_151_sullust",
+      "name": "Sullust",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "152",
+      "id": "ds2_152_there-is-good-in-him",
+      "name": "There Is Good In Him / I Can Save Him",
+      "side": "light",
+      "type": "Objective",
+      "rarity": "R"
+    },
+    {
+      "number": "153",
+      "id": "ds2_153_a-wing",
+      "name": "A-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "154",
+      "id": "ds2_154_b-wing-attack-squadron",
+      "name": "B-wing Attack Squadron",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "155",
+      "id": "ds2_155_b-wing-bomber",
+      "name": "B-wing Bomber",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "156",
+      "id": "ds2_156_blue-squadron-5",
+      "name": "Blue Squadron 5",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "157",
+      "id": "ds2_157_blue-squadron-b-wing",
+      "name": "Blue Squadron B-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "158",
+      "id": "ds2_158_defiance",
+      "name": "Defiance",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "159",
+      "id": "ds2_159_gold-squadron-1",
+      "name": "Gold Squadron 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "160",
+      "id": "ds2_160_gray-squadron-1",
+      "name": "Gray Squadron 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "161",
+      "id": "ds2_161_gray-squadron-2",
+      "name": "Gray Squadron 2",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "162",
+      "id": "ds2_162_green-squadron-1",
+      "name": "Green Squadron 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "163",
+      "id": "ds2_163_green-squadron-3",
+      "name": "Green Squadron 3",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "164",
+      "id": "ds2_164_green-squadron-a-wing",
+      "name": "Green Squadron A-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "165",
+      "id": "ds2_165_home-one",
+      "name": "Home One",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "166",
+      "id": "ds2_166_independence",
+      "name": "Independence",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "167",
+      "id": "ds2_167_liberty",
+      "name": "Liberty",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "168",
+      "id": "ds2_168_luminous",
+      "name": "Luminous",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "169",
+      "id": "ds2_169_masanya",
+      "name": "Masanya",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "170",
+      "id": "ds2_170_mon-calamari-star-cruiser",
+      "name": "Mon Calamari Star Cruiser",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "171",
+      "id": "ds2_171_nebulon-b-frigate",
+      "name": "Nebulon-B Frigate",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "172",
+      "id": "ds2_172_red-squadron-1",
+      "name": "Red Squadron 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "173",
+      "id": "ds2_173_red-squadron-4",
+      "name": "Red Squadron 4",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "174",
+      "id": "ds2_174_red-squadron-7",
+      "name": "Red Squadron 7",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "U"
+    },
+    {
+      "number": "175",
+      "id": "ds2_175_tala-1",
+      "name": "Tala 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "176",
+      "id": "ds2_176_tala-2",
+      "name": "Tala 2",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "177",
+      "id": "ds2_177_a-wing-cannon",
+      "name": "A-wing Cannon",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "178",
+      "id": "ds2_178_concussion-missiles",
+      "name": "Concussion Missiles",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "179",
+      "id": "ds2_179_enhanced-proton-torpedoes",
+      "name": "Enhanced Proton Torpedoes",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "180",
+      "id": "ds2_180_heavy-turbolaser-battery",
+      "name": "Heavy Turbolaser Battery",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "181",
+      "id": "ds2_181_lukes-lightsaber",
+      "name": "Luke's Lightsaber",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": "182",
+      "id": "ds2_182_orbital-mine",
+      "name": "Orbital Mine",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    }
+  ]
+}

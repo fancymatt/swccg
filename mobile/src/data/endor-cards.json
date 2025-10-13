@@ -1,0 +1,1450 @@
+{
+  "set": {
+    "id": "endor",
+    "name": "Endor",
+    "abbreviation": "EN",
+    "releaseDate": "1999-06-01"
+  },
+  "cards": [
+    {
+      "number": "1",
+      "id": "en_001_at-st-pilot",
+      "name": "AT-ST Pilot",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "2",
+      "id": "en_002_biker-scout-trooper",
+      "name": "Biker Scout Trooper",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "3",
+      "id": "en_003_colonel-dyer",
+      "name": "Colonel Dyer",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "4",
+      "id": "en_004_commander-igar",
+      "name": "Commander Igar",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "5",
+      "id": "en_005_corporal-avarik",
+      "name": "Corporal Avarik",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "6",
+      "id": "en_006_corporal-drazin",
+      "name": "Corporal Drazin",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "7",
+      "id": "en_007_corporal-drelosyn",
+      "name": "Corporal Drelosyn",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "8",
+      "id": "en_008_corporal-misik",
+      "name": "Corporal Misik",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "9",
+      "id": "en_009_corporal-oberk",
+      "name": "Corporal Oberk",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "10",
+      "id": "en_010_elite-squadron-stormtrooper",
+      "name": "Elite Squadron Stormtrooper",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "11",
+      "id": "en_011_lieutenant-arnet",
+      "name": "Lieutenant Arnet",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "12",
+      "id": "en_012_lieutenant-grond",
+      "name": "Lieutenant Grond",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "13",
+      "id": "en_013_lieutenant-renz",
+      "name": "Lieutenant Renz",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "14",
+      "id": "en_014_lieutenant-watts",
+      "name": "Lieutenant Watts",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "15",
+      "id": "en_015_major-hewex",
+      "name": "Major Hewex",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "16",
+      "id": "en_016_major-marquand",
+      "name": "Major Marquand",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "17",
+      "id": "en_017_navy-trooper",
+      "name": "Navy Trooper",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "18",
+      "id": "en_018_navy-trooper-fenson",
+      "name": "Navy Trooper Fenson",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "19",
+      "id": "en_019_navy-trooper-shield-technician",
+      "name": "Navy Trooper Shield Technician",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "20",
+      "id": "en_020_navy-trooper-vesden",
+      "name": "Navy Trooper Vesden",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "21",
+      "id": "en_021_sergeant-barich",
+      "name": "Sergeant Barich",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "22",
+      "id": "en_022_sergeant-elsek",
+      "name": "Sergeant Elsek",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "23",
+      "id": "en_023_sergeant-irol",
+      "name": "Sergeant Irol",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "24",
+      "id": "en_024_sergeant-tarl",
+      "name": "Sergeant Tarl",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "25",
+      "id": "en_025_sergeant-wallen",
+      "name": "Sergeant Wallen",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "26",
+      "id": "en_026_an-entire-legion-of-my-best-troops",
+      "name": "An Entire Legion Of My Best Troops",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "27",
+      "id": "en_027_aratech-corporation",
+      "name": "Aratech Corporation",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "28",
+      "id": "en_028_battle-order",
+      "name": "Battle Order",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "29",
+      "id": "en_029_biker-scout-gear",
+      "name": "Biker Scout Gear",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "30",
+      "id": "en_030_closed-door",
+      "name": "Closed Door",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "31",
+      "id": "en_031_crossfire",
+      "name": "Crossfire",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "32",
+      "id": "en_032_early-warning-network",
+      "name": "Early Warning Network",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "33",
+      "id": "en_033_empires-new-order",
+      "name": "Empire's New Order",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "34",
+      "id": "en_034_establish-secret-base",
+      "name": "Establish Secret Base",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "35",
+      "id": "en_035_imperial-academy-training",
+      "name": "Imperial Academy Training",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "36",
+      "id": "en_036_imperial-arrest-order",
+      "name": "Imperial Arrest Order",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "37",
+      "id": "en_037_ominous-rumors",
+      "name": "Ominous Rumors",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "38",
+      "id": "en_038_perimeter-patrol",
+      "name": "Perimeter Patrol",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "39",
+      "id": "en_039_pinned-down",
+      "name": "Pinned Down",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "40",
+      "id": "en_040_relentless-tracking",
+      "name": "Relentless Tracking",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "41",
+      "id": "en_041_search-and-destroy",
+      "name": "Search And Destroy",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "42",
+      "id": "en_042_security-precautions",
+      "name": "Security Precautions",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "43",
+      "id": "en_043_well-earned-command",
+      "name": "Well-earned Command",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "44",
+      "id": "en_044_accelerate",
+      "name": "Accelerate",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "45",
+      "id": "en_045_always-thinking-with-your-stomach",
+      "name": "Always Thinking With Your Stomach",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "46",
+      "id": "en_046_combat-readiness",
+      "name": "Combat Readiness",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "47",
+      "id": "en_047_compact-firepower",
+      "name": "Compact Firepower",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "48",
+      "id": "en_048_counterattack",
+      "name": "Counterattack",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "49",
+      "id": "en_049_dead-ewok",
+      "name": "Dead Ewok",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "50",
+      "id": "en_050_dont-move",
+      "name": "Don't Move!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "51",
+      "id": "en_051_eee-chu-wawa",
+      "name": "Eee Chu Wawa!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "52",
+      "id": "en_052_endor-occupation",
+      "name": "Endor Occupation",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "53",
+      "id": "en_053_freeze",
+      "name": "Freeze!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "54",
+      "id": "en_054_go-for-help",
+      "name": "Go For Help!",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "55",
+      "id": "en_055_high-speed-tactics",
+      "name": "High-speed Tactics",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "56",
+      "id": "en_056_hot-pursuit",
+      "name": "Hot Pursuit",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "57",
+      "id": "en_057_imperial-tyranny",
+      "name": "Imperial Tyranny",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "58",
+      "id": "en_058_its-an-older-code",
+      "name": "It's An Older Code",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "59",
+      "id": "en_059_main-course",
+      "name": "Main Course",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "60",
+      "id": "en_060_outflank",
+      "name": "Outflank",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "61",
+      "id": "en_061_pitiful-little-band",
+      "name": "Pitiful Little Band",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "62",
+      "id": "en_062_scout-recon",
+      "name": "Scout Recon",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "63",
+      "id": "en_063_sneak-attack",
+      "name": "Sneak Attack",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "64",
+      "id": "en_064_wounded-warrior",
+      "name": "Wounded Warrior",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "65",
+      "id": "en_065_you-rebel-scum",
+      "name": "You Rebel Scum",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "66",
+      "id": "en_066_carida",
+      "name": "Carida",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "67",
+      "id": "en_067_endor",
+      "name": "Endor",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "68",
+      "id": "en_068_endor-ancient-forest",
+      "name": "Endor: Ancient Forest",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "69",
+      "id": "en_069_endor-back-door",
+      "name": "Endor: Back Door",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "70",
+      "id": "en_070_endor-bunker",
+      "name": "Endor: Bunker",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "71",
+      "id": "en_071_endor-dark-forest",
+      "name": "Endor: Dark Forest",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "72",
+      "id": "en_072_endor-dense-forest",
+      "name": "Endor: Dense Forest",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "73",
+      "id": "en_073_endor-ewok-village",
+      "name": "Endor: Ewok Village",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "74",
+      "id": "en_074_endor-forest-clearing",
+      "name": "Endor: Forest Clearing",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "75",
+      "id": "en_075_endor-great-forest",
+      "name": "Endor: Great Forest",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "76",
+      "id": "en_076_endor-landing-platform",
+      "name": "Endor: Landing Platform (Docking Bay)",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "77",
+      "id": "en_077_endor-operations",
+      "name": "Endor Operations / Imperial Outpost",
+      "side": "dark",
+      "type": "Objective",
+      "rarity": "R"
+    },
+    {
+      "number": "78",
+      "id": "en_078_lambda-class-shuttle",
+      "name": "Lambda-Class Shuttle",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "79",
+      "id": "en_079_speeder-bike",
+      "name": "Speeder Bike",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": "80",
+      "id": "en_080_tempest-1",
+      "name": "Tempest 1",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "81",
+      "id": "en_081_tempest-scout",
+      "name": "Tempest Scout",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "U"
+    },
+    {
+      "number": "82",
+      "id": "en_082_tempest-scout-1",
+      "name": "Tempest Scout 1",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "83",
+      "id": "en_083_tempest-scout-2",
+      "name": "Tempest Scout 2",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "84",
+      "id": "en_084_tempest-scout-3",
+      "name": "Tempest Scout 3",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "85",
+      "id": "en_085_tempest-scout-4",
+      "name": "Tempest Scout 4",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "86",
+      "id": "en_086_tempest-scout-5",
+      "name": "Tempest Scout 5",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "87",
+      "id": "en_087_tempest-scout-6",
+      "name": "Tempest Scout 6",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "88",
+      "id": "en_088_at-st-dual-cannon",
+      "name": "AT-ST Dual Cannon",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": "89",
+      "id": "en_089_scout-blaster",
+      "name": "Scout Blaster",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "90",
+      "id": "en_090_speeder-bike-cannon",
+      "name": "Speeder Bike Cannon",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "U"
+    },
+    {
+      "number": "91",
+      "id": "en_091_captain-yutani",
+      "name": "Captain Yutani",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "92",
+      "id": "en_092_chewbacca-of-kashyyyk",
+      "name": "Chewbacca Of Kashyyyk",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "93",
+      "id": "en_093_chief-chirpa",
+      "name": "Chief Chirpa",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "94",
+      "id": "en_094_corporal-beezer",
+      "name": "Corporal Beezer",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "95",
+      "id": "en_095_corporal-delevar",
+      "name": "Corporal Delevar",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "96",
+      "id": "en_096_corporal-janse",
+      "name": "Corporal Janse",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "97",
+      "id": "en_097_corporal-kensaric",
+      "name": "Corporal Kensaric",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "98",
+      "id": "en_098_daughter-of-skywalker",
+      "name": "Daughter Of Skywalker",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "99",
+      "id": "en_099_dresselian-commando",
+      "name": "Dresselian Commando",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "100",
+      "id": "en_100_endor-scout-trooper",
+      "name": "Endor Scout Trooper",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "101",
+      "id": "en_101_ewok-sentry",
+      "name": "Ewok Sentry",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "102",
+      "id": "en_102_ewok-spearman",
+      "name": "Ewok Spearman",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "103",
+      "id": "en_103_ewok-tribesman",
+      "name": "Ewok Tribesman",
+      "side": "light",
+      "type": "Character",
+      "rarity": "C"
+    },
+    {
+      "number": "104",
+      "id": "en_104_general-crix-madine",
+      "name": "General Crix Madine",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "105",
+      "id": "en_105_general-solo",
+      "name": "General Solo",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "106",
+      "id": "en_106_graak",
+      "name": "Graak",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "107",
+      "id": "en_107_kazak",
+      "name": "Kazak",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "108",
+      "id": "en_108_lieutenant-greeve",
+      "name": "Lieutenant Greeve",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "109",
+      "id": "en_109_lieutenant-page",
+      "name": "Lieutenant Page",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "110",
+      "id": "en_110_logray",
+      "name": "Logray",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "111",
+      "id": "en_111_lumat",
+      "name": "Lumat",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "112",
+      "id": "en_112_mon-mothma",
+      "name": "Mon Mothma",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "113",
+      "id": "en_113_orrimaarko",
+      "name": "Orrimaarko",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "114",
+      "id": "en_114_paploo",
+      "name": "Paploo",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "115",
+      "id": "en_115_rabin",
+      "name": "Rabin",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "116",
+      "id": "en_116_romba",
+      "name": "Romba",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "117",
+      "id": "en_117_sergeant-brooks-carlson",
+      "name": "Sergeant Brooks Carlson",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "118",
+      "id": "en_118_sergeant-bruckman",
+      "name": "Sergeant Bruckman",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "119",
+      "id": "en_119_sergeant-junkin",
+      "name": "Sergeant Junkin",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "120",
+      "id": "en_120_teebo",
+      "name": "Teebo",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "121",
+      "id": "en_121_threepio",
+      "name": "Threepio",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "122",
+      "id": "en_122_wicket",
+      "name": "Wicket",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R"
+    },
+    {
+      "number": "123",
+      "id": "en_123_wuta",
+      "name": "Wuta",
+      "side": "light",
+      "type": "Character",
+      "rarity": "U"
+    },
+    {
+      "number": "124",
+      "id": "en_124_aim-high",
+      "name": "Aim High",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "125",
+      "id": "en_125_battle-plan",
+      "name": "Battle Plan",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "126",
+      "id": "en_126_commando-training",
+      "name": "Commando Training",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "C"
+    },
+    {
+      "number": "127",
+      "id": "en_127_count-me-in",
+      "name": "Count Me In",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "128",
+      "id": "en_128_i-hope-shes-all-right",
+      "name": "I Hope She's All Right",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "129",
+      "id": "en_129_i-wonder-who-they-found",
+      "name": "I Wonder Who They Found",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "130",
+      "id": "en_130_insurrection",
+      "name": "Insurrection",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "U"
+    },
+    {
+      "number": "131",
+      "id": "en_131_thats-one",
+      "name": "That's One",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "132",
+      "id": "en_132_wokling",
+      "name": "Wokling",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R"
+    },
+    {
+      "number": "133",
+      "id": "en_133_deactivate-the-shield-generator",
+      "name": "Deactivate The Shield Generator",
+      "side": "light",
+      "type": "Epic Event",
+      "rarity": "R"
+    },
+    {
+      "number": "134",
+      "id": "en_134_careful-planning",
+      "name": "Careful Planning",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "135",
+      "id": "en_135_covert-landing",
+      "name": "Covert Landing",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "136",
+      "id": "en_136_endor-celebration",
+      "name": "Endor Celebration",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "137",
+      "id": "en_137_ewok-and-roll",
+      "name": "Ewok And Roll",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "138",
+      "id": "en_138_ewok-log-jam",
+      "name": "Ewok Log Jam",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "139",
+      "id": "en_139_ewok-rescue",
+      "name": "Ewok Rescue",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "140",
+      "id": "en_140_firefight",
+      "name": "Firefight",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "141",
+      "id": "en_141_fly-casual",
+      "name": "Fly Casual",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "142",
+      "id": "en_142_free-ride",
+      "name": "Free Ride",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "143",
+      "id": "en_143_get-alongside-that-one",
+      "name": "Get Alongside That One",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "144",
+      "id": "en_144_here-we-go-again",
+      "name": "Here We Go Again",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "145",
+      "id": "en_145_i-have-a-really-bad-feeling-about-this",
+      "name": "I Have A Really Bad Feeling About This",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "146",
+      "id": "en_146_i-know",
+      "name": "I Know",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "147",
+      "id": "en_147_lost-in-the-wilderness",
+      "name": "Lost In The Wilderness",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "148",
+      "id": "en_148_rapid-deployment",
+      "name": "Rapid Deployment",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "149",
+      "id": "en_149_sound-the-attack",
+      "name": "Sound The Attack",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "150",
+      "id": "en_150_surprise-counter-assault",
+      "name": "Surprise Counter Assault",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "151",
+      "id": "en_151_take-the-initiative",
+      "name": "Take The Initiative",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "152",
+      "id": "en_152_this-is-absolutely-right",
+      "name": "This Is Absolutely Right",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "153",
+      "id": "en_153_throw-me-another-charge",
+      "name": "Throw Me Another Charge",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "U"
+    },
+    {
+      "number": "154",
+      "id": "en_154_were-you-looking-for-me",
+      "name": "Were You Looking For Me?",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R"
+    },
+    {
+      "number": "155",
+      "id": "en_155_wookiee-guide",
+      "name": "Wookiee Guide",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "156",
+      "id": "en_156_yub-yub",
+      "name": "Yub Yub!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "C"
+    },
+    {
+      "number": "157",
+      "id": "en_157_chandrila",
+      "name": "Chandrila",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "158",
+      "id": "en_158_endor",
+      "name": "Endor",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "159",
+      "id": "en_159_endor-back-door",
+      "name": "Endor: Back Door",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "160",
+      "id": "en_160_endor-bunker",
+      "name": "Endor: Bunker",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "161",
+      "id": "en_161_endor-chief-chirpas-hut",
+      "name": "Endor: Chief Chirpa's Hut",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "162",
+      "id": "en_162_endor-dense-forest",
+      "name": "Endor: Dense Forest",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "163",
+      "id": "en_163_endor-ewok-village",
+      "name": "Endor: Ewok Village",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "164",
+      "id": "en_164_endor-great-forest",
+      "name": "Endor: Great Forest",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "165",
+      "id": "en_165_endor-hidden-forest-trail",
+      "name": "Endor: Hidden Forest Trail",
+      "side": "light",
+      "type": "Location",
+      "rarity": "U"
+    },
+    {
+      "number": "166",
+      "id": "en_166_endor-landing-platform",
+      "name": "Endor: Landing Platform (Docking Bay)",
+      "side": "light",
+      "type": "Location",
+      "rarity": "C"
+    },
+    {
+      "number": "167",
+      "id": "en_167_endor-rebel-landing-site",
+      "name": "Endor: Rebel Landing Site (Forest)",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R"
+    },
+    {
+      "number": "168",
+      "id": "en_168_rebel-strike-team",
+      "name": "Rebel Strike Team / Garrison Destroyed",
+      "side": "light",
+      "type": "Objective",
+      "rarity": "R"
+    },
+    {
+      "number": "169",
+      "id": "en_169_tydirium",
+      "name": "Tydirium",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R"
+    },
+    {
+      "number": "170",
+      "id": "en_170_yt-1300-transport",
+      "name": "YT-1300 Transport",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "C"
+    },
+    {
+      "number": "171",
+      "id": "en_171_chewies-at-st",
+      "name": "Chewie's AT-ST",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "R"
+    },
+    {
+      "number": "172",
+      "id": "en_172_ewok-glider",
+      "name": "Ewok Glider",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": "173",
+      "id": "en_173_speeder-bike",
+      "name": "Speeder Bike",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "C"
+    },
+    {
+      "number": "174",
+      "id": "en_174_a280-sharpshooter-rifle",
+      "name": "A280 Sharpshooter Rifle",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": "175",
+      "id": "en_175_blastech-e-11b-blaster-rifle",
+      "name": "Blastech E-11B Blaster Rifle",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "176",
+      "id": "en_176_chewbaccas-bowcaster",
+      "name": "Chewbacca's Bowcaster",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "R"
+    },
+    {
+      "number": "177",
+      "id": "en_177_ewok-bow",
+      "name": "Ewok Bow",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "178",
+      "id": "en_178_ewok-catapult",
+      "name": "Ewok Catapult",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "U"
+    },
+    {
+      "number": "179",
+      "id": "en_179_ewok-spear",
+      "name": "Ewok Spear",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "C"
+    },
+    {
+      "number": "180",
+      "id": "en_180_explosive-charge",
+      "name": "Explosive Charge",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "U"
+    }
+  ]
+}

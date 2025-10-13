@@ -8,6 +8,10 @@ import hothCardsData from './hoth-cards.json';
 import dagobahCardsData from './dagobah-cards.json';
 import jabbasPalaceCardsData from './jabbas-palace-cards.json';
 import cloudCityCardsData from './cloud-city-cards.json';
+import specialEditionCardsData from './special-edition-cards.json';
+import endorCardsData from './endor-cards.json';
+import deathStarIICardsData from './death-star-ii-cards.json';
+import tatooineCardsData from './tatooine-cards.json';
 
 // Combine all set data
 const allSetsData = [
@@ -17,6 +21,10 @@ const allSetsData = [
   cloudCityCardsData,
   dagobahCardsData,
   jabbasPalaceCardsData,
+  specialEditionCardsData,
+  endorCardsData,
+  deathStarIICardsData,
+  tatooineCardsData,
 ];
 
 // Export sets - split into Limited and Unlimited editions
