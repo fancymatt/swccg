@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import * as FileSystem from 'expo-file-system';
 
 // Database instances
 let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
@@ -83,6 +84,22 @@ export async function initializeDatabases(): Promise<void> {
 
     // Enable WAL mode for collection database too
     await collectionDb.execAsync('PRAGMA journal_mode=WAL');
+
+    // Ensure collection database is included in iOS iCloud backups
+    // FileSystem.documentDirectory is backed up by default on iOS
+    // This explicitly ensures the database files are not excluded from backup
+    try {
+      const dbPath = `${FileSystem.documentDirectory}SQLite/collection.db`;
+      await FileSystem.getInfoAsync(dbPath).then(async (info) => {
+        if (info.exists) {
+          // Ensure NOT skipped from backup (false = include in backup)
+          await FileSystem.setIsSkippedBackupAsync(dbPath, false);
+        }
+      });
+    } catch (error) {
+      // Non-fatal - log and continue
+      console.warn('Could not set backup flag for collection database:', error);
+    }
 
     console.log('Databases initialized successfully with WAL mode');
   } catch (error) {
