@@ -381,6 +381,105 @@ export async function getTotalCardsOwned(): Promise<number> {
 }
 
 /**
+ * Helper function to normalize rarity codes to unified categories
+ */
+function normalizeRarity(rarity: string | null | undefined): string {
+  if (!rarity) return 'Other';
+
+  const rarityUpper = rarity.toUpperCase();
+
+  // Common: C1, C2, C3, etc.
+  if (rarityUpper.startsWith('C')) return 'Common';
+
+  // Uncommon: U1, U2, etc.
+  if (rarityUpper.startsWith('U')) return 'Uncommon';
+
+  // Rare: R1, R2, etc.
+  if (rarityUpper.startsWith('R')) return 'Rare';
+
+  // Everything else (foils, promos, etc.)
+  return 'Other';
+}
+
+export interface SetCompletionStats {
+  total: { owned: number; total: number };
+  common: { owned: number; total: number };
+  uncommon: { owned: number; total: number };
+  rare: { owned: number; total: number };
+  other: { owned: number; total: number };
+}
+
+/**
+ * Get set completion statistics broken down by rarity
+ */
+export async function getSetCompletionStats(setId: string): Promise<SetCompletionStats> {
+  if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
+  if (!collectionDb) throw new Error('Collection database not initialized');
+
+  try {
+    // Get all cards in the set with their rarity
+    const cards = await encyclopediaDb.getAllAsync<{ card_id: string; rarity: string | null }>(`
+      SELECT sc.card_id, sc.rarity
+      FROM set_cards sc
+      WHERE sc.set_id = ?
+    `, [setId]);
+
+    // Initialize stats
+    const stats: SetCompletionStats = {
+      total: { owned: 0, total: cards.length },
+      common: { owned: 0, total: 0 },
+      uncommon: { owned: 0, total: 0 },
+      rare: { owned: 0, total: 0 },
+      other: { owned: 0, total: 0 },
+    };
+
+    // Process each card
+    for (const card of cards) {
+      const normalizedRarity = normalizeRarity(card.rarity);
+
+      // Increment total count for this rarity
+      if (normalizedRarity === 'Common') stats.common.total++;
+      else if (normalizedRarity === 'Uncommon') stats.uncommon.total++;
+      else if (normalizedRarity === 'Rare') stats.rare.total++;
+      else stats.other.total++;
+
+      // Check if any variant of this card is owned
+      const variants = await encyclopediaDb.getAllAsync<{ variant_id: string }>(`
+        SELECT v.id as variant_id
+        FROM variants v
+        WHERE v.card_id = ?
+      `, [card.card_id]);
+
+      let isOwned = false;
+      for (const variant of variants) {
+        const result = await collectionDb.getFirstAsync<{ quantity: number }>(
+          'SELECT quantity FROM collection WHERE variant_id = ? AND quantity > 0',
+          [variant.variant_id]
+        );
+        if (result && result.quantity > 0) {
+          isOwned = true;
+          break;
+        }
+      }
+
+      // Increment owned count if card is owned
+      if (isOwned) {
+        stats.total.owned++;
+        if (normalizedRarity === 'Common') stats.common.owned++;
+        else if (normalizedRarity === 'Uncommon') stats.uncommon.owned++;
+        else if (normalizedRarity === 'Rare') stats.rare.owned++;
+        else stats.other.owned++;
+      }
+    }
+
+    return stats;
+  } catch (error) {
+    console.error('Failed to get set completion stats:', error);
+    throw error;
+  }
+}
+
+/**
  * Close both databases
  */
 export async function closeDatabases(): Promise<void> {

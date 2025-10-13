@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
-import { getAllSets } from '../services/database';
+import { getAllSets, getSetCompletionStats, SetCompletionStats } from '../services/database';
+import { ProgressBar } from '../components/ProgressBar';
 
 interface Set {
   id: string;
@@ -19,6 +20,7 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
   const { colors } = useTheme();
   const [sets, setSets] = useState<Set[]>([]);
   const [loading, setLoading] = useState(true);
+  const [setStats, setSetStats] = useState<Record<string, SetCompletionStats>>({});
 
   useEffect(() => {
     loadSets();
@@ -28,6 +30,18 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
     try {
       const setsData = await getAllSets();
       setSets(setsData as Set[]);
+
+      // Load stats for each set
+      const statsMap: Record<string, SetCompletionStats> = {};
+      for (const set of setsData) {
+        try {
+          const stats = await getSetCompletionStats(set.id);
+          statsMap[set.id] = stats;
+        } catch (error) {
+          console.error(`Failed to load stats for set ${set.id}:`, error);
+        }
+      }
+      setSetStats(statsMap);
     } catch (error) {
       console.error('Failed to load sets:', error);
     } finally {
@@ -106,6 +120,12 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
       fontSize: 14,
       color: colors.textSecondary,
     },
+    progressSection: {
+      marginTop: 16,
+      paddingTop: 12,
+      borderTopWidth: 1,
+      borderTopColor: colors.border,
+    },
   });
 
   if (loading) {
@@ -136,26 +156,40 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
           style={styles.scrollView}
           contentContainerStyle={styles.scrollContent}
         >
-          {sets.map((set) => (
-            <TouchableOpacity
-              key={set.id}
-              style={styles.setCard}
-              onPress={() => handleSetPress(set)}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.setName}>{set.name}</Text>
-              <View style={styles.setDetails}>
-                {set.abbreviation && (
-                  <Text style={styles.setAbbr}>{set.abbreviation}</Text>
+          {sets.map((set) => {
+            const stats = setStats[set.id];
+            return (
+              <TouchableOpacity
+                key={set.id}
+                style={styles.setCard}
+                onPress={() => handleSetPress(set)}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.setName}>{set.name}</Text>
+                <View style={styles.setDetails}>
+                  {set.abbreviation && (
+                    <Text style={styles.setAbbr}>{set.abbreviation}</Text>
+                  )}
+                  {set.release_date && (
+                    <Text style={styles.setDate}>
+                      {new Date(set.release_date).getFullYear()}
+                    </Text>
+                  )}
+                </View>
+
+                {stats && (
+                  <View style={styles.progressSection}>
+                    <ProgressBar
+                      label="Total"
+                      owned={stats.total.owned}
+                      total={stats.total.total}
+                      color={colors.accent}
+                    />
+                  </View>
                 )}
-                {set.release_date && (
-                  <Text style={styles.setDate}>
-                    {new Date(set.release_date).getFullYear()}
-                  </Text>
-                )}
-              </View>
-            </TouchableOpacity>
-          ))}
+              </TouchableOpacity>
+            );
+          })}
         </ScrollView>
       </View>
     </SafeAreaView>

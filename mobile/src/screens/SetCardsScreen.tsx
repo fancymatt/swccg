@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-nativ
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardListItem } from '../components/CardListItem';
-import { getCardsInSet, updateVariantQuantity } from '../services/database';
+import { ProgressBar } from '../components/ProgressBar';
+import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, SetCompletionStats } from '../services/database';
 import type { Card } from '../types';
 
 interface SetCardsScreenProps {
@@ -16,11 +17,16 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   const { colors } = useTheme();
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState<SetCompletionStats | null>(null);
 
   const loadCards = useCallback(async () => {
     try {
       const cardsData = await getCardsInSet(setId);
       setCards(cardsData as Card[]);
+
+      // Load completion stats
+      const completionStats = await getSetCompletionStats(setId);
+      setStats(completionStats);
     } catch (error) {
       console.error('Failed to load cards:', error);
     } finally {
@@ -66,6 +72,10 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
 
       // Then update database in the background
       await updateVariantQuantity(variantId, newQuantity);
+
+      // Reload stats to update progress bars
+      const completionStats = await getSetCompletionStats(setId);
+      setStats(completionStats);
     } catch (error) {
       console.error('Failed to update variant quantity:', error);
 
@@ -86,16 +96,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
         })
       );
     }
-  }, []);
-
-  const renderCard = useCallback(({ item }: { item: Card }) => (
-    <CardListItem
-      card={item}
-      onVariantQuantityChange={handleVariantQuantityChange}
-    />
-  ), [handleVariantQuantityChange]);
-
-  const keyExtractor = useCallback((item: Card) => item.id, []);
+  }, [setId]);
 
   const styles = useMemo(() => StyleSheet.create({
     safeArea: {
@@ -113,7 +114,82 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       justifyContent: 'center',
       alignItems: 'center',
     },
+    summarySection: {
+      backgroundColor: colors.bg,
+      borderRadius: 12,
+      padding: 16,
+      marginBottom: 16,
+      shadowColor: colors.shadowColor,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 3,
+    },
+    summaryTitle: {
+      fontSize: 16,
+      fontWeight: '600',
+      marginBottom: 12,
+    },
   }), [colors]);
+
+  const renderCard = useCallback(({ item }: { item: Card }) => (
+    <CardListItem
+      card={item}
+      onVariantQuantityChange={handleVariantQuantityChange}
+    />
+  ), [handleVariantQuantityChange]);
+
+  const renderHeader = useCallback(() => {
+    if (!stats) return null;
+
+    return (
+      <View style={styles.summarySection}>
+        <Text style={[styles.summaryTitle, { color: colors.fg }]}>
+          Collection Progress
+        </Text>
+        <ProgressBar
+          label="Total"
+          owned={stats.total.owned}
+          total={stats.total.total}
+          color={colors.accent}
+        />
+        {stats.common.total > 0 && (
+          <ProgressBar
+            label="Common"
+            owned={stats.common.owned}
+            total={stats.common.total}
+            color="#10b981"
+          />
+        )}
+        {stats.uncommon.total > 0 && (
+          <ProgressBar
+            label="Uncommon"
+            owned={stats.uncommon.owned}
+            total={stats.uncommon.total}
+            color="#3b82f6"
+          />
+        )}
+        {stats.rare.total > 0 && (
+          <ProgressBar
+            label="Rare"
+            owned={stats.rare.owned}
+            total={stats.rare.total}
+            color="#f59e0b"
+          />
+        )}
+        {stats.other.total > 0 && (
+          <ProgressBar
+            label="Other"
+            owned={stats.other.owned}
+            total={stats.other.total}
+            color="#8b5cf6"
+          />
+        )}
+      </View>
+    );
+  }, [stats, colors, styles]);
+
+  const keyExtractor = useCallback((item: Card) => item.id, []);
 
   if (loading) {
     return (
@@ -134,6 +210,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
           data={cards}
           renderItem={renderCard}
           keyExtractor={keyExtractor}
+          ListHeaderComponent={renderHeader}
           contentContainerStyle={styles.listContent}
           removeClippedSubviews={true}
           maxToRenderPerBatch={10}

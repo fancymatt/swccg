@@ -19,6 +19,29 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
     return side === 'light' ? colors.lightSide : colors.darkSide;
   };
 
+  const normalizeRarity = (rarity: string | undefined): string => {
+    if (!rarity) return 'Unknown';
+    const rarityUpper = rarity.toUpperCase();
+    if (rarityUpper.startsWith('C')) return 'Common';
+    if (rarityUpper.startsWith('U')) return 'Uncommon';
+    if (rarityUpper.startsWith('R')) return 'Rare';
+    return 'Other';
+  };
+
+  const getRarityColor = (rarity: string | undefined): string => {
+    const normalized = normalizeRarity(rarity);
+    switch (normalized) {
+      case 'Common':
+        return '#10b981';
+      case 'Uncommon':
+        return '#3b82f6';
+      case 'Rare':
+        return '#f59e0b';
+      default:
+        return '#8b5cf6';
+    }
+  };
+
   const totalQuantity = useMemo(
     () => card.variants.reduce((sum, v) => sum + v.quantity, 0),
     [card.variants]
@@ -77,9 +100,9 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       color: colors.buttonDisabled,
       marginHorizontal: 6,
     },
-    setName: {
+    rarity: {
       fontSize: 14,
-      color: colors.textSecondary,
+      fontWeight: '600',
     },
     totalOwned: {
       fontSize: 14,
@@ -101,7 +124,9 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
         <View style={styles.metaRow}>
           <Text style={styles.cardNumber}>#{card.cardNumber}</Text>
           <Text style={styles.separator}>•</Text>
-          <Text style={styles.setName}>{card.setName}</Text>
+          <Text style={[styles.rarity, { color: getRarityColor(card.rarity) }]}>
+            {normalizeRarity(card.rarity)}
+          </Text>
           {totalQuantity > 0 && (
             <>
               <Text style={styles.separator}>•</Text>
