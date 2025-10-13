@@ -100,6 +100,14 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       color: colors.buttonDisabled,
       marginHorizontal: 6,
     },
+    sideText: {
+      fontSize: 14,
+      fontWeight: '600',
+    },
+    cardType: {
+      fontSize: 14,
+      color: colors.textSecondary,
+    },
     rarity: {
       fontSize: 14,
       fontWeight: '600',
@@ -123,6 +131,12 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
         </View>
         <View style={styles.metaRow}>
           <Text style={styles.cardNumber}>#{card.cardNumber}</Text>
+          <Text style={styles.separator}>•</Text>
+          <Text style={[styles.sideText, { color: getSideColor(card.side) }]}>
+            {card.side === 'light' ? 'Light' : 'Dark'}
+          </Text>
+          <Text style={styles.separator}>•</Text>
+          <Text style={styles.cardType}>{card.type}</Text>
           <Text style={styles.separator}>•</Text>
           <Text style={[styles.rarity, { color: getRarityColor(card.rarity) }]}>
             {normalizeRarity(card.rarity)}

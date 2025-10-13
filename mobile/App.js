@@ -36,11 +36,14 @@ export default function App() {
         setLoadingMessage('Initializing database...');
         await initializeDatabases();
 
-        setLoadingMessage('Loading card data...');
-        const didSeed = await seedEncyclopedia(SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS);
+        const status = await seedEncyclopedia(SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS);
 
-        if (!didSeed) {
-          setLoadingMessage('Database ready!');
+        if (status === 'first-time') {
+          setLoadingMessage('Setting up card encyclopedia...');
+        } else if (status === 'migration') {
+          setLoadingMessage('Migrating card data...');
+        } else {
+          setLoadingMessage('Loading collection...');
         }
 
         setDbInitialized(true);

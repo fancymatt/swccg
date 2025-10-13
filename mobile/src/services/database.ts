@@ -5,7 +5,8 @@ let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
 let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
-const DB_VERSION = 1;
+// Increment this to trigger a reseed of the encyclopedia database
+const DB_VERSION = 3;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -84,11 +85,13 @@ export async function initializeDatabases(): Promise<void> {
   }
 }
 
+export type DatabaseStatus = 'first-time' | 'migration' | 'up-to-date';
+
 /**
- * Check if database needs to be seeded
+ * Check database status
  */
-async function needsSeeding(): Promise<boolean> {
-  if (!encyclopediaDb) return true;
+async function checkDatabaseStatus(): Promise<DatabaseStatus> {
+  if (!encyclopediaDb) return 'first-time';
 
   try {
     const result = await encyclopediaDb.getFirstAsync<{ value: string }>(
@@ -96,31 +99,43 @@ async function needsSeeding(): Promise<boolean> {
       ['db_version']
     );
 
-    return !result || parseInt(result.value) < DB_VERSION;
+    if (!result) return 'first-time';
+
+    const currentVersion = parseInt(result.value);
+    if (currentVersion < DB_VERSION) return 'migration';
+
+    return 'up-to-date';
   } catch {
-    return true;
+    return 'first-time';
   }
 }
 
 /**
  * Seed the encyclopedia database with initial data (only if needed)
+ * Returns the database status: 'first-time', 'migration', or 'up-to-date'
  */
 export async function seedEncyclopedia(
   sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string }>,
   cards: Array<{ id: string; name: string; side: string; type: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
   variants: Array<{ id: string; card_id: string; name: string; code: string }>
-): Promise<boolean> {
+): Promise<DatabaseStatus> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
   try {
-    // Check if we need to seed
-    if (!(await needsSeeding())) {
-      console.log('Database already seeded, skipping');
-      return false;
+    // Check database status
+    const status = await checkDatabaseStatus();
+
+    if (status === 'up-to-date') {
+      console.log('Database is up to date (version ' + DB_VERSION + '), no migration needed');
+      return status;
     }
 
-    console.log('Seeding database for the first time...');
+    if (status === 'first-time') {
+      console.log('Setting up card encyclopedia for the first time...');
+    } else if (status === 'migration') {
+      console.log('Migrating card encyclopedia to version ' + DB_VERSION + '...');
+    }
 
     // Clear existing data
     await encyclopediaDb.execAsync('DELETE FROM variants; DELETE FROM set_cards; DELETE FROM cards; DELETE FROM sets;');
@@ -163,8 +178,13 @@ export async function seedEncyclopedia(
       ['db_version', DB_VERSION.toString()]
     );
 
-    console.log('Encyclopedia seeded successfully');
-    return true;
+    if (status === 'first-time') {
+      console.log('Encyclopedia setup complete!');
+    } else if (status === 'migration') {
+      console.log('Encyclopedia migration complete!');
+    }
+
+    return status;
   } catch (error) {
     console.error('Failed to seed encyclopedia:', error);
     throw error;
@@ -197,6 +217,7 @@ export async function getAllSets(): Promise<any[]> {
 
 /**
  * Get all cards in a specific set with their variants and collection quantities
+ * For Limited/Unlimited sets, only show the matching variant
  */
 export async function getCardsInSet(setId: string): Promise<any[]> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
@@ -220,6 +241,10 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
       ORDER BY CAST(sc.card_number AS INTEGER)
     `, [setId]);
 
+    // Determine which variant suffix to filter by based on set ID
+    const variantSuffix = setId.endsWith('-limited') ? '_limited' :
+                         setId.endsWith('-unlimited') ? '_unlimited' : null;
+
     // For each card, get its variants with quantities
     const cardsWithVariants = await Promise.all(
       cards.map(async (card: any) => {
@@ -233,9 +258,14 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
           ORDER BY v.code
         `, [card.card_id]);
 
+        // Filter variants based on set type
+        const filteredVariants = variantSuffix
+          ? variants.filter((v: any) => v.variant_id.endsWith(variantSuffix))
+          : variants;
+
         // Get quantities for each variant
         const variantsWithQuantity = await Promise.all(
-          variants.map(async (variant: any) => {
+          filteredVariants.map(async (variant: any) => {
             const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
               'SELECT quantity FROM collection WHERE variant_id = ?',
               [variant.variant_id]
@@ -411,6 +441,7 @@ export interface SetCompletionStats {
 
 /**
  * Get set completion statistics broken down by rarity
+ * For Limited/Unlimited sets, only count the matching variant
  */
 export async function getSetCompletionStats(setId: string): Promise<SetCompletionStats> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
@@ -423,6 +454,10 @@ export async function getSetCompletionStats(setId: string): Promise<SetCompletio
       FROM set_cards sc
       WHERE sc.set_id = ?
     `, [setId]);
+
+    // Determine which variant suffix to filter by based on set ID
+    const variantSuffix = setId.endsWith('-limited') ? '_limited' :
+                         setId.endsWith('-unlimited') ? '_unlimited' : null;
 
     // Initialize stats
     const stats: SetCompletionStats = {
@@ -443,15 +478,20 @@ export async function getSetCompletionStats(setId: string): Promise<SetCompletio
       else if (normalizedRarity === 'Rare') stats.rare.total++;
       else stats.other.total++;
 
-      // Check if any variant of this card is owned
+      // Check if the appropriate variant of this card is owned
       const variants = await encyclopediaDb.getAllAsync<{ variant_id: string }>(`
         SELECT v.id as variant_id
         FROM variants v
         WHERE v.card_id = ?
       `, [card.card_id]);
 
+      // Filter variants based on set type
+      const filteredVariants = variantSuffix
+        ? variants.filter((v) => v.variant_id.endsWith(variantSuffix))
+        : variants;
+
       let isOwned = false;
-      for (const variant of variants) {
+      for (const variant of filteredVariants) {
         const result = await collectionDb.getFirstAsync<{ quantity: number }>(
           'SELECT quantity FROM collection WHERE variant_id = ? AND quantity > 0',
           [variant.variant_id]
