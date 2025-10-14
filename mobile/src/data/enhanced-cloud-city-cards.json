@@ -1,0 +1,20 @@
+{
+  "set": {
+    "id": "enhanced-cloud-city",
+    "name": "Enhanced Cloud City",
+    "abbreviation": "ECC",
+    "releaseDate": "1999-12-01"
+  },
+  "cards": [
+    {"number": "1", "id": "ecc_001_4-lom-with-concussion-rifle", "name": "4-LOM With Concussion Rifle", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "ecc_002_ig-88-with-riot-gun", "name": "IG-88 With Riot Gun", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "3", "id": "ecc_003_crush-the-rebellion", "name": "Crush The Rebellion", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "4", "id": "ecc_004_any-methods-necessary", "name": "Any Methods Necessary", "side": "dark", "type": "Interrupt", "rarity": "P"},
+    {"number": "5", "id": "ecc_005_boba-fett-in-slave-i", "name": "Boba Fett In Slave 1", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "6", "id": "ecc_006_dengar-in-punishing-one", "name": "Dengar In Punishing One", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "7", "id": "ecc_007_chewie-with-blaster-rifle", "name": "Chewie With Blaster Rifle", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "8", "id": "ecc_008_lando-with-blaster-pistol", "name": "Lando With Blaster Pistol", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "9", "id": "ecc_009_lando-in-millennium-falcon", "name": "Lando In Millennium Falcon", "side": "light", "type": "Starship", "rarity": "P"},
+    {"number": "10", "id": "ecc_010_z-95-bespin-defense-fighter", "name": "Z-95 Bespin Defense Fighter", "side": "light", "type": "Starship", "rarity": "P"}
+  ]
+}

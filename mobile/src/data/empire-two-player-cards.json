@@ -1,0 +1,17 @@
+{
+  "set": {
+    "id": "empire-two-player",
+    "name": "Empire Strikes Back Intro 2-Player",
+    "abbreviation": "E2P",
+    "releaseDate": "1997-03-01"
+  },
+  "cards": [
+    {"number": "1", "id": "e2p_001_veers", "name": "Veers", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "e2p_002_walker-garrison", "name": "Walker Garrison", "side": "dark", "type": "Interrupt", "rarity": "P"},
+    {"number": "3", "id": "e2p_003_hoth-mountains", "name": "Hoth: Mountains (6th Marker)", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "4", "id": "e2p_004_imperial-walker", "name": "Imperial Walker", "side": "dark", "type": "Vehicle", "rarity": "P"},
+    {"number": "5", "id": "e2p_005_chewie", "name": "Chewie", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "6", "id": "e2p_006_lone-rogue", "name": "Lone Rogue", "side": "light", "type": "Interrupt", "rarity": "P"},
+    {"number": "7", "id": "e2p_007_rebel-snowspeeder", "name": "Rebel Snowspeeder", "side": "light", "type": "Vehicle", "rarity": "P"}
+  ]
+}

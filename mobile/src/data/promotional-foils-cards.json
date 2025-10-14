@@ -1,0 +1,234 @@
+{
+  "set": {
+    "id": "promotional-foils",
+    "name": "Promotional Foils",
+    "abbreviation": "PF",
+    "releaseDate": null
+  },
+  "cards": [
+    {
+      "number": "T1",
+      "id": "pf_t1_darth-maul-with-lightsaber",
+      "name": "Darth Maul With Lightsaber",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "T2",
+      "id": "pf_t2_battle-order",
+      "name": "Battle Order",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "T3",
+      "id": "pf_t3_imperial-arrest-order",
+      "name": "Imperial Arrest Order",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "T4",
+      "id": "pf_t4_imperial-decree",
+      "name": "Imperial Decree",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "T5",
+      "id": "pf_t5_alter",
+      "name": "Alter",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T6",
+      "id": "pf_t6_dark-maneuvers",
+      "name": "Dark Maneuvers",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T7",
+      "id": "pf_t7_ghhhk",
+      "name": "Ghhhk",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T8",
+      "id": "pf_t8_imperial-barrier",
+      "name": "Imperial Barrier",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T9",
+      "id": "pf_t9_masterful-move",
+      "name": "Masterful Move",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T10",
+      "id": "pf_t10_monnnok",
+      "name": "Monnnok",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T11",
+      "id": "pf_t11_sense",
+      "name": "Sense",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T12",
+      "id": "pf_t12_twilek-advisor",
+      "name": "Twi'lek Advisor",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T13",
+      "id": "pf_t13_you-are-beaten",
+      "name": "You Are Beaten",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T14",
+      "id": "pf_t14_imperial-class-star-destroyer",
+      "name": "Imperial-class Star Destroyer",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "P"
+    },
+    {
+      "number": "T15",
+      "id": "pf_t15_qui-gon-jinn-with-lightsaber",
+      "name": "Qui-Gon Jinn With Lightsaber",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "T16",
+      "id": "pf_t16_battle-plan",
+      "name": "Battle Plan",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "T17",
+      "id": "pf_t17_insurrection",
+      "name": "Insurrection",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "T18",
+      "id": "pf_t18_a-few-maneuvers",
+      "name": "A Few Maneuvers",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T19",
+      "id": "pf_t19_alter",
+      "name": "Alter",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T20",
+      "id": "pf_t20_clash-of-sabers",
+      "name": "Clash of Sabers",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T21",
+      "id": "pf_t21_grimtaash",
+      "name": "Grimtaash",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T22",
+      "id": "pf_t22_houjix",
+      "name": "Houjix",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T23",
+      "id": "pf_t23_it-could-be-worse",
+      "name": "It Could Be Worse",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T24",
+      "id": "pf_t24_rebel-barrier",
+      "name": "Rebel Barrier",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T25",
+      "id": "pf_t25_sense",
+      "name": "Sense",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T26",
+      "id": "pf_t26_the-signal",
+      "name": "The Signal",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "T27",
+      "id": "pf_t27_corellian-corvette",
+      "name": "Corellian Corvette",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "P"
+    },
+    {
+      "number": "T28",
+      "id": "pf_t28_snowspeeder",
+      "name": "Snowspeeder",
+      "side": "light",
+      "type": "Vehicle",
+      "rarity": "P"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set": {
+    "id": "third-anthology",
+    "name": "Third Anthology",
+    "abbreviation": "3A",
+    "releaseDate": "2000-06-01"
+  },
+  "cards": [
+    {"number": "1", "id": "3a_001_prisoner-2187", "name": "Prisoner 2187", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "3a_002_a-new-secret-base", "name": "A New Secret Base", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "3", "id": "3a_003_echo-base-garrison", "name": "Echo Base Garrison", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "4", "id": "3a_004_artoo-detoo-in-red-5", "name": "Artoo-Detoo In Red 5", "side": "light", "type": "Starship", "rarity": "P"}
+  ]
+}

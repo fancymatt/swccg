@@ -1,0 +1,20 @@
+{
+  "set": {
+    "id": "enhanced-jabbas-palace",
+    "name": "Enhanced Jabba's Palace",
+    "abbreviation": "EJP",
+    "releaseDate": "2000-01-01"
+  },
+  "cards": [
+    {"number": "1", "id": "ejp_001_bossk-with-mortar-gun", "name": "Bossk With Mortar Gun", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "ejp_002_dengar-with-blaster-carbine", "name": "Dengar With Blaster Carbine", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "3", "id": "ejp_003_jodo-kast", "name": "Jodo Kast", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "4", "id": "ejp_004_mara-jade-the-emperors-hand", "name": "Mara Jade, The Emperor's Hand", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "5", "id": "ejp_005_ig-88-in-ig-2000", "name": "IG-88 In IG-2000", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "6", "id": "ejp_006_zuckuss-in-mist-hunter", "name": "Zuckuss In Mist Hunter", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "7", "id": "ejp_007_maras-jades-lightsaber", "name": "Mara Jade's Lightsaber", "side": "dark", "type": "Weapon", "rarity": "P"},
+    {"number": "8", "id": "ejp_008_boushh", "name": "Boushh", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "9", "id": "ejp_009_master-luke", "name": "Master Luke", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "10", "id": "ejp_010_see-threepio", "name": "See-Threepio", "side": "light", "type": "Character", "rarity": "P"}
+  ]
+}

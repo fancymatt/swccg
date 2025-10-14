@@ -1,0 +1,16 @@
+{
+  "set": {
+    "id": "premiere-two-player",
+    "name": "Premiere Introductory 2-Player Game",
+    "abbreviation": "P2P",
+    "releaseDate": "1996-02-01"
+  },
+  "cards": [
+    {"number": "1", "id": "p2p_001_vader", "name": "Vader", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "p2p_002_vaders-obsession", "name": "Vader's Obsession", "side": "dark", "type": "Interrupt", "rarity": "P"},
+    {"number": "3", "id": "p2p_003_death-star-docking-control-room-327", "name": "Death Star: Docking Control Room 327", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "4", "id": "p2p_004_luke", "name": "Luke", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "5", "id": "p2p_005_run-luke-run", "name": "Run Luke, Run!", "side": "light", "type": "Interrupt", "rarity": "P"},
+    {"number": "6", "id": "p2p_006_death-star-level-6-core-shaft-corridor", "name": "Death Star: Level 6 Core Shaft Corridor", "side": "light", "type": "Location", "rarity": "P"}
+  ]
+}

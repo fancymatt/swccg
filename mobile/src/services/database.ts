@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 4;
+const DB_VERSION = 7;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -91,7 +91,7 @@ export async function initializeDatabases(): Promise<void> {
     try {
       const dbPath = `${FileSystem.documentDirectory}SQLite/collection.db`;
       await FileSystem.getInfoAsync(dbPath).then(async (info) => {
-        if (info.exists) {
+        if (info.exists && FileSystem.setIsSkippedBackupAsync) {
           // Ensure NOT skipped from backup (false = include in backup)
           await FileSystem.setIsSkippedBackupAsync(dbPath, false);
         }

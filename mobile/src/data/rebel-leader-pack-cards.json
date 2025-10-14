@@ -1,0 +1,12 @@
+{
+  "set": {
+    "id": "rebel-leader-pack",
+    "name": "Rebel Leader Pack",
+    "abbreviation": "RL",
+    "releaseDate": "1996-04-01"
+  },
+  "cards": [
+    {"number": "1", "id": "rl_001_gold-leader-in-gold-1", "name": "Gold Leader In Gold 1", "side": "light", "type": "Starship", "rarity": "P"},
+    {"number": "2", "id": "rl_002_red-leader-in-red-1", "name": "Red Leader In Red 1", "side": "light", "type": "Starship", "rarity": "P"}
+  ]
+}

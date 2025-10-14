@@ -1,0 +1,16 @@
+{
+  "set": {
+    "id": "first-anthology",
+    "name": "First Anthology",
+    "abbreviation": "1A",
+    "releaseDate": "1997-05-01"
+  },
+  "cards": [
+    {"number": "1", "id": "1a_001_boba-fett", "name": "Boba Fett", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "1a_002_jabba-influence", "name": "Jabba's Influence", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "3", "id": "1a_003_death-star-assault-squadron", "name": "Death Star Assault Squadron", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "4", "id": "1a_004_commander-wedge-antilles", "name": "Commander Wedge Antilles", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "5", "id": "1a_005_hit-and-run", "name": "Hit And Run", "side": "light", "type": "Interrupt", "rarity": "P"},
+    {"number": "6", "id": "1a_006_x-wing-assault-squadron", "name": "X-wing Assault Squadron", "side": "light", "type": "Starship", "rarity": "P"}
+  ]
+}

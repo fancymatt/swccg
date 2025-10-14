@@ -1,0 +1,28 @@
+{
+  "set": {
+    "id": "tournament-sealed-deck",
+    "name": "Official Tournament Sealed Deck",
+    "abbreviation": "OTSD",
+    "releaseDate": "1998-05-01"
+  },
+  "cards": [
+    {"number": "1", "id": "otsd_001_chall-bekan", "name": "Chall Bekan", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "otsd_002_stormtrooper-cadet", "name": "Stormtrooper Cadet", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "3", "id": "otsd_003_forced-servitude", "name": "Forced Servitude", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "4", "id": "otsd_004_tarkins-orders", "name": "Tarkin's Orders", "side": "dark", "type": "Interrupt", "rarity": "P"},
+    {"number": "5", "id": "otsd_005_corulag", "name": "Corulag", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "6", "id": "otsd_006_tatooine-tusken-canyon", "name": "Tatooine: Tusken Canyon", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "7", "id": "otsd_007_black-squadron-tie", "name": "Black Squadron TIE", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "8", "id": "otsd_008_dreadnaught-class-heavy-cruiser", "name": "Dreadnaught-Class Heavy Cruiser", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "9", "id": "otsd_009_obsidian-squadron-tie", "name": "Obsidian Squadron TIE", "side": "dark", "type": "Starship", "rarity": "P"},
+    {"number": "10", "id": "otsd_010_arleil-schous", "name": "Arleil Schous", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "11", "id": "otsd_011_rebel-trooper-recruit", "name": "Rebel Trooper Recruit", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "12", "id": "otsd_012_faithful-service", "name": "Faithful Service", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "13", "id": "otsd_013_its-a-hit", "name": "It's A Hit!", "side": "light", "type": "Interrupt", "rarity": "P"},
+    {"number": "14", "id": "otsd_014_corulag", "name": "Corulag", "side": "light", "type": "Location", "rarity": "P"},
+    {"number": "15", "id": "otsd_015_tatooine-jundland-wastes", "name": "Tatooine: Jundland Wastes", "side": "light", "type": "Location", "rarity": "P"},
+    {"number": "16", "id": "otsd_016_gold-squadron-y-wing", "name": "Gold Squadron Y-wing", "side": "light", "type": "Starship", "rarity": "P"},
+    {"number": "17", "id": "otsd_017_red-squadron-x-wing", "name": "Red Squadron X-wing", "side": "light", "type": "Starship", "rarity": "P"},
+    {"number": "18", "id": "otsd_018_z-95-headhunter", "name": "Z-95 Headhunter", "side": "light", "type": "Starship", "rarity": "P"}
+  ]
+}

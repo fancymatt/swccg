@@ -1,0 +1,16 @@
+{
+  "set": {
+    "id": "enhanced-premiere",
+    "name": "Enhanced Premiere",
+    "abbreviation": "EPP",
+    "releaseDate": "1998-11-01"
+  },
+  "cards": [
+    {"number": "1", "id": "epp_001_boba-fett-with-blaster-rifle", "name": "Boba Fett with Blaster Rifle", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "epp_002_darth-vader-with-lightsaber", "name": "Darth Vader with Lightsaber", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "3", "id": "epp_003_han-with-heavy-blaster-pistol", "name": "Han with Heavy Blaster Pistol", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "4", "id": "epp_004_leia-with-blaster-rifle", "name": "Leia with Blaster Rifle", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "5", "id": "epp_005_luke-with-lightsaber", "name": "Luke with Lightsaber", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "6", "id": "epp_006_obi-wan-with-lightsaber", "name": "Obi-Wan with Lightsaber", "side": "light", "type": "Character", "rarity": "P"}
+  ]
+}

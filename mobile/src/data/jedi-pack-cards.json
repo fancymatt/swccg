@@ -1,0 +1,20 @@
+{
+  "set": {
+    "id": "jedi-pack",
+    "name": "Jedi Pack",
+    "abbreviation": "JP",
+    "releaseDate": "1996-04-01"
+  },
+  "cards": [
+    {"number": "1", "id": "jp_001_motti", "name": "Motti", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "jp_002_tarkin", "name": "Tarkin", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "3", "id": "jp_003_dark-forces", "name": "Dark Forces", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "4", "id": "jp_004_gravity-shadow", "name": "Gravity Shadow", "side": "dark", "type": "Interrupt", "rarity": "P"},
+    {"number": "5", "id": "jp_005_eriadu", "name": "Eriadu", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "6", "id": "jp_006_han", "name": "Han", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "7", "id": "jp_007_leia", "name": "Leia", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "8", "id": "jp_008_tedn-dahai", "name": "Tedn Dahai", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "9", "id": "jp_009_for-luck", "name": "For Luck", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "10", "id": "jp_010_lukes-t-16-skyhopper", "name": "Luke's T-16 Skyhopper", "side": "light", "type": "Vehicle", "rarity": "P"}
+  ]
+}

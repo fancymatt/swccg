@@ -12,6 +12,24 @@ import specialEditionCardsData from './special-edition-cards.json';
 import endorCardsData from './endor-cards.json';
 import deathStarIICardsData from './death-star-ii-cards.json';
 import tatooineCardsData from './tatooine-cards.json';
+import coruscantCardsData from './coruscant-cards.json';
+import theedPalaceCardsData from './theed-palace-cards.json';
+import reflectionsICardsData from './reflections-i-cards.json';
+import reflectionsIICardsData from './reflections-ii-cards.json';
+import reflectionsIIICardsData from './reflections-iii-cards.json';
+import enhancedPremiereCardsData from './enhanced-premiere-cards.json';
+import enhancedCloudCityCardsData from './enhanced-cloud-city-cards.json';
+import enhancedJabbasPalaceCardsData from './enhanced-jabbas-palace-cards.json';
+import firstAnthologyCardsData from './first-anthology-cards.json';
+import secondAnthologyCardsData from './second-anthology-cards.json';
+import thirdAnthologyCardsData from './third-anthology-cards.json';
+import premiereTwoPlayerCardsData from './premiere-two-player-cards.json';
+import empireTwoPlayerCardsData from './empire-two-player-cards.json';
+import tournamentSealedDeckCardsData from './tournament-sealed-deck-cards.json';
+import jabbasPalaceSealedDeckCardsData from './jabbas-palace-sealed-deck-cards.json';
+import jediPackCardsData from './jedi-pack-cards.json';
+import rebelLeaderPackCardsData from './rebel-leader-pack-cards.json';
+import promotionalFoilsCardsData from './promotional-foils-cards.json';
 
 // Combine all set data
 const allSetsData = [
@@ -25,6 +43,24 @@ const allSetsData = [
   endorCardsData,
   deathStarIICardsData,
   tatooineCardsData,
+  reflectionsICardsData,
+  coruscantCardsData,
+  theedPalaceCardsData,
+  reflectionsIICardsData,
+  reflectionsIIICardsData,
+  enhancedPremiereCardsData,
+  enhancedCloudCityCardsData,
+  enhancedJabbasPalaceCardsData,
+  firstAnthologyCardsData,
+  secondAnthologyCardsData,
+  thirdAnthologyCardsData,
+  premiereTwoPlayerCardsData,
+  empireTwoPlayerCardsData,
+  tournamentSealedDeckCardsData,
+  jabbasPalaceSealedDeckCardsData,
+  jediPackCardsData,
+  rebelLeaderPackCardsData,
+  promotionalFoilsCardsData,
 ];
 
 // Export sets - split into Limited and Unlimited editions

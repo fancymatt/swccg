@@ -1,0 +1,28 @@
+{
+  "set": {
+    "id": "jabbas-palace-sealed-deck",
+    "name": "Jabba's Palace Sealed Deck",
+    "abbreviation": "JPSD",
+    "releaseDate": "2000-10-01"
+  },
+  "cards": [
+    {"number": "1", "id": "jpsd_001_mercenary-pilot", "name": "Mercenary Pilot", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "2", "id": "jpsd_002_mighty-jabba", "name": "Mighty Jabba", "side": "dark", "type": "Character", "rarity": "P"},
+    {"number": "3", "id": "jpsd_003_hutt-influence", "name": "Hutt Influence", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "4", "id": "jpsd_004_no-escape", "name": "No Escape", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "5", "id": "jpsd_005_power-of-the-hutt", "name": "Power Of The Hutt", "side": "dark", "type": "Effect", "rarity": "P"},
+    {"number": "6", "id": "jpsd_006_jabbas-palace-lower-passages", "name": "Jabba's Palace: Lower Passages", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "7", "id": "jpsd_007_tatooine-desert-heart", "name": "Tatooine: Desert Heart", "side": "dark", "type": "Location", "rarity": "P"},
+    {"number": "8", "id": "jpsd_008_racing-skiff", "name": "Racing Skiff", "side": "dark", "type": "Vehicle", "rarity": "P"},
+    {"number": "9", "id": "jpsd_009_stun-blaster", "name": "Stun Blaster", "side": "dark", "type": "Weapon", "rarity": "P"},
+    {"number": "10", "id": "jpsd_010_lando-with-vibro-ax", "name": "Lando With Vibro-Ax", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "11", "id": "jpsd_011_palace-raider", "name": "Palace Raider", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "12", "id": "jpsd_012_ounee-ta", "name": "Ounee Ta", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "13", "id": "jpsd_013_seeking-an-audience", "name": "Seeking An Audience", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "14", "id": "jpsd_014_underworld-contacts", "name": "Underworld Contacts", "side": "light", "type": "Effect", "rarity": "P"},
+    {"number": "15", "id": "jpsd_015_jabbas-palace-antechamber", "name": "Jabba's Palace: Antechamber", "side": "light", "type": "Location", "rarity": "P"},
+    {"number": "16", "id": "jpsd_016_tatooine-hutt-trade-route", "name": "Tatooine: Hutt Trade Route", "side": "light", "type": "Location", "rarity": "P"},
+    {"number": "17", "id": "jpsd_017_racing-skiff", "name": "Racing Skiff", "side": "light", "type": "Vehicle", "rarity": "P"},
+    {"number": "18", "id": "jpsd_018_stun-blaster", "name": "Stun Blaster", "side": "light", "type": "Weapon", "rarity": "P"}
+  ]
+}
