@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import * as FileSystem from 'expo-file-system/legacy';
 
 // Database instances
 let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
@@ -83,6 +84,22 @@ export async function initializeDatabases(): Promise<void> {
 
     // Enable WAL mode for collection database too
     await collectionDb.execAsync('PRAGMA journal_mode=WAL');
+
+    // Ensure collection database is included in iOS iCloud backups
+    // FileSystem.documentDirectory is backed up by default on iOS
+    // This explicitly ensures the database files are not excluded from backup
+    try {
+      const dbPath = `${FileSystem.documentDirectory}SQLite/collection.db`;
+      await FileSystem.getInfoAsync(dbPath).then(async (info) => {
+        if (info.exists) {
+          // Ensure NOT skipped from backup (false = include in backup)
+          await FileSystem.setIsSkippedBackupAsync(dbPath, false);
+        }
+      });
+    } catch (error) {
+      // Non-fatal - log and continue
+      console.warn('Could not set backup flag for collection database:', error);
+    }
 
     console.log('Databases initialized successfully with WAL mode');
   } catch (error) {
@@ -372,6 +389,133 @@ export async function getCardsWithCollection(): Promise<any[]> {
   } catch (error) {
     console.error('Failed to get cards with collection:', error);
     throw error;
+  }
+}
+
+/**
+ * Search for cards by name across all sets
+ * Returns cards grouped by their set appearances with variants and collection quantities
+ */
+export async function searchCardsByName(searchQuery: string): Promise<any[]> {
+  if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
+  if (!collectionDb) throw new Error('Collection database not initialized');
+
+  // Additional safety check - ensure databases are still valid
+  if (!encyclopediaDb || !collectionDb) {
+    console.error('Database references became null during search');
+    return [];
+  }
+
+  try {
+    // Search for cards matching the query (case-insensitive)
+    const cards = await encyclopediaDb.getAllAsync(`
+      SELECT
+        c.id as card_id,
+        c.name as card_name,
+        c.side,
+        c.type,
+        sc.card_number,
+        sc.rarity,
+        sc.set_id,
+        s.name as set_name,
+        s.abbreviation as set_abbr
+      FROM cards c
+      JOIN set_cards sc ON c.id = sc.card_id
+      JOIN sets s ON sc.set_id = s.id
+      WHERE LOWER(c.name) LIKE LOWER(?)
+      ORDER BY c.name, s.release_date, CAST(sc.card_number AS INTEGER)
+    `, [`%${searchQuery}%`]);
+
+    // For each card appearance, get its variants with quantities
+    // Process cards sequentially in small batches to avoid overwhelming the database
+    const cardsWithVariants = [];
+    const batchSize = 10;
+
+    for (let i = 0; i < cards.length; i += batchSize) {
+      const batch = cards.slice(i, i + batchSize);
+      const batchResults = await Promise.all(
+        batch.map(async (card: any) => {
+          try {
+            // Safety check before each database operation
+            if (!encyclopediaDb || !collectionDb) {
+              console.error('Database became unavailable during search');
+              return null;
+            }
+
+            // Determine which variant suffix to filter by based on set ID
+            const variantSuffix = card.set_id.endsWith('-limited') ? '_limited' :
+                                 card.set_id.endsWith('-unlimited') ? '_unlimited' : null;
+
+            const variants = await encyclopediaDb.getAllAsync(`
+              SELECT
+                v.id as variant_id,
+                v.name as variant_name,
+                v.code as variant_code
+              FROM variants v
+              WHERE v.card_id = ?
+              ORDER BY v.code
+            `, [card.card_id]);
+
+            // Filter variants based on set type
+            const filteredVariants = variantSuffix
+              ? variants.filter((v: any) => v.variant_id.endsWith(variantSuffix))
+              : variants;
+
+            // Get quantities for each variant
+            const variantsWithQuantity = await Promise.all(
+              filteredVariants.map(async (variant: any) => {
+                try {
+                  const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
+                    'SELECT quantity FROM collection WHERE variant_id = ?',
+                    [variant.variant_id]
+                  );
+
+                  return {
+                    id: variant.variant_id,
+                    name: variant.variant_name,
+                    code: variant.variant_code,
+                    quantity: result?.quantity || 0,
+                  };
+                } catch (variantError) {
+                  console.error('Error fetching variant quantity:', variantError);
+                  return {
+                    id: variant.variant_id,
+                    name: variant.variant_name,
+                    code: variant.variant_code,
+                    quantity: 0,
+                  };
+                }
+              })
+            );
+
+            return {
+              id: card.card_id,
+              name: card.card_name,
+              cardNumber: card.card_number,
+              side: card.side,
+              type: card.type,
+              rarity: card.rarity,
+              setId: card.set_id,
+              setName: card.set_name,
+              setAbbr: card.set_abbr,
+              variants: variantsWithQuantity,
+            };
+          } catch (cardError) {
+            console.error('Error processing card during search:', cardError);
+            return null;
+          }
+        })
+      );
+
+      // Filter out any null results from errors and add to results
+      cardsWithVariants.push(...batchResults.filter(card => card !== null));
+    }
+
+    return cardsWithVariants;
+  } catch (error) {
+    console.error('Failed to search cards:', error);
+    // Return empty array instead of throwing to prevent crashes
+    return [];
   }
 }
 

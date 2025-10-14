@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { CollectionStackNavigator } from './CollectionStackNavigator';
+import { SearchScreen } from '../screens/SearchScreen';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -26,6 +27,13 @@ export const TabNavigator: React.FC = () => {
         component={CollectionStackNavigator}
         options={{
           tabBarLabel: 'Collection',
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={SearchScreen}
+        options={{
+          tabBarLabel: 'Search',
         }}
       />
       <Tab.Screen

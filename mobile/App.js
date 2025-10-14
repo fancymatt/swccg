@@ -5,6 +5,7 @@ import { useFonts, ZenDots_400Regular } from '@expo-google-fonts/zen-dots';
 import { useEffect, useState, useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from './src/contexts/ThemeContext';
+import { CollectionStatsProvider } from './src/contexts/CollectionStatsContext';
 import { TabNavigator } from './src/navigation/TabNavigator';
 import { LoadingScreen } from './src/components/LoadingScreen';
 import { initializeDatabases, seedEncyclopedia } from './src/services/database';
@@ -70,10 +71,12 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
-        <NavigationContainer>
-          <TabNavigator />
-        </NavigationContainer>
-        <StatusBar style="auto" />
+        <CollectionStatsProvider>
+          <NavigationContainer>
+            <TabNavigator />
+          </NavigationContainer>
+          <StatusBar style="auto" />
+        </CollectionStatsProvider>
       </ThemeProvider>
     </SafeAreaProvider>
   );

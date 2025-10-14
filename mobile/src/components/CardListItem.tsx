@@ -7,11 +7,13 @@ import type { Card } from '../types';
 interface CardListItemProps {
   card: Card;
   onVariantQuantityChange: (cardId: string, variantId: string, newQuantity: number) => void;
+  showSetInfo?: boolean;
 }
 
 export const CardListItem: React.FC<CardListItemProps> = React.memo(({
   card,
   onVariantQuantityChange,
+  showSetInfo = false,
 }) => {
   const { colors } = useTheme();
 
@@ -88,6 +90,7 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
     },
     metaRow: {
       flexDirection: 'row',
+      flexWrap: 'wrap',
       alignItems: 'center',
       marginLeft: 12,
     },
@@ -117,6 +120,11 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       color: colors.success,
       fontWeight: '600',
     },
+    setInfo: {
+      fontSize: 14,
+      color: colors.accent,
+      fontWeight: '600',
+    },
     variantsContainer: {
       marginTop: 4,
     },
@@ -141,6 +149,12 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
           <Text style={[styles.rarity, { color: getRarityColor(card.rarity) }]}>
             {normalizeRarity(card.rarity)}
           </Text>
+          {showSetInfo && (
+            <>
+              <Text style={styles.separator}>•</Text>
+              <Text style={styles.setInfo}>{card.setName}</Text>
+            </>
+          )}
           {totalQuantity > 0 && (
             <>
               <Text style={styles.separator}>•</Text>

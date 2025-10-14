@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SetsListScreen } from '../screens/SetsListScreen';
 import { SetCardsScreen } from '../screens/SetCardsScreen';
 import { useTheme } from '../contexts/ThemeContext';
-import { CollectionStatsProvider } from '../contexts/CollectionStatsContext';
 
 export type CollectionStackParamList = {
   SetsList: undefined;
@@ -16,8 +15,7 @@ export const CollectionStackNavigator: React.FC = () => {
   const { colors } = useTheme();
 
   return (
-    <CollectionStatsProvider>
-      <Stack.Navigator
+    <Stack.Navigator
       screenOptions={{
         headerStyle: {
           backgroundColor: colors.bg,
@@ -43,6 +41,5 @@ export const CollectionStackNavigator: React.FC = () => {
         })}
       />
     </Stack.Navigator>
-    </CollectionStatsProvider>
   );
 };
