@@ -13,6 +13,7 @@ module.exports = {
       backgroundColor: '#1a1a1a',
     },
     ios: {
+      icon: './assets/icon.png',
       supportsTablet: true,
       bundleIdentifier: 'com.fancymatt.swccgmobile',
       infoPlist: {
