@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { View, Text, StyleSheet, ScrollView, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { getAllSets, getSetCompletionStats } from '../services/database';
 import { ProgressBar } from '../components/ProgressBar';
+import { FilterBar, FilterCategory } from '../components/FilterBar';
 
 interface Set {
   id: string;
@@ -22,6 +23,10 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
   const { setStats, setAllStats } = useCollectionStats();
   const [sets, setSets] = useState<Set[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
+    edition: [],
+    size: [],
+  });
 
   const loadSets = useCallback(async () => {
     try {
@@ -56,6 +61,57 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
       setName: set.name
     });
   };
+
+  // Define filter categories
+  const filterCategories: FilterCategory[] = useMemo(() => [
+    {
+      key: 'edition',
+      label: 'Edition',
+      options: [
+        { value: 'limited', label: 'Limited' },
+        { value: 'unlimited', label: 'Unlimited' },
+      ],
+    },
+    {
+      key: 'size',
+      label: 'Size',
+      options: [
+        { value: 'major', label: 'Major (>100 cards)' },
+        { value: 'minor', label: 'Minor (≤100 cards)' },
+      ],
+    },
+  ], []);
+
+  // Filter sets based on active filters
+  const filteredSets = useMemo(() => {
+    let filtered = [...sets];
+
+    // Apply edition filter
+    if (activeFilters.edition.length > 0) {
+      filtered = filtered.filter((set) => {
+        const isLimited = set.id.endsWith('-limited');
+        const isUnlimited = set.id.endsWith('-unlimited');
+        return activeFilters.edition.some((filter) =>
+          filter === 'limited' ? isLimited : isUnlimited
+        );
+      });
+    }
+
+    // Apply size filter
+    if (activeFilters.size.length > 0) {
+      filtered = filtered.filter((set) => {
+        const stats = setStats[set.id];
+        if (!stats) return true; // Include if stats not loaded yet
+        const totalCards = stats.total.total;
+        const isMajor = totalCards > 100;
+        return activeFilters.size.some((filter) =>
+          filter === 'major' ? isMajor : !isMajor
+        );
+      });
+    }
+
+    return filtered;
+  }, [sets, activeFilters, setStats]);
 
   const styles = StyleSheet.create({
     safeArea: {
@@ -156,11 +212,17 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
           <Text style={styles.subtitle}>Select a Set</Text>
         </View>
 
+        <FilterBar
+          categories={filterCategories}
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
+        />
+
         <ScrollView
           style={styles.scrollView}
           contentContainerStyle={styles.scrollContent}
         >
-          {sets.map((set) => {
+          {filteredSets.map((set) => {
             const stats = setStats[set.id];
             return (
               <TouchableOpacity

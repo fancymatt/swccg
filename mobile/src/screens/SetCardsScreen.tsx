@@ -5,6 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { CardListItem } from '../components/CardListItem';
 import { ProgressBar } from '../components/ProgressBar';
+import { FilterBar, FilterCategory } from '../components/FilterBar';
 import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, SetCompletionStats } from '../services/database';
 import type { Card } from '../types';
 
@@ -20,6 +21,12 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<SetCompletionStats | null>(null);
+  const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
+    side: [],
+    type: [],
+    rarity: [],
+    owned: [],
+  });
 
   const loadCards = useCallback(async () => {
     try {
@@ -106,6 +113,74 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
     }
   }, [setId, updateSetStats]);
 
+  // Define filter categories
+  const filterCategories: FilterCategory[] = useMemo(() => {
+    // Get unique values from cards
+    const sides = Array.from(new Set(cards.map((c) => c.side))).sort();
+    const types = Array.from(new Set(cards.map((c) => c.type))).sort();
+    const rarities = Array.from(new Set(cards.map((c) => c.rarity || 'Unknown'))).sort();
+
+    return [
+      {
+        key: 'side',
+        label: 'Side',
+        options: sides.map((s) => ({ value: s, label: s === 'dark' ? 'Dark Side' : 'Light Side' })),
+      },
+      {
+        key: 'type',
+        label: 'Type',
+        options: types.map((t) => ({ value: t, label: t })),
+      },
+      {
+        key: 'rarity',
+        label: 'Rarity',
+        options: rarities.map((r) => ({ value: r, label: r })),
+      },
+      {
+        key: 'owned',
+        label: 'Collection',
+        options: [
+          { value: 'owned', label: 'Owned' },
+          { value: 'unowned', label: 'Not Owned' },
+        ],
+      },
+    ];
+  }, [cards]);
+
+  // Filter cards based on active filters
+  const filteredCards = useMemo(() => {
+    let filtered = [...cards];
+
+    // Apply side filter
+    if (activeFilters.side.length > 0) {
+      filtered = filtered.filter((card) => activeFilters.side.includes(card.side));
+    }
+
+    // Apply type filter
+    if (activeFilters.type.length > 0) {
+      filtered = filtered.filter((card) => activeFilters.type.includes(card.type));
+    }
+
+    // Apply rarity filter
+    if (activeFilters.rarity.length > 0) {
+      filtered = filtered.filter((card) =>
+        activeFilters.rarity.includes(card.rarity || 'Unknown')
+      );
+    }
+
+    // Apply owned filter
+    if (activeFilters.owned.length > 0) {
+      filtered = filtered.filter((card) => {
+        const isOwned = card.variants.some((v) => v.quantity > 0);
+        return activeFilters.owned.some((filter) =>
+          filter === 'owned' ? isOwned : !isOwned
+        );
+      });
+    }
+
+    return filtered;
+  }, [cards, activeFilters]);
+
   const styles = useMemo(() => StyleSheet.create({
     safeArea: {
       flex: 1,
@@ -147,55 +222,62 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
     />
   ), [handleVariantQuantityChange]);
 
-  const renderHeader = useCallback(() => {
-    if (!stats) return null;
-
+  const renderListHeader = useCallback(() => {
     return (
-      <View style={styles.summarySection}>
-        <Text style={[styles.summaryTitle, { color: colors.fg }]}>
-          Collection Progress
-        </Text>
-        <ProgressBar
-          label="Total"
-          owned={stats.total.owned}
-          total={stats.total.total}
-          color={colors.accent}
+      <>
+        {stats && (
+          <View style={styles.summarySection}>
+            <Text style={[styles.summaryTitle, { color: colors.fg }]}>
+              Collection Progress
+            </Text>
+            <ProgressBar
+              label="Total"
+              owned={stats.total.owned}
+              total={stats.total.total}
+              color={colors.accent}
+            />
+            {stats.common.total > 0 && (
+              <ProgressBar
+                label="Common"
+                owned={stats.common.owned}
+                total={stats.common.total}
+                color="#10b981"
+              />
+            )}
+            {stats.uncommon.total > 0 && (
+              <ProgressBar
+                label="Uncommon"
+                owned={stats.uncommon.owned}
+                total={stats.uncommon.total}
+                color="#3b82f6"
+              />
+            )}
+            {stats.rare.total > 0 && (
+              <ProgressBar
+                label="Rare"
+                owned={stats.rare.owned}
+                total={stats.rare.total}
+                color="#f59e0b"
+              />
+            )}
+            {stats.other.total > 0 && (
+              <ProgressBar
+                label="Other"
+                owned={stats.other.owned}
+                total={stats.other.total}
+                color="#8b5cf6"
+              />
+            )}
+          </View>
+        )}
+        <FilterBar
+          categories={filterCategories}
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
         />
-        {stats.common.total > 0 && (
-          <ProgressBar
-            label="Common"
-            owned={stats.common.owned}
-            total={stats.common.total}
-            color="#10b981"
-          />
-        )}
-        {stats.uncommon.total > 0 && (
-          <ProgressBar
-            label="Uncommon"
-            owned={stats.uncommon.owned}
-            total={stats.uncommon.total}
-            color="#3b82f6"
-          />
-        )}
-        {stats.rare.total > 0 && (
-          <ProgressBar
-            label="Rare"
-            owned={stats.rare.owned}
-            total={stats.rare.total}
-            color="#f59e0b"
-          />
-        )}
-        {stats.other.total > 0 && (
-          <ProgressBar
-            label="Other"
-            owned={stats.other.owned}
-            total={stats.other.total}
-            color="#8b5cf6"
-          />
-        )}
-      </View>
+      </>
     );
-  }, [stats, colors, styles]);
+  }, [stats, colors, styles, filterCategories, activeFilters]);
 
   const keyExtractor = useCallback((item: Card) => item.id, []);
 
@@ -215,10 +297,10 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
     <SafeAreaView style={styles.safeArea} edges={[]}>
       <View style={styles.container}>
         <FlatList
-          data={cards}
+          data={filteredCards}
           renderItem={renderCard}
           keyExtractor={keyExtractor}
-          ListHeaderComponent={renderHeader}
+          ListHeaderComponent={renderListHeader}
           contentContainerStyle={styles.listContent}
           removeClippedSubviews={true}
           maxToRenderPerBatch={10}
