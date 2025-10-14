@@ -201,7 +201,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
 
   if (loading) {
     return (
-      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+      <SafeAreaView style={styles.safeArea} edges={[]}>
         <View style={styles.container}>
           <View style={styles.loadingContainer}>
             <ActivityIndicator size="large" color={colors.accent} />
@@ -212,7 +212,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   }
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+    <SafeAreaView style={styles.safeArea} edges={[]}>
       <View style={styles.container}>
         <FlatList
           data={cards}

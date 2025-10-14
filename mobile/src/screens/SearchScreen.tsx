@@ -206,7 +206,7 @@ export const SearchScreen: React.FC = () => {
   }, [loading, hasSearched, searchQuery, colors.accent, styles]);
 
   return (
-    <SafeAreaView style={styles.safeArea} edges={['top', 'bottom']}>
+    <SafeAreaView style={styles.safeArea} edges={['top']}>
       <View style={styles.container}>
         <View style={styles.searchContainer}>
           <TextInput
