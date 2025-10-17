@@ -80,7 +80,7 @@
     {"number": "72", "id": "anh_072_tie-assault-squadron", "name": "TIE Assault Squadron", "side": "dark", "type": "Starship", "rarity": "U1"},
     {"number": "73", "id": "anh_073_tie-vanguard", "name": "TIE Vanguard", "side": "dark", "type": "Starship", "rarity": "C2"},
     {"number": "74", "id": "anh_074_victory-class-star-destroyer", "name": "Victory-Class Star Destroyer", "side": "dark", "type": "Starship", "rarity": "U1"},
-    {"number": "75", "id": "anh_075_bespin-motors-void-spider", "name": "BespinMotorsVoidSpiderTHX1138", "side": "dark", "type": "Vehicle", "rarity": "C2"},
+    {"number": "75", "id": "anh_075_bespin-motors-void-spider", "name": "Bespin Motors Void Spider THX 1138", "side": "dark", "type": "Vehicle", "rarity": "C2"},
     {"number": "76", "id": "anh_076_mobquet-a1-deluxe-floater", "name": "Mobquet A-1 Deluxe Floater", "side": "dark", "type": "Vehicle", "rarity": "C2"},
     {"number": "77", "id": "anh_077_enhanced-tie-laser-cannon", "name": "Enhanced TIE Laser Cannon", "side": "dark", "type": "Weapon", "rarity": "C2"},
     {"number": "78", "id": "anh_078_jawa-blaster", "name": "Jawa Blaster", "side": "dark", "type": "Weapon", "rarity": "C2"},

@@ -74,7 +74,7 @@
     {"number": "66", "id": "pm_066_reactor-terminal", "name": "Reactor Terminal", "side": "dark", "type": "Effect", "rarity": "U2"},
     {"number": "67", "id": "pm_067_send-a-detachment-down", "name": "Send A Detachment Down", "side": "dark", "type": "Effect", "rarity": "R1"},
     {"number": "68", "id": "pm_068_sunsdown", "name": "Sunsdown", "side": "dark", "type": "Effect", "rarity": "U1"},
-    {"number": "69", "id": "pm_069_tactical-recall", "name": "Tactical Recall", "side": "dark", "type": "Effect", "rarity": "R2"},
+    {"number": "69", "id": "pm_069_tactical-recall", "name": "Tactical Re-Call", "side": "dark", "type": "Effect", "rarity": "R2"},
     {"number": "70", "id": "pm_070_wrong-turn", "name": "Wrong Turn", "side": "dark", "type": "Effect", "rarity": "U1"},
     {"number": "71", "id": "pm_071_your-eyes-can-deceive-you", "name": "Your Eyes Can Deceive You", "side": "dark", "type": "Effect", "rarity": "U1"},
     {"number": "72", "id": "pm_072_alter", "name": "Alter", "side": "dark", "type": "Interrupt", "rarity": "U1"},

@@ -2,6 +2,7 @@ import React, { useMemo, useCallback } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardVariantItem } from './CardVariantItem';
+import { CardTypeIcon } from './CardTypeIcon';
 import type { Card } from '../types';
 
 interface CardListItemProps {
@@ -82,6 +83,9 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       borderRadius: 2,
       marginRight: 8,
     },
+    typeIconWrapper: {
+      marginRight: 8,
+    },
     cardName: {
       fontSize: 18,
       fontWeight: '600',
@@ -135,6 +139,14 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       <View style={styles.header}>
         <View style={styles.titleRow}>
           <View style={[styles.sideIndicator, { backgroundColor: getSideColor(card.side) }]} />
+          <View style={styles.typeIconWrapper}>
+            <CardTypeIcon
+              cardType={card.type}
+              icon={card.icon}
+              iconColor={card.iconColor}
+              size={16}
+            />
+          </View>
           <Text style={styles.cardName}>{card.name}</Text>
         </View>
         <View style={styles.metaRow}>

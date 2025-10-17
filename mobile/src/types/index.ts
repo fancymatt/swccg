@@ -14,4 +14,6 @@ export interface Card {
   rarity?: string;
   setName: string;
   variants: CardVariant[];
+  icon?: string; // Optional SVG icon path/identifier for the type icon
+  iconColor?: string; // Optional color override for the type icon (used if no icon is provided)
 }

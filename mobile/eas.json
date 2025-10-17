@@ -13,13 +13,14 @@
       }
     },
     "preview": {
-      "distribution": "internal",
+      "distribution": "store",
       "node": "22.11.0",
       "ios": {
         "image": "sdk-54"
       }
     },
     "production": {
+      "distribution": "store",
       "autoIncrement": true,
       "node": "22.11.0",
       "ios": {
@@ -28,6 +29,15 @@
     }
   },
   "submit": {
-    "production": {}
+    "preview": {
+      "ios": {
+        "ascAppId": "6754121631"
+      }
+    },
+    "production": {
+      "ios": {
+        "ascAppId": "6754121631"
+      }
+    }
   }
 }
