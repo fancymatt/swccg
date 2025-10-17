@@ -3,7 +3,8 @@
     "id": "jabbas-palace-sealed-deck",
     "name": "Jabba's Palace Sealed Deck",
     "abbreviation": "JPSD",
-    "releaseDate": "2000-10-01"
+    "releaseDate": "2000-10-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "jpsd_001_mercenary-pilot", "name": "Mercenary Pilot", "side": "dark", "type": "Character", "rarity": "P"},

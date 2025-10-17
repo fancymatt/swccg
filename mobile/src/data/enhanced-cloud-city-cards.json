@@ -3,7 +3,8 @@
     "id": "enhanced-cloud-city",
     "name": "Enhanced Cloud City",
     "abbreviation": "ECC",
-    "releaseDate": "1999-12-01"
+    "releaseDate": "1999-12-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "ecc_001_4-lom-with-concussion-rifle", "name": "4-LOM With Concussion Rifle", "side": "dark", "type": "Character", "rarity": "P"},

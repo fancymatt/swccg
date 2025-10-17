@@ -3,7 +3,8 @@
     "id": "jabbas_palace",
     "name": "Jabba's Palace",
     "abbreviation": "JP",
-    "releaseDate": "1998-04-01"
+    "releaseDate": "1998-04-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {

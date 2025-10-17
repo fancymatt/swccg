@@ -3,7 +3,8 @@
     "id": "tatooine",
     "name": "Tatooine",
     "abbreviation": "TAT",
-    "releaseDate": "2001-06-01"
+    "releaseDate": "2001-06-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {

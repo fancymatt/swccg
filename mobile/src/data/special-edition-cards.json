@@ -3,7 +3,8 @@
     "id": "special-edition",
     "name": "Special Edition",
     "abbreviation": "SE",
-    "releaseDate": "1998-11-01"
+    "releaseDate": "1998-11-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "se_001_2x-7kpr", "name": "2X-7KPR (Tooex)", "side": "dark", "type": "Character", "rarity": "C"},

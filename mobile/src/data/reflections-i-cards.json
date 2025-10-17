@@ -3,7 +3,8 @@
     "id": "reflections-i",
     "name": "Reflections I",
     "abbreviation": "R1",
-    "releaseDate": "1998-11-01"
+    "releaseDate": "1998-11-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "R1", "id": "r1_r1_4-lom", "name": "4-LOM", "side": "dark", "type": "Character", "rarity": "VR"},
@@ -70,7 +71,7 @@
     {"number": "R62", "id": "r1_r62_brainiac", "name": "Brainiac", "side": "light", "type": "Character", "rarity": "VR"},
     {"number": "R63", "id": "r1_r63_c-3po", "name": "C-3PO (See-Threepio)", "side": "light", "type": "Character", "rarity": "SR"},
     {"number": "R64", "id": "r1_r64_captain-han-solo", "name": "Captain Han Solo", "side": "light", "type": "Character", "rarity": "SR"},
-    {"number": "R65", "id": "r1_r65_chewbacca", "name": "Chewbacca", "side": "light", "type": "Character", "rarity": "SR"},
+    {"number": "R65", "id": "r1_r65_chewbacca", "name": "Chewbacca", "side": "light", "type": "Character - Alien", "icon": "icon_cardtype_character-alien", "rarity": "SR"},
     {"number": "R66", "id": "r1_r66_commander-luke-skywalker", "name": "Commander Luke Skywalker", "side": "light", "type": "Character", "rarity": "VR"},
     {"number": "R67", "id": "r1_r67_dutch", "name": "Dutch", "side": "light", "type": "Character", "rarity": "VR"},
     {"number": "R68", "id": "r1_r68_han-solo", "name": "Han Solo", "side": "light", "type": "Character", "rarity": "SR"},

@@ -70,6 +70,7 @@ export const SEED_SETS = allSetsData.flatMap((setData) => [
     name: setData.set.name,
     abbreviation: setData.set.abbreviation,
     release_date: setData.set.releaseDate,
+    icon_path: setData.set.iconPath,
   },
   {
     id: `${setData.set.id}-unlimited`,
@@ -79,6 +80,7 @@ export const SEED_SETS = allSetsData.flatMap((setData) => [
     release_date: setData.set.releaseDate ?
       new Date(new Date(setData.set.releaseDate).getTime() + 180 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
       : setData.set.releaseDate,
+    icon_path: setData.set.iconPath,
   },
 ]);
 
@@ -89,6 +91,7 @@ export const SEED_CARDS = allSetsData.flatMap((setData) =>
     name: card.name,
     side: card.side,
     type: card.type,
+    icon: (card as any).icon,
   }))
 );
 

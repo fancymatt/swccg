@@ -3,7 +3,8 @@
     "id": "endor",
     "name": "Endor",
     "abbreviation": "EN",
-    "releaseDate": "1999-06-01"
+    "releaseDate": "1999-06-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {

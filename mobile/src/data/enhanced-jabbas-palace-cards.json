@@ -3,7 +3,8 @@
     "id": "enhanced-jabbas-palace",
     "name": "Enhanced Jabba's Palace",
     "abbreviation": "EJP",
-    "releaseDate": "2000-01-01"
+    "releaseDate": "2000-01-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "ejp_001_bossk-with-mortar-gun", "name": "Bossk With Mortar Gun", "side": "dark", "type": "Character", "rarity": "P"},

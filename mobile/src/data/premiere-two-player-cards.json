@@ -3,7 +3,8 @@
     "id": "premiere-two-player",
     "name": "Premiere Introductory 2-Player Game",
     "abbreviation": "P2P",
-    "releaseDate": "1996-02-01"
+    "releaseDate": "1996-02-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "p2p_001_vader", "name": "Vader", "side": "dark", "type": "Character", "rarity": "P"},

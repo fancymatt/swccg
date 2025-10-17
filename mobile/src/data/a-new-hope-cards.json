@@ -3,7 +3,8 @@
     "id": "a_new_hope",
     "name": "A New Hope",
     "abbreviation": "ANH",
-    "releaseDate": "1996-07-01"
+    "releaseDate": "1996-07-01",
+    "iconPath": "icon_set_anewhope"
   },
   "cards": [
     {"number": "1", "id": "anh_001_advosze", "name": "Advosze", "side": "dark", "type": "Character", "rarity": "C2"},
@@ -89,7 +90,7 @@
     {"number": "81", "id": "anh_081_urorrurr-hunting-rifle", "name": "URoRRuR'R'R's Hunting Rifle", "side": "dark", "type": "Weapon", "rarity": "U1"},
     {"number": "82", "id": "anh_082_arcona", "name": "Arcona", "side": "light", "type": "Character", "rarity": "C2"},
     {"number": "83", "id": "anh_083_brainiac", "name": "Brainiac", "side": "light", "type": "Character", "rarity": "R1"},
-    {"number": "84", "id": "anh_084_chewbacca", "name": "Chewbacca", "side": "light", "type": "Character", "rarity": "R2"},
+    {"number": "84", "id": "anh_084_chewbacca", "name": "Chewbacca", "side": "light", "type": "Character - Alien", "icon": "icon_cardtype_character-alien", "rarity": "R2"},
     {"number": "85", "id": "anh_085_commander-evram-lajaie", "name": "Commander Evram Lajaie", "side": "light", "type": "Character", "rarity": "C1"},
     {"number": "86", "id": "anh_086_commander-vanden-willard", "name": "Commander Vanden Willard", "side": "light", "type": "Character", "rarity": "U2"},
     {"number": "87", "id": "anh_087_corellian", "name": "Corellian", "side": "light", "type": "Character", "rarity": "C2"},

@@ -3,7 +3,8 @@
     "id": "first-anthology",
     "name": "First Anthology",
     "abbreviation": "1A",
-    "releaseDate": "1997-05-01"
+    "releaseDate": "1997-05-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "1a_001_boba-fett", "name": "Boba Fett", "side": "dark", "type": "Character", "rarity": "P"},

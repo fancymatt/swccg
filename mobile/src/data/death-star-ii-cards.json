@@ -3,7 +3,8 @@
     "id": "death-star-ii",
     "name": "Death Star II",
     "abbreviation": "DS2",
-    "releaseDate": "2000-07-01"
+    "releaseDate": "2000-07-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {

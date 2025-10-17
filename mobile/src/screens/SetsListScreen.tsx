@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { View, Text, StyleSheet, ScrollView, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { useCollectionStats } from '../contexts/CollectionStatsContext';
@@ -12,11 +12,19 @@ interface Set {
   name: string;
   abbreviation?: string;
   release_date?: string;
+  icon_path?: string;
 }
 
 interface SetsListScreenProps {
   navigation: any;
 }
+
+// Icon mapping
+const iconMap: Record<string, any> = {
+  icon_set_anewhope: require('../../assets/icons_sets/icon_set_anewhope.png'),
+  icon_set_hoth: require('../../assets/icons_sets/icon_set_hoth.png'),
+  icon_set_default: require('../../assets/icons_sets/icon_set_default.png'),
+};
 
 export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) => {
   const { colors } = useTheme();
@@ -27,6 +35,13 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
     edition: [],
     size: [],
   });
+
+  const getSetIcon = (iconPath?: string) => {
+    if (iconPath && iconMap[iconPath]) {
+      return iconMap[iconPath];
+    }
+    return iconMap['icon_set_default'];
+  };
 
   const loadSets = useCallback(async () => {
     try {
@@ -160,11 +175,21 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
       shadowRadius: 4,
       elevation: 3,
     },
+    setHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 4,
+    },
+    setIcon: {
+      width: 24,
+      height: 24,
+      marginRight: 12,
+    },
     setName: {
       fontSize: 20,
       fontFamily: 'ZenDots_400Regular',
       color: colors.fg,
-      marginBottom: 4,
+      flex: 1,
     },
     setDetails: {
       flexDirection: 'row',
@@ -231,7 +256,14 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
                 onPress={() => handleSetPress(set)}
                 activeOpacity={0.7}
               >
-                <Text style={styles.setName}>{set.name}</Text>
+                <View style={styles.setHeader}>
+                  <Image
+                    source={getSetIcon(set.icon_path)}
+                    style={styles.setIcon}
+                    resizeMode="contain"
+                  />
+                  <Text style={styles.setName}>{set.name}</Text>
+                </View>
                 <View style={styles.setDetails}>
                   {set.abbreviation && (
                     <Text style={styles.setAbbr}>{set.abbreviation}</Text>

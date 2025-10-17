@@ -3,7 +3,8 @@
     "id": "cloud_city",
     "name": "Cloud City",
     "abbreviation": "CC",
-    "releaseDate": "1997-11-01"
+    "releaseDate": "1997-11-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {

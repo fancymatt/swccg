@@ -3,7 +3,8 @@
     "id": "second-anthology",
     "name": "Second Anthology",
     "abbreviation": "2A",
-    "releaseDate": "1998-07-01"
+    "releaseDate": "1998-07-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "2a_001_sarlacc", "name": "Sarlacc", "side": "dark", "type": "Character", "rarity": "P"},

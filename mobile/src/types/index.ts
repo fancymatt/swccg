@@ -13,7 +13,7 @@ export interface Card {
   type: string;
   rarity?: string;
   setName: string;
+  setIconPath?: string; // Set icon path for displaying set icons
   variants: CardVariant[];
-  icon?: string; // Optional SVG icon path/identifier for the type icon
-  iconColor?: string; // Optional color override for the type icon (used if no icon is provided)
+  icon?: string; // Optional icon override for the card type icon
 }

@@ -3,7 +3,8 @@
     "id": "jedi-pack",
     "name": "Jedi Pack",
     "abbreviation": "JP",
-    "releaseDate": "1996-04-01"
+    "releaseDate": "1996-04-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "jp_001_motti", "name": "Motti", "side": "dark", "type": "Character", "rarity": "P"},

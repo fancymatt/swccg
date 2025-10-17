@@ -1,9 +1,21 @@
 import React, { useMemo, useCallback } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardVariantItem } from './CardVariantItem';
 import { CardTypeIcon } from './CardTypeIcon';
 import type { Card } from '../types';
+
+// Icon mapping
+const setIconMap: Record<string, any> = {
+  icon_set_anewhope: require('../../assets/icons_sets/icon_set_anewhope.png'),
+  icon_set_hoth: require('../../assets/icons_sets/icon_set_hoth.png'),
+  icon_set_default: require('../../assets/icons_sets/icon_set_default.png'),
+};
+
+const sideIconMap = {
+  light: require('../../assets/icons_darklight/icon_darklight_light.png'),
+  dark: require('../../assets/icons_darklight/icon_darklight_dark.png'),
+};
 
 interface CardListItemProps {
   card: Card;
@@ -20,6 +32,17 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
 
   const getSideColor = (side: 'light' | 'dark') => {
     return side === 'light' ? colors.lightSide : colors.darkSide;
+  };
+
+  const getSideIcon = (side: 'light' | 'dark') => {
+    return sideIconMap[side];
+  };
+
+  const getSetIcon = (iconPath?: string) => {
+    if (iconPath && setIconMap[iconPath]) {
+      return setIconMap[iconPath];
+    }
+    return setIconMap['icon_set_default'];
   };
 
   const normalizeRarity = (rarity: string | undefined): string => {
@@ -78,9 +101,8 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       marginBottom: 6,
     },
     sideIndicator: {
-      width: 4,
+      width: 20,
       height: 20,
-      borderRadius: 2,
       marginRight: 8,
     },
     typeIconWrapper: {
@@ -129,6 +151,15 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       color: colors.accent,
       fontWeight: '600',
     },
+    setInfoContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    setIcon: {
+      width: 14,
+      height: 14,
+      marginRight: 4,
+    },
     variantsContainer: {
       marginTop: 4,
     },
@@ -138,12 +169,15 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.titleRow}>
-          <View style={[styles.sideIndicator, { backgroundColor: getSideColor(card.side) }]} />
+          <Image
+            source={getSideIcon(card.side)}
+            style={styles.sideIndicator}
+            resizeMode="contain"
+          />
           <View style={styles.typeIconWrapper}>
             <CardTypeIcon
               cardType={card.type}
               icon={card.icon}
-              iconColor={card.iconColor}
               size={16}
             />
           </View>
@@ -164,7 +198,14 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
           {showSetInfo && (
             <>
               <Text style={styles.separator}>•</Text>
-              <Text style={styles.setInfo}>{card.setName}</Text>
+              <View style={styles.setInfoContainer}>
+                <Image
+                  source={getSetIcon(card.setIconPath)}
+                  style={styles.setIcon}
+                  resizeMode="contain"
+                />
+                <Text style={styles.setInfo}>{card.setName}</Text>
+              </View>
             </>
           )}
           {totalQuantity > 0 && (

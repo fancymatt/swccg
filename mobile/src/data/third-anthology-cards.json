@@ -3,7 +3,8 @@
     "id": "third-anthology",
     "name": "Third Anthology",
     "abbreviation": "3A",
-    "releaseDate": "2000-06-01"
+    "releaseDate": "2000-06-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "3a_001_prisoner-2187", "name": "Prisoner 2187", "side": "light", "type": "Character", "rarity": "P"},

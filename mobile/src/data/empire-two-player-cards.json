@@ -3,7 +3,8 @@
     "id": "empire-two-player",
     "name": "Empire Strikes Back Intro 2-Player",
     "abbreviation": "E2P",
-    "releaseDate": "1997-03-01"
+    "releaseDate": "1997-03-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "e2p_001_veers", "name": "Veers", "side": "dark", "type": "Character", "rarity": "P"},

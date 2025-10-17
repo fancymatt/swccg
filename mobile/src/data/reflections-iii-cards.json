@@ -3,7 +3,8 @@
     "id": "reflections-iii",
     "name": "Reflections III",
     "abbreviation": "R3",
-    "releaseDate": "2001-11-01"
+    "releaseDate": "2001-11-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "r3_001_bib-fortuna", "name": "Bib Fortuna", "side": "dark", "type": "Character", "rarity": "P"},

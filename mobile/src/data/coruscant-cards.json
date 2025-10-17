@@ -3,7 +3,8 @@
     "id": "coruscant",
     "name": "Coruscant",
     "abbreviation": "COR",
-    "releaseDate": "2001-09-01"
+    "releaseDate": "2001-09-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "cor_001_aks-moe", "name": "Aks Moe", "side": "dark", "type": "Character", "rarity": "R"},

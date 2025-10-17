@@ -3,7 +3,8 @@
     "id": "theed-palace",
     "name": "Theed Palace",
     "abbreviation": "TP",
-    "releaseDate": "2001-12-01"
+    "releaseDate": "2001-12-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "tp_001_nothing-can-get-through-our-shield", "name": "Nothing Can Get Through Our Shield", "side": "dark", "type": "Admiral's Order", "rarity": "R"},

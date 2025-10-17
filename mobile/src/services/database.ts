@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 7;
+const DB_VERSION = 9;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -20,14 +20,16 @@ const ENCYCLOPEDIA_SCHEMA = `
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     release_date TEXT,
-    abbreviation TEXT
+    abbreviation TEXT,
+    icon_path TEXT
   );
 
   CREATE TABLE IF NOT EXISTS cards (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     side TEXT NOT NULL,
-    type TEXT NOT NULL
+    type TEXT NOT NULL,
+    icon TEXT
   );
 
   CREATE TABLE IF NOT EXISTS set_cards (
@@ -138,8 +140,8 @@ async function checkDatabaseStatus(): Promise<DatabaseStatus> {
  * Returns the database status: 'first-time', 'migration', or 'up-to-date'
  */
 export async function seedEncyclopedia(
-  sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string }>,
-  cards: Array<{ id: string; name: string; side: string; type: string }>,
+  sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string; icon_path?: string }>,
+  cards: Array<{ id: string; name: string; side: string; type: string; icon?: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
   variants: Array<{ id: string; card_id: string; name: string; code: string }>
 ): Promise<DatabaseStatus> {
@@ -158,24 +160,30 @@ export async function seedEncyclopedia(
       console.log('Setting up card encyclopedia for the first time...');
     } else if (status === 'migration') {
       console.log('Migrating card encyclopedia to version ' + DB_VERSION + '...');
+      // Drop existing tables to recreate with new schema
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS variants; DROP TABLE IF EXISTS set_cards; DROP TABLE IF EXISTS cards; DROP TABLE IF EXISTS sets;');
+      // Recreate tables with updated schema
+      await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
     }
 
-    // Clear existing data
-    await encyclopediaDb.execAsync('DELETE FROM variants; DELETE FROM set_cards; DELETE FROM cards; DELETE FROM sets;');
+    // Clear existing data (only needed for first-time setup since migration drops tables)
+    if (status === 'first-time') {
+      await encyclopediaDb.execAsync('DELETE FROM variants; DELETE FROM set_cards; DELETE FROM cards; DELETE FROM sets;');
+    }
 
     // Insert sets
     for (const set of sets) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO sets (id, name, abbreviation, release_date) VALUES (?, ?, ?, ?)',
-        [set.id, set.name, set.abbreviation || null, set.release_date || null]
+        'INSERT INTO sets (id, name, abbreviation, release_date, icon_path) VALUES (?, ?, ?, ?, ?)',
+        [set.id, set.name, set.abbreviation || null, set.release_date || null, set.icon_path || null]
       );
     }
 
     // Insert cards
     for (const card of cards) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO cards (id, name, side, type) VALUES (?, ?, ?, ?)',
-        [card.id, card.name, card.side, card.type]
+        'INSERT INTO cards (id, name, side, type, icon) VALUES (?, ?, ?, ?, ?)',
+        [card.id, card.name, card.side, card.type, card.icon || null]
       );
     }
 
@@ -229,7 +237,8 @@ export async function getAllSets(): Promise<any[]> {
         id,
         name,
         abbreviation,
-        release_date
+        release_date,
+        icon_path
       FROM sets
       ORDER BY release_date, name
     `);
@@ -256,6 +265,7 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
         c.name as card_name,
         c.side,
         c.type,
+        c.icon,
         sc.card_number,
         sc.rarity,
         s.name as set_name,
@@ -312,6 +322,7 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
           cardNumber: card.card_number,
           side: card.side,
           type: card.type,
+          icon: card.icon,
           rarity: card.rarity,
           setName: card.set_name,
           variants: variantsWithQuantity,
@@ -414,11 +425,13 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
         c.name as card_name,
         c.side,
         c.type,
+        c.icon,
         sc.card_number,
         sc.rarity,
         sc.set_id,
         s.name as set_name,
-        s.abbreviation as set_abbr
+        s.abbreviation as set_abbr,
+        s.icon_path as set_icon_path
       FROM cards c
       JOIN set_cards sc ON c.id = sc.card_id
       JOIN sets s ON sc.set_id = s.id
@@ -494,10 +507,12 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
               cardNumber: card.card_number,
               side: card.side,
               type: card.type,
+              icon: card.icon,
               rarity: card.rarity,
               setId: card.set_id,
               setName: card.set_name,
               setAbbr: card.set_abbr,
+              setIconPath: card.set_icon_path,
               variants: variantsWithQuantity,
             };
           } catch (cardError) {

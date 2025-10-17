@@ -3,7 +3,8 @@
     "id": "reflections-ii",
     "name": "Reflections II",
     "abbreviation": "R2",
-    "releaseDate": "2001-01-01"
+    "releaseDate": "2001-01-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "r2_001_black-sun-fleet", "name": "Black Sun Fleet", "side": "dark", "type": "Admiral's Orders", "rarity": "P"},
@@ -35,7 +36,7 @@
     {"number": "27", "id": "r2_027_virago", "name": "Virago", "side": "dark", "type": "Starship", "rarity": "P"},
     {"number": "28", "id": "r2_028_no-questions-asked", "name": "No Questions Asked", "side": "light", "type": "Admiral's Orders", "rarity": "P"},
     {"number": "29", "id": "r2_029_artoo-threepio", "name": "Artoo & Threepio", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "30", "id": "r2_030_chewbacca-protector", "name": "Chewbacca, Protector", "side": "light", "type": "Character", "rarity": "P"},
+    {"number": "30", "id": "r2_030_chewbacca-protector", "name": "Chewbacca, Protector", "side": "light", "type": "Character - Alien", "icon": "icon_cardtype_character-alien", "rarity": "P"},
     {"number": "31", "id": "r2_031_corran-horn", "name": "Corran Horn", "side": "light", "type": "Character", "rarity": "P"},
     {"number": "32", "id": "r2_032_dash-rendar", "name": "Dash Rendar", "side": "light", "type": "Character", "rarity": "P"},
     {"number": "33", "id": "r2_033_le-b02d9", "name": "LE-B02D9", "side": "light", "type": "Character", "rarity": "P"},

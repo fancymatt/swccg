@@ -3,7 +3,8 @@
     "id": "tournament-sealed-deck",
     "name": "Official Tournament Sealed Deck",
     "abbreviation": "OTSD",
-    "releaseDate": "1998-05-01"
+    "releaseDate": "1998-05-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "otsd_001_chall-bekan", "name": "Chall Bekan", "side": "dark", "type": "Character", "rarity": "P"},

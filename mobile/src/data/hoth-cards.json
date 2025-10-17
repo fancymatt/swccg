@@ -3,7 +3,8 @@
     "id": "hoth",
     "name": "Hoth",
     "abbreviation": "HT",
-    "releaseDate": "1996-11-01"
+    "releaseDate": "1996-11-01",
+    "iconPath": "icon_set_hoth"
   },
   "cards": [
     {"number": "1", "id": "ht_001_admiral-ozzel", "name": "Admiral Ozzel", "side": "dark", "type": "Character", "rarity": "R1"},

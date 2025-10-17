@@ -3,7 +3,8 @@
     "id": "enhanced-premiere",
     "name": "Enhanced Premiere",
     "abbreviation": "EPP",
-    "releaseDate": "1998-11-01"
+    "releaseDate": "1998-11-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "epp_001_boba-fett-with-blaster-rifle", "name": "Boba Fett with Blaster Rifle", "side": "dark", "type": "Character", "rarity": "P"},

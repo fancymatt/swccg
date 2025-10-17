@@ -3,7 +3,8 @@
     "id": "premiere",
     "name": "Premiere",
     "abbreviation": "PM",
-    "releaseDate": "1995-12-01"
+    "releaseDate": "1995-12-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {"number": "1", "id": "pm_001_5d6-ra-7", "name": "5D6-RA-7 [Fivedesix]", "side": "dark", "type": "Character", "rarity": "R1"},

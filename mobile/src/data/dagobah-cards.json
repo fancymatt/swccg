@@ -3,7 +3,8 @@
     "id": "dagobah",
     "name": "Dagobah",
     "abbreviation": "DA",
-    "releaseDate": "1997-04-01"
+    "releaseDate": "1997-04-01",
+    "iconPath": "icon_set_default"
   },
   "cards": [
     {
