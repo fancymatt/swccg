@@ -460,6 +460,21 @@ export async function getCardsWithCollection(): Promise<any[]> {
 }
 
 /**
+ * Normalize a string for fuzzy search by:
+ * - Converting to lowercase
+ * - Replacing various apostrophe characters with standard single quote
+ * - Removing common punctuation that might vary
+ */
+function normalizeSearchString(str: string): string {
+  return str
+    .toLowerCase()
+    // Replace various apostrophe/quote characters with standard single quote
+    .replace(/[\u2018\u2019\u201A\u201B\u2032\u0060´'']/g, "'")
+    // Replace various dash characters with standard hyphen
+    .replace(/[\u2013\u2014\u2015]/g, "-");
+}
+
+/**
  * Search for cards by name across all sets
  * Returns unique cards with all their variants and collection quantities
  * Each card appears only once in results, with variants showing set info
@@ -475,19 +490,44 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
   }
 
   try {
+    // Normalize the search query to handle apostrophe variations
+    const normalizedQuery = normalizeSearchString(searchQuery);
+
+    // For fuzzy matching, also create a version without punctuation/spaces
+    const fuzzyQuery = normalizedQuery.replace(/['\-\s]/g, '');
+
     // Search for unique card NAMES (not IDs) to group all instances of same card
+    // We normalize both the card name and search query for matching
+    // First try exact normalized match, then fall back to fuzzy match
     const cardNames = await encyclopediaDb.getAllAsync(`
       SELECT DISTINCT
         c.name as card_name,
         MIN(c.id) as card_id,
         c.side,
         c.type,
-        c.icon
+        c.icon,
+        CASE
+          WHEN REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
+            LOWER(c.name),
+            '\u2018', ''''), '\u2019', ''''), '\u201A', ''''), '\u201B', ''''),
+            '\u2032', ''''), '\u0060', ''''), '´', ''''), ''', '''')
+          LIKE ? THEN 1
+          ELSE 2
+        END as match_priority
       FROM cards c
-      WHERE LOWER(c.name) LIKE LOWER(?)
+      WHERE
+        REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
+          LOWER(c.name),
+          '\u2018', ''''), '\u2019', ''''), '\u201A', ''''), '\u201B', ''''),
+          '\u2032', ''''), '\u0060', ''''), '´', ''''), ''', '''')
+        LIKE ?
+        OR REPLACE(REPLACE(REPLACE(
+          LOWER(c.name),
+          '''', ''), '-', ''), ' ', '')
+        LIKE ?
       GROUP BY c.name, c.side, c.type, c.icon
-      ORDER BY c.name
-    `, [`%${searchQuery}%`]);
+      ORDER BY match_priority, c.name
+    `, [`%${normalizedQuery}%`, `%${normalizedQuery}%`, `%${fuzzyQuery}%`]);
 
     // For each unique card name, get ALL variants from ALL card instances
     // Process cards sequentially in small batches to avoid overwhelming the database
