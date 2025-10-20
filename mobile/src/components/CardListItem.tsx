@@ -184,18 +184,26 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
           <Text style={styles.cardName}>{card.name}</Text>
         </View>
         <View style={styles.metaRow}>
-          <Text style={styles.cardNumber}>#{card.cardNumber}</Text>
-          <Text style={styles.separator}>•</Text>
+          {card.cardNumber && (
+            <>
+              <Text style={styles.cardNumber}>#{card.cardNumber}</Text>
+              <Text style={styles.separator}>•</Text>
+            </>
+          )}
           <Text style={[styles.sideText, { color: getSideColor(card.side) }]}>
             {card.side === 'light' ? 'Light' : 'Dark'}
           </Text>
           <Text style={styles.separator}>•</Text>
           <Text style={styles.cardType}>{card.type}</Text>
-          <Text style={styles.separator}>•</Text>
-          <Text style={[styles.rarity, { color: getRarityColor(card.rarity) }]}>
-            {normalizeRarity(card.rarity)}
-          </Text>
-          {showSetInfo && (
+          {card.rarity && (
+            <>
+              <Text style={styles.separator}>•</Text>
+              <Text style={[styles.rarity, { color: getRarityColor(card.rarity) }]}>
+                {normalizeRarity(card.rarity)}
+              </Text>
+            </>
+          )}
+          {showSetInfo && card.setName && (
             <>
               <Text style={styles.separator}>•</Text>
               <View style={styles.setInfoContainer}>

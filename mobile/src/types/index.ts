@@ -4,6 +4,9 @@ export interface CardVariant {
   code: string;
   details?: string; // Optional descriptive details about this variant (e.g., "Card text cut off", "Complete card text")
   quantity: number;
+  setName?: string; // Set name where this variant appears (for search results)
+  cardNumber?: string; // Card number in the set (for search results)
+  setAbbr?: string; // Set abbreviation (for search results)
 }
 
 // New: Represents where a specific variant appears (can be in multiple sets)

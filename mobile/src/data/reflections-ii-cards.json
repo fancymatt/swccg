@@ -7,60 +7,526 @@
     "iconPath": "icon_set_default"
   },
   "cards": [
-    {"number": "1", "id": "r2_001_black-sun-fleet", "name": "Black Sun Fleet", "side": "dark", "type": "Admiral's Orders", "rarity": "P"},
-    {"number": "2", "id": "r2_002_arica", "name": "Arica", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "3", "id": "r2_003_captain-gilead-pellaeon", "name": "Captain Gilead Pellaeon", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "4", "id": "r2_004_dr-evazan-ponda-baba", "name": "Dr Evazan & Ponda Baba", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "5", "id": "r2_005_grand-admiral-thrawn", "name": "Grand Admiral Thrawn", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "6", "id": "r2_006_guri", "name": "Guri", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "7", "id": "r2_007_jabbas-prize", "name": "Jabba's Prize", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "8", "id": "r2_008_kir-kanos", "name": "Kir Kanos", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "9", "id": "r2_009_prince-xizor", "name": "Prince Xizor", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "10", "id": "r2_010_snoova", "name": "Snoova", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "11", "id": "r2_011_the-emperor", "name": "The Emperor", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "12", "id": "r2_012_vigo", "name": "Vigo", "side": "dark", "type": "Character", "rarity": "P"},
-    {"number": "13", "id": "r2_013_sunsdown-too-cold-for-speeders", "name": "Sunsdown & Too Cold For Speeders", "side": "dark", "type": "Effect", "rarity": "P"},
-    {"number": "14", "id": "r2_014_there-is-no-try-oppressive-enforcement", "name": "There Is No Try & Oppressive Enforcement", "side": "dark", "type": "Effect", "rarity": "P"},
-    {"number": "15", "id": "r2_015_abyssin-ornament-wounded-wookiee", "name": "Abyssin Ornament & Wounded Wookiee", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "16", "id": "r2_016_alter-collateral-damage", "name": "Alter & Collateral Damage", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "17", "id": "r2_017_control-set-for-stun", "name": "Control & Set For Stun", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "18", "id": "r2_018_dark-maneuvers-tallon-roll", "name": "Dark Maneuvers & Tallon Roll", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "19", "id": "r2_019_defensive-fire-hutt-smooch", "name": "Defensive Fire & Hutt Smooch", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "20", "id": "r2_020_evader-monnok", "name": "Evader & Monnok", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "21", "id": "r2_021_ghhhk-those-rebels-wont-escape-us", "name": "Ghhhk & Those Rebels Won't Escape Us", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "22", "id": "r2_022_ommni-box-its-worse", "name": "Ommni Box & It's Worse", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "23", "id": "r2_023_sense-uncertain-is-the-future", "name": "Sense & Uncertain Is The Future", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "24", "id": "r2_024_sniper-dark-strike", "name": "Sniper & Dark Strike", "side": "dark", "type": "Interrupt", "rarity": "P"},
-    {"number": "25", "id": "r2_025_agents-of-black-sun-vengeance-of-the-dark-prince", "name": "Agents of Black Sun / Vengeance Of The Dark Prince", "side": "dark", "type": "Objective", "rarity": "P"},
-    {"number": "26", "id": "r2_026_stinger", "name": "Stinger", "side": "dark", "type": "Starship", "rarity": "P"},
-    {"number": "27", "id": "r2_027_virago", "name": "Virago", "side": "dark", "type": "Starship", "rarity": "P"},
-    {"number": "28", "id": "r2_028_no-questions-asked", "name": "No Questions Asked", "side": "light", "type": "Admiral's Orders", "rarity": "P"},
-    {"number": "29", "id": "r2_029_artoo-threepio", "name": "Artoo & Threepio", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "30", "id": "r2_030_chewbacca-protector", "name": "Chewbacca, Protector", "side": "light", "type": "Character - Alien", "icon": "icon_cardtype_character-alien", "rarity": "P"},
-    {"number": "31", "id": "r2_031_corran-horn", "name": "Corran Horn", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "32", "id": "r2_032_dash-rendar", "name": "Dash Rendar", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "33", "id": "r2_033_le-b02d9", "name": "LE-B02D9", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "34", "id": "r2_034_luke-skywalker-rebel-scout", "name": "Luke Skywalker, Rebel Scout", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "35", "id": "r2_035_mirax-terrik", "name": "Mirax Terrik", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "36", "id": "r2_036_owen-lars-beru-lars", "name": "Owen Lars & Beru Lars", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "37", "id": "r2_037_talon-karrde", "name": "Talon Karrde", "side": "light", "type": "Character", "rarity": "P"},
-    {"number": "38", "id": "r2_038_mercenary-armor", "name": "Mercenary Armor", "side": "light", "type": "Device", "rarity": "P"},
-    {"number": "39", "id": "r2_039_obi-wans-journal", "name": "Obi-Wan's Journal", "side": "light", "type": "Device", "rarity": "P"},
-    {"number": "40", "id": "r2_040_do-or-do-not-do-wise-advice", "name": "Do, Or Do Not Do & Wise Advice", "side": "light", "type": "Effect", "rarity": "P"},
-    {"number": "41", "id": "r2_041_alter-friendly-fire", "name": "Alter & Friendly Fire", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "42", "id": "r2_042_control-tunnel-vision", "name": "Control & Tunnel Vision", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "43", "id": "r2_043_houjix-out-of-nowhere", "name": "Houjix & Out Of Nowhere", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "44", "id": "r2_044_nar-shaddaa-wind-chimes-out-of-somewhere", "name": "Nar Shaddaa Wind Chimes & Out Of Somewhere", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "45", "id": "r2_045_out-of-commission-transmission-terminated", "name": "Out of Commission & Transmission Terminated", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "46", "id": "r2_046_path-of-least-resistance-revealed", "name": "Path Of Least Resistance & Revealed", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "47", "id": "r2_047_sense-recoil-in-fear", "name": "Sense & Recoil In Fear", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "48", "id": "r2_048_shocking-information-grimtaash", "name": "Shocking Information & Grimtaash", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "49", "id": "r2_049_sorry-about-the-mess-blaster-proficiency", "name": "Sorry About The Mess & Blaster Proficiency", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "50", "id": "r2_050_the-bith-shuffle-desperate-reach", "name": "The Bith Shuffle & Desperate Reach", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "51", "id": "r2_051_yoda-stew-you-do-have-your-moments", "name": "Yoda Stew & You Do Have Your Moments", "side": "light", "type": "Interrupt", "rarity": "P"},
-    {"number": "52", "id": "r2_052_watch-your-step-this-place-can-be-a-little-rough", "name": "Watch Your Step / This Place Can Be A Little Rough", "side": "light", "type": "Objective", "rarity": "P"},
-    {"number": "53", "id": "r2_053_outrider", "name": "Outrider", "side": "light", "type": "Starship", "rarity": "P"},
-    {"number": "54", "id": "r2_054_pulsar-skate", "name": "Pulsar Skate", "side": "light", "type": "Starship", "rarity": "P"},
+    {
+      "number": "1",
+      "id": "r2_001_black-sun-fleet",
+      "name": "Black Sun Fleet",
+      "side": "dark",
+      "type": "Admiral's Orders",
+      "rarity": "P"
+    },
+    {
+      "number": "R1",
+      "id": "ds2_003_fighters-coming-in",
+      "name": "Fighters Coming In",
+      "side": "dark",
+      "type": "Admiral's Order",
+      "rarity": "R1",
+      "variants": [
+        {
+          "id": "ds2_003_fighters-coming-in_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "2",
+      "id": "r2_002_arica",
+      "name": "Arica",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R2",
+      "id": "ecc_001_4-lom-with-concussion-rifle",
+      "name": "4-LOM With Concussion Rifle",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R2",
+      "variants": [
+        {
+          "id": "ecc_001_4-lom-with-concussion-rifle_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "3",
+      "id": "r2_003_captain-gilead-pellaeon",
+      "name": "Captain Gilead Pellaeon",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R3",
+      "id": "ds2_007_admiral-piett",
+      "name": "Admiral Piett",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R3",
+      "variants": [
+        {
+          "id": "ds2_007_admiral-piett_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "4",
+      "id": "r2_004_dr-evazan-ponda-baba",
+      "name": "Dr Evazan & Ponda Baba",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R4",
+      "id": "ds2_008_baron-soontir-fel",
+      "name": "Baron Soontir Fel",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R4",
+      "variants": [
+        {
+          "id": "ds2_008_baron-soontir-fel_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "5",
+      "id": "r2_005_grand-admiral-thrawn",
+      "name": "Grand Admiral Thrawn",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R5",
+      "id": "epp_001_boba-fett-with-blaster-rifle",
+      "name": "Boba Fett With Blaster Rifle",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R5",
+      "variants": [
+        {
+          "id": "epp_001_boba-fett-with-blaster-rifle_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "6",
+      "id": "r2_006_guri",
+      "name": "Guri",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R6",
+      "id": "se_006_boelo",
+      "name": "Boelo",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R6",
+      "variants": [
+        {
+          "id": "se_006_boelo_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "7",
+      "id": "r2_007_jabbas-prize",
+      "name": "Jabba's Prize",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R7",
+      "id": "ejp_001_bossk-with-mortar-gun",
+      "name": "Bossk With Mortar Gun",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R7",
+      "variants": [
+        {
+          "id": "ejp_001_bossk-with-mortar-gun_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "8",
+      "id": "r2_008_kir-kanos",
+      "name": "Kir Kanos",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R8",
+      "id": "otsd_001_chall-bekan",
+      "name": "Chall Bekan",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R8",
+      "variants": [
+        {
+          "id": "otsd_001_chall-bekan_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "9",
+      "id": "r2_009_prince-xizor",
+      "name": "Prince Xizor",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R9",
+      "id": "en_004_commander-igar",
+      "name": "Commander Igar",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R9",
+      "variants": [
+        {
+          "id": "en_004_commander-igar_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "10",
+      "id": "r2_010_snoova",
+      "name": "Snoova",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "11",
+      "id": "r2_011_the-emperor",
+      "name": "The Emperor",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R11",
+      "id": "epp_002_darth-vader-with-lightsaber",
+      "name": "Darth Vader With Lightsaber",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R11",
+      "variants": [
+        {
+          "id": "epp_002_darth-vader-with-lightsaber_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "12",
+      "id": "r2_012_vigo",
+      "name": "Vigo",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R12",
+      "id": "ejp_002_dengar-with-blaster-carbine",
+      "name": "Dengar With Blaster Carbine",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R12",
+      "variants": [
+        {
+          "id": "ejp_002_dengar-with-blaster-carbine_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "13",
+      "id": "r2_013_sunsdown-too-cold-for-speeders",
+      "name": "Sunsdown & Too Cold For Speeders",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "R13",
+      "id": "pm_009_djas-puhr",
+      "name": "Djas Puhr",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R13",
+      "variants": [
+        {
+          "id": "pm_009_djas-puhr_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "14",
+      "id": "r2_014_there-is-no-try-oppressive-enforcement",
+      "name": "There Is No Try & Oppressive Enforcement",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "R14",
+      "id": "ds2_018_emperor-palpatine",
+      "name": "Emperor Palpatine",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R14",
+      "variants": [
+        {
+          "id": "ds2_018_emperor-palpatine_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "15",
+      "id": "r2_015_abyssin-ornament-wounded-wookiee",
+      "name": "Abyssin Ornament & Wounded Wookiee",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R15",
+      "id": "ecc_002_ig-88-with-riot-gun",
+      "name": "IG-88 With Riot Gun",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R15",
+      "variants": [
+        {
+          "id": "ecc_002_ig-88-with-riot-gun_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "16",
+      "id": "r2_016_alter-collateral-damage",
+      "name": "Alter & Collateral Damage",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R16",
+      "id": "ds2_019_janus-greejatus",
+      "name": "Janus Greejatus",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R16",
+      "variants": [
+        {
+          "id": "ds2_019_janus-greejatus_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "17",
+      "id": "r2_017_control-set-for-stun",
+      "name": "Control & Set For Stun",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R17",
+      "id": "ejp_003_jodo-kast",
+      "name": "Jodo Kast",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R17",
+      "variants": [
+        {
+          "id": "ejp_003_jodo-kast_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "18",
+      "id": "r2_018_dark-maneuvers-tallon-roll",
+      "name": "Dark Maneuvers & Tallon Roll",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R18",
+      "id": "ds2_022_lord-vader",
+      "name": "Lord Vader",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R18",
+      "variants": [
+        {
+          "id": "ds2_022_lord-vader_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "19",
+      "id": "r2_019_defensive-fire-hutt-smooch",
+      "name": "Defensive Fire & Hutt Smooch",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R19",
+      "id": "ejp_004_mara-jade-the-emperors-hand",
+      "name": "Mara Jade, The Emperor's Hand",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R19",
+      "variants": [
+        {
+          "id": "ejp_004_mara-jade-the-emperors-hand_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "20",
+      "id": "r2_020_evader-monnok",
+      "name": "Evader & Monnok",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R20",
+      "id": "ds2_026_moff-jerjerrod",
+      "name": "Moff Jerjerrod",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R20",
+      "variants": [
+        {
+          "id": "ds2_026_moff-jerjerrod_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "21",
+      "id": "r2_021_ghhhk-those-rebels-wont-escape-us",
+      "name": "Ghhhk & Those Rebels Won't Escape Us",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R21",
+      "id": "ds2_027_myn-kyneugh",
+      "name": "Myn Kyneugh",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R21",
+      "variants": [
+        {
+          "id": "ds2_027_myn-kyneugh_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "22",
+      "id": "r2_022_ommni-box-its-worse",
+      "name": "Ommni Box & It's Worse",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R22",
+      "id": "se_033_outer-rim-scout",
+      "name": "Outer Rim Scout",
+      "side": "dark",
+      "type": "Character",
+      "rarity": "R22",
+      "variants": [
+        {
+          "id": "se_033_outer-rim-scout_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "23",
+      "id": "r2_023_sense-uncertain-is-the-future",
+      "name": "Sense & Uncertain Is The Future",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
     {
       "number": "R23",
       "id": "ds2_029_sim-aloo",
@@ -71,6 +537,1423 @@
       "variants": [
         {
           "id": "ds2_029_sim-aloo_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "24",
+      "id": "r2_024_sniper-dark-strike",
+      "name": "Sniper & Dark Strike",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R24",
+      "id": "da_26_bad_feeling_have_i",
+      "name": "Bad Feeling Have I",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R24",
+      "variants": [
+        {
+          "id": "da_26_bad_feeling_have_i_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "25",
+      "id": "r2_025_agents-of-black-sun-vengeance-of-the-dark-prince",
+      "name": "Agents of Black Sun / Vengeance Of The Dark Prince",
+      "side": "dark",
+      "type": "Objective",
+      "rarity": "P"
+    },
+    {
+      "number": "R25",
+      "id": "pm_060_lateral-damage",
+      "name": "Lateral Damage",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R25",
+      "variants": [
+        {
+          "id": "pm_060_lateral-damage_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "26",
+      "id": "r2_026_stinger",
+      "name": "Stinger",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "P"
+    },
+    {
+      "number": "R26",
+      "id": "jp_59_scum_and_villainy",
+      "name": "Scum And Villainy",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R26",
+      "variants": [
+        {
+          "id": "jp_59_scum_and_villainy_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "27",
+      "id": "r2_027_virago",
+      "name": "Virago",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "P"
+    },
+    {
+      "number": "R27",
+      "id": "se_079_sienar-fleet-systems",
+      "name": "Sienar Fleet Systems",
+      "side": "dark",
+      "type": "Effect",
+      "rarity": "R27",
+      "variants": [
+        {
+          "id": "se_079_sienar-fleet-systems_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "28",
+      "id": "r2_028_no-questions-asked",
+      "name": "No Questions Asked",
+      "side": "light",
+      "type": "Admiral's Orders",
+      "rarity": "P"
+    },
+    {
+      "number": "R28",
+      "id": "ds2_045_force-lightning",
+      "name": "Force Lightning",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R28",
+      "variants": [
+        {
+          "id": "ds2_045_force-lightning_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "29",
+      "id": "r2_029_artoo-threepio",
+      "name": "Artoo & Threepio",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R29",
+      "id": "ht_057_trample",
+      "name": "Trample",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R29",
+      "variants": [
+        {
+          "id": "ht_057_trample_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "30",
+      "id": "r2_030_chewbacca-protector",
+      "name": "Chewbacca, Protector",
+      "side": "light",
+      "type": "Character - Alien",
+      "icon": "icon_cardtype_character-alien",
+      "rarity": "P"
+    },
+    {
+      "number": "R30",
+      "id": "p2p_002_vaders-obsession",
+      "name": "Vader's Obsession",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R30",
+      "variants": [
+        {
+          "id": "p2p_002_vaders-obsession_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "31",
+      "id": "r2_031_corran-horn",
+      "name": "Corran Horn",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R31",
+      "id": "e2p_002_walker-garrison",
+      "name": "Walker Garrison",
+      "side": "dark",
+      "type": "Interrupt",
+      "rarity": "R31",
+      "variants": [
+        {
+          "id": "e2p_002_walker-garrison_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "32",
+      "id": "r2_032_dash-rendar",
+      "name": "Dash Rendar",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "33",
+      "id": "r2_033_le-b02d9",
+      "name": "LE-B02D9",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R33",
+      "id": "ds2_051_death-star-ii",
+      "name": "Death Star II",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R33",
+      "variants": [
+        {
+          "id": "ds2_051_death-star-ii_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "34",
+      "id": "r2_034_luke-skywalker-rebel-scout",
+      "name": "Luke Skywalker, Rebel Scout",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R34",
+      "id": "ds2_056_death-star-ii-throne-room",
+      "name": "Death Star II: Throne Room",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R34",
+      "variants": [
+        {
+          "id": "ds2_056_death-star-ii-throne-room_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "35",
+      "id": "r2_035_mirax-terrik",
+      "name": "Mirax Terrik",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R35",
+      "id": "da_71_executor_holotheatre",
+      "name": "Executor: Holotheatre",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R35",
+      "variants": [
+        {
+          "id": "da_71_executor_holotheatre_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "36",
+      "id": "r2_036_owen-lars-beru-lars",
+      "name": "Owen Lars & Beru Lars",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R36",
+      "id": "da_73_executor_meditation_chamber",
+      "name": "Executor: Meditation Chamber",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R36",
+      "variants": [
+        {
+          "id": "da_73_executor_meditation_chamber_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "37",
+      "id": "r2_037_talon-karrde",
+      "name": "Talon Karrde",
+      "side": "light",
+      "type": "Character",
+      "rarity": "P"
+    },
+    {
+      "number": "R37",
+      "id": "ht_069_hoth-wampa-cave",
+      "name": "Hoth: Wampa Cave",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R37",
+      "variants": [
+        {
+          "id": "ht_069_hoth-wampa-cave_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "38",
+      "id": "r2_038_mercenary-armor",
+      "name": "Mercenary Armor",
+      "side": "light",
+      "type": "Device",
+      "rarity": "P"
+    },
+    {
+      "number": "R38",
+      "id": "anh_066_kiffex",
+      "name": "Kiffex",
+      "side": "dark",
+      "type": "Location",
+      "rarity": "R38",
+      "variants": [
+        {
+          "id": "anh_066_kiffex_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "39",
+      "id": "r2_039_obi-wans-journal",
+      "name": "Obi-Wan's Journal",
+      "side": "light",
+      "type": "Device",
+      "rarity": "P"
+    },
+    {
+      "number": "R39",
+      "id": "otsd_007_black-squadron-tie",
+      "name": "Black Squadron TIE",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R39",
+      "variants": [
+        {
+          "id": "otsd_007_black-squadron-tie_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "40",
+      "id": "r2_040_do-or-do-not-do-wise-advice",
+      "name": "Do, Or Do Not Do & Wise Advice",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "P"
+    },
+    {
+      "number": "R40",
+      "id": "ecc_005_boba-fett-in-slave-i",
+      "name": "Boba Fett In Slave I",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R40",
+      "variants": [
+        {
+          "id": "ecc_005_boba-fett-in-slave-i_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "41",
+      "id": "r2_041_alter-friendly-fire",
+      "name": "Alter & Friendly Fire",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R41",
+      "id": "ds2_063_chimaera",
+      "name": "Chimaera",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R41",
+      "variants": [
+        {
+          "id": "ds2_063_chimaera_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "42",
+      "id": "r2_042_control-tunnel-vision",
+      "name": "Control & Tunnel Vision",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R42",
+      "id": "ecc_006_dengar-in-punishing-one",
+      "name": "Dengar In Punishing One",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R42",
+      "variants": [
+        {
+          "id": "ecc_006_dengar-in-punishing-one_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "43",
+      "id": "r2_043_houjix-out-of-nowhere",
+      "name": "Houjix & Out Of Nowhere",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R43",
+      "id": "otsd_008_dreadnaught-class-heavy-cruiser",
+      "name": "Dreadnaught-Class Heavy Cruiser",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R43",
+      "variants": [
+        {
+          "id": "otsd_008_dreadnaught-class-heavy-cruiser_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "44",
+      "id": "r2_044_nar-shaddaa-wind-chimes-out-of-somewhere",
+      "name": "Nar Shaddaa Wind Chimes & Out Of Somewhere",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R44",
+      "id": "ds2_066_flagship-executor",
+      "name": "Flagship Executor",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R44",
+      "variants": [
+        {
+          "id": "ds2_066_flagship-executor_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "45",
+      "id": "r2_045_out-of-commission-transmission-terminated",
+      "name": "Out of Commission & Transmission Terminated",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R45",
+      "id": "ejp_005_ig-88-in-ig-2000",
+      "name": "IG-88 In IG-2000",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R45",
+      "variants": [
+        {
+          "id": "ejp_005_ig-88-in-ig-2000_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "46",
+      "id": "r2_046_path-of-least-resistance-revealed",
+      "name": "Path Of Least Resistance & Revealed",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R46",
+      "id": "ds2_081_the-emperors-shield",
+      "name": "The Emperor's Shield",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R46",
+      "variants": [
+        {
+          "id": "ds2_081_the-emperors-shield_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "47",
+      "id": "r2_047_sense-recoil-in-fear",
+      "name": "Sense & Recoil In Fear",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R47",
+      "id": "ds2_082_the-emperors-sword",
+      "name": "The Emperor's Sword",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R47",
+      "variants": [
+        {
+          "id": "ds2_082_the-emperors-sword_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "48",
+      "id": "r2_048_shocking-information-grimtaash",
+      "name": "Shocking Information & Grimtaash",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R48",
+      "id": "ejp_006_zuckuss-in-mist-hunter",
+      "name": "Zuckuss In Mist Hunter",
+      "side": "dark",
+      "type": "Starship",
+      "rarity": "R48",
+      "variants": [
+        {
+          "id": "ejp_006_zuckuss-in-mist-hunter_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "49",
+      "id": "r2_049_sorry-about-the-mess-blaster-proficiency",
+      "name": "Sorry About The Mess & Blaster Proficiency",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "50",
+      "id": "r2_050_the-bith-shuffle-desperate-reach",
+      "name": "The Bith Shuffle & Desperate Reach",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R50",
+      "id": "en_082_tempest-scout-1",
+      "name": "Tempest Scout 1",
+      "side": "dark",
+      "type": "Vehicle",
+      "rarity": "R50",
+      "variants": [
+        {
+          "id": "en_082_tempest-scout-1_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "51",
+      "id": "r2_051_yoda-stew-you-do-have-your-moments",
+      "name": "Yoda Stew & You Do Have Your Moments",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "P"
+    },
+    {
+      "number": "R51",
+      "id": "ds2_087_darth-vaders-lightsaber",
+      "name": "Darth Vader's Lightsaber",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R51",
+      "variants": [
+        {
+          "id": "ds2_087_darth-vaders-lightsaber_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "52",
+      "id": "r2_052_watch-your-step-this-place-can-be-a-little-rough",
+      "name": "Watch Your Step / This Place Can Be A Little Rough",
+      "side": "light",
+      "type": "Objective",
+      "rarity": "P"
+    },
+    {
+      "number": "R52",
+      "id": "ejp_007_maras-jades-lightsaber",
+      "name": "Mara Jade's Lightsaber",
+      "side": "dark",
+      "type": "Weapon",
+      "rarity": "R52",
+      "variants": [
+        {
+          "id": "ejp_007_maras-jades-lightsaber_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "53",
+      "id": "r2_053_outrider",
+      "name": "Outrider",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "P"
+    },
+    {
+      "number": "R53",
+      "id": "ds2_092_capital-support",
+      "name": "Capital Support",
+      "side": "light",
+      "type": "Admiral's Order",
+      "rarity": "R53",
+      "variants": [
+        {
+          "id": "ds2_092_capital-support_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "54",
+      "id": "r2_054_pulsar-skate",
+      "name": "Pulsar Skate",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "P"
+    },
+    {
+      "number": "R54",
+      "id": "ds2_097_admiral-ackbar",
+      "name": "Admiral Ackbar",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R54",
+      "variants": [
+        {
+          "id": "ds2_097_admiral-ackbar_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R55",
+      "id": "otsd_010_arleil-schous",
+      "name": "Arleil Schous",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R55",
+      "variants": [
+        {
+          "id": "otsd_010_arleil-schous_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R57",
+      "id": "ecc_007_chewie-with-blaster-rifle",
+      "name": "Chewie With Blaster Rifle",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R57",
+      "variants": [
+        {
+          "id": "ecc_007_chewie-with-blaster-rifle_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R58",
+      "id": "en_093_chief-chirpa",
+      "name": "Chief Chirpa",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R58",
+      "variants": [
+        {
+          "id": "en_093_chief-chirpa_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R59",
+      "id": "ds2_104_general-calrissian",
+      "name": "General Calrissian",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R59",
+      "variants": [
+        {
+          "id": "ds2_104_general-calrissian_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R60",
+      "id": "en_104_general-crix-madine",
+      "name": "General Crix Madine",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R60",
+      "variants": [
+        {
+          "id": "en_104_general-crix-madine_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R62",
+      "id": "pm_177_kalfalnl-cndros",
+      "name": "Kal'Falnl C'ndros",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R62",
+      "variants": [
+        {
+          "id": "pm_177_kalfalnl-cndros_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R65",
+      "id": "ds2_115_luke-skywalker-jedi-knight",
+      "name": "Luke Skywalker, Jedi Knight",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R65",
+      "variants": [
+        {
+          "id": "ds2_115_luke-skywalker-jedi-knight_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R66",
+      "id": "epp_005_luke-with-lightsaber",
+      "name": "Luke With Lightsaber",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R66",
+      "variants": [
+        {
+          "id": "epp_005_luke-with-lightsaber_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R67",
+      "id": "se_194_melas",
+      "name": "Melas",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R67",
+      "variants": [
+        {
+          "id": "se_194_melas_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R69",
+      "id": "en_113_orrimaarko",
+      "name": "Orrimaarko",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R69",
+      "variants": [
+        {
+          "id": "en_113_orrimaarko_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R70",
+      "id": "ejp_010_see-threepio",
+      "name": "See-Threepio",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R70",
+      "variants": [
+        {
+          "id": "ejp_010_see-threepio_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R71",
+      "id": "se_206_tawss-khaa",
+      "name": "Tawss Khaa",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R71",
+      "variants": [
+        {
+          "id": "se_206_tawss-khaa_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R72",
+      "id": "ds2_122_wedge-antilles-red-squadron-leader",
+      "name": "Wedge Antilles, Red Squadron Leader",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R72",
+      "variants": [
+        {
+          "id": "ds2_122_wedge-antilles-red-squadron-leader_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R73",
+      "id": "en_122_wicket",
+      "name": "Wicket",
+      "side": "light",
+      "type": "Character",
+      "rarity": "R73",
+      "variants": [
+        {
+          "id": "en_122_wicket_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R74",
+      "id": "ht_113_bacta-tank",
+      "name": "Bacta Tank",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R74",
+      "variants": [
+        {
+          "id": "ht_113_bacta-tank_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R75",
+      "id": "ht_115_echo-base-operations",
+      "name": "Echo Base Operations",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R75",
+      "variants": [
+        {
+          "id": "ht_115_echo-base-operations_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R76",
+      "id": "cc_113_frozen_assets",
+      "name": "Frozen Assets",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R76",
+      "variants": [
+        {
+          "id": "cc_113_frozen_assets_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R77",
+      "id": "se_224_goo-nee-tay",
+      "name": "Goo Nee Tay",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R77",
+      "variants": [
+        {
+          "id": "se_224_goo-nee-tay_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R78",
+      "id": "pm_215_kessel-run",
+      "name": "Kessel Run",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R78",
+      "variants": [
+        {
+          "id": "pm_215_kessel-run_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R79",
+      "id": "pm_217_mantellian-savrip",
+      "name": "Mantellian Savrip",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R79",
+      "variants": [
+        {
+          "id": "pm_217_mantellian-savrip_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R80",
+      "id": "da_120_order_to_engage",
+      "name": "Order To Engage",
+      "side": "light",
+      "type": "Effect",
+      "rarity": "R80",
+      "variants": [
+        {
+          "id": "da_120_order_to_engage_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R81",
+      "id": "pm_238_dont-get-cocky",
+      "name": "Don't Get Cocky",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R81",
+      "variants": [
+        {
+          "id": "pm_238_dont-get-cocky_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R82",
+      "id": "pm_244_gift-of-the-mentor",
+      "name": "Gift Of The Mentor",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R82",
+      "variants": [
+        {
+          "id": "pm_244_gift-of-the-mentor_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R83",
+      "id": "e2p_006_lone-rogue",
+      "name": "Lone Rogue",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R83",
+      "variants": [
+        {
+          "id": "e2p_006_lone-rogue_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R84",
+      "id": "p2p_005_run-luke-run",
+      "name": "Run Luke, Run!",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R84",
+      "variants": [
+        {
+          "id": "p2p_005_run-luke-run_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R85",
+      "id": "cc_159_smoke_screen",
+      "name": "Smoke Screen",
+      "side": "light",
+      "type": "Interrupt",
+      "rarity": "R85",
+      "variants": [
+        {
+          "id": "cc_159_smoke_screen_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R87",
+      "id": "pm_300_yavin-4-massassi-throne-room",
+      "name": "Yavin 4: Massassi Throne Room",
+      "side": "light",
+      "type": "Location",
+      "rarity": "R87",
+      "variants": [
+        {
+          "id": "pm_300_yavin-4-massassi-throne-room_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R88",
+      "id": "3a_004_artoo-detoo-in-red-5",
+      "name": "Artoo-Detoo In Red 5",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R88",
+      "variants": [
+        {
+          "id": "3a_004_artoo-detoo-in-red-5_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R89",
+      "id": "ds2_154_b-wing-attack-squadron",
+      "name": "B-wing Attack Squadron",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R89",
+      "variants": [
+        {
+          "id": "ds2_154_b-wing-attack-squadron_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R90",
+      "id": "ds2_157_blue-squadron-b-wing",
+      "name": "Blue Squadron B-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R90",
+      "variants": [
+        {
+          "id": "ds2_157_blue-squadron-b-wing_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R91",
+      "id": "rl_001_gold-leader-in-gold-1",
+      "name": "Gold Leader In Gold 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R91",
+      "variants": [
+        {
+          "id": "rl_001_gold-leader-in-gold-1_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R92",
+      "id": "ds2_159_gold-squadron-1",
+      "name": "Gold Squadron 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R92",
+      "variants": [
+        {
+          "id": "ds2_159_gold-squadron-1_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R93",
+      "id": "otsd_016_gold-squadron-y-wing",
+      "name": "Gold Squadron Y-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R93",
+      "variants": [
+        {
+          "id": "otsd_016_gold-squadron-y-wing_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R94",
+      "id": "ds2_164_green-squadron-a-wing",
+      "name": "Green Squadron A-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R94",
+      "variants": [
+        {
+          "id": "ds2_164_green-squadron-a-wing_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R95",
+      "id": "ds2_165_home-one",
+      "name": "Home One",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R95",
+      "variants": [
+        {
+          "id": "ds2_165_home-one_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R96",
+      "id": "ds2_166_independence",
+      "name": "Independence",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R96",
+      "variants": [
+        {
+          "id": "ds2_166_independence_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R97",
+      "id": "ecc_009_lando-in-millennium-falcon",
+      "name": "Lando In Millennium Falcon",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R97",
+      "variants": [
+        {
+          "id": "ecc_009_lando-in-millennium-falcon_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R98",
+      "id": "ds2_167_liberty",
+      "name": "Liberty",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R98",
+      "variants": [
+        {
+          "id": "ds2_167_liberty_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R99",
+      "id": "rl_002_red-leader-in-red-1",
+      "name": "Red Leader In Red 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R99",
+      "variants": [
+        {
+          "id": "rl_002_red-leader-in-red-1_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R100",
+      "id": "ds2_172_red-squadron-1",
+      "name": "Red Squadron 1",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R100",
+      "variants": [
+        {
+          "id": "ds2_172_red-squadron-1_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R101",
+      "id": "otsd_017_red-squadron-x-wing",
+      "name": "Red Squadron X-wing",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R101",
+      "variants": [
+        {
+          "id": "otsd_017_red-squadron-x-wing_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R102",
+      "id": "1a_006_x-wing-assault-squadron",
+      "name": "X-wing Assault Squadron",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R102",
+      "variants": [
+        {
+          "id": "1a_006_x-wing-assault-squadron_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R103",
+      "id": "otsd_018_z-95-headhunter",
+      "name": "Z-95 Headhunter",
+      "side": "light",
+      "type": "Starship",
+      "rarity": "R103",
+      "variants": [
+        {
+          "id": "otsd_018_z-95-headhunter_foil_limited",
+          "name": "Black Border Holo",
+          "code": "BBH",
+          "details": "Reflections II foil reprint"
+        }
+      ]
+    },
+    {
+      "number": "R105",
+      "id": "ds2_181_lukes-lightsaber",
+      "name": "Luke's Lightsaber",
+      "side": "light",
+      "type": "Weapon",
+      "rarity": "R105",
+      "variants": [
+        {
+          "id": "ds2_181_lukes-lightsaber_foil_limited",
           "name": "Black Border Holo",
           "code": "BBH",
           "details": "Reflections II foil reprint"

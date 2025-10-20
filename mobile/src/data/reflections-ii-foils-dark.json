@@ -1,0 +1,23 @@
+[
+  {"number": "R23", "name": "Sim Aloo", "side": "dark", "type": "Character", "rarity": "R23", "source": "Death Star II"},
+  {"number": "R2", "name": "4-LOM With Concussion Rifle", "side": "dark", "type": "Character", "rarity": "R2", "source": "Enhanced Cloud City"},
+  {"number": "R3", "name": "Admiral Piett", "side": "dark", "type": "Character", "rarity": "R3", "source": "Death Star II"},
+  {"number": "R4", "name": "Baron Soontir Fel", "side": "dark", "type": "Character", "rarity": "R4", "source": "Death Star II"},
+  {"number": "R5", "name": "Boba Fett With Blaster Rifle", "side": "dark", "type": "Character", "rarity": "R5", "source": "Enhanced Premiere"},
+  {"number": "R6", "name": "Boelo", "side": "dark", "type": "Character", "rarity": "R6", "source": "Special Edition"},
+  {"number": "R7", "name": "Bossk With Mortar Gun", "side": "dark", "type": "Character", "rarity": "R7", "source": "Enhanced Jabba's Palace"},
+  {"number": "R8", "name": "Chall Bekan", "side": "dark", "type": "Character", "rarity": "R8", "source": "Special Edition"},
+  {"number": "R9", "name": "Commander Igar", "side": "dark", "type": "Character", "rarity": "R9", "source": "Endor"},
+  {"number": "R11", "name": "Darth Vader With Lightsaber", "side": "dark", "type": "Character", "rarity": "R11", "source": "Enhanced Premiere"},
+  {"number": "R12", "name": "Dengar With Blaster Carbine", "side": "dark", "type": "Character", "rarity": "R12", "source": "Enhanced Jabba's Palace"},
+  {"number": "R13", "name": "Djas Puhr", "side": "dark", "type": "Character", "rarity": "R13", "source": "Premiere"},
+  {"number": "R14", "name": "Emperor Palpatine", "side": "dark", "type": "Character", "rarity": "R14", "source": "Death Star II"},
+  {"number": "R15", "name": "IG-88 With Riot Gun", "side": "dark", "type": "Character", "rarity": "R15", "source": "Enhanced Cloud City"},
+  {"number": "R16", "name": "Janus Greejatus", "side": "dark", "type": "Character", "rarity": "R16", "source": "Death Star II"},
+  {"number": "R17", "name": "Jodo Kast", "side": "dark", "type": "Character", "rarity": "R17", "source": "Enhanced Jabba's Palace"},
+  {"number": "R18", "name": "Lord Vader", "side": "dark", "type": "Character", "rarity": "R18", "source": "Death Star II"},
+  {"number": "R19", "name": "Mara Jade, The Emperor's Hand", "side": "dark", "type": "Character", "rarity": "R19", "source": "Enhanced Jabba's Palace"},
+  {"number": "R20", "name": "Moff Jerjerrod", "side": "dark", "type": "Character", "rarity": "R20", "source": "Death Star II"},
+  {"number": "R21", "name": "Myn Kyneugh", "side": "dark", "type": "Character", "rarity": "R21", "source": "Death Star II"},
+  {"number": "R22", "name": "Outer Rim Scout", "side": "dark", "type": "Character", "rarity": "R22", "source": "Special Edition"}
+]

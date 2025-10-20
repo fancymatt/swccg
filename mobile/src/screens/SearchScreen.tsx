@@ -2,14 +2,12 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { View, Text, TextInput, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
-import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { CardListItem } from '../components/CardListItem';
-import { searchCardsByName, updateVariantQuantity, getSetCompletionStats } from '../services/database';
+import { searchCardsByName, updateVariantQuantity } from '../services/database';
 import type { Card } from '../types';
 
 export const SearchScreen: React.FC = () => {
   const { colors } = useTheme();
-  const { updateSetStats } = useCollectionStats();
   const [searchQuery, setSearchQuery] = useState('');
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(false);
@@ -48,12 +46,10 @@ export const SearchScreen: React.FC = () => {
   ) => {
     // Store the old quantity for rollback if needed
     let oldQuantity = 0;
-    let setId = '';
     setCards((prevCards) => {
       const card = prevCards.find((card) => card.id === cardId);
       const variant = card?.variants.find((variant) => variant.id === variantId);
       oldQuantity = variant?.quantity ?? 0;
-      setId = (card as any)?.setId ?? '';
       return prevCards;
     });
 
@@ -78,11 +74,8 @@ export const SearchScreen: React.FC = () => {
       // Then update database in the background
       await updateVariantQuantity(variantId, newQuantity);
 
-      // Update shared collection stats for the set
-      if (setId) {
-        const completionStats = await getSetCompletionStats(setId);
-        updateSetStats(setId, completionStats);
-      }
+      // Note: Set stats updates are handled by the updateVariantQuantity function
+      // which invalidates the cache for all affected sets
     } catch (error) {
       console.error('Failed to update variant quantity:', error);
 
@@ -103,7 +96,7 @@ export const SearchScreen: React.FC = () => {
         })
       );
     }
-  }, [updateSetStats]);
+  }, []);
 
   const styles = useMemo(() => StyleSheet.create({
     safeArea: {
@@ -164,7 +157,7 @@ export const SearchScreen: React.FC = () => {
     />
   ), [handleVariantQuantityChange]);
 
-  const keyExtractor = useCallback((item: Card, index: number) => `${item.id}-${(item as any).setId}-${index}`, []);
+  const keyExtractor = useCallback((item: Card) => item.id, []);
 
   const renderHeader = useCallback(() => {
     if (cards.length > 0) {

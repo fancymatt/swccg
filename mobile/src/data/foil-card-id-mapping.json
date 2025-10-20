@@ -1,0 +1,907 @@
+{
+  "4-LOM With Concussion Rifle": {
+    "id": "ecc_001_4-lom-with-concussion-rifle",
+    "side": "dark",
+    "type": "Character"
+  },
+  "A New Secret Base": {
+    "id": "3a_002_a-new-secret-base",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Admiral Ackbar": {
+    "id": "ds2_097_admiral-ackbar",
+    "side": "light",
+    "type": "Character"
+  },
+  "Admiral Piett": {
+    "id": "ds2_007_admiral-piett",
+    "side": "dark",
+    "type": "Character"
+  },
+  "After Her!": {
+    "id": "tp_025_after-her",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Amidala's Blaster": {
+    "id": "tp_116_amidala-blaster",
+    "side": "light",
+    "type": "Weapon"
+  },
+  "Anakin's Podracer": {
+    "id": "tat_088_anakins-podracer",
+    "side": "light",
+    "type": "Podracer"
+  },
+  "Arica": {
+    "id": "r2_002_arica",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Arleil Schous": {
+    "id": "otsd_010_arleil-schous",
+    "side": "light",
+    "type": "Character"
+  },
+  "Artoo & Threepio": {
+    "id": "r2_029_artoo-threepio",
+    "side": "light",
+    "type": "Character"
+  },
+  "Artoo-Detoo In Red 5": {
+    "id": "3a_004_artoo-detoo-in-red-5",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Aurra Sing": {
+    "id": "tat_001_aurra-sing",
+    "side": "dark",
+    "type": "Character"
+  },
+  "B-wing Attack Squadron": {
+    "id": "ds2_154_b-wing-attack-squadron",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Bacta Tank": {
+    "id": "ht_113_bacta-tank",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Bad Feeling Have I": {
+    "id": "da_26_bad_feeling_have_i",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Baron Soontir Fel": {
+    "id": "ds2_008_baron-soontir-fel",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Battle Deployment": {
+    "id": "ds2_001_battle-deployment",
+    "side": "dark",
+    "type": "Admiral's Order"
+  },
+  "Black Squadron TIE": {
+    "id": "otsd_007_black-squadron-tie",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Blue Squadron B-wing": {
+    "id": "ds2_157_blue-squadron-b-wing",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Boba Fett In Slave I": {
+    "id": "ecc_005_boba-fett-in-slave-i",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Boba Fett With Blaster Rifle": {
+    "id": "epp_001_boba-fett-with-blaster-rifle",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Boelo": {
+    "id": "se_006_boelo",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Boonta Eve Podrace": {
+    "id": "tat_025_boonta-eve-podrace",
+    "side": "dark",
+    "type": "Epic Event"
+  },
+  "Bossk With Mortar Gun": {
+    "id": "ejp_001_bossk-with-mortar-gun",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Brangus Glee": {
+    "id": "se_007_brangus-glee",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Brisky Morning Munchen": {
+    "id": "tat_057_brisky-morning-munchen",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Capital Support": {
+    "id": "ds2_092_capital-support",
+    "side": "light",
+    "type": "Admiral's Order"
+  },
+  "Captain Gilad Pallaeon": {
+    "id": "r2_003_captain-gilead-pellaeon",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Captain Panaka": {
+    "id": "cor_092_captain-panaka",
+    "side": "light",
+    "type": "Character"
+  },
+  "Chall Bekan": {
+    "id": "otsd_001_chall-bekan",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Chewbacca, Protector": {
+    "id": "r2_030_chewbacca-protector",
+    "side": "light",
+    "type": "Character - Alien"
+  },
+  "Chewie With Blaster Rifle": {
+    "id": "ecc_007_chewie-with-blaster-rifle",
+    "side": "light",
+    "type": "Character"
+  },
+  "Chief Chirpa": {
+    "id": "en_093_chief-chirpa",
+    "side": "light",
+    "type": "Character"
+  },
+  "Chimaera": {
+    "id": "ds2_063_chimaera",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Commander Igar": {
+    "id": "en_004_commander-igar",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Corran Horn": {
+    "id": "r2_031_corran-horn",
+    "side": "light",
+    "type": "Character"
+  },
+  "Coruscant: Jedi Council Chamber": {
+    "id": "cor_160_coruscant-jedi-council-chamber",
+    "side": "light",
+    "type": "Location"
+  },
+  "Darth Maul": {
+    "id": "tat_003_darth-maul",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Darth Maul, Young Apprentice": {
+    "id": "cor_005_darth-maul-young-apprentice",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Darth Vader With Lightsaber": {
+    "id": "epp_002_darth-vader-with-lightsaber",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Darth Vader's Lightsaber": {
+    "id": "ds2_087_darth-vaders-lightsaber",
+    "side": "dark",
+    "type": "Weapon"
+  },
+  "Dash Rendar": {
+    "id": "r2_032_dash-rendar",
+    "side": "light",
+    "type": "Character"
+  },
+  "Death Star II": {
+    "id": "ds2_051_death-star-ii",
+    "side": "dark",
+    "type": "Location"
+  },
+  "Death Star II: Throne Room": {
+    "id": "ds2_056_death-star-ii-throne-room",
+    "side": "dark",
+    "type": "Location"
+  },
+  "Dengar In Punishing One": {
+    "id": "ecc_006_dengar-in-punishing-one",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Dengar With Blaster Carbine": {
+    "id": "ejp_002_dengar-with-blaster-carbine",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Destroyer Droid": {
+    "id": "cor_007_destroyer-droid",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Dioxis": {
+    "id": "cor_049_dioxis",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Disarmed": {
+    "id": "pm_052_disarmed",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Djas Puhr": {
+    "id": "pm_009_djas-puhr",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Don't Get Cocky": {
+    "id": "pm_238_dont-get-cocky",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Dr. Evazan & Ponda Baba": {
+    "id": "r2_004_dr-evazan-ponda-baba",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Dreadnaught-Class Heavy Cruiser": {
+    "id": "otsd_008_dreadnaught-class-heavy-cruiser",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Echo Base Garrison": {
+    "id": "3a_003_echo-base-garrison",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Echo Base Operations": {
+    "id": "ht_115_echo-base-operations",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Emperor Palpatine": {
+    "id": "ds2_018_emperor-palpatine",
+    "side": "dark",
+    "type": "Character"
+  },
+  "End Of A Reign": {
+    "id": "tat_074_end-of-a-reign",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Executor: Holotheatre": {
+    "id": "da_71_executor_holotheatre",
+    "side": "dark",
+    "type": "Location"
+  },
+  "Executor: Meditation Chamber": {
+    "id": "da_73_executor_meditation_chamber",
+    "side": "dark",
+    "type": "Location"
+  },
+  "Fighters Coming In": {
+    "id": "ds2_003_fighters-coming-in",
+    "side": "dark",
+    "type": "Admiral's Order"
+  },
+  "Flagship Executor": {
+    "id": "ds2_066_flagship-executor",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Force Lightning": {
+    "id": "ds2_045_force-lightning",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Frozen Assets": {
+    "id": "cc_113_frozen_assets",
+    "side": "light",
+    "type": "Effect"
+  },
+  "General Calrissian": {
+    "id": "ds2_104_general-calrissian",
+    "side": "light",
+    "type": "Character"
+  },
+  "General Crix Madine": {
+    "id": "en_104_general-crix-madine",
+    "side": "light",
+    "type": "Character"
+  },
+  "Gift Of The Mentor": {
+    "id": "pm_244_gift-of-the-mentor",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Gimme A Lift": {
+    "id": "tp_096_gimme-a-lift",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Gold Leader In Gold 1": {
+    "id": "rl_001_gold-leader-in-gold-1",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Gold Squadron 1": {
+    "id": "ds2_159_gold-squadron-1",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Gold Squadron Y-wing": {
+    "id": "otsd_016_gold-squadron-y-wing",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Goo Nee Tay": {
+    "id": "se_224_goo-nee-tay",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Grand Admiral Thrawn": {
+    "id": "r2_005_grand-admiral-thrawn",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Gravity Shadow": {
+    "id": "jp_004_gravity-shadow",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Green Squadron A-wing": {
+    "id": "ds2_164_green-squadron-a-wing",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Guri": {
+    "id": "r2_006_guri",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Harvest": {
+    "id": "se_252_harvest",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Home One": {
+    "id": "ds2_165_home-one",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Hoth: Wampa Cave": {
+    "id": "ht_069_hoth-wampa-cave",
+    "side": "dark",
+    "type": "Location"
+  },
+  "I Did it!": {
+    "id": "tat_066_i-did-it",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "I Have You Now": {
+    "id": "pm_086_i-have-you-now",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "IG-88 In IG-2000": {
+    "id": "ejp_005_ig-88-in-ig-2000",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "IG-88 With Riot Gun": {
+    "id": "ecc_002_ig-88-with-riot-gun",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Imperial Artillery": {
+    "id": "cor_050_imperial-artillery",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Imperial Command": {
+    "id": "ds2_046_imperial-command",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Independence": {
+    "id": "ds2_166_independence",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Janus Greejatus": {
+    "id": "ds2_019_janus-greejatus",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Jar Jar Binks": {
+    "id": "tat_049_jar-jar-binks",
+    "side": "light",
+    "type": "Character"
+  },
+  "Jodo Kast": {
+    "id": "ejp_003_jodo-kast",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Kal'Falnl C'ndros": {
+    "id": "pm_177_kalfalnl-cndros",
+    "side": "light",
+    "type": "Character"
+  },
+  "Kessel Run": {
+    "id": "pm_215_kessel-run",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Kiffex": {
+    "id": "anh_066_kiffex",
+    "side": "dark",
+    "type": "Location"
+  },
+  "Lando In Millennium Falcon": {
+    "id": "ecc_009_lando-in-millennium-falcon",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Lando With Vibro Axe": {
+    "id": "jpsd_010_lando-with-vibro-ax",
+    "side": "light",
+    "type": "Character"
+  },
+  "Lateral Damage": {
+    "id": "pm_060_lateral-damage",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Liberty": {
+    "id": "ds2_167_liberty",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Lone Rogue": {
+    "id": "e2p_006_lone-rogue",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Lord Vader": {
+    "id": "ds2_022_lord-vader",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Lott Dod": {
+    "id": "cor_013_lott-dod",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Luke Skywalker, Jedi Knight": {
+    "id": "ds2_115_luke-skywalker-jedi-knight",
+    "side": "light",
+    "type": "Character"
+  },
+  "Luke Skywalker, Rebel Scout": {
+    "id": "r2_034_luke-skywalker-rebel-scout",
+    "side": "light",
+    "type": "Character"
+  },
+  "Luke With Lightsaber": {
+    "id": "epp_005_luke-with-lightsaber",
+    "side": "light",
+    "type": "Character"
+  },
+  "Luke's Lightsaber": {
+    "id": "ds2_181_lukes-lightsaber",
+    "side": "light",
+    "type": "Weapon"
+  },
+  "Mace Windu": {
+    "id": "cor_103_mace-windu",
+    "side": "light",
+    "type": "Character"
+  },
+  "Mantellian Savrip": {
+    "id": "pm_217_mantellian-savrip",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Mara Jade's Lightsaber": {
+    "id": "ejp_007_maras-jades-lightsaber",
+    "side": "dark",
+    "type": "Weapon"
+  },
+  "Mara Jade, The Emperor's Hand": {
+    "id": "ejp_004_mara-jade-the-emperors-hand",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Master Qui-Gon": {
+    "id": "cor_105_master-qui-gon",
+    "side": "light",
+    "type": "Character"
+  },
+  "Maul Strikes": {
+    "id": "cor_055_maul-strikes",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Maul's Lightsaber": {
+    "id": "tat_045_mauls-lightsaber",
+    "side": "dark",
+    "type": "Weapon"
+  },
+  "Maul's Sith Infiltrator": {
+    "id": "cor_084_mauls-sith-infiltrator",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Melas": {
+    "id": "se_194_melas",
+    "side": "light",
+    "type": "Character"
+  },
+  "Mercenary Pilot": {
+    "id": "jpsd_001_mercenary-pilot",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Mighty Jabba": {
+    "id": "jpsd_002_mighty-jabba",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Mirax Terrik": {
+    "id": "r2_035_mirax-terrik",
+    "side": "light",
+    "type": "Character"
+  },
+  "Moff Jerjerrod": {
+    "id": "ds2_026_moff-jerjerrod",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Myn Kyneugh": {
+    "id": "ds2_027_myn-kyneugh",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Naboo Occupation": {
+    "id": "tp_029_naboo-occupation",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Nute Gunray": {
+    "id": "cor_015_nute-gunray",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Obi-Wan Kenobi, Padawan Learner": {
+    "id": "tat_051_obi-wan-kenobi-padawan-learner",
+    "side": "light",
+    "type": "Character"
+  },
+  "Obi-Wan's Journal": {
+    "id": "r2_039_obi-wans-journal",
+    "side": "light",
+    "type": "Device"
+  },
+  "Ominous Rumors": {
+    "id": "en_037_ominous-rumors",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Order To Engage": {
+    "id": "da_120_order_to_engage",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Orrimaarko": {
+    "id": "en_113_orrimaarko",
+    "side": "light",
+    "type": "Character"
+  },
+  "Outer Rim Scout": {
+    "id": "se_033_outer-rim-scout",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Outrider": {
+    "id": "r2_053_outrider",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Owen Lars & Beru Lars": {
+    "id": "r2_036_owen-lars-beru-lars",
+    "side": "light",
+    "type": "Character"
+  },
+  "P-59": {
+    "id": "cor_017_p-59",
+    "side": "dark",
+    "type": "Character"
+  },
+  "P-60": {
+    "id": "cor_018_p-60",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Padmé Naberrie": {
+    "id": "tat_052_padme-naberrie",
+    "side": "light",
+    "type": "Character"
+  },
+  "Palace Raider": {
+    "id": "jpsd_011_palace-raider",
+    "side": "light",
+    "type": "Character"
+  },
+  "Power Of The Hutt": {
+    "id": "jpsd_005_power-of-the-hutt",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Prince Xizor": {
+    "id": "r2_009_prince-xizor",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Prisoner 2187": {
+    "id": "3a_001_prisoner-2187",
+    "side": "light",
+    "type": "Character"
+  },
+  "Pulsar Skate": {
+    "id": "r2_054_pulsar-skate",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Queen's Royal Starship": {
+    "id": "cor_175_queens-royal-starship",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Qui-Gon Jinn": {
+    "id": "tat_053_qui-gon-jinn",
+    "side": "light",
+    "type": "Character"
+  },
+  "Radiant VII": {
+    "id": "cor_176_radiant-vii",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Rebel Artillery": {
+    "id": "cor_150_rebel-artillery",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Rebel Leadership": {
+    "id": "ds2_145_rebel-leadership",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Red Leader In Red 1": {
+    "id": "rl_002_red-leader-in-red-1",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Red Squadron 1": {
+    "id": "ds2_172_red-squadron-1",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Red Squadron X-wing": {
+    "id": "otsd_017_red-squadron-x-wing",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Ric Olié": {
+    "id": "cor_111_ric-olie",
+    "side": "light",
+    "type": "Character"
+  },
+  "Rolling, Rolling, Rolling": {
+    "id": "tp_036_rolling-rolling-rolling",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Run Luke, Run!": {
+    "id": "p2p_005_run-luke-run",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Scum And Villainy": {
+    "id": "jp_59_scum_and_villainy",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Sebulba's Podracer": {
+    "id": "tat_043_sebulbas-podracer",
+    "side": "dark",
+    "type": "Podracer"
+  },
+  "See-Threepio": {
+    "id": "ejp_010_see-threepio",
+    "side": "light",
+    "type": "Character"
+  },
+  "Seeking An Audience": {
+    "id": "jpsd_013_seeking-an-audience",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Shmi Skywalker": {
+    "id": "tat_054_shmi-skywalker",
+    "side": "light",
+    "type": "Character"
+  },
+  "Sienar Fleet Systems": {
+    "id": "se_079_sienar-fleet-systems",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Sim Aloo": {
+    "id": "ds2_029_sim-aloo",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Sith Probe Droid": {
+    "id": "tat_011_sith-probe-droid",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Smoke Screen": {
+    "id": "cc_159_smoke_screen",
+    "side": "light",
+    "type": "Interrupt"
+  },
+  "Snoova": {
+    "id": "r2_010_snoova",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Stinger": {
+    "id": "r2_026_stinger",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Supreme Chancellor Valorum": {
+    "id": "cor_116_supreme-chancellor-valorum",
+    "side": "light",
+    "type": "Character"
+  },
+  "TC-14": {
+    "id": "cor_022_tc-14",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Talon Karde": {
+    "id": "r2_037_talon-karrde",
+    "side": "light",
+    "type": "Character"
+  },
+  "Tatooine: Desert Landing Site": {
+    "id": "tat_038_tatooine-desert-landing-site",
+    "side": "dark",
+    "type": "Location"
+  },
+  "Tawss Khaa": {
+    "id": "se_206_tawss-khaa",
+    "side": "light",
+    "type": "Character"
+  },
+  "Tempest Scout 1": {
+    "id": "en_082_tempest-scout-1",
+    "side": "dark",
+    "type": "Vehicle"
+  },
+  "The Emperor's Shield": {
+    "id": "ds2_081_the-emperors-shield",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "The Emperor's Sword": {
+    "id": "ds2_082_the-emperors-sword",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "The Phantom Menace": {
+    "id": "cor_042_the-phantom-menace",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "They Win This Round": {
+    "id": "tp_091_they-win-this-round",
+    "side": "light",
+    "type": "Effect"
+  },
+  "Threepio With His Parts Showing": {
+    "id": "tat_055_threepio-with-his-parts-showing",
+    "side": "light",
+    "type": "Character"
+  },
+  "Trample": {
+    "id": "ht_057_trample",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Vader's Obsession": {
+    "id": "p2p_002_vaders-obsession",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Vigo": {
+    "id": "r2_012_vigo",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Virago": {
+    "id": "r2_027_virago",
+    "side": "dark",
+    "type": "Starship"
+  },
+  "Vote Now!": {
+    "id": "cor_064_vote-now",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Walker Garrison": {
+    "id": "e2p_002_walker-garrison",
+    "side": "dark",
+    "type": "Interrupt"
+  },
+  "Watto": {
+    "id": "tat_012_watto",
+    "side": "dark",
+    "type": "Character"
+  },
+  "Wedge Antilles, Red Squadron Leader": {
+    "id": "ds2_122_wedge-antilles-red-squadron-leader",
+    "side": "light",
+    "type": "Character"
+  },
+  "Wicket": {
+    "id": "en_122_wicket",
+    "side": "light",
+    "type": "Character"
+  },
+  "X-wing Assault Squadron": {
+    "id": "1a_006_x-wing-assault-squadron",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Yavin 4: Massassi Throne Room": {
+    "id": "pm_300_yavin-4-massassi-throne-room",
+    "side": "light",
+    "type": "Location"
+  },
+  "You May Start Your Landing": {
+    "id": "tat_023_you-may-start-your-landing",
+    "side": "dark",
+    "type": "Effect"
+  },
+  "Z-95 Headhunter": {
+    "id": "otsd_018_z-95-headhunter",
+    "side": "light",
+    "type": "Starship"
+  },
+  "Zuckuss In Mist Hunter": {
+    "id": "ejp_006_zuckuss-in-mist-hunter",
+    "side": "dark",
+    "type": "Starship"
+  }
+}

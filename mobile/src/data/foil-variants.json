@@ -1,0 +1,2359 @@
+{
+  "reflections-ii": [
+    {
+      "cardId": "ds2_003_fighters-coming-in",
+      "variant": {
+        "id": "ds2_003_fighters-coming-in_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R1",
+        "rarity": "R1"
+      }
+    },
+    {
+      "cardId": "ecc_001_4-lom-with-concussion-rifle",
+      "variant": {
+        "id": "ecc_001_4-lom-with-concussion-rifle_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R2",
+        "rarity": "R2"
+      }
+    },
+    {
+      "cardId": "ds2_007_admiral-piett",
+      "variant": {
+        "id": "ds2_007_admiral-piett_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R3",
+        "rarity": "R3"
+      }
+    },
+    {
+      "cardId": "ds2_008_baron-soontir-fel",
+      "variant": {
+        "id": "ds2_008_baron-soontir-fel_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R4",
+        "rarity": "R4"
+      }
+    },
+    {
+      "cardId": "epp_001_boba-fett-with-blaster-rifle",
+      "variant": {
+        "id": "epp_001_boba-fett-with-blaster-rifle_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R5",
+        "rarity": "R5"
+      }
+    },
+    {
+      "cardId": "se_006_boelo",
+      "variant": {
+        "id": "se_006_boelo_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R6",
+        "rarity": "R6"
+      }
+    },
+    {
+      "cardId": "ejp_001_bossk-with-mortar-gun",
+      "variant": {
+        "id": "ejp_001_bossk-with-mortar-gun_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R7",
+        "rarity": "R7"
+      }
+    },
+    {
+      "cardId": "otsd_001_chall-bekan",
+      "variant": {
+        "id": "otsd_001_chall-bekan_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R8",
+        "rarity": "R8"
+      }
+    },
+    {
+      "cardId": "en_004_commander-igar",
+      "variant": {
+        "id": "en_004_commander-igar_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R9",
+        "rarity": "R9"
+      }
+    },
+    {
+      "cardId": "epp_002_darth-vader-with-lightsaber",
+      "variant": {
+        "id": "epp_002_darth-vader-with-lightsaber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R11",
+        "rarity": "R11"
+      }
+    },
+    {
+      "cardId": "ejp_002_dengar-with-blaster-carbine",
+      "variant": {
+        "id": "ejp_002_dengar-with-blaster-carbine_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R12",
+        "rarity": "R12"
+      }
+    },
+    {
+      "cardId": "pm_009_djas-puhr",
+      "variant": {
+        "id": "pm_009_djas-puhr_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R13",
+        "rarity": "R13"
+      }
+    },
+    {
+      "cardId": "ds2_018_emperor-palpatine",
+      "variant": {
+        "id": "ds2_018_emperor-palpatine_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R14",
+        "rarity": "R14"
+      }
+    },
+    {
+      "cardId": "ecc_002_ig-88-with-riot-gun",
+      "variant": {
+        "id": "ecc_002_ig-88-with-riot-gun_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R15",
+        "rarity": "R15"
+      }
+    },
+    {
+      "cardId": "ds2_019_janus-greejatus",
+      "variant": {
+        "id": "ds2_019_janus-greejatus_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R16",
+        "rarity": "R16"
+      }
+    },
+    {
+      "cardId": "ejp_003_jodo-kast",
+      "variant": {
+        "id": "ejp_003_jodo-kast_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R17",
+        "rarity": "R17"
+      }
+    },
+    {
+      "cardId": "ds2_022_lord-vader",
+      "variant": {
+        "id": "ds2_022_lord-vader_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R18",
+        "rarity": "R18"
+      }
+    },
+    {
+      "cardId": "ejp_004_mara-jade-the-emperors-hand",
+      "variant": {
+        "id": "ejp_004_mara-jade-the-emperors-hand_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R19",
+        "rarity": "R19"
+      }
+    },
+    {
+      "cardId": "ds2_026_moff-jerjerrod",
+      "variant": {
+        "id": "ds2_026_moff-jerjerrod_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R20",
+        "rarity": "R20"
+      }
+    },
+    {
+      "cardId": "ds2_027_myn-kyneugh",
+      "variant": {
+        "id": "ds2_027_myn-kyneugh_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R21",
+        "rarity": "R21"
+      }
+    },
+    {
+      "cardId": "se_033_outer-rim-scout",
+      "variant": {
+        "id": "se_033_outer-rim-scout_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R22",
+        "rarity": "R22"
+      }
+    },
+    {
+      "cardId": "ds2_029_sim-aloo",
+      "variant": {
+        "id": "ds2_029_sim-aloo_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R23",
+        "rarity": "R23"
+      }
+    },
+    {
+      "cardId": "da_26_bad_feeling_have_i",
+      "variant": {
+        "id": "da_26_bad_feeling_have_i_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R24",
+        "rarity": "R24"
+      }
+    },
+    {
+      "cardId": "pm_060_lateral-damage",
+      "variant": {
+        "id": "pm_060_lateral-damage_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R25",
+        "rarity": "R25"
+      }
+    },
+    {
+      "cardId": "jp_59_scum_and_villainy",
+      "variant": {
+        "id": "jp_59_scum_and_villainy_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R26",
+        "rarity": "R26"
+      }
+    },
+    {
+      "cardId": "se_079_sienar-fleet-systems",
+      "variant": {
+        "id": "se_079_sienar-fleet-systems_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R27",
+        "rarity": "R27"
+      }
+    },
+    {
+      "cardId": "ds2_045_force-lightning",
+      "variant": {
+        "id": "ds2_045_force-lightning_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R28",
+        "rarity": "R28"
+      }
+    },
+    {
+      "cardId": "ht_057_trample",
+      "variant": {
+        "id": "ht_057_trample_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R29",
+        "rarity": "R29"
+      }
+    },
+    {
+      "cardId": "p2p_002_vaders-obsession",
+      "variant": {
+        "id": "p2p_002_vaders-obsession_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R30",
+        "rarity": "R30"
+      }
+    },
+    {
+      "cardId": "e2p_002_walker-garrison",
+      "variant": {
+        "id": "e2p_002_walker-garrison_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R31",
+        "rarity": "R31"
+      }
+    },
+    {
+      "cardId": "ds2_051_death-star-ii",
+      "variant": {
+        "id": "ds2_051_death-star-ii_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R33",
+        "rarity": "R33"
+      }
+    },
+    {
+      "cardId": "ds2_056_death-star-ii-throne-room",
+      "variant": {
+        "id": "ds2_056_death-star-ii-throne-room_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R34",
+        "rarity": "R34"
+      }
+    },
+    {
+      "cardId": "da_71_executor_holotheatre",
+      "variant": {
+        "id": "da_71_executor_holotheatre_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R35",
+        "rarity": "R35"
+      }
+    },
+    {
+      "cardId": "da_73_executor_meditation_chamber",
+      "variant": {
+        "id": "da_73_executor_meditation_chamber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R36",
+        "rarity": "R36"
+      }
+    },
+    {
+      "cardId": "ht_069_hoth-wampa-cave",
+      "variant": {
+        "id": "ht_069_hoth-wampa-cave_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R37",
+        "rarity": "R37"
+      }
+    },
+    {
+      "cardId": "anh_066_kiffex",
+      "variant": {
+        "id": "anh_066_kiffex_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R38",
+        "rarity": "R38"
+      }
+    },
+    {
+      "cardId": "otsd_007_black-squadron-tie",
+      "variant": {
+        "id": "otsd_007_black-squadron-tie_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R39",
+        "rarity": "R39"
+      }
+    },
+    {
+      "cardId": "ecc_005_boba-fett-in-slave-i",
+      "variant": {
+        "id": "ecc_005_boba-fett-in-slave-i_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R40",
+        "rarity": "R40"
+      }
+    },
+    {
+      "cardId": "ds2_063_chimaera",
+      "variant": {
+        "id": "ds2_063_chimaera_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R41",
+        "rarity": "R41"
+      }
+    },
+    {
+      "cardId": "ecc_006_dengar-in-punishing-one",
+      "variant": {
+        "id": "ecc_006_dengar-in-punishing-one_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R42",
+        "rarity": "R42"
+      }
+    },
+    {
+      "cardId": "otsd_008_dreadnaught-class-heavy-cruiser",
+      "variant": {
+        "id": "otsd_008_dreadnaught-class-heavy-cruiser_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R43",
+        "rarity": "R43"
+      }
+    },
+    {
+      "cardId": "ds2_066_flagship-executor",
+      "variant": {
+        "id": "ds2_066_flagship-executor_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R44",
+        "rarity": "R44"
+      }
+    },
+    {
+      "cardId": "ejp_005_ig-88-in-ig-2000",
+      "variant": {
+        "id": "ejp_005_ig-88-in-ig-2000_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R45",
+        "rarity": "R45"
+      }
+    },
+    {
+      "cardId": "ds2_081_the-emperors-shield",
+      "variant": {
+        "id": "ds2_081_the-emperors-shield_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R46",
+        "rarity": "R46"
+      }
+    },
+    {
+      "cardId": "ds2_082_the-emperors-sword",
+      "variant": {
+        "id": "ds2_082_the-emperors-sword_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R47",
+        "rarity": "R47"
+      }
+    },
+    {
+      "cardId": "ejp_006_zuckuss-in-mist-hunter",
+      "variant": {
+        "id": "ejp_006_zuckuss-in-mist-hunter_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R48",
+        "rarity": "R48"
+      }
+    },
+    {
+      "cardId": "en_082_tempest-scout-1",
+      "variant": {
+        "id": "en_082_tempest-scout-1_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R50",
+        "rarity": "R50"
+      }
+    },
+    {
+      "cardId": "ds2_087_darth-vaders-lightsaber",
+      "variant": {
+        "id": "ds2_087_darth-vaders-lightsaber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R51",
+        "rarity": "R51"
+      }
+    },
+    {
+      "cardId": "ejp_007_maras-jades-lightsaber",
+      "variant": {
+        "id": "ejp_007_maras-jades-lightsaber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R52",
+        "rarity": "R52"
+      }
+    },
+    {
+      "cardId": "ds2_092_capital-support",
+      "variant": {
+        "id": "ds2_092_capital-support_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R53",
+        "rarity": "R53"
+      }
+    },
+    {
+      "cardId": "ds2_097_admiral-ackbar",
+      "variant": {
+        "id": "ds2_097_admiral-ackbar_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R54",
+        "rarity": "R54"
+      }
+    },
+    {
+      "cardId": "otsd_010_arleil-schous",
+      "variant": {
+        "id": "otsd_010_arleil-schous_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R55",
+        "rarity": "R55"
+      }
+    },
+    {
+      "cardId": "ecc_007_chewie-with-blaster-rifle",
+      "variant": {
+        "id": "ecc_007_chewie-with-blaster-rifle_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R57",
+        "rarity": "R57"
+      }
+    },
+    {
+      "cardId": "en_093_chief-chirpa",
+      "variant": {
+        "id": "en_093_chief-chirpa_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R58",
+        "rarity": "R58"
+      }
+    },
+    {
+      "cardId": "ds2_104_general-calrissian",
+      "variant": {
+        "id": "ds2_104_general-calrissian_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R59",
+        "rarity": "R59"
+      }
+    },
+    {
+      "cardId": "en_104_general-crix-madine",
+      "variant": {
+        "id": "en_104_general-crix-madine_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R60",
+        "rarity": "R60"
+      }
+    },
+    {
+      "cardId": "pm_177_kalfalnl-cndros",
+      "variant": {
+        "id": "pm_177_kalfalnl-cndros_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R62",
+        "rarity": "R62"
+      }
+    },
+    {
+      "cardId": "ds2_115_luke-skywalker-jedi-knight",
+      "variant": {
+        "id": "ds2_115_luke-skywalker-jedi-knight_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R65",
+        "rarity": "R65"
+      }
+    },
+    {
+      "cardId": "epp_005_luke-with-lightsaber",
+      "variant": {
+        "id": "epp_005_luke-with-lightsaber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R66",
+        "rarity": "R66"
+      }
+    },
+    {
+      "cardId": "se_194_melas",
+      "variant": {
+        "id": "se_194_melas_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R67",
+        "rarity": "R67"
+      }
+    },
+    {
+      "cardId": "en_113_orrimaarko",
+      "variant": {
+        "id": "en_113_orrimaarko_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R69",
+        "rarity": "R69"
+      }
+    },
+    {
+      "cardId": "ejp_010_see-threepio",
+      "variant": {
+        "id": "ejp_010_see-threepio_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R70",
+        "rarity": "R70"
+      }
+    },
+    {
+      "cardId": "se_206_tawss-khaa",
+      "variant": {
+        "id": "se_206_tawss-khaa_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R71",
+        "rarity": "R71"
+      }
+    },
+    {
+      "cardId": "ds2_122_wedge-antilles-red-squadron-leader",
+      "variant": {
+        "id": "ds2_122_wedge-antilles-red-squadron-leader_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R72",
+        "rarity": "R72"
+      }
+    },
+    {
+      "cardId": "en_122_wicket",
+      "variant": {
+        "id": "en_122_wicket_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R73",
+        "rarity": "R73"
+      }
+    },
+    {
+      "cardId": "ht_113_bacta-tank",
+      "variant": {
+        "id": "ht_113_bacta-tank_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R74",
+        "rarity": "R74"
+      }
+    },
+    {
+      "cardId": "ht_115_echo-base-operations",
+      "variant": {
+        "id": "ht_115_echo-base-operations_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R75",
+        "rarity": "R75"
+      }
+    },
+    {
+      "cardId": "cc_113_frozen_assets",
+      "variant": {
+        "id": "cc_113_frozen_assets_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R76",
+        "rarity": "R76"
+      }
+    },
+    {
+      "cardId": "se_224_goo-nee-tay",
+      "variant": {
+        "id": "se_224_goo-nee-tay_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R77",
+        "rarity": "R77"
+      }
+    },
+    {
+      "cardId": "pm_215_kessel-run",
+      "variant": {
+        "id": "pm_215_kessel-run_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R78",
+        "rarity": "R78"
+      }
+    },
+    {
+      "cardId": "pm_217_mantellian-savrip",
+      "variant": {
+        "id": "pm_217_mantellian-savrip_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R79",
+        "rarity": "R79"
+      }
+    },
+    {
+      "cardId": "da_120_order_to_engage",
+      "variant": {
+        "id": "da_120_order_to_engage_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R80",
+        "rarity": "R80"
+      }
+    },
+    {
+      "cardId": "pm_238_dont-get-cocky",
+      "variant": {
+        "id": "pm_238_dont-get-cocky_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R81",
+        "rarity": "R81"
+      }
+    },
+    {
+      "cardId": "pm_244_gift-of-the-mentor",
+      "variant": {
+        "id": "pm_244_gift-of-the-mentor_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R82",
+        "rarity": "R82"
+      }
+    },
+    {
+      "cardId": "e2p_006_lone-rogue",
+      "variant": {
+        "id": "e2p_006_lone-rogue_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R83",
+        "rarity": "R83"
+      }
+    },
+    {
+      "cardId": "p2p_005_run-luke-run",
+      "variant": {
+        "id": "p2p_005_run-luke-run_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R84",
+        "rarity": "R84"
+      }
+    },
+    {
+      "cardId": "cc_159_smoke_screen",
+      "variant": {
+        "id": "cc_159_smoke_screen_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R85",
+        "rarity": "R85"
+      }
+    },
+    {
+      "cardId": "pm_300_yavin-4-massassi-throne-room",
+      "variant": {
+        "id": "pm_300_yavin-4-massassi-throne-room_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R87",
+        "rarity": "R87"
+      }
+    },
+    {
+      "cardId": "3a_004_artoo-detoo-in-red-5",
+      "variant": {
+        "id": "3a_004_artoo-detoo-in-red-5_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R88",
+        "rarity": "R88"
+      }
+    },
+    {
+      "cardId": "ds2_154_b-wing-attack-squadron",
+      "variant": {
+        "id": "ds2_154_b-wing-attack-squadron_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R89",
+        "rarity": "R89"
+      }
+    },
+    {
+      "cardId": "ds2_157_blue-squadron-b-wing",
+      "variant": {
+        "id": "ds2_157_blue-squadron-b-wing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R90",
+        "rarity": "R90"
+      }
+    },
+    {
+      "cardId": "rl_001_gold-leader-in-gold-1",
+      "variant": {
+        "id": "rl_001_gold-leader-in-gold-1_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R91",
+        "rarity": "R91"
+      }
+    },
+    {
+      "cardId": "ds2_159_gold-squadron-1",
+      "variant": {
+        "id": "ds2_159_gold-squadron-1_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R92",
+        "rarity": "R92"
+      }
+    },
+    {
+      "cardId": "otsd_016_gold-squadron-y-wing",
+      "variant": {
+        "id": "otsd_016_gold-squadron-y-wing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R93",
+        "rarity": "R93"
+      }
+    },
+    {
+      "cardId": "ds2_164_green-squadron-a-wing",
+      "variant": {
+        "id": "ds2_164_green-squadron-a-wing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R94",
+        "rarity": "R94"
+      }
+    },
+    {
+      "cardId": "ds2_165_home-one",
+      "variant": {
+        "id": "ds2_165_home-one_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R95",
+        "rarity": "R95"
+      }
+    },
+    {
+      "cardId": "ds2_166_independence",
+      "variant": {
+        "id": "ds2_166_independence_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R96",
+        "rarity": "R96"
+      }
+    },
+    {
+      "cardId": "ecc_009_lando-in-millennium-falcon",
+      "variant": {
+        "id": "ecc_009_lando-in-millennium-falcon_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R97",
+        "rarity": "R97"
+      }
+    },
+    {
+      "cardId": "ds2_167_liberty",
+      "variant": {
+        "id": "ds2_167_liberty_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R98",
+        "rarity": "R98"
+      }
+    },
+    {
+      "cardId": "rl_002_red-leader-in-red-1",
+      "variant": {
+        "id": "rl_002_red-leader-in-red-1_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R99",
+        "rarity": "R99"
+      }
+    },
+    {
+      "cardId": "ds2_172_red-squadron-1",
+      "variant": {
+        "id": "ds2_172_red-squadron-1_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R100",
+        "rarity": "R100"
+      }
+    },
+    {
+      "cardId": "otsd_017_red-squadron-x-wing",
+      "variant": {
+        "id": "otsd_017_red-squadron-x-wing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R101",
+        "rarity": "R101"
+      }
+    },
+    {
+      "cardId": "1a_006_x-wing-assault-squadron",
+      "variant": {
+        "id": "1a_006_x-wing-assault-squadron_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R102",
+        "rarity": "R102"
+      }
+    },
+    {
+      "cardId": "otsd_018_z-95-headhunter",
+      "variant": {
+        "id": "otsd_018_z-95-headhunter_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R103",
+        "rarity": "R103"
+      }
+    },
+    {
+      "cardId": "ds2_181_lukes-lightsaber",
+      "variant": {
+        "id": "ds2_181_lukes-lightsaber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections II foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R105",
+        "rarity": "R105"
+      }
+    }
+  ],
+  "reflections-iii": [
+    {
+      "cardId": "ds2_001_battle-deployment",
+      "variant": {
+        "id": "ds2_001_battle-deployment_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R1",
+        "rarity": "R1"
+      }
+    },
+    {
+      "cardId": "r2_002_arica",
+      "variant": {
+        "id": "r2_002_arica_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R2",
+        "rarity": "R2"
+      }
+    },
+    {
+      "cardId": "tat_001_aurra-sing",
+      "variant": {
+        "id": "tat_001_aurra-sing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R3",
+        "rarity": "R3"
+      }
+    },
+    {
+      "cardId": "se_007_brangus-glee",
+      "variant": {
+        "id": "se_007_brangus-glee_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R4",
+        "rarity": "R4"
+      }
+    },
+    {
+      "cardId": "r2_003_captain-gilead-pellaeon",
+      "variant": {
+        "id": "r2_003_captain-gilead-pellaeon_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R5",
+        "rarity": "R5"
+      }
+    },
+    {
+      "cardId": "tat_003_darth-maul",
+      "variant": {
+        "id": "tat_003_darth-maul_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R6",
+        "rarity": "R6"
+      }
+    },
+    {
+      "cardId": "cor_005_darth-maul-young-apprentice",
+      "variant": {
+        "id": "cor_005_darth-maul-young-apprentice_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R7",
+        "rarity": "R7"
+      }
+    },
+    {
+      "cardId": "cor_007_destroyer-droid",
+      "variant": {
+        "id": "cor_007_destroyer-droid_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R8",
+        "rarity": "R8"
+      }
+    },
+    {
+      "cardId": "r2_004_dr-evazan-ponda-baba",
+      "variant": {
+        "id": "r2_004_dr-evazan-ponda-baba_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R10",
+        "rarity": "R10"
+      }
+    },
+    {
+      "cardId": "r2_005_grand-admiral-thrawn",
+      "variant": {
+        "id": "r2_005_grand-admiral-thrawn_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R11",
+        "rarity": "R11"
+      }
+    },
+    {
+      "cardId": "r2_006_guri",
+      "variant": {
+        "id": "r2_006_guri_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R13",
+        "rarity": "R13"
+      }
+    },
+    {
+      "cardId": "cor_013_lott-dod",
+      "variant": {
+        "id": "cor_013_lott-dod_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R14",
+        "rarity": "R14"
+      }
+    },
+    {
+      "cardId": "jpsd_001_mercenary-pilot",
+      "variant": {
+        "id": "jpsd_001_mercenary-pilot_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R15",
+        "rarity": "R15"
+      }
+    },
+    {
+      "cardId": "jpsd_002_mighty-jabba",
+      "variant": {
+        "id": "jpsd_002_mighty-jabba_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R16",
+        "rarity": "R16"
+      }
+    },
+    {
+      "cardId": "cor_015_nute-gunray",
+      "variant": {
+        "id": "cor_015_nute-gunray_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R17",
+        "rarity": "R17"
+      }
+    },
+    {
+      "cardId": "cor_017_p-59",
+      "variant": {
+        "id": "cor_017_p-59_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R18",
+        "rarity": "R18"
+      }
+    },
+    {
+      "cardId": "cor_018_p-60",
+      "variant": {
+        "id": "cor_018_p-60_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R19",
+        "rarity": "R19"
+      }
+    },
+    {
+      "cardId": "r2_009_prince-xizor",
+      "variant": {
+        "id": "r2_009_prince-xizor_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R20",
+        "rarity": "R20"
+      }
+    },
+    {
+      "cardId": "tat_011_sith-probe-droid",
+      "variant": {
+        "id": "tat_011_sith-probe-droid_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R21",
+        "rarity": "R21"
+      }
+    },
+    {
+      "cardId": "r2_010_snoova",
+      "variant": {
+        "id": "r2_010_snoova_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R22",
+        "rarity": "R22"
+      }
+    },
+    {
+      "cardId": "cor_022_tc-14",
+      "variant": {
+        "id": "cor_022_tc-14_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R23",
+        "rarity": "R23"
+      }
+    },
+    {
+      "cardId": "r2_012_vigo",
+      "variant": {
+        "id": "r2_012_vigo_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R24",
+        "rarity": "R24"
+      }
+    },
+    {
+      "cardId": "tat_012_watto",
+      "variant": {
+        "id": "tat_012_watto_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R25",
+        "rarity": "R25"
+      }
+    },
+    {
+      "cardId": "tp_025_after-her",
+      "variant": {
+        "id": "tp_025_after-her_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R26",
+        "rarity": "R26"
+      }
+    },
+    {
+      "cardId": "pm_052_disarmed",
+      "variant": {
+        "id": "pm_052_disarmed_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R27",
+        "rarity": "R27"
+      }
+    },
+    {
+      "cardId": "tp_029_naboo-occupation",
+      "variant": {
+        "id": "tp_029_naboo-occupation_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R28",
+        "rarity": "R28"
+      }
+    },
+    {
+      "cardId": "en_037_ominous-rumors",
+      "variant": {
+        "id": "en_037_ominous-rumors_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R29",
+        "rarity": "R29"
+      }
+    },
+    {
+      "cardId": "jpsd_005_power-of-the-hutt",
+      "variant": {
+        "id": "jpsd_005_power-of-the-hutt_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R30",
+        "rarity": "R30"
+      }
+    },
+    {
+      "cardId": "cor_042_the-phantom-menace",
+      "variant": {
+        "id": "cor_042_the-phantom-menace_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R31",
+        "rarity": "R31"
+      }
+    },
+    {
+      "cardId": "tat_023_you-may-start-your-landing",
+      "variant": {
+        "id": "tat_023_you-may-start-your-landing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R32",
+        "rarity": "R32"
+      }
+    },
+    {
+      "cardId": "tat_025_boonta-eve-podrace",
+      "variant": {
+        "id": "tat_025_boonta-eve-podrace_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R33",
+        "rarity": "R33"
+      }
+    },
+    {
+      "cardId": "cor_049_dioxis",
+      "variant": {
+        "id": "cor_049_dioxis_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R34",
+        "rarity": "R34"
+      }
+    },
+    {
+      "cardId": "jp_004_gravity-shadow",
+      "variant": {
+        "id": "jp_004_gravity-shadow_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R35",
+        "rarity": "R35"
+      }
+    },
+    {
+      "cardId": "pm_086_i-have-you-now",
+      "variant": {
+        "id": "pm_086_i-have-you-now_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R36",
+        "rarity": "R36"
+      }
+    },
+    {
+      "cardId": "cor_050_imperial-artillery",
+      "variant": {
+        "id": "cor_050_imperial-artillery_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R37",
+        "rarity": "R37"
+      }
+    },
+    {
+      "cardId": "ds2_046_imperial-command",
+      "variant": {
+        "id": "ds2_046_imperial-command_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R38",
+        "rarity": "R38"
+      }
+    },
+    {
+      "cardId": "cor_055_maul-strikes",
+      "variant": {
+        "id": "cor_055_maul-strikes_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R39",
+        "rarity": "R39"
+      }
+    },
+    {
+      "cardId": "tp_036_rolling-rolling-rolling",
+      "variant": {
+        "id": "tp_036_rolling-rolling-rolling_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R40",
+        "rarity": "R40"
+      }
+    },
+    {
+      "cardId": "cor_064_vote-now",
+      "variant": {
+        "id": "cor_064_vote-now_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R43",
+        "rarity": "R43"
+      }
+    },
+    {
+      "cardId": "tat_038_tatooine-desert-landing-site",
+      "variant": {
+        "id": "tat_038_tatooine-desert-landing-site_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R44",
+        "rarity": "R44"
+      }
+    },
+    {
+      "cardId": "tat_043_sebulbas-podracer",
+      "variant": {
+        "id": "tat_043_sebulbas-podracer_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R45",
+        "rarity": "R45"
+      }
+    },
+    {
+      "cardId": "cor_084_mauls-sith-infiltrator",
+      "variant": {
+        "id": "cor_084_mauls-sith-infiltrator_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R46",
+        "rarity": "R46"
+      }
+    },
+    {
+      "cardId": "r2_026_stinger",
+      "variant": {
+        "id": "r2_026_stinger_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R47",
+        "rarity": "R47"
+      }
+    },
+    {
+      "cardId": "r2_027_virago",
+      "variant": {
+        "id": "r2_027_virago_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R48",
+        "rarity": "R48"
+      }
+    },
+    {
+      "cardId": "tat_045_mauls-lightsaber",
+      "variant": {
+        "id": "tat_045_mauls-lightsaber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R49",
+        "rarity": "R49"
+      }
+    },
+    {
+      "cardId": "r2_029_artoo-threepio",
+      "variant": {
+        "id": "r2_029_artoo-threepio_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R51",
+        "rarity": "R51"
+      }
+    },
+    {
+      "cardId": "cor_092_captain-panaka",
+      "variant": {
+        "id": "cor_092_captain-panaka_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R52",
+        "rarity": "R52"
+      }
+    },
+    {
+      "cardId": "r2_030_chewbacca-protector",
+      "variant": {
+        "id": "r2_030_chewbacca-protector_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R53",
+        "rarity": "R53"
+      }
+    },
+    {
+      "cardId": "r2_031_corran-horn",
+      "variant": {
+        "id": "r2_031_corran-horn_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R54",
+        "rarity": "R54"
+      }
+    },
+    {
+      "cardId": "r2_032_dash-rendar",
+      "variant": {
+        "id": "r2_032_dash-rendar_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R55",
+        "rarity": "R55"
+      }
+    },
+    {
+      "cardId": "tat_049_jar-jar-binks",
+      "variant": {
+        "id": "tat_049_jar-jar-binks_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R56",
+        "rarity": "R56"
+      }
+    },
+    {
+      "cardId": "jpsd_010_lando-with-vibro-ax",
+      "variant": {
+        "id": "jpsd_010_lando-with-vibro-ax_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R57",
+        "rarity": "R57"
+      }
+    },
+    {
+      "cardId": "r2_034_luke-skywalker-rebel-scout",
+      "variant": {
+        "id": "r2_034_luke-skywalker-rebel-scout_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R59",
+        "rarity": "R59"
+      }
+    },
+    {
+      "cardId": "cor_103_mace-windu",
+      "variant": {
+        "id": "cor_103_mace-windu_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R60",
+        "rarity": "R60"
+      }
+    },
+    {
+      "cardId": "cor_105_master-qui-gon",
+      "variant": {
+        "id": "cor_105_master-qui-gon_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R61",
+        "rarity": "R61"
+      }
+    },
+    {
+      "cardId": "r2_035_mirax-terrik",
+      "variant": {
+        "id": "r2_035_mirax-terrik_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R62",
+        "rarity": "R62"
+      }
+    },
+    {
+      "cardId": "tat_051_obi-wan-kenobi-padawan-learner",
+      "variant": {
+        "id": "tat_051_obi-wan-kenobi-padawan-learner_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R63",
+        "rarity": "R63"
+      }
+    },
+    {
+      "cardId": "r2_036_owen-lars-beru-lars",
+      "variant": {
+        "id": "r2_036_owen-lars-beru-lars_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R65",
+        "rarity": "R65"
+      }
+    },
+    {
+      "cardId": "tat_052_padme-naberrie",
+      "variant": {
+        "id": "tat_052_padme-naberrie_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R66",
+        "rarity": "R66"
+      }
+    },
+    {
+      "cardId": "jpsd_011_palace-raider",
+      "variant": {
+        "id": "jpsd_011_palace-raider_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R67",
+        "rarity": "R67"
+      }
+    },
+    {
+      "cardId": "3a_001_prisoner-2187",
+      "variant": {
+        "id": "3a_001_prisoner-2187_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R68",
+        "rarity": "R68"
+      }
+    },
+    {
+      "cardId": "tat_053_qui-gon-jinn",
+      "variant": {
+        "id": "tat_053_qui-gon-jinn_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R69",
+        "rarity": "R69"
+      }
+    },
+    {
+      "cardId": "cor_111_ric-olie",
+      "variant": {
+        "id": "cor_111_ric-olie_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R70",
+        "rarity": "R70"
+      }
+    },
+    {
+      "cardId": "tat_054_shmi-skywalker",
+      "variant": {
+        "id": "tat_054_shmi-skywalker_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R71",
+        "rarity": "R71"
+      }
+    },
+    {
+      "cardId": "cor_116_supreme-chancellor-valorum",
+      "variant": {
+        "id": "cor_116_supreme-chancellor-valorum_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R72",
+        "rarity": "R72"
+      }
+    },
+    {
+      "cardId": "r2_037_talon-karrde",
+      "variant": {
+        "id": "r2_037_talon-karrde_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R73",
+        "rarity": "R73"
+      }
+    },
+    {
+      "cardId": "tat_055_threepio-with-his-parts-showing",
+      "variant": {
+        "id": "tat_055_threepio-with-his-parts-showing_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R74",
+        "rarity": "R74"
+      }
+    },
+    {
+      "cardId": "r2_039_obi-wans-journal",
+      "variant": {
+        "id": "r2_039_obi-wans-journal_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R77",
+        "rarity": "R77"
+      }
+    },
+    {
+      "cardId": "3a_002_a-new-secret-base",
+      "variant": {
+        "id": "3a_002_a-new-secret-base_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R78",
+        "rarity": "R78"
+      }
+    },
+    {
+      "cardId": "tat_057_brisky-morning-munchen",
+      "variant": {
+        "id": "tat_057_brisky-morning-munchen_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R79",
+        "rarity": "R79"
+      }
+    },
+    {
+      "cardId": "3a_003_echo-base-garrison",
+      "variant": {
+        "id": "3a_003_echo-base-garrison_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R80",
+        "rarity": "R80"
+      }
+    },
+    {
+      "cardId": "jpsd_013_seeking-an-audience",
+      "variant": {
+        "id": "jpsd_013_seeking-an-audience_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R81",
+        "rarity": "R81"
+      }
+    },
+    {
+      "cardId": "tp_091_they-win-this-round",
+      "variant": {
+        "id": "tp_091_they-win-this-round_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R82",
+        "rarity": "R82"
+      }
+    },
+    {
+      "cardId": "tat_066_i-did-it",
+      "variant": {
+        "id": "tat_066_i-did-it_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R84",
+        "rarity": "R84"
+      }
+    },
+    {
+      "cardId": "tat_074_end-of-a-reign",
+      "variant": {
+        "id": "tat_074_end-of-a-reign_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R85",
+        "rarity": "R85"
+      }
+    },
+    {
+      "cardId": "tp_096_gimme-a-lift",
+      "variant": {
+        "id": "tp_096_gimme-a-lift_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R86",
+        "rarity": "R86"
+      }
+    },
+    {
+      "cardId": "se_252_harvest",
+      "variant": {
+        "id": "se_252_harvest_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R87",
+        "rarity": "R87"
+      }
+    },
+    {
+      "cardId": "cor_150_rebel-artillery",
+      "variant": {
+        "id": "cor_150_rebel-artillery_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R88",
+        "rarity": "R88"
+      }
+    },
+    {
+      "cardId": "ds2_145_rebel-leadership",
+      "variant": {
+        "id": "ds2_145_rebel-leadership_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R89",
+        "rarity": "R89"
+      }
+    },
+    {
+      "cardId": "cor_160_coruscant-jedi-council-chamber",
+      "variant": {
+        "id": "cor_160_coruscant-jedi-council-chamber_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R91",
+        "rarity": "R91"
+      }
+    },
+    {
+      "cardId": "tat_088_anakins-podracer",
+      "variant": {
+        "id": "tat_088_anakins-podracer_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R92",
+        "rarity": "R92"
+      }
+    },
+    {
+      "cardId": "r2_053_outrider",
+      "variant": {
+        "id": "r2_053_outrider_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R93",
+        "rarity": "R93"
+      }
+    },
+    {
+      "cardId": "r2_054_pulsar-skate",
+      "variant": {
+        "id": "r2_054_pulsar-skate_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R94",
+        "rarity": "R94"
+      }
+    },
+    {
+      "cardId": "cor_175_queens-royal-starship",
+      "variant": {
+        "id": "cor_175_queens-royal-starship_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R95",
+        "rarity": "R95"
+      }
+    },
+    {
+      "cardId": "cor_176_radiant-vii",
+      "variant": {
+        "id": "cor_176_radiant-vii_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R96",
+        "rarity": "R96"
+      }
+    },
+    {
+      "cardId": "tp_116_amidala-blaster",
+      "variant": {
+        "id": "tp_116_amidala-blaster_foil_limited",
+        "name": "Black Border Holo",
+        "code": "BBH",
+        "details": "Reflections III foil reprint"
+      },
+      "appearance": {
+        "cardNumber": "R97",
+        "rarity": "R97"
+      }
+    }
+  ]
+}

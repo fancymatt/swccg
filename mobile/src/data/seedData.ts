@@ -99,7 +99,7 @@ export const SEED_SETS = allSetsData.flatMap((setData) => {
 });
 
 // Helper to get variants for a specific set edition
-function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
+function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited', setId?: string) {
   // If card has custom variants defined, filter by edition
   if (card.variants && Array.isArray(card.variants)) {
     return card.variants.filter((v: any) => {
@@ -108,19 +108,26 @@ function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
     });
   }
 
-  // Check if card is a foil (indicated by rarity ending with 'F' followed by a number, or starting with 'F')
-  // Foil cards: F#, R# (Reflections Foil), T# (Tournament Foil)
+  // Check if card is a foil reprint in a Reflections set
+  // Reflections I: ALL cards are foils (rarities: VR, SR, UR)
+  // Reflections II/III: Cards with rarity starting with "R" + digits are foils (e.g., "R23")
+  //                     Cards with rarity "P" are NEW non-foil cards
+  const isReflectionsSet = setId && setId.includes('reflections');
   const rarity = card.rarity || '';
-  const isFoil = /[FRT]\d/.test(rarity) || rarity.startsWith('F');
+  const isReflectionsI = setId === 'reflections-i';
+  const isReflectionsFoil = isReflectionsSet && (
+    isReflectionsI || // All Reflections I cards are foils
+    /^R\d+$/.test(rarity) // Reflections II/III foils have rarity like "R23"
+  );
 
   // Otherwise, return standard variant for this edition
-  // Limited cards: Black Border (or Black Border Holo if foil)
-  // Unlimited cards: White Border (no foils exist for unlimited)
+  // Limited cards: Black Border (or Black Border Holo for Reflections foils)
+  // Unlimited cards: White Border
   if (edition === 'limited') {
     return [{
       id: `${card.id}_${edition}`,
-      name: isFoil ? 'Black Border Holo' : 'Black Border',
-      code: isFoil ? 'BBH' : 'BB',
+      name: isReflectionsFoil ? 'Black Border Holo' : 'Black Border',
+      code: isReflectionsFoil ? 'BBH' : 'BB',
     }];
   } else {
     return [{
@@ -220,7 +227,7 @@ export const SEED_VARIANTS = (() => {
     const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
     return setData.cards.flatMap((card: any) => {
-      const limitedVariants = getVariantsForEdition(card, 'limited').map((v: any) => ({
+      const limitedVariants = getVariantsForEdition(card, 'limited', setData.set.id).map((v: any) => ({
         id: v.id,
         card_id: `${card.id}_limited`,
         name: v.name,
@@ -233,7 +240,7 @@ export const SEED_VARIANTS = (() => {
         return limitedVariants;
       }
 
-      const unlimitedVariants = getVariantsForEdition(card, 'unlimited').map((v: any) => ({
+      const unlimitedVariants = getVariantsForEdition(card, 'unlimited', setData.set.id).map((v: any) => ({
         id: v.id,
         card_id: `${card.id}_unlimited`,
         name: v.name,
@@ -264,6 +271,17 @@ export const SEED_VARIANT_SET_APPEARANCES = allSetsData.flatMap((setData) => {
   const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
   return setData.cards.flatMap((card) => {
+    // If card has custom variants, create appearances for those specific variant IDs
+    if (card.variants && Array.isArray(card.variants) && card.variants.length > 0) {
+      return card.variants.map((variant: any) => ({
+        set_id: `${setData.set.id}-limited`,
+        variant_id: variant.id,
+        card_number: card.number,
+        rarity: card.rarity,
+      }));
+    }
+
+    // Otherwise, create appearances for standard auto-generated variants
     const limitedAppearance = {
       set_id: `${setData.set.id}-limited`,
       variant_id: `${card.id}_limited`,

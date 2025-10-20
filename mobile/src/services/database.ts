@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 12;
+const DB_VERSION = 19;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -316,25 +316,28 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
   if (!collectionDb) throw new Error('Collection database not initialized');
 
   try {
+    // Get unique cards that appear in this set via their variants
     const cards = await encyclopediaDb.getAllAsync(`
-      SELECT
+      SELECT DISTINCT
         c.id as card_id,
         c.name as card_name,
         c.side,
         c.type,
         c.icon,
-        sc.card_number,
-        sc.rarity,
+        MIN(vsa.card_number) as card_number,
+        MIN(vsa.rarity) as rarity,
         s.name as set_name,
         s.abbreviation as set_abbr
-      FROM cards c
-      JOIN set_cards sc ON c.id = sc.card_id
-      JOIN sets s ON sc.set_id = s.id
-      WHERE sc.set_id = ?
-      ORDER BY CAST(sc.card_number AS INTEGER)
+      FROM variant_set_appearances vsa
+      JOIN variants v ON vsa.variant_id = v.id
+      JOIN cards c ON v.card_id = c.id
+      JOIN sets s ON vsa.set_id = s.id
+      WHERE vsa.set_id = ?
+      GROUP BY c.id, c.name, c.side, c.type, c.icon, s.name, s.abbreviation
+      ORDER BY CAST(MIN(vsa.card_number) AS INTEGER)
     `, [setId]);
 
-    // For each card, get its variants with quantities
+    // For each card, get ONLY the variants that appear in this set
     const cardsWithVariants = await Promise.all(
       cards.map(async (card: any) => {
         const variants = await encyclopediaDb!.getAllAsync(`
@@ -344,9 +347,10 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
             v.code as variant_code,
             v.details as variant_details
           FROM variants v
-          WHERE v.card_id = ?
+          JOIN variant_set_appearances vsa ON v.id = vsa.variant_id
+          WHERE v.card_id = ? AND vsa.set_id = ?
           ORDER BY v.code
-        `, [card.card_id]);
+        `, [card.card_id, setId]);
 
         // Get quantities for each variant
         const variantsWithQuantity = await Promise.all(
@@ -457,7 +461,8 @@ export async function getCardsWithCollection(): Promise<any[]> {
 
 /**
  * Search for cards by name across all sets
- * Returns cards grouped by their set appearances with variants and collection quantities
+ * Returns unique cards with all their variants and collection quantities
+ * Each card appears only once in results, with variants showing set info
  */
 export async function searchCardsByName(searchQuery: string): Promise<any[]> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
@@ -470,34 +475,27 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
   }
 
   try {
-    // Search for cards matching the query (case-insensitive)
-    const cards = await encyclopediaDb.getAllAsync(`
-      SELECT
-        c.id as card_id,
+    // Search for unique card NAMES (not IDs) to group all instances of same card
+    const cardNames = await encyclopediaDb.getAllAsync(`
+      SELECT DISTINCT
         c.name as card_name,
+        MIN(c.id) as card_id,
         c.side,
         c.type,
-        c.icon,
-        sc.card_number,
-        sc.rarity,
-        sc.set_id,
-        s.name as set_name,
-        s.abbreviation as set_abbr,
-        s.icon_path as set_icon_path
+        c.icon
       FROM cards c
-      JOIN set_cards sc ON c.id = sc.card_id
-      JOIN sets s ON sc.set_id = s.id
       WHERE LOWER(c.name) LIKE LOWER(?)
-      ORDER BY c.name, s.release_date, CAST(sc.card_number AS INTEGER)
+      GROUP BY c.name, c.side, c.type, c.icon
+      ORDER BY c.name
     `, [`%${searchQuery}%`]);
 
-    // For each card appearance, get its variants with quantities
+    // For each unique card name, get ALL variants from ALL card instances
     // Process cards sequentially in small batches to avoid overwhelming the database
     const cardsWithVariants = [];
     const batchSize = 10;
 
-    for (let i = 0; i < cards.length; i += batchSize) {
-      const batch = cards.slice(i, i + batchSize);
+    for (let i = 0; i < cardNames.length; i += batchSize) {
+      const batch = cardNames.slice(i, i + batchSize);
       const batchResults = await Promise.all(
         batch.map(async (card: any) => {
           try {
@@ -507,21 +505,40 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
               return null;
             }
 
-            const variants = await encyclopediaDb.getAllAsync(`
-              SELECT
+            // Get ALL variants for ALL instances of this card name
+            const variantsRaw = await encyclopediaDb.getAllAsync(`
+              SELECT DISTINCT
                 v.id as variant_id,
                 v.name as variant_name,
                 v.code as variant_code,
                 v.details as variant_details
               FROM variants v
-              WHERE v.card_id = ?
+              JOIN cards c ON v.card_id = c.id
+              WHERE c.name = ?
               ORDER BY v.code
-            `, [card.card_id]);
+            `, [card.card_name]);
 
-            // Get quantities for each variant
+            // For each variant, get its set appearances and quantity
             const variantsWithQuantity = await Promise.all(
-              variants.map(async (variant: any) => {
+              variantsRaw.map(async (variant: any) => {
                 try {
+                  // Get the first set appearance for this variant (for display)
+                  const appearance = await encyclopediaDb!.getFirstAsync<{
+                    card_number: string;
+                    set_name: string;
+                    set_abbr: string;
+                  }>(`
+                    SELECT
+                      vsa.card_number,
+                      s.name as set_name,
+                      s.abbreviation as set_abbr
+                    FROM variant_set_appearances vsa
+                    JOIN sets s ON vsa.set_id = s.id
+                    WHERE vsa.variant_id = ?
+                    ORDER BY s.release_date
+                    LIMIT 1
+                  `, [variant.variant_id]);
+
                   const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
                     'SELECT quantity FROM collection WHERE variant_id = ?',
                     [variant.variant_id]
@@ -533,15 +550,21 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
                     code: variant.variant_code,
                     details: variant.variant_details,
                     quantity: result?.quantity || 0,
+                    setName: appearance?.set_name || '',
+                    cardNumber: appearance?.card_number || '',
+                    setAbbr: appearance?.set_abbr || '',
                   };
                 } catch (variantError) {
-                  console.error('Error fetching variant quantity:', variantError);
+                  console.error('Error fetching variant info:', variantError);
                   return {
                     id: variant.variant_id,
                     name: variant.variant_name,
                     code: variant.variant_code,
                     details: variant.variant_details,
                     quantity: 0,
+                    setName: '',
+                    cardNumber: '',
+                    setAbbr: '',
                   };
                 }
               })
@@ -550,15 +573,15 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
             return {
               id: card.card_id,
               name: card.card_name,
-              cardNumber: card.card_number,
+              cardNumber: '', // Not set-specific at card level
               side: card.side,
               type: card.type,
               icon: card.icon,
-              rarity: card.rarity,
-              setId: card.set_id,
-              setName: card.set_name,
-              setAbbr: card.set_abbr,
-              setIconPath: card.set_icon_path,
+              rarity: '', // Not set-specific at card level
+              setId: '', // Not set-specific at card level
+              setName: '', // Empty at card level, shown per variant
+              setAbbr: '',
+              setIconPath: '',
               variants: variantsWithQuantity,
             };
           } catch (cardError) {

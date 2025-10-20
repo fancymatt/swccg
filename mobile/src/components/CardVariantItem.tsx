@@ -58,6 +58,11 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
     <View style={styles.container}>
       <View style={styles.infoContainer}>
         <Text style={styles.variantName}>{variant.name}</Text>
+        {variant.setName && variant.cardNumber && (
+          <Text style={styles.variantCode}>
+            {variant.setName} #{variant.cardNumber}
+          </Text>
+        )}
         {variant.details && (
           <Text style={styles.variantDetails}>{variant.details}</Text>
         )}
