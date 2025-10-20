@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { View, Text, TextInput, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
+import { View, Text, TextInput, StyleSheet, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardListItem } from '../components/CardListItem';
@@ -112,15 +112,37 @@ export const SearchScreen: React.FC = () => {
       borderBottomWidth: 1,
       borderBottomColor: colors.border,
     },
+    searchInputWrapper: {
+      position: 'relative',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
     searchInput: {
+      flex: 1,
       backgroundColor: colors.widgetBg,
       borderRadius: 8,
       paddingHorizontal: 16,
       paddingVertical: 12,
+      paddingRight: 48,
       fontSize: 16,
       color: colors.fg,
       borderWidth: 1,
       borderColor: colors.border,
+    },
+    clearButton: {
+      position: 'absolute',
+      right: 8,
+      width: 32,
+      height: 32,
+      borderRadius: 16,
+      backgroundColor: colors.textSecondary,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    clearButtonText: {
+      color: colors.widgetBg,
+      fontSize: 16,
+      fontWeight: '600',
     },
     listContent: {
       padding: 16,
@@ -202,16 +224,26 @@ export const SearchScreen: React.FC = () => {
     <SafeAreaView style={styles.safeArea} edges={['top']}>
       <View style={styles.container}>
         <View style={styles.searchContainer}>
-          <TextInput
-            style={styles.searchInput}
-            placeholder="Search card names..."
-            placeholderTextColor={colors.textSecondary}
-            value={searchQuery}
-            onChangeText={setSearchQuery}
-            autoCapitalize="none"
-            autoCorrect={false}
-            clearButtonMode="while-editing"
-          />
+          <View style={styles.searchInputWrapper}>
+            <TextInput
+              style={styles.searchInput}
+              placeholder="Search card names..."
+              placeholderTextColor={colors.textSecondary}
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+              autoCapitalize="none"
+              autoCorrect={false}
+            />
+            {searchQuery.length > 0 && (
+              <TouchableOpacity
+                style={styles.clearButton}
+                onPress={() => setSearchQuery('')}
+                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+              >
+                <Text style={styles.clearButtonText}>✕</Text>
+              </TouchableOpacity>
+            )}
+          </View>
         </View>
 
         {cards.length > 0 ? (
