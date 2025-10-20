@@ -64,10 +64,9 @@ const allSetsData = [
 ];
 
 // Export sets - split into Limited and Unlimited editions
-// Note: Reflections sets only have Limited versions (no Unlimited)
+// Only Premiere, A New Hope, Hoth, and Dagobah had Unlimited (white border) versions
+// Cloud City was the first set to NOT have an Unlimited version
 export const SEED_SETS = allSetsData.flatMap((setData) => {
-  const isReflectionsSet = setData.set.id.includes('reflections');
-
   const limitedSet = {
     id: `${setData.set.id}-limited`,
     name: setData.set.name,
@@ -76,12 +75,15 @@ export const SEED_SETS = allSetsData.flatMap((setData) => {
     icon_path: (setData.set as any).iconPath || 'icon_set_default',
   };
 
-  // Reflections sets only have Limited versions
-  if (isReflectionsSet) {
+  // Only these four sets had Unlimited versions (white border)
+  const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
+  const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
+
+  if (!hasUnlimited) {
     return [limitedSet];
   }
 
-  // All other sets have both Limited and Unlimited versions
+  // Create Unlimited version for sets that had them
   const unlimitedSet = {
     id: `${setData.set.id}-unlimited`,
     name: `${setData.set.name} Unlimited`,
@@ -131,11 +133,13 @@ function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
 
 // Cards (set-specific instances)
 // Each card instance is specific to either Limited or Unlimited edition
-// Note: Reflections sets only have Limited versions
+// Only Premiere, A New Hope, Hoth, and Dagobah had Unlimited versions
 // Deduplicate cards that appear in multiple sets
 export const SEED_CARDS = (() => {
+  const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
+
   const allCards = allSetsData.flatMap((setData) => {
-    const isReflectionsSet = setData.set.id.includes('reflections');
+    const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
     return setData.cards.flatMap((card) => {
       const limitedCard = {
@@ -146,12 +150,11 @@ export const SEED_CARDS = (() => {
         icon: (card as any).icon,
       };
 
-      // Reflections sets only have Limited versions
-      if (isReflectionsSet) {
+      // Only create Unlimited cards for sets that had Unlimited versions
+      if (!hasUnlimited) {
         return [limitedCard];
       }
 
-      // All other sets have both Limited and Unlimited versions
       const unlimitedCard = {
         id: `${card.id}_unlimited`,
         name: card.name,
@@ -177,9 +180,10 @@ export const SEED_CARDS = (() => {
 
 // Link cards to sets with card numbers and rarities
 // Each set gets its edition-specific card instances
-// Note: Reflections sets only have Limited versions
+// Only Premiere, A New Hope, Hoth, and Dagobah had Unlimited versions
 export const SEED_SET_CARDS = allSetsData.flatMap((setData) => {
-  const isReflectionsSet = setData.set.id.includes('reflections');
+  const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
+  const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
   return setData.cards.flatMap((card) => {
     const limitedSetCard = {
@@ -189,12 +193,11 @@ export const SEED_SET_CARDS = allSetsData.flatMap((setData) => {
       rarity: card.rarity,
     };
 
-    // Reflections sets only have Limited versions
-    if (isReflectionsSet) {
+    // Only create Unlimited set cards for sets that had Unlimited versions
+    if (!hasUnlimited) {
       return [limitedSetCard];
     }
 
-    // All other sets have both Limited and Unlimited versions
     const unlimitedSetCard = {
       set_id: `${setData.set.id}-unlimited`,
       card_id: `${card.id}_unlimited`,
@@ -208,11 +211,13 @@ export const SEED_SET_CARDS = allSetsData.flatMap((setData) => {
 
 // Card variants belong to their specific card instances
 // Each card instance only has variants appropriate for its edition
-// Note: Reflections sets only have Limited versions
+// Only Premiere, A New Hope, Hoth, and Dagobah had Unlimited versions
 // Deduplicate variants that appear in multiple sets
 export const SEED_VARIANTS = (() => {
+  const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
+
   const allVariants = allSetsData.flatMap((setData) => {
-    const isReflectionsSet = setData.set.id.includes('reflections');
+    const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
     return setData.cards.flatMap((card: any) => {
       const limitedVariants = getVariantsForEdition(card, 'limited').map((v: any) => ({
@@ -223,12 +228,11 @@ export const SEED_VARIANTS = (() => {
         details: v.details,
       }));
 
-      // Reflections sets only have Limited versions
-      if (isReflectionsSet) {
+      // Only create Unlimited variants for sets that had Unlimited versions
+      if (!hasUnlimited) {
         return limitedVariants;
       }
 
-      // All other sets have both Limited and Unlimited versions
       const unlimitedVariants = getVariantsForEdition(card, 'unlimited').map((v: any) => ({
         id: v.id,
         card_id: `${card.id}_unlimited`,
@@ -254,8 +258,10 @@ export const SEED_VARIANTS = (() => {
 
 // New: Link variants to their appearances in sets (with card number and rarity)
 // This replaces SEED_SET_CARDS and allows variants to appear in multiple sets
+// Only Premiere, A New Hope, Hoth, and Dagobah had Unlimited versions
 export const SEED_VARIANT_SET_APPEARANCES = allSetsData.flatMap((setData) => {
-  const isReflectionsSet = setData.set.id.includes('reflections');
+  const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
+  const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
   return setData.cards.flatMap((card) => {
     const limitedAppearance = {
@@ -265,12 +271,11 @@ export const SEED_VARIANT_SET_APPEARANCES = allSetsData.flatMap((setData) => {
       rarity: card.rarity,
     };
 
-    // Reflections sets only have Limited versions
-    if (isReflectionsSet) {
+    // Only create Unlimited appearances for sets that had Unlimited versions
+    if (!hasUnlimited) {
       return [limitedAppearance];
     }
 
-    // All other sets have both Limited and Unlimited versions
     const unlimitedAppearance = {
       set_id: `${setData.set.id}-unlimited`,
       variant_id: `${card.id}_unlimited`,

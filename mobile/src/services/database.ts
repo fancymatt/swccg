@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 11;
+const DB_VERSION = 12;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -235,6 +235,41 @@ export async function seedEncyclopedia(
       console.log('Encyclopedia setup complete!');
     } else if (status === 'migration') {
       console.log('Encyclopedia migration complete!');
+
+      // Clean up orphaned collection entries after migration
+      // Remove any collection entries for variants that no longer exist in the encyclopedia
+      if (collectionDb) {
+        console.log('Cleaning up orphaned collection entries...');
+
+        // Get all valid variant IDs from the encyclopedia
+        const validVariants = await encyclopediaDb.getAllAsync<{ id: string }>(
+          'SELECT id FROM variants'
+        );
+        const validVariantIds = new Set(validVariants.map(v => v.id));
+
+        // Get all variant IDs from the collection
+        const collectionVariants = await collectionDb.getAllAsync<{ variant_id: string }>(
+          'SELECT variant_id FROM collection'
+        );
+
+        // Delete orphaned entries
+        let orphanedCount = 0;
+        for (const cv of collectionVariants) {
+          if (!validVariantIds.has(cv.variant_id)) {
+            await collectionDb.runAsync(
+              'DELETE FROM collection WHERE variant_id = ?',
+              [cv.variant_id]
+            );
+            orphanedCount++;
+          }
+        }
+
+        if (orphanedCount > 0) {
+          console.log(`Removed ${orphanedCount} orphaned collection entries`);
+        } else {
+          console.log('No orphaned collection entries found');
+        }
+      }
     }
 
     // Clear stats cache after reseeding/migration
