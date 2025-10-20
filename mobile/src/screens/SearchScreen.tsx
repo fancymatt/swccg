@@ -258,6 +258,8 @@ export const SearchScreen: React.FC = () => {
             updateCellsBatchingPeriod={50}
             initialNumToRender={10}
             windowSize={5}
+            keyboardDismissMode="on-drag"
+            keyboardShouldPersistTaps="handled"
           />
         ) : (
           renderEmpty()
