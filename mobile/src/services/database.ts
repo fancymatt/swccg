@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 20;
+const DB_VERSION = 21;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -334,7 +334,12 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
       JOIN sets s ON vsa.set_id = s.id
       WHERE vsa.set_id = ?
       GROUP BY c.id, c.name, c.side, c.type, c.icon, s.name, s.abbreviation
-      ORDER BY CAST(MIN(vsa.card_number) AS INTEGER)
+      ORDER BY
+        CASE
+          WHEN MIN(vsa.card_number) GLOB '[0-9]*' THEN 0
+          ELSE 1
+        END,
+        CAST(REPLACE(REPLACE(MIN(vsa.card_number), 'R', ''), 'P', '') AS INTEGER)
     `, [setId]);
 
     // For each card, get ONLY the variants that appear in this set
