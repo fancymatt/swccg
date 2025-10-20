@@ -1,0 +1,668 @@
+{
+  "4-LOM": {
+    "id": "da_1_4-lom",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "Admiral Ozzel": {
+    "id": "ht_001_admiral-ozzel",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "hoth"
+  },
+  "Bane Malar": {
+    "id": "jp_5_bane_malar",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Bib Fortuna": {
+    "id": "jp_8_bib_fortuna",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Boba Fett": {
+    "id": "1a_001_boba-fett",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "first-anthology"
+  },
+  "Bossk": {
+    "id": "da_2_bossk",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "Darth Vader": {
+    "id": "pm_006_darth-vader",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Darth Vader, Dark Lord Of The Sith": {
+    "id": "se_013_darth-vader-dark-lord-of-the-sith",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "special-edition"
+  },
+  "Dengar": {
+    "id": "da_10_dengar",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "DS-61-3": {
+    "id": "pm_012_ds-61-3",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "General Veers": {
+    "id": "ht_006_general-veers",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "hoth"
+  },
+  "Grand Moff Tarkin": {
+    "id": "pm_017_grand-moff-tarkin",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Greedo": {
+    "id": "anh_008_greedo",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "a_new_hope"
+  },
+  "IG-88": {
+    "id": "da_11_ig-88",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "IT-O": {
+    "id": "anh_012_it-o",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "a_new_hope"
+  },
+  "Jabba": {
+    "id": "se_020_jabba",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "special-edition"
+  },
+  "Jabba The Hutt": {
+    "id": "jp_20_jabba_the_hutt",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Lando Calrissian": {
+    "id": "cc_9_lando_calrissian",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "cloud_city"
+  },
+  "Lobot": {
+    "id": "cc_96_lobot",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "cloud_city"
+  },
+  "Salacious Crumb": {
+    "id": "jp_32_salacious_crumb",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Tonnika Sisters": {
+    "id": "pm_033_tonnika-sisters",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "U-3PO": {
+    "id": "anh_026_u-3po",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "a_new_hope"
+  },
+  "Zuckuss": {
+    "id": "da_17_zuckuss",
+    "side": "dark",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "Rancor": {
+    "id": "jp_49_rancor",
+    "side": "dark",
+    "type": "Creature",
+    "originalSet": "jabbas_palace"
+  },
+  "Wampa": {
+    "id": "ht_012_wampa",
+    "side": "dark",
+    "type": "Creature",
+    "originalSet": "hoth"
+  },
+  "Expand The Empire": {
+    "id": "pm_053_expand-the-empire",
+    "side": "dark",
+    "type": "Effect",
+    "originalSet": "premiere"
+  },
+  "Presence of the Force": {
+    "id": "pm_065_presence-of-the-force",
+    "side": "dark",
+    "type": "Effect",
+    "originalSet": "premiere"
+  },
+  "Visage Of The Emperor": {
+    "id": "da_45_visage_of_the_emperor",
+    "side": "dark",
+    "type": "Effect",
+    "originalSet": "dagobah"
+  },
+  "Commence Primary Ignition": {
+    "id": "anh_049_commence-primary-ignition",
+    "side": "dark",
+    "type": "Epic Event",
+    "originalSet": "a_new_hope"
+  },
+  "Epic Duel": {
+    "id": "cc_39_epic_duel",
+    "side": "dark",
+    "type": "Epic Event",
+    "originalSet": "cloud_city"
+  },
+  "Slip Sliding Away": {
+    "id": "cc_64_slip_sliding_away",
+    "side": "dark",
+    "type": "Interrupt",
+    "originalSet": "cloud_city"
+  },
+  "The Circle Is Now Complete": {
+    "id": "pm_109_the-circle-is-now-complete",
+    "side": "dark",
+    "type": "Interrupt",
+    "originalSet": "premiere"
+  },
+  "Death Star": {
+    "id": "anh_062_death-star",
+    "side": "dark",
+    "type": "Location",
+    "originalSet": "a_new_hope"
+  },
+  "Avenger": {
+    "id": "da_76_avenger",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "dagobah"
+  },
+  "Black 2": {
+    "id": "pm_137_black-2",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "premiere"
+  },
+  "Bossk in Hounds Tooth": {
+    "id": "se_139_bossk-in-hounds-tooth",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "special-edition"
+  },
+  "Conquest": {
+    "id": "anh_071_conquest",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "a_new_hope"
+  },
+  "Death Squadron Star Destroyer": {
+    "id": "se_140_death-squadron-star-destroyer",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "special-edition"
+  },
+  "Devastator": {
+    "id": "pm_139_devastator",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "premiere"
+  },
+  "Executor": {
+    "id": "da_77_executor",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "dagobah"
+  },
+  "IG-2000": {
+    "id": "da_79_ig-2000",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "dagobah"
+  },
+  "Mist Hunter": {
+    "id": "da_80_mist_hunter",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "dagobah"
+  },
+  "Obsidian 7": {
+    "id": "cc_85_obsidian_7",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "cloud_city"
+  },
+  "Obsidian 8": {
+    "id": "cc_86_obsidian_8",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "cloud_city"
+  },
+  "Punishing One": {
+    "id": "da_81_punishing_one",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "dagobah"
+  },
+  "Slave I": {
+    "id": "cc_87_slave_i",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "cloud_city"
+  },
+  "Stalker": {
+    "id": "ht_071_stalker",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "hoth"
+  },
+  "Tyrant": {
+    "id": "ht_072_tyrant",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "hoth"
+  },
+  "Vader's Custom TIE": {
+    "id": "pm_144_vader-custom-tie",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "premiere"
+  },
+  "Vengeance": {
+    "id": "se_148_vengeance",
+    "side": "dark",
+    "type": "Starship",
+    "originalSet": "special-edition"
+  },
+  "Blizzard 1": {
+    "id": "ht_073_blizzard-1",
+    "side": "dark",
+    "type": "Vehicle",
+    "originalSet": "hoth"
+  },
+  "Blizzard 2": {
+    "id": "ht_074_blizzard-2",
+    "side": "dark",
+    "type": "Vehicle",
+    "originalSet": "hoth"
+  },
+  "Blizzard Scout 1": {
+    "id": "ht_075_blizzard-scout-1",
+    "side": "dark",
+    "type": "Vehicle",
+    "originalSet": "hoth"
+  },
+  "Jabba's Sail Barge": {
+    "id": "jp_82_jabbas_sail_barge",
+    "side": "dark",
+    "type": "Vehicle",
+    "originalSet": "jabbas_palace"
+  },
+  "Boba Fett's Blaster Rifle": {
+    "id": "cc_89_boba_fetts_blaster_rifle",
+    "side": "dark",
+    "type": "Weapon",
+    "originalSet": "cloud_city"
+  },
+  "Superlaser": {
+    "id": "anh_080_superlaser",
+    "side": "dark",
+    "type": "Weapon",
+    "originalSet": "a_new_hope"
+  },
+  "Vader's Lightsaber": {
+    "id": "pm_162_vader-lightsaber",
+    "side": "dark",
+    "type": "Weapon",
+    "originalSet": "premiere"
+  },
+  "2-1B": {
+    "id": "ht_082_2-1b",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "hoth"
+  },
+  "Artoo": {
+    "id": "jp_93_artoo",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Ben Kenobi": {
+    "id": "se_166_ben-kenobi",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "special-edition"
+  },
+  "Biggs Darklighter": {
+    "id": "pm_165_biggs-darklighter",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Brainiac": {
+    "id": "anh_083_brainiac",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "a_new_hope"
+  },
+  "C-3PO (See-Threepio)": {
+    "id": "pm_167_c-3po",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Captain Han Solo": {
+    "id": "cc_91_captain_han_solo",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "cloud_city"
+  },
+  "Chewbacca": {
+    "id": "anh_084_chewbacca",
+    "side": "light",
+    "type": "Character - Alien",
+    "originalSet": "a_new_hope"
+  },
+  "Commander Luke Skywalker": {
+    "id": "ht_084_commander-luke-skywalker",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "hoth"
+  },
+  "Dutch": {
+    "id": "pm_170_dutch",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Han Solo": {
+    "id": "pm_173_han-solo",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Leia Organa": {
+    "id": "pm_179_leia-organa",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Luke Skywalker": {
+    "id": "pm_181_luke-skywalker",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Obi-Wan Kenobi": {
+    "id": "pm_183_obi-wan-kenobi",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Oola": {
+    "id": "jp_119_oola",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Princess Leia": {
+    "id": "cc_97_princess_leia",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "cloud_city"
+  },
+  "Princess Leia Organa": {
+    "id": "jp_122_princess_leia_organa",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "Princess Organa": {
+    "id": "se_197_princess-organa",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "special-edition"
+  },
+  "R2-D2 (Artoo-Detoo)": {
+    "id": "anh_095_r2-d2",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "a_new_hope"
+  },
+  "Red Leader": {
+    "id": "pm_191_red-leader",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "premiere"
+  },
+  "Son Of Skywalker": {
+    "id": "da_91_son_of_skywalker",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "Tamtel Skreej": {
+    "id": "jp_132_tamtel_skreej",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "jabbas_palace"
+  },
+  "TK-422": {
+    "id": "se_210_tk-422",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "special-edition"
+  },
+  "Wedge Antilles": {
+    "id": "anh_104_wedge-antilles",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "a_new_hope"
+  },
+  "Yoda": {
+    "id": "da_92_yoda",
+    "side": "light",
+    "type": "Character",
+    "originalSet": "dagobah"
+  },
+  "Landing Claw": {
+    "id": "da_101_landing_claw",
+    "side": "light",
+    "type": "Device",
+    "originalSet": "dagobah"
+  },
+  "Coruscant Celebration": {
+    "id": "se_219_coruscant-celebration",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "special-edition"
+  },
+  "Death Star Plans": {
+    "id": "pm_208_death-star-plans",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "premiere"
+  },
+  "Haven": {
+    "id": "cc_114_haven",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "cloud_city"
+  },
+  "Lightsaber Proficiency": {
+    "id": "pm_216_lightsaber-proficiency",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "premiere"
+  },
+  "Mechanical Failure": {
+    "id": "se_232_mechanical-failure",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "special-edition"
+  },
+  "Reflection": {
+    "id": "da_123_reflection",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "dagobah"
+  },
+  "Revolution": {
+    "id": "pm_224_revolution",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "premiere"
+  },
+  "Uncontrollable Fury": {
+    "id": "cc_119_uncontrollable_fury",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "cloud_city"
+  },
+  "What Is Thy Bidding, My Master?": {
+    "id": "da_132_what_is_thy_bidding_my_master",
+    "side": "light",
+    "type": "Effect",
+    "originalSet": "dagobah"
+  },
+  "Attack Run": {
+    "id": "anh_123_attack-run",
+    "side": "light",
+    "type": "Epic Event",
+    "originalSet": "a_new_hope"
+  },
+  "All Wings Report In": {
+    "id": "se_244_all-wings-report-in",
+    "side": "light",
+    "type": "Interrupt",
+    "originalSet": "special-edition"
+  },
+  "Skywalkers": {
+    "id": "pm_272_skywalkers",
+    "side": "light",
+    "type": "Interrupt",
+    "originalSet": "premiere"
+  },
+  "It Is The Future You See": {
+    "id": "da_168_it_is_the_future_you_see",
+    "side": "light",
+    "type": "Jedi Test",
+    "originalSet": "dagobah"
+  },
+  "Cloud City: Downtown Plaza": {
+    "id": "se_108_cloud-city-downtown-plaza",
+    "side": "dark",
+    "type": "Location",
+    "originalSet": "special-edition"
+  },
+  "Cloud City: Guest Quarters": {
+    "id": "cc_170_cloud_city_guest_quarters",
+    "side": "light",
+    "type": "Location",
+    "originalSet": "cloud_city"
+  },
+  "Dagobah: Yoda's Hut": {
+    "id": "da_179_dagobah_yodas_hut",
+    "side": "light",
+    "type": "Location",
+    "originalSet": "dagobah"
+  },
+  "Death Star: Trench": {
+    "id": "anh_143_death-star-trench",
+    "side": "light",
+    "type": "Location",
+    "originalSet": "a_new_hope"
+  },
+  "Rendezvous Point": {
+    "id": "se_285_rendezvous-point",
+    "side": "light",
+    "type": "Location",
+    "originalSet": "special-edition"
+  },
+  "Millennium Falcon": {
+    "id": "pm_305_millennium-falcon",
+    "side": "light",
+    "type": "Starship",
+    "originalSet": "premiere"
+  },
+  "Red 2": {
+    "id": "anh_151_red-2",
+    "side": "light",
+    "type": "Starship",
+    "originalSet": "a_new_hope"
+  },
+  "Red 5": {
+    "id": "anh_152_red-5",
+    "side": "light",
+    "type": "Starship",
+    "originalSet": "a_new_hope"
+  },
+  "Redemption": {
+    "id": "cc_177_redemption",
+    "side": "light",
+    "type": "Starship",
+    "originalSet": "cloud_city"
+  },
+  "Spiral": {
+    "id": "se_311_spiral",
+    "side": "light",
+    "type": "Starship",
+    "originalSet": "special-edition"
+  },
+  "Tantive IV": {
+    "id": "anh_154_tantive-iv",
+    "side": "light",
+    "type": "Starship",
+    "originalSet": "a_new_hope"
+  },
+  "Rogue 1": {
+    "id": "ht_147_rogue-1",
+    "side": "light",
+    "type": "Vehicle",
+    "originalSet": "hoth"
+  },
+  "Rogue 3": {
+    "id": "ht_149_rogue-3",
+    "side": "light",
+    "type": "Vehicle",
+    "originalSet": "hoth"
+  },
+  "Anakin's Lightsaber": {
+    "id": "ht_152_anakins-lightsaber",
+    "side": "light",
+    "type": "Weapon",
+    "originalSet": "hoth"
+  },
+  "Obi-Wan's Lightsaber": {
+    "id": "pm_319_obi-wans-lightsaber",
+    "side": "light",
+    "type": "Weapon",
+    "originalSet": "premiere"
+  }
+}

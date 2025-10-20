@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 19;
+const DB_VERSION = 20;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
