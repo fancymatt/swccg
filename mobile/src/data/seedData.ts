@@ -14,6 +14,9 @@ import deathStarIICardsData from './death-star-ii-cards.json';
 import tatooineCardsData from './tatooine-cards.json';
 import coruscantCardsData from './coruscant-cards.json';
 import theedPalaceCardsData from './theed-palace-cards.json';
+import reflectionsICardsData from './reflections-i-cards.json';
+import reflectionsIICardsData from './reflections-ii-cards.json';
+import reflectionsIIICardsData from './reflections-iii-cards.json';
 import enhancedPremiereCardsData from './enhanced-premiere-cards.json';
 import enhancedCloudCityCardsData from './enhanced-cloud-city-cards.json';
 import enhancedJabbasPalaceCardsData from './enhanced-jabbas-palace-cards.json';
@@ -40,8 +43,11 @@ const allSetsData = [
   endorCardsData,
   deathStarIICardsData,
   tatooineCardsData,
+  reflectionsICardsData,
   coruscantCardsData,
   theedPalaceCardsData,
+  reflectionsIICardsData,
+  reflectionsIIICardsData,
   enhancedPremiereCardsData,
   enhancedCloudCityCardsData,
   enhancedJabbasPalaceCardsData,
@@ -58,15 +64,25 @@ const allSetsData = [
 ];
 
 // Export sets - split into Limited and Unlimited editions
-export const SEED_SETS = allSetsData.flatMap((setData) => [
-  {
+// Note: Reflections sets only have Limited versions (no Unlimited)
+export const SEED_SETS = allSetsData.flatMap((setData) => {
+  const isReflectionsSet = setData.set.id.includes('reflections');
+
+  const limitedSet = {
     id: `${setData.set.id}-limited`,
     name: setData.set.name,
     abbreviation: setData.set.abbreviation,
     release_date: setData.set.releaseDate,
-    icon_path: setData.set.iconPath,
-  },
-  {
+    icon_path: (setData.set as any).iconPath || 'icon_set_default',
+  };
+
+  // Reflections sets only have Limited versions
+  if (isReflectionsSet) {
+    return [limitedSet];
+  }
+
+  // All other sets have both Limited and Unlimited versions
+  const unlimitedSet = {
     id: `${setData.set.id}-unlimited`,
     name: `${setData.set.name} Unlimited`,
     abbreviation: `${setData.set.abbreviation}-U`,
@@ -74,9 +90,11 @@ export const SEED_SETS = allSetsData.flatMap((setData) => [
     release_date: setData.set.releaseDate ?
       new Date(new Date(setData.set.releaseDate).getTime() + 180 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
       : setData.set.releaseDate,
-    icon_path: setData.set.iconPath,
-  },
-]);
+    icon_path: (setData.set as any).iconPath || 'icon_set_default',
+  };
+
+  return [limitedSet, unlimitedSet];
+});
 
 // Helper to get variants for a specific set edition
 function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
@@ -113,64 +131,153 @@ function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
 
 // Cards (set-specific instances)
 // Each card instance is specific to either Limited or Unlimited edition
-export const SEED_CARDS = allSetsData.flatMap((setData) =>
-  setData.cards.flatMap((card) => [
-    {
-      id: `${card.id}_limited`,
-      name: card.name,
-      side: card.side,
-      type: card.type,
-      icon: (card as any).icon,
-    },
-    {
-      id: `${card.id}_unlimited`,
-      name: card.name,
-      side: card.side,
-      type: card.type,
-      icon: (card as any).icon,
-    },
-  ])
-);
+// Note: Reflections sets only have Limited versions
+// Deduplicate cards that appear in multiple sets
+export const SEED_CARDS = (() => {
+  const allCards = allSetsData.flatMap((setData) => {
+    const isReflectionsSet = setData.set.id.includes('reflections');
+
+    return setData.cards.flatMap((card) => {
+      const limitedCard = {
+        id: `${card.id}_limited`,
+        name: card.name,
+        side: card.side,
+        type: card.type,
+        icon: (card as any).icon,
+      };
+
+      // Reflections sets only have Limited versions
+      if (isReflectionsSet) {
+        return [limitedCard];
+      }
+
+      // All other sets have both Limited and Unlimited versions
+      const unlimitedCard = {
+        id: `${card.id}_unlimited`,
+        name: card.name,
+        side: card.side,
+        type: card.type,
+        icon: (card as any).icon,
+      };
+
+      return [limitedCard, unlimitedCard];
+    });
+  });
+
+  // Deduplicate by card ID
+  const cardMap = new Map();
+  allCards.forEach(card => {
+    if (!cardMap.has(card.id)) {
+      cardMap.set(card.id, card);
+    }
+  });
+
+  return Array.from(cardMap.values());
+})();
 
 // Link cards to sets with card numbers and rarities
 // Each set gets its edition-specific card instances
-export const SEED_SET_CARDS = allSetsData.flatMap((setData) =>
-  setData.cards.flatMap((card) => [
-    {
+// Note: Reflections sets only have Limited versions
+export const SEED_SET_CARDS = allSetsData.flatMap((setData) => {
+  const isReflectionsSet = setData.set.id.includes('reflections');
+
+  return setData.cards.flatMap((card) => {
+    const limitedSetCard = {
       set_id: `${setData.set.id}-limited`,
       card_id: `${card.id}_limited`,
       card_number: card.number,
       rarity: card.rarity,
-    },
-    {
+    };
+
+    // Reflections sets only have Limited versions
+    if (isReflectionsSet) {
+      return [limitedSetCard];
+    }
+
+    // All other sets have both Limited and Unlimited versions
+    const unlimitedSetCard = {
       set_id: `${setData.set.id}-unlimited`,
       card_id: `${card.id}_unlimited`,
       card_number: card.number,
       rarity: card.rarity,
-    },
-  ])
-);
+    };
+
+    return [limitedSetCard, unlimitedSetCard];
+  });
+});
 
 // Card variants belong to their specific card instances
 // Each card instance only has variants appropriate for its edition
-export const SEED_VARIANTS = allSetsData.flatMap((setData) =>
-  setData.cards.flatMap((card: any) => {
-    const limitedVariants = getVariantsForEdition(card, 'limited').map((v: any) => ({
-      id: v.id,
-      card_id: `${card.id}_limited`,
-      name: v.name,
-      code: v.code,
-      details: v.details,
-    }));
+// Note: Reflections sets only have Limited versions
+// Deduplicate variants that appear in multiple sets
+export const SEED_VARIANTS = (() => {
+  const allVariants = allSetsData.flatMap((setData) => {
+    const isReflectionsSet = setData.set.id.includes('reflections');
 
-    const unlimitedVariants = getVariantsForEdition(card, 'unlimited').map((v: any) => ({
-      id: v.id,
-      card_id: `${card.id}_unlimited`,
-      name: v.name,
-      code: v.code,
-      details: v.details,
-    }));
+    return setData.cards.flatMap((card: any) => {
+      const limitedVariants = getVariantsForEdition(card, 'limited').map((v: any) => ({
+        id: v.id,
+        card_id: `${card.id}_limited`,
+        name: v.name,
+        code: v.code,
+        details: v.details,
+      }));
 
-    return [...limitedVariants, ...unlimitedVariants];
-  })
-);
+      // Reflections sets only have Limited versions
+      if (isReflectionsSet) {
+        return limitedVariants;
+      }
+
+      // All other sets have both Limited and Unlimited versions
+      const unlimitedVariants = getVariantsForEdition(card, 'unlimited').map((v: any) => ({
+        id: v.id,
+        card_id: `${card.id}_unlimited`,
+        name: v.name,
+        code: v.code,
+        details: v.details,
+      }));
+
+      return [...limitedVariants, ...unlimitedVariants];
+    });
+  });
+
+  // Deduplicate by variant ID
+  const variantMap = new Map();
+  allVariants.forEach(variant => {
+    if (!variantMap.has(variant.id)) {
+      variantMap.set(variant.id, variant);
+    }
+  });
+
+  return Array.from(variantMap.values());
+})();
+
+// New: Link variants to their appearances in sets (with card number and rarity)
+// This replaces SEED_SET_CARDS and allows variants to appear in multiple sets
+export const SEED_VARIANT_SET_APPEARANCES = allSetsData.flatMap((setData) => {
+  const isReflectionsSet = setData.set.id.includes('reflections');
+
+  return setData.cards.flatMap((card) => {
+    const limitedAppearance = {
+      set_id: `${setData.set.id}-limited`,
+      variant_id: `${card.id}_limited`,
+      card_number: card.number,
+      rarity: card.rarity,
+    };
+
+    // Reflections sets only have Limited versions
+    if (isReflectionsSet) {
+      return [limitedAppearance];
+    }
+
+    // All other sets have both Limited and Unlimited versions
+    const unlimitedAppearance = {
+      set_id: `${setData.set.id}-unlimited`,
+      variant_id: `${card.id}_unlimited`,
+      card_number: card.number,
+      rarity: card.rarity,
+    };
+
+    return [limitedAppearance, unlimitedAppearance];
+  });
+});

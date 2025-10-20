@@ -6,6 +6,14 @@ export interface CardVariant {
   quantity: number;
 }
 
+// New: Represents where a specific variant appears (can be in multiple sets)
+export interface VariantSetAppearance {
+  variant_id: string;
+  set_id: string;
+  card_number: string;
+  rarity: string;
+}
+
 export interface Card {
   id: string;
   name: string;

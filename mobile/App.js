@@ -9,7 +9,7 @@ import { CollectionStatsProvider } from './src/contexts/CollectionStatsContext';
 import { TabNavigator } from './src/navigation/TabNavigator';
 import { LoadingScreen } from './src/components/LoadingScreen';
 import { initializeDatabases, seedEncyclopedia } from './src/services/database';
-import { SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS } from './src/data/seedData';
+import { SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS, SEED_VARIANT_SET_APPEARANCES } from './src/data/seedData';
 
 // Keep the native splash screen visible while we load resources
 SplashScreen.preventAutoHideAsync();
@@ -37,7 +37,7 @@ export default function App() {
         setLoadingMessage('Initializing database...');
         await initializeDatabases();
 
-        const status = await seedEncyclopedia(SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS);
+        const status = await seedEncyclopedia(SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS, SEED_VARIANT_SET_APPEARANCES);
 
         if (status === 'first-time') {
           setLoadingMessage('Setting up card encyclopedia...');

@@ -51,9 +51,21 @@ const ENCYCLOPEDIA_SCHEMA = `
     FOREIGN KEY (card_id) REFERENCES cards(id)
   );
 
+  CREATE TABLE IF NOT EXISTS variant_set_appearances (
+    set_id TEXT NOT NULL,
+    variant_id TEXT NOT NULL,
+    card_number TEXT NOT NULL,
+    rarity TEXT,
+    PRIMARY KEY (set_id, variant_id),
+    FOREIGN KEY (set_id) REFERENCES sets(id),
+    FOREIGN KEY (variant_id) REFERENCES variants(id)
+  );
+
   CREATE INDEX IF NOT EXISTS idx_set_cards_set ON set_cards(set_id);
   CREATE INDEX IF NOT EXISTS idx_set_cards_card ON set_cards(card_id);
   CREATE INDEX IF NOT EXISTS idx_variants_card ON variants(card_id);
+  CREATE INDEX IF NOT EXISTS idx_variant_appearances_set ON variant_set_appearances(set_id);
+  CREATE INDEX IF NOT EXISTS idx_variant_appearances_variant ON variant_set_appearances(variant_id);
 `;
 
 // Collection database schema
@@ -144,7 +156,8 @@ export async function seedEncyclopedia(
   sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string; icon_path?: string }>,
   cards: Array<{ id: string; name: string; side: string; type: string; icon?: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
-  variants: Array<{ id: string; card_id: string; name: string; code: string; details?: string }>
+  variants: Array<{ id: string; card_id: string; name: string; code: string; details?: string }>,
+  variantSetAppearances: Array<{ set_id: string; variant_id: string; card_number: string; rarity?: string }>
 ): Promise<DatabaseStatus> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
@@ -162,7 +175,7 @@ export async function seedEncyclopedia(
     } else if (status === 'migration') {
       console.log('Migrating card encyclopedia to version ' + DB_VERSION + '...');
       // Drop existing tables to recreate with new schema
-      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS variants; DROP TABLE IF EXISTS set_cards; DROP TABLE IF EXISTS cards; DROP TABLE IF EXISTS sets;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS variant_set_appearances; DROP TABLE IF EXISTS variants; DROP TABLE IF EXISTS set_cards; DROP TABLE IF EXISTS cards; DROP TABLE IF EXISTS sets;');
       // Recreate tables with updated schema
       await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
     }
@@ -201,6 +214,14 @@ export async function seedEncyclopedia(
       await encyclopediaDb.runAsync(
         'INSERT INTO variants (id, card_id, name, code, details) VALUES (?, ?, ?, ?, ?)',
         [variant.id, variant.card_id, variant.name, variant.code, variant.details || null]
+      );
+    }
+
+    // Insert variant_set_appearances relationships
+    for (const appearance of variantSetAppearances) {
+      await encyclopediaDb.runAsync(
+        'INSERT INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES (?, ?, ?, ?)',
+        [appearance.set_id, appearance.variant_id, appearance.card_number, appearance.rarity || null]
       );
     }
 
