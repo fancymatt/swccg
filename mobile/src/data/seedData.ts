@@ -88,12 +88,27 @@ function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
     });
   }
 
+  // Check if card is a foil (indicated by rarity ending with 'F' followed by a number, or starting with 'F')
+  // Foil cards: F#, R# (Reflections Foil), T# (Tournament Foil)
+  const rarity = card.rarity || '';
+  const isFoil = /[FRT]\d/.test(rarity) || rarity.startsWith('F');
+
   // Otherwise, return standard variant for this edition
-  return [{
-    id: `${card.id}_${edition}`,
-    name: edition === 'limited' ? 'Limited' : 'Unlimited',
-    code: edition === 'limited' ? 'LTD' : 'UNL',
-  }];
+  // Limited cards: Black Border (or Black Border Holo if foil)
+  // Unlimited cards: White Border (no foils exist for unlimited)
+  if (edition === 'limited') {
+    return [{
+      id: `${card.id}_${edition}`,
+      name: isFoil ? 'Black Border Holo' : 'Black Border',
+      code: isFoil ? 'BBH' : 'BB',
+    }];
+  } else {
+    return [{
+      id: `${card.id}_${edition}`,
+      name: 'White Border',
+      code: 'WB',
+    }];
+  }
 }
 
 // Cards (set-specific instances)
