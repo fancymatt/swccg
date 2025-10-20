@@ -14,9 +14,6 @@ import deathStarIICardsData from './death-star-ii-cards.json';
 import tatooineCardsData from './tatooine-cards.json';
 import coruscantCardsData from './coruscant-cards.json';
 import theedPalaceCardsData from './theed-palace-cards.json';
-import reflectionsICardsData from './reflections-i-cards.json';
-import reflectionsIICardsData from './reflections-ii-cards.json';
-import reflectionsIIICardsData from './reflections-iii-cards.json';
 import enhancedPremiereCardsData from './enhanced-premiere-cards.json';
 import enhancedCloudCityCardsData from './enhanced-cloud-city-cards.json';
 import enhancedJabbasPalaceCardsData from './enhanced-jabbas-palace-cards.json';
@@ -43,11 +40,8 @@ const allSetsData = [
   endorCardsData,
   deathStarIICardsData,
   tatooineCardsData,
-  reflectionsICardsData,
   coruscantCardsData,
   theedPalaceCardsData,
-  reflectionsIICardsData,
-  reflectionsIIICardsData,
   enhancedPremiereCardsData,
   enhancedCloudCityCardsData,
   enhancedJabbasPalaceCardsData,
@@ -84,51 +78,84 @@ export const SEED_SETS = allSetsData.flatMap((setData) => [
   },
 ]);
 
-// Cards (unique definitions per set appearance)
+// Helper to get variants for a specific set edition
+function getVariantsForEdition(card: any, edition: 'limited' | 'unlimited') {
+  // If card has custom variants defined, filter by edition
+  if (card.variants && Array.isArray(card.variants)) {
+    return card.variants.filter((v: any) => {
+      const id = v.id.toLowerCase();
+      return edition === 'limited' ? id.includes('_limited') : id.includes('_unlimited');
+    });
+  }
+
+  // Otherwise, return standard variant for this edition
+  return [{
+    id: `${card.id}_${edition}`,
+    name: edition === 'limited' ? 'Limited' : 'Unlimited',
+    code: edition === 'limited' ? 'LTD' : 'UNL',
+  }];
+}
+
+// Cards (set-specific instances)
+// Each card instance is specific to either Limited or Unlimited edition
 export const SEED_CARDS = allSetsData.flatMap((setData) =>
-  setData.cards.map((card) => ({
-    id: card.id,
-    name: card.name,
-    side: card.side,
-    type: card.type,
-    icon: (card as any).icon,
-  }))
+  setData.cards.flatMap((card) => [
+    {
+      id: `${card.id}_limited`,
+      name: card.name,
+      side: card.side,
+      type: card.type,
+      icon: (card as any).icon,
+    },
+    {
+      id: `${card.id}_unlimited`,
+      name: card.name,
+      side: card.side,
+      type: card.type,
+      icon: (card as any).icon,
+    },
+  ])
 );
 
 // Link cards to sets with card numbers and rarities
-// Each card appears in both Limited and Unlimited versions of its set
+// Each set gets its edition-specific card instances
 export const SEED_SET_CARDS = allSetsData.flatMap((setData) =>
   setData.cards.flatMap((card) => [
     {
       set_id: `${setData.set.id}-limited`,
-      card_id: card.id,
+      card_id: `${card.id}_limited`,
       card_number: card.number,
       rarity: card.rarity,
     },
     {
       set_id: `${setData.set.id}-unlimited`,
-      card_id: card.id,
+      card_id: `${card.id}_unlimited`,
       card_number: card.number,
       rarity: card.rarity,
     },
   ])
 );
 
-// Card variants (editions: Limited and Unlimited)
-// Variant IDs remain the same to preserve user collection data
+// Card variants belong to their specific card instances
+// Each card instance only has variants appropriate for its edition
 export const SEED_VARIANTS = allSetsData.flatMap((setData) =>
-  setData.cards.flatMap((card) => [
-    {
-      id: `${card.id}_limited`,
-      card_id: card.id,
-      name: 'Limited',
-      code: 'LTD',
-    },
-    {
-      id: `${card.id}_unlimited`,
-      card_id: card.id,
-      name: 'Unlimited',
-      code: 'UNL',
-    },
-  ])
+  setData.cards.flatMap((card: any) => {
+    const limitedVariants = getVariantsForEdition(card, 'limited').map((v: any) => ({
+      id: v.id,
+      card_id: `${card.id}_limited`,
+      name: v.name,
+      code: v.code,
+      details: v.details,
+    }));
+
+    const unlimitedVariants = getVariantsForEdition(card, 'unlimited').map((v: any) => ({
+      id: v.id,
+      card_id: `${card.id}_unlimited`,
+      name: v.name,
+      code: v.code,
+      details: v.details,
+    }));
+
+    return [...limitedVariants, ...unlimitedVariants];
+  })
 );

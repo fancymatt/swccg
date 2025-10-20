@@ -14,6 +14,7 @@
     },
     "preview": {
       "distribution": "store",
+      "autoIncrement": true,
       "node": "22.11.0",
       "ios": {
         "image": "sdk-54"

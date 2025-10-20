@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 9;
+const DB_VERSION = 11;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -47,6 +47,7 @@ const ENCYCLOPEDIA_SCHEMA = `
     card_id TEXT NOT NULL,
     name TEXT NOT NULL,
     code TEXT NOT NULL,
+    details TEXT,
     FOREIGN KEY (card_id) REFERENCES cards(id)
   );
 
@@ -143,7 +144,7 @@ export async function seedEncyclopedia(
   sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string; icon_path?: string }>,
   cards: Array<{ id: string; name: string; side: string; type: string; icon?: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
-  variants: Array<{ id: string; card_id: string; name: string; code: string }>
+  variants: Array<{ id: string; card_id: string; name: string; code: string; details?: string }>
 ): Promise<DatabaseStatus> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
@@ -198,8 +199,8 @@ export async function seedEncyclopedia(
     // Insert variants
     for (const variant of variants) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO variants (id, card_id, name, code) VALUES (?, ?, ?, ?)',
-        [variant.id, variant.card_id, variant.name, variant.code]
+        'INSERT INTO variants (id, card_id, name, code, details) VALUES (?, ?, ?, ?, ?)',
+        [variant.id, variant.card_id, variant.name, variant.code, variant.details || null]
       );
     }
 
@@ -277,10 +278,6 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
       ORDER BY CAST(sc.card_number AS INTEGER)
     `, [setId]);
 
-    // Determine which variant suffix to filter by based on set ID
-    const variantSuffix = setId.endsWith('-limited') ? '_limited' :
-                         setId.endsWith('-unlimited') ? '_unlimited' : null;
-
     // For each card, get its variants with quantities
     const cardsWithVariants = await Promise.all(
       cards.map(async (card: any) => {
@@ -288,20 +285,16 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
           SELECT
             v.id as variant_id,
             v.name as variant_name,
-            v.code as variant_code
+            v.code as variant_code,
+            v.details as variant_details
           FROM variants v
           WHERE v.card_id = ?
           ORDER BY v.code
         `, [card.card_id]);
 
-        // Filter variants based on set type
-        const filteredVariants = variantSuffix
-          ? variants.filter((v: any) => v.variant_id.endsWith(variantSuffix))
-          : variants;
-
         // Get quantities for each variant
         const variantsWithQuantity = await Promise.all(
-          filteredVariants.map(async (variant: any) => {
+          variants.map(async (variant: any) => {
             const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
               'SELECT quantity FROM collection WHERE variant_id = ?',
               [variant.variant_id]
@@ -311,6 +304,7 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
               id: variant.variant_id,
               name: variant.variant_name,
               code: variant.variant_code,
+              details: variant.variant_details,
               quantity: result?.quantity || 0,
             };
           })
@@ -363,7 +357,8 @@ export async function getCardsWithCollection(): Promise<any[]> {
           SELECT
             v.id as variant_id,
             v.name as variant_name,
-            v.code as variant_code
+            v.code as variant_code,
+            v.details as variant_details
           FROM variants v
           WHERE v.card_id = ?
           ORDER BY v.code
@@ -381,6 +376,7 @@ export async function getCardsWithCollection(): Promise<any[]> {
               id: variant.variant_id,
               name: variant.variant_name,
               code: variant.variant_code,
+              details: variant.variant_details,
               quantity: result?.quantity || 0,
             };
           })
@@ -455,28 +451,20 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
               return null;
             }
 
-            // Determine which variant suffix to filter by based on set ID
-            const variantSuffix = card.set_id.endsWith('-limited') ? '_limited' :
-                                 card.set_id.endsWith('-unlimited') ? '_unlimited' : null;
-
             const variants = await encyclopediaDb.getAllAsync(`
               SELECT
                 v.id as variant_id,
                 v.name as variant_name,
-                v.code as variant_code
+                v.code as variant_code,
+                v.details as variant_details
               FROM variants v
               WHERE v.card_id = ?
               ORDER BY v.code
             `, [card.card_id]);
 
-            // Filter variants based on set type
-            const filteredVariants = variantSuffix
-              ? variants.filter((v: any) => v.variant_id.endsWith(variantSuffix))
-              : variants;
-
             // Get quantities for each variant
             const variantsWithQuantity = await Promise.all(
-              filteredVariants.map(async (variant: any) => {
+              variants.map(async (variant: any) => {
                 try {
                   const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
                     'SELECT quantity FROM collection WHERE variant_id = ?',
@@ -487,6 +475,7 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
                     id: variant.variant_id,
                     name: variant.variant_name,
                     code: variant.variant_code,
+                    details: variant.variant_details,
                     quantity: result?.quantity || 0,
                   };
                 } catch (variantError) {
@@ -495,6 +484,7 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
                     id: variant.variant_id,
                     name: variant.variant_name,
                     code: variant.variant_code,
+                    details: variant.variant_details,
                     quantity: 0,
                   };
                 }
@@ -710,10 +700,6 @@ async function calculateSetCompletionStats(setId: string): Promise<SetCompletion
   if (!collectionDb) throw new Error('Collection database not initialized');
 
   try {
-    // Determine which variant suffix to filter by based on set ID
-    const variantSuffix = setId.endsWith('-limited') ? '_limited' :
-                         setId.endsWith('-unlimited') ? '_unlimited' : null;
-
     // Query 1: Get all cards in the set with their variants (in bulk)
     const cardVariants = await encyclopediaDb.getAllAsync<{
       card_id: string;
@@ -729,10 +715,7 @@ async function calculateSetCompletionStats(setId: string): Promise<SetCompletion
       WHERE sc.set_id = ?
     `, [setId]);
 
-    // Filter variants based on set type
-    const filteredCardVariants = variantSuffix
-      ? cardVariants.filter(cv => cv.variant_id.endsWith(variantSuffix))
-      : cardVariants;
+    const filteredCardVariants = cardVariants;
 
     // Extract unique variant IDs for collection lookup
     const variantIds = [...new Set(filteredCardVariants.map(cv => cv.variant_id))];

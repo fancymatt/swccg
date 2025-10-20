@@ -1085,7 +1085,26 @@
       "name": "Dodge",
       "side": "light",
       "type": "Interrupt",
-      "rarity": "C"
+      "rarity": "C",
+      "variants": [
+        {
+          "id": "cc_135_dodge_variant_ltd_limited",
+          "name": "Limited",
+          "code": "LTD",
+          "details": "Complete card text"
+        },
+        {
+          "id": "cc_135_dodge_variant_ltd_errata_limited",
+          "name": "Limited (Errata)",
+          "code": "LTD-E",
+          "details": "Card text cut off"
+        },
+        {
+          "id": "cc_135_dodge_variant_unl_unlimited",
+          "name": "Unlimited",
+          "code": "UNL"
+        }
+      ]
     },
     {
       "number": 136,

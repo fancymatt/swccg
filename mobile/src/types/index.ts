@@ -2,6 +2,7 @@ export interface CardVariant {
   id: string;
   name: string;
   code: string;
+  details?: string; // Optional descriptive details about this variant (e.g., "Card text cut off", "Complete card text")
   quantity: number;
 }
 

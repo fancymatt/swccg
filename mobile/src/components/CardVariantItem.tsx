@@ -46,13 +46,21 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
       fontSize: 14,
       color: colors.textSecondary,
     },
+    variantDetails: {
+      fontSize: 13,
+      color: colors.textSecondary,
+      fontStyle: 'italic',
+      marginTop: 2,
+    },
   }), [colors]);
 
   return (
     <View style={styles.container}>
       <View style={styles.infoContainer}>
         <Text style={styles.variantName}>{variant.name}</Text>
-        <Text style={styles.variantCode}>{variant.code}</Text>
+        {variant.details && (
+          <Text style={styles.variantDetails}>{variant.details}</Text>
+        )}
       </View>
 
       <CardCounter
