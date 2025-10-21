@@ -1,25 +1,22 @@
-import React, { useMemo, useCallback, useState, useEffect } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardCounter } from './CardCounter';
-import { getVariantPricing, type CardPricing } from '../services/database';
+import type { CardPricing } from '../services/database';
 import type { CardVariant } from '../types';
 
 interface CardVariantItemProps {
   variant: CardVariant;
+  pricing: CardPricing | null;
   onQuantityChange: (variantId: string, newQuantity: number) => void;
 }
 
 export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
   variant,
+  pricing,
   onQuantityChange,
 }) => {
   const { colors } = useTheme();
-  const [pricing, setPricing] = useState<CardPricing | null>(null);
-
-  useEffect(() => {
-    getVariantPricing(variant.id).then(setPricing);
-  }, [variant.id]);
 
   const handleChange = useCallback(
     (newCount: number) => {

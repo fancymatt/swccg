@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardVariantItem } from './CardVariantItem';
 import { CardTypeIcon } from './CardTypeIcon';
-import { getVariantPricing } from '../services/database';
+import type { CardPricing } from '../services/database';
 import type { Card } from '../types';
 
 // Icon mapping
@@ -20,12 +20,14 @@ const sideIconMap = {
 
 interface CardListItemProps {
   card: Card;
+  pricingMap: Map<string, CardPricing>;
   onVariantQuantityChange: (cardId: string, variantId: string, newQuantity: number) => void;
   showSetInfo?: boolean;
 }
 
 export const CardListItem: React.FC<CardListItemProps> = React.memo(({
   card,
+  pricingMap,
   onVariantQuantityChange,
   showSetInfo = false,
 }) => {
@@ -34,25 +36,21 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
   const [hasAnyPricing, setHasAnyPricing] = useState<boolean>(false);
 
   useEffect(() => {
-    // Calculate total value from all variants
-    async function calculateValue() {
-      let total = 0;
-      let foundPricing = false;
+    // Calculate total value from all variants using the pricing map
+    let total = 0;
+    let foundPricing = false;
 
-      for (const variant of card.variants) {
-        const pricing = await getVariantPricing(variant.id);
-        if (pricing && pricing.ungraded_price) {
-          total += (pricing.ungraded_price / 100) * variant.quantity;
-          foundPricing = true;
-        }
+    for (const variant of card.variants) {
+      const pricing = pricingMap.get(variant.id);
+      if (pricing && pricing.ungraded_price) {
+        total += (pricing.ungraded_price / 100) * variant.quantity;
+        foundPricing = true;
       }
-
-      setTotalValue(total);
-      setHasAnyPricing(foundPricing);
     }
 
-    calculateValue();
-  }, [card.variants]);
+    setTotalValue(total);
+    setHasAnyPricing(foundPricing);
+  }, [card.variants, pricingMap]);
 
   const getSideColor = (side: 'light' | 'dark') => {
     return side === 'light' ? colors.lightSide : colors.darkSide;
@@ -268,6 +266,7 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
           <CardVariantItem
             key={variant.id}
             variant={variant}
+            pricing={pricingMap.get(variant.id) || null}
             onQuantityChange={handleVariantChange}
           />
         ))}

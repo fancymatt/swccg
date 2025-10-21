@@ -6,7 +6,7 @@ import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { CardListItem } from '../components/CardListItem';
 import { ProgressBar } from '../components/ProgressBar';
 import { FilterBar, FilterCategory } from '../components/FilterBar';
-import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, getVariantPricing, SetCompletionStats } from '../services/database';
+import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, getBatchVariantPricing, SetCompletionStats, CardPricing } from '../services/database';
 import type { Card } from '../types';
 
 interface SetCardsScreenProps {
@@ -22,6 +22,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<SetCompletionStats | null>(null);
   const [totalValue, setTotalValue] = useState<number>(0);
+  const [pricingMap, setPricingMap] = useState<Map<string, CardPricing>>(new Map());
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
     side: [],
     type: [],
@@ -30,12 +31,25 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   });
 
   const calculateTotalValue = useCallback(async (cardsData: Card[]) => {
+    // Collect all variant IDs from all cards
+    const variantIds: string[] = [];
+    for (const card of cardsData) {
+      for (const variant of card.variants) {
+        variantIds.push(variant.id);
+      }
+    }
+
+    // Fetch all pricing data in a single batch query
+    const pricing = await getBatchVariantPricing(variantIds);
+    setPricingMap(pricing);
+
+    // Calculate total value using the pricing map
     let total = 0;
     for (const card of cardsData) {
       for (const variant of card.variants) {
-        const pricing = await getVariantPricing(variant.id);
-        if (pricing && pricing.ungraded_price) {
-          total += (pricing.ungraded_price / 100) * variant.quantity;
+        const variantPricing = pricing.get(variant.id);
+        if (variantPricing && variantPricing.ungraded_price) {
+          total += (variantPricing.ungraded_price / 100) * variant.quantity;
         }
       }
     }
@@ -253,9 +267,10 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   const renderCard = useCallback(({ item }: { item: Card }) => (
     <CardListItem
       card={item}
+      pricingMap={pricingMap}
       onVariantQuantityChange={handleVariantQuantityChange}
     />
-  ), [handleVariantQuantityChange]);
+  ), [handleVariantQuantityChange, pricingMap]);
 
   const renderListHeader = useCallback(() => {
     return (

@@ -3,7 +3,7 @@ import { View, Text, TextInput, StyleSheet, FlatList, ActivityIndicator, Touchab
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardListItem } from '../components/CardListItem';
-import { searchCardsByName, updateVariantQuantity } from '../services/database';
+import { searchCardsByName, updateVariantQuantity, getBatchVariantPricing, CardPricing } from '../services/database';
 import type { Card } from '../types';
 
 export const SearchScreen: React.FC = () => {
@@ -12,6 +12,7 @@ export const SearchScreen: React.FC = () => {
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
+  const [pricingMap, setPricingMap] = useState<Map<string, CardPricing>>(new Map());
 
   // Debounced search effect
   useEffect(() => {
@@ -38,6 +39,30 @@ export const SearchScreen: React.FC = () => {
 
     return () => clearTimeout(timeoutId);
   }, [searchQuery]);
+
+  // Fetch pricing whenever cards change
+  useEffect(() => {
+    async function fetchPricing() {
+      if (cards.length === 0) {
+        setPricingMap(new Map());
+        return;
+      }
+
+      // Collect all variant IDs from all cards
+      const variantIds: string[] = [];
+      for (const card of cards) {
+        for (const variant of card.variants) {
+          variantIds.push(variant.id);
+        }
+      }
+
+      // Fetch all pricing data in a single batch query
+      const pricing = await getBatchVariantPricing(variantIds);
+      setPricingMap(pricing);
+    }
+
+    fetchPricing();
+  }, [cards]);
 
   const handleVariantQuantityChange = useCallback(async (
     cardId: string,
@@ -174,10 +199,11 @@ export const SearchScreen: React.FC = () => {
   const renderCard = useCallback(({ item }: { item: Card }) => (
     <CardListItem
       card={item}
+      pricingMap={pricingMap}
       onVariantQuantityChange={handleVariantQuantityChange}
       showSetInfo={true}
     />
-  ), [handleVariantQuantityChange]);
+  ), [handleVariantQuantityChange, pricingMap]);
 
   const keyExtractor = useCallback((item: Card) => item.id, []);
 

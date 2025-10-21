@@ -1040,6 +1040,48 @@ export async function getVariantPricing(variantId: string): Promise<CardPricing 
 }
 
 /**
+ * Get pricing data for multiple variants in a single query (batch operation)
+ * This is much more efficient than calling getVariantPricing() in a loop
+ * Returns a Map of variant_id -> CardPricing
+ */
+export async function getBatchVariantPricing(variantIds: string[]): Promise<Map<string, CardPricing>> {
+  if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
+
+  const pricingMap = new Map<string, CardPricing>();
+
+  if (variantIds.length === 0) {
+    return pricingMap;
+  }
+
+  try {
+    // Create placeholders for IN clause
+    const placeholders = variantIds.map(() => '?').join(',');
+
+    // Fetch all pricing data in a single query
+    const results = await encyclopediaDb.getAllAsync<CardPricing & { variant_id: string }>(
+      `SELECT cp.*, v.id as variant_id
+       FROM card_pricing cp
+       INNER JOIN variants v ON v.pricing_id = cp.id
+       WHERE v.id IN (${placeholders})`,
+      variantIds
+    );
+
+    // Build the map
+    for (const result of results) {
+      const variantId = result.variant_id;
+      // Remove variant_id from the pricing object before storing
+      const { variant_id, ...pricing } = result;
+      pricingMap.set(variantId, pricing);
+    }
+
+    return pricingMap;
+  } catch (error) {
+    console.error('Failed to get batch variant pricing:', error);
+    return pricingMap;
+  }
+}
+
+/**
  * Close both databases
  */
 export async function closeDatabases(): Promise<void> {
