@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { useFonts, ZenDots_400Regular } from '@expo-google-fonts/zen-dots';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from './src/contexts/ThemeContext';
 import { CollectionStatsProvider } from './src/contexts/CollectionStatsContext';
@@ -23,6 +23,9 @@ export default function App() {
   const [dbInitialized, setDbInitialized] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('Initializing database...');
 
+  // Ref to prevent multiple initialization attempts (fixes race condition in React StrictMode)
+  const setupCalledRef = useRef(false);
+
   // Hide splash screen as soon as fonts are loaded so we can show our loading screen
   useEffect(() => {
     async function hideSplash() {
@@ -34,6 +37,12 @@ export default function App() {
   }, [fontsLoaded]);
 
   useEffect(() => {
+    // Prevent multiple initialization attempts (can happen in React StrictMode or hot reload)
+    if (setupCalledRef.current) {
+      return;
+    }
+    setupCalledRef.current = true;
+
     async function setupDatabase() {
       try {
         setLoadingMessage('Initializing database...');
@@ -53,6 +62,8 @@ export default function App() {
       } catch (error) {
         console.error('Failed to setup database:', error);
         setLoadingMessage('Error loading database');
+        // Reset ref on error to allow retry
+        setupCalledRef.current = false;
       }
     }
 

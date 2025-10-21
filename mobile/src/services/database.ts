@@ -6,6 +6,10 @@ import type { Set, Card, CardVariant } from '../types';
 let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
 let collectionDb: SQLite.SQLiteDatabase | null = null;
 
+// Initialization state management to prevent race conditions
+let initializationPromise: Promise<void> | null = null;
+let isInitialized = false;
+
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
 const DB_VERSION = 29;
@@ -100,45 +104,89 @@ const COLLECTION_SCHEMA = `
 
 /**
  * Initialize both databases
+ * Uses a promise guard to prevent concurrent initialization attempts (race condition fix)
  */
 export async function initializeDatabases(): Promise<void> {
-  try {
-    // Initialize encyclopedia database
-    encyclopediaDb = await SQLite.openDatabaseAsync('encyclopedia.db');
+  // If already initialized, return immediately
+  if (isInitialized) {
+    return;
+  }
 
-    // Create tables with schema
-    await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
+  // If initialization is in progress, wait for it to complete
+  if (initializationPromise) {
+    return initializationPromise;
+  }
 
-    // Enable WAL mode for better concurrency (one writer, many readers)
-    await encyclopediaDb.execAsync('PRAGMA journal_mode=WAL');
-
-    // Initialize collection database
-    collectionDb = await SQLite.openDatabaseAsync('collection.db');
-    await collectionDb.execAsync(COLLECTION_SCHEMA);
-
-    // Enable WAL mode for collection database too
-    await collectionDb.execAsync('PRAGMA journal_mode=WAL');
-
-    // Ensure collection database is included in iOS iCloud backups
-    // FileSystem.documentDirectory is backed up by default on iOS
-    // This explicitly ensures the database files are not excluded from backup
+  // Start initialization and store the promise
+  initializationPromise = (async () => {
     try {
-      const dbPath = `${FileSystem.documentDirectory}SQLite/collection.db`;
-      await FileSystem.getInfoAsync(dbPath).then(async (info) => {
-        if (info.exists && FileSystem.setIsSkippedBackupAsync) {
-          // Ensure NOT skipped from backup (false = include in backup)
-          await FileSystem.setIsSkippedBackupAsync(dbPath, false);
-        }
-      });
-    } catch (error) {
-      // Non-fatal - log and continue
-      console.warn('Could not set backup flag for collection database:', error);
-    }
+      // Initialize encyclopedia database
+      encyclopediaDb = await SQLite.openDatabaseAsync('encyclopedia.db');
 
-    console.log('Databases initialized successfully with WAL mode');
-  } catch (error) {
-    console.error('Failed to initialize databases:', error);
-    throw error;
+      // Create tables with schema
+      await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
+
+      // Enable WAL mode for better concurrency (one writer, many readers)
+      await encyclopediaDb.execAsync('PRAGMA journal_mode=WAL');
+
+      // Initialize collection database
+      collectionDb = await SQLite.openDatabaseAsync('collection.db');
+      await collectionDb.execAsync(COLLECTION_SCHEMA);
+
+      // Enable WAL mode for collection database too
+      await collectionDb.execAsync('PRAGMA journal_mode=WAL');
+
+      // Ensure collection database is included in iOS iCloud backups
+      // FileSystem.documentDirectory is backed up by default on iOS
+      // This explicitly ensures the database files are not excluded from backup
+      try {
+        const dbPath = `${FileSystem.documentDirectory}SQLite/collection.db`;
+        await FileSystem.getInfoAsync(dbPath).then(async (info) => {
+          if (info.exists && FileSystem.setIsSkippedBackupAsync) {
+            // Ensure NOT skipped from backup (false = include in backup)
+            await FileSystem.setIsSkippedBackupAsync(dbPath, false);
+          }
+        });
+      } catch (error) {
+        // Non-fatal - log and continue
+        console.warn('Could not set backup flag for collection database:', error);
+      }
+
+      // Mark as initialized
+      isInitialized = true;
+      console.log('Databases initialized successfully with WAL mode');
+    } catch (error) {
+      // Reset state on error to allow retry
+      initializationPromise = null;
+      isInitialized = false;
+      encyclopediaDb = null;
+      collectionDb = null;
+      console.error('Failed to initialize databases:', error);
+      throw error;
+    }
+  })();
+
+  return initializationPromise;
+}
+
+/**
+ * Ensures database is initialized before running queries
+ * Prevents race conditions where queries are attempted before initialization completes
+ */
+async function ensureDatabaseReady(): Promise<void> {
+  // If already initialized, return immediately
+  if (isInitialized && encyclopediaDb && collectionDb) {
+    return;
+  }
+
+  // If initialization is in progress, wait for it
+  if (initializationPromise) {
+    await initializationPromise;
+  }
+
+  // Double-check after waiting
+  if (!encyclopediaDb || !collectionDb) {
+    throw new Error('Database not initialized. Please call initializeDatabases() first.');
   }
 }
 
