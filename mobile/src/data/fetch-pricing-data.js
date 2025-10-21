@@ -1,9 +1,18 @@
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '..', '..', '.env') });
 
-// Your PriceCharting API token
-const API_TOKEN = '1a7e4a9774241c8abeeed5452bcdabef03e9ef6a';
+// Your PriceCharting API token from environment variable
+const API_TOKEN = process.env.PRICECHARTING_API_TOKEN;
 const PRICECHARTING_API_BASE = 'https://www.pricecharting.com/api';
+
+// Validate API token is set
+if (!API_TOKEN) {
+  console.error('ERROR: PRICECHARTING_API_TOKEN environment variable is not set');
+  console.error('Please create a .env file in the mobile/ directory with:');
+  console.error('PRICECHARTING_API_TOKEN=your_token_here');
+  process.exit(1);
+}
 
 /**
  * Search for a card by name on PriceCharting
