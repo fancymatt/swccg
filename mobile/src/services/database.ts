@@ -206,81 +206,154 @@ export async function seedEncyclopedia(
       await encyclopediaDb.execAsync('DELETE FROM variants; DELETE FROM set_cards; DELETE FROM cards; DELETE FROM sets;');
     }
 
-    // Insert sets
-    for (const set of sets) {
-      await encyclopediaDb.runAsync(
-        'INSERT INTO sets (id, name, abbreviation, release_date, icon_path) VALUES (?, ?, ?, ?, ?)',
-        [set.id, set.name, set.abbreviation || null, set.release_date || null, set.icon_path || null]
-      );
-    }
+    // BEGIN TRANSACTION for atomic operations and better performance
+    console.log('Starting database transaction...');
+    await encyclopediaDb.execAsync('BEGIN TRANSACTION');
 
-    // Insert cards
-    for (const card of cards) {
+    try {
+      // Batch insert sets
+      console.log(`Inserting ${sets.length} sets...`);
+      const setsPlaceholders = sets.map(() => '(?, ?, ?, ?, ?)').join(', ');
+      const setsValues = sets.flatMap(set => [
+        set.id,
+        set.name,
+        set.abbreviation || null,
+        set.release_date || null,
+        set.icon_path || null
+      ]);
       await encyclopediaDb.runAsync(
-        'INSERT OR REPLACE INTO cards (id, name, side, type, icon) VALUES (?, ?, ?, ?, ?)',
-        [card.id, card.name, card.side, card.type, card.icon || null]
+        `INSERT INTO sets (id, name, abbreviation, release_date, icon_path) VALUES ${setsPlaceholders}`,
+        setsValues
       );
-    }
 
-    // Insert set_cards relationships
-    for (const setCard of setCards) {
+      // Batch insert cards
+      console.log(`Inserting ${cards.length} cards...`);
+      const cardsPlaceholders = cards.map(() => '(?, ?, ?, ?, ?)').join(', ');
+      const cardsValues = cards.flatMap(card => [
+        card.id,
+        card.name,
+        card.side,
+        card.type,
+        card.icon || null
+      ]);
       await encyclopediaDb.runAsync(
-        'INSERT OR REPLACE INTO set_cards (set_id, card_id, card_number, rarity) VALUES (?, ?, ?, ?)',
-        [setCard.set_id, setCard.card_id, setCard.card_number, setCard.rarity || null]
+        `INSERT OR REPLACE INTO cards (id, name, side, type, icon) VALUES ${cardsPlaceholders}`,
+        cardsValues
       );
-    }
 
-    // Insert variants
-    for (const variant of variants) {
+      // Batch insert set_cards relationships
+      console.log(`Inserting ${setCards.length} set-card relationships...`);
+      const setCardsPlaceholders = setCards.map(() => '(?, ?, ?, ?)').join(', ');
+      const setCardsValues = setCards.flatMap(setCard => [
+        setCard.set_id,
+        setCard.card_id,
+        setCard.card_number,
+        setCard.rarity || null
+      ]);
       await encyclopediaDb.runAsync(
-        'INSERT OR REPLACE INTO variants (id, card_id, name, code, details) VALUES (?, ?, ?, ?, ?)',
-        [variant.id, variant.card_id, variant.name, variant.code, variant.details || null]
+        `INSERT OR REPLACE INTO set_cards (set_id, card_id, card_number, rarity) VALUES ${setCardsPlaceholders}`,
+        setCardsValues
       );
-    }
 
-    // Insert variant_set_appearances relationships
-    for (const appearance of variantSetAppearances) {
+      // Batch insert variants
+      console.log(`Inserting ${variants.length} variants...`);
+      const variantsPlaceholders = variants.map(() => '(?, ?, ?, ?, ?)').join(', ');
+      const variantsValues = variants.flatMap(variant => [
+        variant.id,
+        variant.card_id,
+        variant.name,
+        variant.code,
+        variant.details || null
+      ]);
       await encyclopediaDb.runAsync(
-        'INSERT OR REPLACE INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES (?, ?, ?, ?)',
-        [appearance.set_id, appearance.variant_id, appearance.card_number, appearance.rarity || null]
+        `INSERT OR REPLACE INTO variants (id, card_id, name, code, details) VALUES ${variantsPlaceholders}`,
+        variantsValues
       );
-    }
 
-    // Insert pricing data if provided
-    if (pricingData && pricingData.length > 0) {
-      console.log(`Inserting ${pricingData.length} pricing records...`);
-      for (const pricing of pricingData) {
+      // Batch insert variant_set_appearances relationships
+      console.log(`Inserting ${variantSetAppearances.length} variant appearances...`);
+      const appearancesPlaceholders = variantSetAppearances.map(() => '(?, ?, ?, ?)').join(', ');
+      const appearancesValues = variantSetAppearances.flatMap(appearance => [
+        appearance.set_id,
+        appearance.variant_id,
+        appearance.card_number,
+        appearance.rarity || null
+      ]);
+      await encyclopediaDb.runAsync(
+        `INSERT OR REPLACE INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES ${appearancesPlaceholders}`,
+        appearancesValues
+      );
+
+      // Batch insert pricing data if provided
+      if (pricingData && pricingData.length > 0) {
+        console.log(`Inserting ${pricingData.length} pricing records...`);
+        const pricingPlaceholders = pricingData.map(() => '(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').join(', ');
+        const pricingValues = pricingData.flatMap(pricing => [
+          pricing.card_name,
+          pricing.pc_id,
+          pricing.pc_card_name,
+          pricing.pc_set_name,
+          pricing.ungraded_price,
+          pricing.grade_7_price,
+          pricing.grade_8_price,
+          pricing.grade_9_price,
+          pricing.grade_10_price,
+          pricing.pc_last_updated_time
+        ]);
         await encyclopediaDb.runAsync(
-          'INSERT OR REPLACE INTO card_pricing (card_name, pc_id, pc_card_name, pc_set_name, ungraded_price, grade_7_price, grade_8_price, grade_9_price, grade_10_price, pc_last_updated_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-          [pricing.card_name, pricing.pc_id, pricing.pc_card_name, pricing.pc_set_name, pricing.ungraded_price, pricing.grade_7_price, pricing.grade_8_price, pricing.grade_9_price, pricing.grade_10_price, pricing.pc_last_updated_time]
+          `INSERT OR REPLACE INTO card_pricing (card_name, pc_id, pc_card_name, pc_set_name, ungraded_price, grade_7_price, grade_8_price, grade_9_price, grade_10_price, pc_last_updated_time) VALUES ${pricingPlaceholders}`,
+          pricingValues
         );
+        console.log('Pricing data inserted successfully');
       }
-      console.log('Pricing data inserted successfully');
-    }
 
-    // Apply variant pricing mappings if provided
-    if (variantPricingMappings && Object.keys(variantPricingMappings).length > 0) {
-      console.log(`Applying ${Object.keys(variantPricingMappings).length} variant pricing mappings...`);
-      let appliedCount = 0;
-      for (const [variantId, pcId] of Object.entries(variantPricingMappings)) {
-        // Look up the card_pricing.id from pc_id
-        const pricingRecord = await encyclopediaDb.getFirstAsync<{ id: number }>(
-          'SELECT id FROM card_pricing WHERE pc_id = ?',
-          [pcId]
-        );
+      // Apply variant pricing mappings if provided
+      if (variantPricingMappings && Object.keys(variantPricingMappings).length > 0) {
+        console.log(`Applying ${Object.keys(variantPricingMappings).length} variant pricing mappings...`);
 
-        if (pricingRecord) {
-          // Update the variant's pricing_id
+        // Build a map of pc_id -> pricing.id by querying all at once
+        const pcIds = Object.values(variantPricingMappings);
+        const placeholders = pcIds.map(() => '?').join(',');
+        const pricingRecords = await encyclopediaDb.getAllAsync(
+          `SELECT id, pc_id FROM card_pricing WHERE pc_id IN (${placeholders})`,
+          pcIds
+        ) as Array<{ id: number; pc_id: number }>;
+
+        const pcIdToInternalId = new Map<number, number>();
+        pricingRecords.forEach(record => {
+          pcIdToInternalId.set(record.pc_id, record.id);
+        });
+
+        // Build batch UPDATE using CASE statement
+        const variantIds: string[] = [];
+        const caseStatements: string[] = [];
+
+        for (const [variantId, pcId] of Object.entries(variantPricingMappings)) {
+          const internalId = pcIdToInternalId.get(pcId);
+          if (internalId) {
+            variantIds.push(variantId);
+            caseStatements.push(`WHEN '${variantId}' THEN ${internalId}`);
+          }
+        }
+
+        if (variantIds.length > 0) {
+          const variantIdsPlaceholders = variantIds.map(() => '?').join(',');
           await encyclopediaDb.runAsync(
-            'UPDATE variants SET pricing_id = ? WHERE id = ?',
-            [pricingRecord.id, variantId]
+            `UPDATE variants SET pricing_id = CASE id ${caseStatements.join(' ')} END WHERE id IN (${variantIdsPlaceholders})`,
+            variantIds
           );
-          appliedCount++;
-        } else {
-          console.warn(`Warning: No pricing record found for pc_id ${pcId} (variant ${variantId})`);
+          console.log(`Applied ${variantIds.length} pricing mappings successfully`);
         }
       }
-      console.log(`Applied ${appliedCount} pricing mappings successfully`);
+
+      // COMMIT TRANSACTION
+      await encyclopediaDb.execAsync('COMMIT');
+      console.log('Transaction committed successfully');
+    } catch (error) {
+      // ROLLBACK on error
+      console.error('Error during seeding, rolling back transaction:', error);
+      await encyclopediaDb.execAsync('ROLLBACK');
+      throw error;
     }
 
     // Mark database as seeded
