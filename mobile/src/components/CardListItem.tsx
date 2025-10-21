@@ -5,18 +5,8 @@ import { CardVariantItem } from './CardVariantItem';
 import { CardTypeIcon } from './CardTypeIcon';
 import type { CardPricing } from '../services/database';
 import type { Card } from '../types';
-
-// Icon mapping
-const setIconMap: Record<string, any> = {
-  icon_set_anewhope: require('../../assets/icons_sets/icon_set_anewhope.png'),
-  icon_set_hoth: require('../../assets/icons_sets/icon_set_hoth.png'),
-  icon_set_default: require('../../assets/icons_sets/icon_set_default.png'),
-};
-
-const sideIconMap = {
-  light: require('../../assets/icons_darklight/icon_darklight_light.png'),
-  dark: require('../../assets/icons_darklight/icon_darklight_dark.png'),
-};
+import { getSetIcon, getSideIcon, getSideColor, getSideDisplayName } from '../utils/iconUtils';
+import { getRarityDisplayName, getRarityColor } from '../utils/rarityUtils';
 
 interface CardListItemProps {
   card: Card;
@@ -53,44 +43,6 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
     setTotalValue(total);
     setHasAnyPricing(foundPricing);
   }, [card.variants, pricingMap]);
-
-  const getSideColor = (side: 'light' | 'dark') => {
-    return side === 'light' ? colors.lightSide : colors.darkSide;
-  };
-
-  const getSideIcon = (side: 'light' | 'dark') => {
-    return sideIconMap[side];
-  };
-
-  const getSetIcon = (iconPath?: string) => {
-    if (iconPath && setIconMap[iconPath]) {
-      return setIconMap[iconPath];
-    }
-    return setIconMap['icon_set_default'];
-  };
-
-  const normalizeRarity = (rarity: string | undefined): string => {
-    if (!rarity) return 'Unknown';
-    const rarityUpper = rarity.toUpperCase();
-    if (rarityUpper.startsWith('C')) return 'Common';
-    if (rarityUpper.startsWith('U')) return 'Uncommon';
-    if (rarityUpper.startsWith('R')) return 'Rare';
-    return 'Other';
-  };
-
-  const getRarityColor = (rarity: string | undefined): string => {
-    const normalized = normalizeRarity(rarity);
-    switch (normalized) {
-      case 'Common':
-        return '#10b981';
-      case 'Uncommon':
-        return '#3b82f6';
-      case 'Rare':
-        return '#f59e0b';
-      default:
-        return '#8b5cf6';
-    }
-  };
 
   const totalQuantity = useMemo(
     () => card.variants.reduce((sum, v) => sum + v.quantity, 0),
@@ -226,8 +178,8 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
               <Text style={styles.separator}>•</Text>
             </>
           )}
-          <Text style={[styles.sideText, { color: getSideColor(card.side) }]}>
-            {card.side === 'light' ? 'Light' : 'Dark'}
+          <Text style={[styles.sideText, { color: getSideColor(card.side, colors) }]}>
+            {getSideDisplayName(card.side)}
           </Text>
           <Text style={styles.separator}>•</Text>
           <Text style={styles.cardType}>{card.type}</Text>
@@ -235,7 +187,7 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
             <>
               <Text style={styles.separator}>•</Text>
               <Text style={[styles.rarity, { color: getRarityColor(card.rarity) }]}>
-                {normalizeRarity(card.rarity)}
+                {getRarityDisplayName(card.rarity)}
               </Text>
             </>
           )}

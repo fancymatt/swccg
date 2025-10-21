@@ -1,6 +1,7 @@
 import * as SQLite from 'expo-sqlite';
 import * as FileSystem from 'expo-file-system/legacy';
 import type { Set, Card, CardVariant } from '../types';
+import { normalizeRarity } from '../utils/rarityUtils';
 
 // Database instances
 let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
@@ -958,27 +959,6 @@ export async function getTotalCardsOwned(): Promise<number> {
   }
 }
 
-/**
- * Helper function to normalize rarity codes to unified categories
- */
-function normalizeRarity(rarity: string | null | undefined): string {
-  if (!rarity) return 'Other';
-
-  const rarityUpper = rarity.toUpperCase();
-
-  // Common: C1, C2, C3, etc.
-  if (rarityUpper.startsWith('C')) return 'Common';
-
-  // Uncommon: U1, U2, etc.
-  if (rarityUpper.startsWith('U')) return 'Uncommon';
-
-  // Rare: R1, R2, etc.
-  if (rarityUpper.startsWith('R')) return 'Rare';
-
-  // Everything else (foils, promos, etc.)
-  return 'Other';
-}
-
 export interface SetCompletionStats {
   total: { owned: number; total: number };
   common: { owned: number; total: number };
@@ -1135,17 +1115,17 @@ async function calculateSetCompletionStats(setId: string): Promise<SetCompletion
       const isOwned = cardOwnership.get(cardId) || false;
 
       // Increment total count for this rarity
-      if (normalizedRarity === 'Common') stats.common.total++;
-      else if (normalizedRarity === 'Uncommon') stats.uncommon.total++;
-      else if (normalizedRarity === 'Rare') stats.rare.total++;
+      if (normalizedRarity === 'common') stats.common.total++;
+      else if (normalizedRarity === 'uncommon') stats.uncommon.total++;
+      else if (normalizedRarity === 'rare') stats.rare.total++;
       else stats.other.total++;
 
       // Increment owned count if card is owned
       if (isOwned) {
         stats.total.owned++;
-        if (normalizedRarity === 'Common') stats.common.owned++;
-        else if (normalizedRarity === 'Uncommon') stats.uncommon.owned++;
-        else if (normalizedRarity === 'Rare') stats.rare.owned++;
+        if (normalizedRarity === 'common') stats.common.owned++;
+        else if (normalizedRarity === 'uncommon') stats.uncommon.owned++;
+        else if (normalizedRarity === 'rare') stats.rare.owned++;
         else stats.other.owned++;
       }
     }

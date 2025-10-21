@@ -8,6 +8,7 @@ import { ProgressBar } from '../components/ProgressBar';
 import { FilterBar, FilterCategory } from '../components/FilterBar';
 import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, getBatchVariantPricing, SetCompletionStats, CardPricing } from '../services/database';
 import type { Card } from '../types';
+import { normalizeRarity } from '../utils/rarityUtils';
 
 interface SetCardsScreenProps {
   route: any;
@@ -86,16 +87,6 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   useEffect(() => {
     loadCards();
   }, [loadCards]);
-
-  // Helper function to normalize rarity codes to unified categories
-  const normalizeRarity = useCallback((rarity: string | undefined): 'common' | 'uncommon' | 'rare' | 'other' => {
-    if (!rarity) return 'other';
-    const rarityUpper = rarity.toUpperCase();
-    if (rarityUpper.startsWith('C')) return 'common';
-    if (rarityUpper.startsWith('U')) return 'uncommon';
-    if (rarityUpper.startsWith('R')) return 'rare';
-    return 'other';
-  }, []);
 
   const handleVariantQuantityChange = useCallback(async (
     cardId: string,
@@ -187,7 +178,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
         })
       );
     }
-  }, [setId, updateSetStats, calculateTotalValue, stats, normalizeRarity]);
+  }, [setId, updateSetStats, calculateTotalValue, stats]);
 
   // Define filter categories
   const filterCategories: FilterCategory[] = useMemo(() => {
