@@ -40,16 +40,16 @@ async function searchCardPrices(cardName) {
 }
 
 /**
- * Get all unique card names from specified sets
+ * Get all unique card names from ALL sets
  */
 function getCardNamesFromSets() {
   const cardNames = new Set();
-  const setFiles = [
-    'premiere-cards.json',
-    'reflections-i-cards.json',
-    'reflections-ii-cards.json',
-    'reflections-iii-cards.json'
-  ];
+
+  // Get all *-cards.json files in the directory
+  const allFiles = fs.readdirSync(__dirname);
+  const setFiles = allFiles.filter(f => f.endsWith('-cards.json'));
+
+  console.log(`Found ${setFiles.length} set files:\n`);
 
   setFiles.forEach(filename => {
     const filepath = path.join(__dirname, filename);
@@ -61,10 +61,10 @@ function getCardNamesFromSets() {
             cardNames.add(card.name);
           }
         });
+        console.log(`  ✓ ${data.set.name}: ${data.cards.length} cards`);
       }
-      console.log(`  Loaded ${data.cards.length} cards from ${filename}`);
     } catch (error) {
-      console.error(`  Error reading ${filename}:`, error.message);
+      console.error(`  ✗ Error reading ${filename}:`, error.message);
     }
   });
 
@@ -75,7 +75,7 @@ function getCardNamesFromSets() {
  * Main function to fetch pricing data
  */
 async function fetchAllPricing() {
-  console.log('Fetching pricing data for Premiere (Limited) and Reflections I, II, III cards...\n');
+  console.log('Fetching pricing data for ALL Star Wars CCG sets...\n');
 
   const cardNames = getCardNamesFromSets();
   console.log(`\nFound ${cardNames.length} unique card names across all sets\n`);
@@ -92,25 +92,11 @@ async function fetchAllPricing() {
 
     const products = await searchCardPrices(cardName);
 
-    // Filter to only Premiere Limited and Reflections products
+    // Keep all Star Wars CCG products
     const relevantProducts = products.filter(p => {
       const consoleName = p['console-name'] || '';
-      const productName = p['product-name'] || '';
-
-      // Premiere Limited products
-      if (consoleName === 'Star Wars CCG Premiere' && productName.includes('[Limited]')) {
-        return true;
-      }
-
-      // Reflections products (any variant)
-      if (consoleName === 'Star Wars CCG Reflections' ||
-          consoleName === 'Star Wars CCG Reflections I' ||
-          consoleName === 'Star Wars CCG Reflections II' ||
-          consoleName === 'Star Wars CCG Reflections III') {
-        return true;
-      }
-
-      return false;
+      // Accept any product with "Star Wars CCG" in the console name
+      return consoleName.toLowerCase().includes('star wars ccg');
     });
 
     if (relevantProducts.length > 0) {
