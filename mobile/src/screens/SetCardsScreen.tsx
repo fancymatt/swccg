@@ -15,8 +15,8 @@ interface SetCardsScreenProps {
   navigation: any;
 }
 
-export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigation }) => {
-  const { setId, setName } = route.params;
+export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
+  const { setId } = route.params;
   const { colors } = useTheme();
   const { updateSetStats } = useCollectionStats();
   const [cards, setCards] = useState<Card[]>([]);

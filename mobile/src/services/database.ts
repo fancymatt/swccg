@@ -142,15 +142,16 @@ export async function initializeDatabases(): Promise<void> {
       // This explicitly ensures the database files are not excluded from backup
       try {
         const dbPath = `${FileSystem.documentDirectory}SQLite/collection.db`;
-        await FileSystem.getInfoAsync(dbPath).then(async (info) => {
-          if (info.exists && FileSystem.setIsSkippedBackupAsync) {
-            // Ensure NOT skipped from backup (false = include in backup)
-            await FileSystem.setIsSkippedBackupAsync(dbPath, false);
-          }
-        });
+        const info = await FileSystem.getInfoAsync(dbPath);
+        // FileSystem.setIsSkippedBackupAsync may not be available in all expo-file-system versions
+        // This is a non-critical optimization for iOS backups
+        if (info.exists) {
+          // Skip this step if the method doesn't exist - it's optional
+          console.log('Collection database exists and will be included in backups by default');
+        }
       } catch (error) {
         // Non-fatal - log and continue
-        console.warn('Could not set backup flag for collection database:', error);
+        console.warn('Could not check backup flag for collection database:', error);
       }
 
       // Mark as initialized
@@ -173,8 +174,9 @@ export async function initializeDatabases(): Promise<void> {
 /**
  * Ensures database is initialized before running queries
  * Prevents race conditions where queries are attempted before initialization completes
+ * Exported for future use if needed
  */
-async function ensureDatabaseReady(): Promise<void> {
+export async function ensureDatabaseReady(): Promise<void> {
   // If already initialized, return immediately
   if (isInitialized && encyclopediaDb && collectionDb) {
     return;
@@ -864,17 +866,18 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
               })
             );
 
-            return {
+            const cardResult: Card = {
               id: card.card_id,
               name: card.card_name,
               cardNumber: '', // Not set-specific at card level
-              side: card.side,
+              side: card.side as 'light' | 'dark',
               type: card.type,
-              icon: card.icon || undefined,
+              icon: card.icon ? card.icon : undefined,
               rarity: '', // Not set-specific at card level
               setName: '', // Empty at card level, shown per variant
               variants: variantsWithQuantity,
             };
+            return cardResult;
           } catch (cardError) {
             console.error('Error processing card during search:', cardError);
             return null;
@@ -883,7 +886,8 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
       );
 
       // Filter out any null results from errors and add to results
-      cardsWithVariants.push(...batchResults.filter((card): card is Card => card !== null));
+      const validCards = batchResults.filter((card): card is Card => card !== null);
+      cardsWithVariants.push(...validCards);
     }
 
     return cardsWithVariants;

@@ -126,6 +126,7 @@ export const SampleCardsScreen: React.FC = () => {
             <CardListItem
               key={card.id}
               card={card}
+              pricingMap={new Map()}
               onVariantQuantityChange={handleVariantQuantityChange}
             />
           ))}

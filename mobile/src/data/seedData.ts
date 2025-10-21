@@ -270,7 +270,7 @@ export const SEED_VARIANT_SET_APPEARANCES = allSetsData.flatMap((setData) => {
   const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
   const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
 
-  return setData.cards.flatMap((card) => {
+  return setData.cards.flatMap((card: any) => {
     // If card has custom variants, create appearances for those specific variant IDs
     if (card.variants && Array.isArray(card.variants) && card.variants.length > 0) {
       return card.variants.map((variant: any) => ({

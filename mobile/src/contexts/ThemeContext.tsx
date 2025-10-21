@@ -28,7 +28,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Determine the actual color scheme based on theme mode and system settings
-  const getColorScheme = (mode: ThemeMode, system: 'light' | 'dark' | null): ColorScheme => {
+  const getColorScheme = (mode: ThemeMode, system: 'light' | 'dark' | null | undefined): ColorScheme => {
     if (mode === 'system') {
       return system === 'dark' ? 'dark' : 'light';
     }
