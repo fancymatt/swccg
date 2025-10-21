@@ -1,5 +1,6 @@
 import * as SQLite from 'expo-sqlite';
 import * as FileSystem from 'expo-file-system/legacy';
+import type { Set, Card, CardVariant } from '../types';
 
 // Database instances
 let encyclopediaDb: SQLite.SQLiteDatabase | null = null;
@@ -342,7 +343,7 @@ export async function seedEncyclopedia(
 /**
  * Get all sets
  */
-export async function getAllSets(): Promise<any[]> {
+export async function getAllSets(): Promise<Set[]> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
   try {
@@ -355,7 +356,7 @@ export async function getAllSets(): Promise<any[]> {
         icon_path
       FROM sets
       ORDER BY release_date, name
-    `);
+    `) as Set[];
 
     return sets;
   } catch (error) {
@@ -368,7 +369,7 @@ export async function getAllSets(): Promise<any[]> {
  * Get all cards in a specific set with their variants and collection quantities
  * For Limited/Unlimited sets, only show the matching variant
  */
-export async function getCardsInSet(setId: string): Promise<any[]> {
+export async function getCardsInSet(setId: string): Promise<Card[]> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
   if (!collectionDb) throw new Error('Collection database not initialized');
 
@@ -397,11 +398,21 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
           ELSE 1
         END,
         CAST(REPLACE(REPLACE(MIN(vsa.card_number), 'R', ''), 'P', '') AS INTEGER)
-    `, [setId]);
+    `, [setId]) as Array<{
+      card_id: string;
+      card_name: string;
+      side: 'light' | 'dark';
+      type: string;
+      icon: string | null;
+      card_number: string;
+      rarity: string | null;
+      set_name: string;
+      set_abbr: string;
+    }>;
 
     // For each card, get ONLY the variants that appear in this set
-    const cardsWithVariants = await Promise.all(
-      cards.map(async (card: any) => {
+    const cardsWithVariants: Card[] = await Promise.all(
+      cards.map(async (card) => {
         const variants = await encyclopediaDb!.getAllAsync(`
           SELECT
             v.id as variant_id,
@@ -412,21 +423,26 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
           JOIN variant_set_appearances vsa ON v.id = vsa.variant_id
           WHERE v.card_id = ? AND vsa.set_id = ?
           ORDER BY v.code
-        `, [card.card_id, setId]);
+        `, [card.card_id, setId]) as Array<{
+          variant_id: string;
+          variant_name: string;
+          variant_code: string;
+          variant_details: string | null;
+        }>;
 
         // Get quantities for each variant
-        const variantsWithQuantity = await Promise.all(
-          variants.map(async (variant: any) => {
-            const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
+        const variantsWithQuantity: CardVariant[] = await Promise.all(
+          variants.map(async (variant) => {
+            const result = await collectionDb!.getFirstAsync(
               'SELECT quantity FROM collection WHERE variant_id = ?',
               [variant.variant_id]
-            );
+            ) as { quantity: number } | null;
 
             return {
               id: variant.variant_id,
               name: variant.variant_name,
               code: variant.variant_code,
-              details: variant.variant_details,
+              details: variant.variant_details || undefined,
               quantity: result?.quantity || 0,
             };
           })
@@ -438,8 +454,8 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
           cardNumber: card.card_number,
           side: card.side,
           type: card.type,
-          icon: card.icon,
-          rarity: card.rarity,
+          icon: card.icon || undefined,
+          rarity: card.rarity || undefined,
           setName: card.set_name,
           variants: variantsWithQuantity,
         };
@@ -456,7 +472,7 @@ export async function getCardsInSet(setId: string): Promise<any[]> {
 /**
  * Get all cards with their variants and collection quantities (legacy, kept for backwards compatibility)
  */
-export async function getCardsWithCollection(): Promise<any[]> {
+export async function getCardsWithCollection(): Promise<Card[]> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
   if (!collectionDb) throw new Error('Collection database not initialized');
 
@@ -470,11 +486,16 @@ export async function getCardsWithCollection(): Promise<any[]> {
       FROM cards c
       JOIN set_cards sc ON c.id = sc.card_id
       ORDER BY c.name
-    `);
+    `) as Array<{
+      card_id: string;
+      card_name: string;
+      side: 'light' | 'dark';
+      type: string;
+    }>;
 
     // For each card, get its variants with quantities
-    const cardsWithVariants = await Promise.all(
-      cards.map(async (card: any) => {
+    const cardsWithVariants: Card[] = await Promise.all(
+      cards.map(async (card) => {
         const variants = await encyclopediaDb!.getAllAsync(`
           SELECT
             v.id as variant_id,
@@ -484,21 +505,26 @@ export async function getCardsWithCollection(): Promise<any[]> {
           FROM variants v
           WHERE v.card_id = ?
           ORDER BY v.code
-        `, [card.card_id]);
+        `, [card.card_id]) as Array<{
+          variant_id: string;
+          variant_name: string;
+          variant_code: string;
+          variant_details: string | null;
+        }>;
 
         // Get quantities for each variant
-        const variantsWithQuantity = await Promise.all(
-          variants.map(async (variant: any) => {
-            const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
+        const variantsWithQuantity: CardVariant[] = await Promise.all(
+          variants.map(async (variant) => {
+            const result = await collectionDb!.getFirstAsync(
               'SELECT quantity FROM collection WHERE variant_id = ?',
               [variant.variant_id]
-            );
+            ) as { quantity: number } | null;
 
             return {
               id: variant.variant_id,
               name: variant.variant_name,
               code: variant.variant_code,
-              details: variant.variant_details,
+              details: variant.variant_details || undefined,
               quantity: result?.quantity || 0,
             };
           })
@@ -507,8 +533,10 @@ export async function getCardsWithCollection(): Promise<any[]> {
         return {
           id: card.card_id,
           name: card.card_name,
+          cardNumber: '',
           side: card.side,
           type: card.type,
+          setName: '',
           variants: variantsWithQuantity,
         };
       })
@@ -541,7 +569,7 @@ function normalizeSearchString(str: string): string {
  * Returns unique cards with all their variants and collection quantities
  * Each card appears only once in results, with variants showing set info
  */
-export async function searchCardsByName(searchQuery: string): Promise<any[]> {
+export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
   if (!collectionDb) throw new Error('Collection database not initialized');
 
@@ -610,13 +638,13 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
 
     // For each unique card name, get ALL variants from ALL card instances
     // Process cards sequentially in small batches to avoid overwhelming the database
-    const cardsWithVariants = [];
+    const cardsWithVariants: Card[] = [];
     const batchSize = 10;
 
     for (let i = 0; i < cardNames.length; i += batchSize) {
       const batch = cardNames.slice(i, i + batchSize);
       const batchResults = await Promise.all(
-        batch.map(async (card: any) => {
+        batch.map(async (card) => {
           try {
             // Safety check before each database operation
             if (!encyclopediaDb || !collectionDb) {
@@ -635,18 +663,19 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
               JOIN cards c ON v.card_id = c.id
               WHERE c.name = ?
               ORDER BY v.code
-            `, [card.card_name]);
+            `, [card.card_name]) as Array<{
+              variant_id: string;
+              variant_name: string;
+              variant_code: string;
+              variant_details: string | null;
+            }>;
 
             // For each variant, get its set appearances and quantity
-            const variantsWithQuantity = await Promise.all(
-              variantsRaw.map(async (variant: any) => {
+            const variantsWithQuantity: CardVariant[] = await Promise.all(
+              variantsRaw.map(async (variant) => {
                 try {
                   // Get the first set appearance for this variant (for display)
-                  const appearance = await encyclopediaDb!.getFirstAsync<{
-                    card_number: string;
-                    set_name: string;
-                    set_abbr: string;
-                  }>(`
+                  const appearance = await encyclopediaDb!.getFirstAsync(`
                     SELECT
                       vsa.card_number,
                       s.name as set_name,
@@ -656,18 +685,22 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
                     WHERE vsa.variant_id = ?
                     ORDER BY s.release_date
                     LIMIT 1
-                  `, [variant.variant_id]);
+                  `, [variant.variant_id]) as {
+                    card_number: string;
+                    set_name: string;
+                    set_abbr: string;
+                  } | null;
 
-                  const result = await collectionDb!.getFirstAsync<{ quantity: number }>(
+                  const result = await collectionDb!.getFirstAsync(
                     'SELECT quantity FROM collection WHERE variant_id = ?',
                     [variant.variant_id]
-                  );
+                  ) as { quantity: number } | null;
 
                   return {
                     id: variant.variant_id,
                     name: variant.variant_name,
                     code: variant.variant_code,
-                    details: variant.variant_details,
+                    details: variant.variant_details || undefined,
                     quantity: result?.quantity || 0,
                     setName: appearance?.set_name || '',
                     cardNumber: appearance?.card_number || '',
@@ -679,7 +712,7 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
                     id: variant.variant_id,
                     name: variant.variant_name,
                     code: variant.variant_code,
-                    details: variant.variant_details,
+                    details: variant.variant_details || undefined,
                     quantity: 0,
                     setName: '',
                     cardNumber: '',
@@ -695,12 +728,9 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
               cardNumber: '', // Not set-specific at card level
               side: card.side,
               type: card.type,
-              icon: card.icon,
+              icon: card.icon || undefined,
               rarity: '', // Not set-specific at card level
-              setId: '', // Not set-specific at card level
               setName: '', // Empty at card level, shown per variant
-              setAbbr: '',
-              setIconPath: '',
               variants: variantsWithQuantity,
             };
           } catch (cardError) {
@@ -711,7 +741,7 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
       );
 
       // Filter out any null results from errors and add to results
-      cardsWithVariants.push(...batchResults.filter(card => card !== null));
+      cardsWithVariants.push(...batchResults.filter((card): card is Card => card !== null));
     }
 
     return cardsWithVariants;
@@ -1026,12 +1056,12 @@ export async function getVariantPricing(variantId: string): Promise<CardPricing 
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
   try {
-    const pricing = await encyclopediaDb.getFirstAsync<CardPricing>(
+    const pricing = await encyclopediaDb.getFirstAsync(
       `SELECT cp.* FROM card_pricing cp
        INNER JOIN variants v ON v.pricing_id = cp.id
        WHERE v.id = ?`,
       [variantId]
-    );
+    ) as CardPricing | null;
     return pricing || null;
   } catch (error) {
     console.error('Failed to get variant pricing:', error);
@@ -1058,13 +1088,13 @@ export async function getBatchVariantPricing(variantIds: string[]): Promise<Map<
     const placeholders = variantIds.map(() => '?').join(',');
 
     // Fetch all pricing data in a single query
-    const results = await encyclopediaDb.getAllAsync<CardPricing & { variant_id: string }>(
+    const results = await encyclopediaDb.getAllAsync(
       `SELECT cp.*, v.id as variant_id
        FROM card_pricing cp
        INNER JOIN variants v ON v.pricing_id = cp.id
        WHERE v.id IN (${placeholders})`,
       variantIds
-    );
+    ) as Array<CardPricing & { variant_id: string }>;
 
     // Build the map
     for (const result of results) {

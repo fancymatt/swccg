@@ -1,3 +1,11 @@
+export interface Set {
+  id: string;
+  name: string;
+  abbreviation: string | null;
+  release_date: string | null;
+  icon_path: string | null;
+}
+
 export interface CardVariant {
   id: string;
   name: string;
