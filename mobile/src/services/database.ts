@@ -7,7 +7,7 @@ let collectionDb: SQLite.SQLiteDatabase | null = null;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 21;
+const DB_VERSION = 27;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -48,7 +48,9 @@ const ENCYCLOPEDIA_SCHEMA = `
     name TEXT NOT NULL,
     code TEXT NOT NULL,
     details TEXT,
-    FOREIGN KEY (card_id) REFERENCES cards(id)
+    pricing_id INTEGER,
+    FOREIGN KEY (card_id) REFERENCES cards(id),
+    FOREIGN KEY (pricing_id) REFERENCES card_pricing(id)
   );
 
   CREATE TABLE IF NOT EXISTS variant_set_appearances (
@@ -61,11 +63,27 @@ const ENCYCLOPEDIA_SCHEMA = `
     FOREIGN KEY (variant_id) REFERENCES variants(id)
   );
 
+  CREATE TABLE IF NOT EXISTS card_pricing (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    card_name TEXT NOT NULL,
+    pc_id INTEGER UNIQUE,
+    pc_card_name TEXT,
+    pc_set_name TEXT,
+    ungraded_price INTEGER,
+    grade_7_price INTEGER,
+    grade_8_price INTEGER,
+    grade_9_price INTEGER,
+    grade_10_price INTEGER,
+    pc_last_updated_time TEXT DEFAULT CURRENT_TIMESTAMP
+  );
+
   CREATE INDEX IF NOT EXISTS idx_set_cards_set ON set_cards(set_id);
   CREATE INDEX IF NOT EXISTS idx_set_cards_card ON set_cards(card_id);
   CREATE INDEX IF NOT EXISTS idx_variants_card ON variants(card_id);
   CREATE INDEX IF NOT EXISTS idx_variant_appearances_set ON variant_set_appearances(set_id);
   CREATE INDEX IF NOT EXISTS idx_variant_appearances_variant ON variant_set_appearances(variant_id);
+  CREATE INDEX IF NOT EXISTS idx_card_pricing_card_name ON card_pricing(card_name);
+  CREATE INDEX IF NOT EXISTS idx_card_pricing_pc_id ON card_pricing(pc_id);
 `;
 
 // Collection database schema
@@ -157,7 +175,9 @@ export async function seedEncyclopedia(
   cards: Array<{ id: string; name: string; side: string; type: string; icon?: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
   variants: Array<{ id: string; card_id: string; name: string; code: string; details?: string }>,
-  variantSetAppearances: Array<{ set_id: string; variant_id: string; card_number: string; rarity?: string }>
+  variantSetAppearances: Array<{ set_id: string; variant_id: string; card_number: string; rarity?: string }>,
+  pricingData?: Array<{ card_name: string; pc_id: number; pc_card_name: string; pc_set_name: string; ungraded_price: number | null; grade_7_price: number | null; grade_8_price: number | null; grade_9_price: number | null; grade_10_price: number | null; pc_last_updated_time: string }>,
+  variantPricingMappings?: Record<string, number>
 ): Promise<DatabaseStatus> {
   if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
 
@@ -175,7 +195,7 @@ export async function seedEncyclopedia(
     } else if (status === 'migration') {
       console.log('Migrating card encyclopedia to version ' + DB_VERSION + '...');
       // Drop existing tables to recreate with new schema
-      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS variant_set_appearances; DROP TABLE IF EXISTS variants; DROP TABLE IF EXISTS set_cards; DROP TABLE IF EXISTS cards; DROP TABLE IF EXISTS sets;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS card_pricing; DROP TABLE IF EXISTS variant_set_appearances; DROP TABLE IF EXISTS variants; DROP TABLE IF EXISTS set_cards; DROP TABLE IF EXISTS cards; DROP TABLE IF EXISTS sets;');
       // Recreate tables with updated schema
       await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
     }
@@ -196,7 +216,7 @@ export async function seedEncyclopedia(
     // Insert cards
     for (const card of cards) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO cards (id, name, side, type, icon) VALUES (?, ?, ?, ?, ?)',
+        'INSERT OR REPLACE INTO cards (id, name, side, type, icon) VALUES (?, ?, ?, ?, ?)',
         [card.id, card.name, card.side, card.type, card.icon || null]
       );
     }
@@ -204,7 +224,7 @@ export async function seedEncyclopedia(
     // Insert set_cards relationships
     for (const setCard of setCards) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO set_cards (set_id, card_id, card_number, rarity) VALUES (?, ?, ?, ?)',
+        'INSERT OR REPLACE INTO set_cards (set_id, card_id, card_number, rarity) VALUES (?, ?, ?, ?)',
         [setCard.set_id, setCard.card_id, setCard.card_number, setCard.rarity || null]
       );
     }
@@ -212,7 +232,7 @@ export async function seedEncyclopedia(
     // Insert variants
     for (const variant of variants) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO variants (id, card_id, name, code, details) VALUES (?, ?, ?, ?, ?)',
+        'INSERT OR REPLACE INTO variants (id, card_id, name, code, details) VALUES (?, ?, ?, ?, ?)',
         [variant.id, variant.card_id, variant.name, variant.code, variant.details || null]
       );
     }
@@ -220,9 +240,46 @@ export async function seedEncyclopedia(
     // Insert variant_set_appearances relationships
     for (const appearance of variantSetAppearances) {
       await encyclopediaDb.runAsync(
-        'INSERT INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES (?, ?, ?, ?)',
+        'INSERT OR REPLACE INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES (?, ?, ?, ?)',
         [appearance.set_id, appearance.variant_id, appearance.card_number, appearance.rarity || null]
       );
+    }
+
+    // Insert pricing data if provided
+    if (pricingData && pricingData.length > 0) {
+      console.log(`Inserting ${pricingData.length} pricing records...`);
+      for (const pricing of pricingData) {
+        await encyclopediaDb.runAsync(
+          'INSERT OR REPLACE INTO card_pricing (card_name, pc_id, pc_card_name, pc_set_name, ungraded_price, grade_7_price, grade_8_price, grade_9_price, grade_10_price, pc_last_updated_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+          [pricing.card_name, pricing.pc_id, pricing.pc_card_name, pricing.pc_set_name, pricing.ungraded_price, pricing.grade_7_price, pricing.grade_8_price, pricing.grade_9_price, pricing.grade_10_price, pricing.pc_last_updated_time]
+        );
+      }
+      console.log('Pricing data inserted successfully');
+    }
+
+    // Apply variant pricing mappings if provided
+    if (variantPricingMappings && Object.keys(variantPricingMappings).length > 0) {
+      console.log(`Applying ${Object.keys(variantPricingMappings).length} variant pricing mappings...`);
+      let appliedCount = 0;
+      for (const [variantId, pcId] of Object.entries(variantPricingMappings)) {
+        // Look up the card_pricing.id from pc_id
+        const pricingRecord = await encyclopediaDb.getFirstAsync<{ id: number }>(
+          'SELECT id FROM card_pricing WHERE pc_id = ?',
+          [pcId]
+        );
+
+        if (pricingRecord) {
+          // Update the variant's pricing_id
+          await encyclopediaDb.runAsync(
+            'UPDATE variants SET pricing_id = ? WHERE id = ?',
+            [pricingRecord.id, variantId]
+          );
+          appliedCount++;
+        } else {
+          console.warn(`Warning: No pricing record found for pc_id ${pcId} (variant ${variantId})`);
+        }
+      }
+      console.log(`Applied ${appliedCount} pricing mappings successfully`);
     }
 
     // Mark database as seeded
@@ -503,36 +560,53 @@ export async function searchCardsByName(searchQuery: string): Promise<any[]> {
 
     // Search for unique card NAMES (not IDs) to group all instances of same card
     // We normalize both the card name and search query for matching
-    // First try exact normalized match, then fall back to fuzzy match
-    const cardNames = await encyclopediaDb.getAllAsync(`
+    // We do the normalization in JavaScript to avoid SQL syntax issues with special characters
+    const allCards = await encyclopediaDb.getAllAsync<{
+      name: string;
+      id: string;
+      side: string;
+      type: string;
+      icon: string | null;
+    }>(`
       SELECT DISTINCT
-        c.name as card_name,
-        MIN(c.id) as card_id,
+        c.name,
+        MIN(c.id) as id,
         c.side,
         c.type,
-        c.icon,
-        CASE
-          WHEN REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
-            LOWER(c.name),
-            '\u2018', ''''), '\u2019', ''''), '\u201A', ''''), '\u201B', ''''),
-            '\u2032', ''''), '\u0060', ''''), '´', ''''), ''', '''')
-          LIKE ? THEN 1
-          ELSE 2
-        END as match_priority
+        c.icon
       FROM cards c
-      WHERE
-        REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(
-          LOWER(c.name),
-          '\u2018', ''''), '\u2019', ''''), '\u201A', ''''), '\u201B', ''''),
-          '\u2032', ''''), '\u0060', ''''), '´', ''''), ''', '''')
-        LIKE ?
-        OR REPLACE(REPLACE(REPLACE(
-          LOWER(c.name),
-          '''', ''), '-', ''), ' ', '')
-        LIKE ?
       GROUP BY c.name, c.side, c.type, c.icon
-      ORDER BY match_priority, c.name
-    `, [`%${normalizedQuery}%`, `%${normalizedQuery}%`, `%${fuzzyQuery}%`]);
+    `);
+
+    // Filter and sort in JavaScript
+    const cardNames = allCards
+      .map(card => {
+        const normalizedCardName = normalizeSearchString(card.name);
+        const fuzzyCardName = normalizedCardName.replace(/['\-\s]/g, '');
+
+        // Check if it matches
+        const exactMatch = normalizedCardName.includes(normalizedQuery);
+        const fuzzyMatch = fuzzyCardName.includes(fuzzyQuery);
+
+        if (exactMatch || fuzzyMatch) {
+          return {
+            card_name: card.name,
+            card_id: card.id,
+            side: card.side,
+            type: card.type,
+            icon: card.icon,
+            match_priority: exactMatch ? 1 : 2
+          };
+        }
+        return null;
+      })
+      .filter((card): card is NonNullable<typeof card> => card !== null)
+      .sort((a, b) => {
+        if (a.match_priority !== b.match_priority) {
+          return a.match_priority - b.match_priority;
+        }
+        return a.card_name.localeCompare(b.card_name);
+      });
 
     // For each unique card name, get ALL variants from ALL card instances
     // Process cards sequentially in small batches to avoid overwhelming the database
@@ -926,6 +1000,43 @@ export function invalidateStatsCache(setId: string): void {
  */
 export function clearStatsCache(): void {
   statsCache.invalidateAll();
+}
+
+/**
+ * Pricing data interface
+ */
+export interface CardPricing {
+  card_name: string;
+  pc_id: number;
+  pc_card_name: string;
+  pc_set_name: string;
+  ungraded_price: number | null;
+  grade_7_price: number | null;
+  grade_8_price: number | null;
+  grade_9_price: number | null;
+  grade_10_price: number | null;
+  pc_last_updated_time: string;
+}
+
+/**
+ * Get pricing data for a specific variant
+ * Uses the variant's pricing_id foreign key to look up the linked PriceCharting product
+ */
+export async function getVariantPricing(variantId: string): Promise<CardPricing | null> {
+  if (!encyclopediaDb) throw new Error('Encyclopedia database not initialized');
+
+  try {
+    const pricing = await encyclopediaDb.getFirstAsync<CardPricing>(
+      `SELECT cp.* FROM card_pricing cp
+       INNER JOIN variants v ON v.pricing_id = cp.id
+       WHERE v.id = ?`,
+      [variantId]
+    );
+    return pricing || null;
+  } catch (error) {
+    console.error('Failed to get variant pricing:', error);
+    return null;
+  }
 }
 
 /**

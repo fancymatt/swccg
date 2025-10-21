@@ -6,7 +6,7 @@ import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { CardListItem } from '../components/CardListItem';
 import { ProgressBar } from '../components/ProgressBar';
 import { FilterBar, FilterCategory } from '../components/FilterBar';
-import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, SetCompletionStats } from '../services/database';
+import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, getVariantPricing, SetCompletionStats } from '../services/database';
 import type { Card } from '../types';
 
 interface SetCardsScreenProps {
@@ -21,12 +21,26 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<SetCompletionStats | null>(null);
+  const [totalValue, setTotalValue] = useState<number>(0);
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
     side: [],
     type: [],
     rarity: [],
     owned: [],
   });
+
+  const calculateTotalValue = useCallback(async (cardsData: Card[]) => {
+    let total = 0;
+    for (const card of cardsData) {
+      for (const variant of card.variants) {
+        const pricing = await getVariantPricing(variant.id);
+        if (pricing && pricing.ungraded_price) {
+          total += (pricing.ungraded_price / 100) * variant.quantity;
+        }
+      }
+    }
+    setTotalValue(total);
+  }, []);
 
   const loadCards = useCallback(async () => {
     try {
@@ -37,6 +51,9 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       const completionStats = await getSetCompletionStats(setId);
       setStats(completionStats);
 
+      // Calculate total value
+      await calculateTotalValue(cardsData as Card[]);
+
       // Update shared collection stats
       updateSetStats(setId, completionStats);
     } catch (error) {
@@ -44,7 +61,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
     } finally {
       setLoading(false);
     }
-  }, [setId, updateSetStats]);
+  }, [setId, updateSetStats, calculateTotalValue]);
 
   useEffect(() => {
     loadCards();
@@ -89,6 +106,12 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       const completionStats = await getSetCompletionStats(setId);
       setStats(completionStats);
 
+      // Recalculate total value with updated cards
+      setCards((currentCards) => {
+        calculateTotalValue(currentCards);
+        return currentCards;
+      });
+
       // Update shared collection stats
       updateSetStats(setId, completionStats);
     } catch (error) {
@@ -111,7 +134,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
         })
       );
     }
-  }, [setId, updateSetStats]);
+  }, [setId, updateSetStats, calculateTotalValue]);
 
   // Define filter categories
   const filterCategories: FilterCategory[] = useMemo(() => {
@@ -213,6 +236,18 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       fontWeight: '600',
       marginBottom: 12,
     },
+    totalValueContainer: {
+      marginTop: 16,
+      paddingTop: 16,
+      borderTopWidth: 1,
+      borderTopColor: colors.border,
+    },
+    totalValueText: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: colors.success,
+      textAlign: 'center',
+    },
   }), [colors]);
 
   const renderCard = useCallback(({ item }: { item: Card }) => (
@@ -268,6 +303,13 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
                 color="#8b5cf6"
               />
             )}
+            {totalValue > 0 && (
+              <View style={styles.totalValueContainer}>
+                <Text style={styles.totalValueText}>
+                  Total Value: ${totalValue.toFixed(2)}
+                </Text>
+              </View>
+            )}
           </View>
         )}
         <FilterBar
@@ -277,7 +319,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
         />
       </>
     );
-  }, [stats, colors, styles, filterCategories, activeFilters]);
+  }, [stats, colors, styles, filterCategories, activeFilters, totalValue]);
 
   const keyExtractor = useCallback((item: Card) => item.id, []);
 

@@ -10,6 +10,8 @@ import { TabNavigator } from './src/navigation/TabNavigator';
 import { LoadingScreen } from './src/components/LoadingScreen';
 import { initializeDatabases, seedEncyclopedia } from './src/services/database';
 import { SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS, SEED_VARIANT_SET_APPEARANCES } from './src/data/seedData';
+import PRICING_DATA from './src/data/card-pricing-data.json';
+import VARIANT_PRICING_MAPPINGS from './src/data/variant-pricing-mappings.json';
 
 // Keep the native splash screen visible while we load resources
 SplashScreen.preventAutoHideAsync();
@@ -37,7 +39,7 @@ export default function App() {
         setLoadingMessage('Initializing database...');
         await initializeDatabases();
 
-        const status = await seedEncyclopedia(SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS, SEED_VARIANT_SET_APPEARANCES);
+        const status = await seedEncyclopedia(SEED_SETS, SEED_CARDS, SEED_SET_CARDS, SEED_VARIANTS, SEED_VARIANT_SET_APPEARANCES, PRICING_DATA, VARIANT_PRICING_MAPPINGS.mappings);
 
         if (status === 'first-time') {
           setLoadingMessage('Setting up card encyclopedia...');

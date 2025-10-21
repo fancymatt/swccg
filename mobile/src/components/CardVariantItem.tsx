@@ -1,7 +1,8 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo, useCallback, useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardCounter } from './CardCounter';
+import { getVariantPricing, type CardPricing } from '../services/database';
 import type { CardVariant } from '../types';
 
 interface CardVariantItemProps {
@@ -14,6 +15,11 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
   onQuantityChange,
 }) => {
   const { colors } = useTheme();
+  const [pricing, setPricing] = useState<CardPricing | null>(null);
+
+  useEffect(() => {
+    getVariantPricing(variant.id).then(setPricing);
+  }, [variant.id]);
 
   const handleChange = useCallback(
     (newCount: number) => {
@@ -21,6 +27,13 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
     },
     [variant.id, onQuantityChange]
   );
+
+  const formattedPrice = useMemo(() => {
+    if (!pricing || pricing.ungraded_price === null) {
+      return 'No price available';
+    }
+    return `$${(pricing.ungraded_price / 100).toFixed(2)}`;
+  }, [pricing]);
 
   const styles = useMemo(() => StyleSheet.create({
     container: {
@@ -52,6 +65,12 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
       fontStyle: 'italic',
       marginTop: 2,
     },
+    priceText: {
+      fontSize: 14,
+      color: colors.success,
+      fontWeight: '600',
+      marginTop: 4,
+    },
   }), [colors]);
 
   return (
@@ -66,6 +85,7 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
         {variant.details && (
           <Text style={styles.variantDetails}>{variant.details}</Text>
         )}
+        <Text style={styles.priceText}>{formattedPrice}</Text>
       </View>
 
       <CardCounter

@@ -1,0 +1,5309 @@
+[
+  {
+    "variantId": "da_1_4-lom_foil_limited",
+    "cardName": "4-LOM",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074681",
+      "pc_card_name": "4-LOM [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074848",
+          "pc_card_name": "4-LOM With Concussion Rifle [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ht_001_admiral-ozzel_foil_limited",
+    "cardName": "Admiral Ozzel",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074682",
+      "pc_card_name": "Admiral Ozzel [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jp_5_bane_malar_foil_limited",
+    "cardName": "Bane Malar",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074688",
+      "pc_card_name": "Bane Malar [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jp_8_bib_fortuna_foil_limited",
+    "cardName": "Bib Fortuna",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074690",
+      "pc_card_name": "Bib Fortuna [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "1a_001_boba-fett_foil_limited",
+    "cardName": "Boba Fett",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074969",
+      "pc_card_name": "Boba Fett, Bounty Hunter",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (5) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074948",
+          "pc_card_name": "Boba Fett With Blaster Rifle [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074859",
+          "pc_card_name": "Boba Fett In Slave I [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074696",
+          "pc_card_name": "Boba Fett [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_2_bossk_foil_limited",
+    "cardName": "Bossk",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074699",
+      "pc_card_name": "Bossk In Hound's Tooth [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074861",
+          "pc_card_name": "Bossk With Mortar Gun [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074698",
+          "pc_card_name": "Bossk [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_006_darth-vader_foil_limited",
+    "cardName": "Darth Vader",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "5946491",
+      "pc_card_name": "Darth Vader [Limited]",
+      "pc_set_name": "Star Wars CCG Premiere",
+      "reason": "Multiple matches (6) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074712",
+          "pc_card_name": "Darth Vader, Dark Lord Of The Sith [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074869",
+          "pc_card_name": "Darth Vader With Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074870",
+          "pc_card_name": "Darth Vader's Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "se_013_darth-vader-dark-lord-of-the-sith_foil_limited",
+    "cardName": "Darth Vader, Dark Lord Of The Sith",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074712",
+      "pc_card_name": "Darth Vader, Dark Lord Of The Sith [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_10_dengar_foil_limited",
+    "cardName": "Dengar",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074875",
+      "pc_card_name": "Dengar With Blaster Carbine [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074874",
+          "pc_card_name": "Dengar In Punishing One [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074718",
+          "pc_card_name": "Dengar [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_012_ds-61-3_foil_limited",
+    "cardName": "DS-61-3",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074720",
+      "pc_card_name": "DS-61-3 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "ht_006_general-veers_foil_limited",
+    "cardName": "General Veers",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074725",
+      "pc_card_name": "General Veers [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_017_grand-moff-tarkin_foil_limited",
+    "cardName": "Grand Moff Tarkin",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "5946543",
+      "pc_card_name": "Grand Moff Tarkin [Limited]",
+      "pc_set_name": "Star Wars CCG Premiere",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074726",
+          "pc_card_name": "Grand Moff Tarkin [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6075088",
+          "pc_card_name": "Grand Moff Tarkin [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "anh_008_greedo_foil_limited",
+    "cardName": "Greedo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074727",
+      "pc_card_name": "Greedo [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_11_ig-88_foil_limited",
+    "cardName": "IG-88",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074898",
+      "pc_card_name": "IG-88 With Riot Gun [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074731",
+          "pc_card_name": "IG-88 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074897",
+          "pc_card_name": "IG-88 In IG-2000 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "anh_012_it-o_foil_limited",
+    "cardName": "IT-O",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074733",
+      "pc_card_name": "IT-O [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_020_jabba_foil_limited",
+    "cardName": "Jabba",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074816",
+      "pc_card_name": "Jabba's Prize",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (6) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074735",
+          "pc_card_name": "Jabba The Hutt [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6075107",
+          "pc_card_name": "Mighty Jabba [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6074997",
+          "pc_card_name": "Jabba Desilijic Tiure",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "jp_20_jabba_the_hutt_foil_limited",
+    "cardName": "Jabba The Hutt",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074735",
+      "pc_card_name": "Jabba The Hutt [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_9_lando_calrissian_foil_limited",
+    "cardName": "Lando Calrissian",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075000",
+      "pc_card_name": "Lando Calrissian, Scoundrel",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074739",
+          "pc_card_name": "Lando Calrissian [Light Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074738",
+          "pc_card_name": "Lando Calrissian [Dark Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cc_96_lobot_foil_limited",
+    "cardName": "Lobot",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074742",
+      "pc_card_name": "Lobot [Dark Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074743",
+          "pc_card_name": "Lobot [Light \\Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "jp_32_salacious_crumb_foil_limited",
+    "cardName": "Salacious Crumb",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074769",
+      "pc_card_name": "Salacious Crumb [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_033_tonnika-sisters_foil_limited",
+    "cardName": "Tonnika Sisters",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074781",
+      "pc_card_name": "Tonnika Sisters [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "anh_026_u-3po_foil_limited",
+    "cardName": "U-3PO",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074783",
+      "pc_card_name": "U-3PO (Yoo-Threepio) [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_17_zuckuss_foil_limited",
+    "cardName": "Zuckuss",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074947",
+      "pc_card_name": "Zuckuss In Mist Hunter [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074793",
+          "pc_card_name": "Zuckuss [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "jp_49_rancor_foil_limited",
+    "cardName": "Rancor",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074759",
+      "pc_card_name": "Rancor [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_012_wampa_foil_limited",
+    "cardName": "Wampa",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074896",
+      "pc_card_name": "Hoth: Wampa Cave [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074789",
+          "pc_card_name": "Wampa [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_053_expand-the-empire_foil_limited",
+    "cardName": "Expand The Empire",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074724",
+      "pc_card_name": "Expand The Empire [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "pm_065_presence-of-the-force_foil_limited",
+    "cardName": "Presence of the Force",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074753",
+      "pc_card_name": "Presence Of The Force [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "da_45_visage_of_the_emperor_foil_limited",
+    "cardName": "Visage Of The Emperor",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074788",
+      "pc_card_name": "Visage Of The Emperor [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_049_commence-primary-ignition_foil_limited",
+    "cardName": "Commence Primary Ignition",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074707",
+      "pc_card_name": "Commence Primary Ignition [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_39_epic_duel_foil_limited",
+    "cardName": "Epic Duel",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074722",
+      "pc_card_name": "Epic Duel [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_64_slip_sliding_away_foil_limited",
+    "cardName": "Slip Sliding Away",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074772",
+      "pc_card_name": "Slip Sliding Away [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_109_the-circle-is-now-complete_foil_limited",
+    "cardName": "The Circle Is Now Complete",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074779",
+      "pc_card_name": "The Circle Is Now Complete [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "5946717",
+          "pc_card_name": "The Circle Is Now Complete [Limited]",
+          "pc_set_name": "Star Wars CCG Premiere"
+        },
+        {
+          "pc_id": "6075144",
+          "pc_card_name": "The Circle Is Now Complete [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "anh_062_death-star_foil_limited",
+    "cardName": "Death Star",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074872",
+      "pc_card_name": "Death Star II [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (17) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074714",
+          "pc_card_name": "Death Star [Dark Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074713",
+          "pc_card_name": "Death Squadron Star Destroyer [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074873",
+          "pc_card_name": "Death Star II: Throne Room [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_76_avenger_foil_limited",
+    "cardName": "Avenger",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074687",
+      "pc_card_name": "Avenger [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_137_black-2_foil_limited",
+    "cardName": "Black 2",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074692",
+      "pc_card_name": "Black 2 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "se_139_bossk-in-hounds-tooth_foil_limited",
+    "cardName": "Bossk in Hounds Tooth",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074699",
+      "pc_card_name": "Bossk In Hound's Tooth [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_071_conquest_foil_limited",
+    "cardName": "Conquest",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074708",
+      "pc_card_name": "Conquest [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_140_death-squadron-star-destroyer_foil_limited",
+    "cardName": "Death Squadron Star Destroyer",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074713",
+      "pc_card_name": "Death Squadron Star Destroyer [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_139_devastator_foil_limited",
+    "cardName": "Devastator",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074719",
+      "pc_card_name": "Devastator [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "da_77_executor_foil_limited",
+    "cardName": "Executor",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074884",
+      "pc_card_name": "Flagship Executor [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (4) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074881",
+          "pc_card_name": "Executor: Holotheatre [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074723",
+          "pc_card_name": "Executor [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074882",
+          "pc_card_name": "Executor: Meditation Chamber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_79_ig-2000_foil_limited",
+    "cardName": "IG-2000",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074897",
+      "pc_card_name": "IG-88 In IG-2000 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074730",
+          "pc_card_name": "IG-2000 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_80_mist_hunter_foil_limited",
+    "cardName": "Mist Hunter",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074947",
+      "pc_card_name": "Zuckuss In Mist Hunter [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074747",
+          "pc_card_name": "Mist Hunter [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cc_85_obsidian_7_foil_limited",
+    "cardName": "Obsidian 7",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074750",
+      "pc_card_name": "Obsidian 7 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_86_obsidian_8_foil_limited",
+    "cardName": "Obsidian 8",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074751",
+      "pc_card_name": "Obsidian 8 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_81_punishing_one_foil_limited",
+    "cardName": "Punishing One",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074874",
+      "pc_card_name": "Dengar In Punishing One [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074757",
+          "pc_card_name": "Punishing One [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cc_87_slave_i_foil_limited",
+    "cardName": "Slave I",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074771",
+      "pc_card_name": "Slave I [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074859",
+          "pc_card_name": "Boba Fett In Slave I [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ht_071_stalker_foil_limited",
+    "cardName": "Stalker",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074775",
+      "pc_card_name": "Stalker [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_072_tyrant_foil_limited",
+    "cardName": "Tyrant",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074782",
+      "pc_card_name": "Tyrant [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_144_vader-custom-tie_foil_limited",
+    "cardName": "Vader's Custom TIE",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074785",
+      "pc_card_name": "Vader's Custom TIE [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "se_148_vengeance_foil_limited",
+    "cardName": "Vengeance",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074787",
+      "pc_card_name": "Vengeance [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_073_blizzard-1_foil_limited",
+    "cardName": "Blizzard 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074695",
+      "pc_card_name": "Blizzard Scout 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074693",
+          "pc_card_name": "Blizzard 1 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ht_074_blizzard-2_foil_limited",
+    "cardName": "Blizzard 2",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074694",
+      "pc_card_name": "Blizzard 2 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_075_blizzard-scout-1_foil_limited",
+    "cardName": "Blizzard Scout 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074695",
+      "pc_card_name": "Blizzard Scout 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jp_82_jabbas_sail_barge_foil_limited",
+    "cardName": "Jabba's Sail Barge",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074736",
+      "pc_card_name": "Jabba's Sail Barge [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_89_boba_fetts_blaster_rifle_foil_limited",
+    "cardName": "Boba Fett's Blaster Rifle",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074697",
+      "pc_card_name": "Boba Fett's Blaster Rifle [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_080_superlaser_foil_limited",
+    "cardName": "Superlaser",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074776",
+      "pc_card_name": "Superlaser [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_162_vader-lightsaber_foil_limited",
+    "cardName": "Vader's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074870",
+      "pc_card_name": "Darth Vader's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (4) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074786",
+          "pc_card_name": "Vader's Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "5946739",
+          "pc_card_name": "Vader's Lightsaber [Limited]",
+          "pc_set_name": "Star Wars CCG Premiere"
+        },
+        {
+          "pc_id": "6075149",
+          "pc_card_name": "Vader's Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ht_082_2-1b_foil_limited",
+    "cardName": "2-1B",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074680",
+      "pc_card_name": "2-1B [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jp_93_artoo_foil_limited",
+    "cardName": "Artoo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075064",
+      "pc_card_name": "Artoo & Threepio [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (5) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074799",
+          "pc_card_name": "Artoo & Threepio",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074685",
+          "pc_card_name": "Artoo [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074852",
+          "pc_card_name": "Artoo-Deetoo In Red 5 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "se_166_ben-kenobi_foil_limited",
+    "cardName": "Ben Kenobi",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074689",
+      "pc_card_name": "Ben Kenobi [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_165_biggs-darklighter_foil_limited",
+    "cardName": "Biggs Darklighter",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074691",
+      "pc_card_name": "Biggs Darklighter [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "anh_083_brainiac_foil_limited",
+    "cardName": "Brainiac",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074700",
+      "pc_card_name": "Brainiac [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074862",
+          "pc_card_name": "Brainiac [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_167_c-3po_foil_limited",
+    "cardName": "C-3PO (See-Threepio)",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074701",
+      "pc_card_name": "C-3PO (See-Threepio) [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_91_captain_han_solo_foil_limited",
+    "cardName": "Captain Han Solo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074702",
+      "pc_card_name": "Captain Han Solo [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_084_chewbacca_foil_limited",
+    "cardName": "Chewbacca",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074703",
+      "pc_card_name": "Chewbacca [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075073",
+          "pc_card_name": "Chewbacca, Protector [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6074802",
+          "pc_card_name": "Chewbacca, Protector",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ht_084_commander-luke-skywalker_foil_limited",
+    "cardName": "Commander Luke Skywalker",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074706",
+      "pc_card_name": "Commander Luke Skywalker [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_170_dutch_foil_limited",
+    "cardName": "Dutch",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074721",
+      "pc_card_name": "Dutch [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "pm_173_han-solo_foil_limited",
+    "cardName": "Han Solo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "5946683",
+      "pc_card_name": "Han Solo [Limited]",
+      "pc_set_name": "Star Wars CCG Premiere",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074728",
+          "pc_card_name": "Han Solo [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074702",
+          "pc_card_name": "Captain Han Solo [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cc_9_lando_calrissian_foil_limited",
+    "cardName": "Lando Calrissian",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075000",
+      "pc_card_name": "Lando Calrissian, Scoundrel",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074739",
+          "pc_card_name": "Lando Calrissian [Light Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074738",
+          "pc_card_name": "Lando Calrissian [Dark Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_179_leia-organa_foil_limited",
+    "cardName": "Leia Organa",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "5946593",
+      "pc_card_name": "Leia Organa [Limited]",
+      "pc_set_name": "Star Wars CCG Premiere",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074755",
+          "pc_card_name": "Princess Leia Organa [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074740",
+          "pc_card_name": "Leia Organa [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cc_96_lobot_foil_limited",
+    "cardName": "Lobot",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074742",
+      "pc_card_name": "Lobot [Dark Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074743",
+          "pc_card_name": "Lobot [Light \\Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_181_luke-skywalker_foil_limited",
+    "cardName": "Luke Skywalker",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "5946610",
+      "pc_card_name": "Luke Skywalker [Limited]",
+      "pc_set_name": "Star Wars CCG Premiere",
+      "reason": "Multiple matches (7) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074913",
+          "pc_card_name": "Luke Skywalker, Jedi Knight [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074819",
+          "pc_card_name": "Luke Skywalker, Rebel Scout",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6075100",
+          "pc_card_name": "Luke Skywalker, Rebel Scout [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_183_obi-wan-kenobi_foil_limited",
+    "cardName": "Obi-Wan Kenobi",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075014",
+      "pc_card_name": "Obi-Wan Kenobi, Jedi Knight",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (6) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075112",
+          "pc_card_name": "Obi-Wan Kenobi, Padawan Learner [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6074748",
+          "pc_card_name": "Obi-Wan Kenobi [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "5946629",
+          "pc_card_name": "Obi-Wan Kenobi [Limited]",
+          "pc_set_name": "Star Wars CCG Premiere"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "jp_119_oola_foil_limited",
+    "cardName": "Oola",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074752",
+      "pc_card_name": "Oola [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_97_princess_leia_foil_limited",
+    "cardName": "Princess Leia",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074755",
+      "pc_card_name": "Princess Leia Organa [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075003",
+          "pc_card_name": "Leia, Rebel Princess",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6074754",
+          "pc_card_name": "Princess Leia [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "jp_122_princess_leia_organa_foil_limited",
+    "cardName": "Princess Leia Organa",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074755",
+      "pc_card_name": "Princess Leia Organa [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_197_princess-organa_foil_limited",
+    "cardName": "Princess Organa",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074755",
+      "pc_card_name": "Princess Leia Organa [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074756",
+          "pc_card_name": "Princess Organa [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "anh_095_r2-d2_foil_limited",
+    "cardName": "R2-D2 (Artoo-Detoo)",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074852",
+      "pc_card_name": "Artoo-Deetoo In Red 5 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (7) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074758",
+          "pc_card_name": "R2-D2 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074685",
+          "pc_card_name": "Artoo [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074799",
+          "pc_card_name": "Artoo & Threepio",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_191_red-leader_foil_limited",
+    "cardName": "Red Leader",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074762",
+      "pc_card_name": "Red Leader [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (4) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074942",
+          "pc_card_name": "Wedge Antilles, Red Squadron Leader [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074926",
+          "pc_card_name": "Red Leader In Red 1 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "5946665",
+          "pc_card_name": "Red Leader [Limited]",
+          "pc_set_name": "Star Wars CCG Premiere"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_91_son_of_skywalker_foil_limited",
+    "cardName": "Son Of Skywalker",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074773",
+      "pc_card_name": "Son Of Skywalker [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jp_132_tamtel_skreej_foil_limited",
+    "cardName": "Tamtel Skreej",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074777",
+      "pc_card_name": "Tamtel Skreej [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_210_tk-422_foil_limited",
+    "cardName": "TK-422",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074780",
+      "pc_card_name": "TK-422 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_104_wedge-antilles_foil_limited",
+    "cardName": "Wedge Antilles",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074942",
+      "pc_card_name": "Wedge Antilles, Red Squadron Leader [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074790",
+          "pc_card_name": "Wedge Antilles [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6075156",
+          "pc_card_name": "Wedge Antilles [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_92_yoda_foil_limited",
+    "cardName": "Yoda",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075155",
+      "pc_card_name": "Yoda, Senior Council Member [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (5) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074792",
+          "pc_card_name": "Yoda [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6075052",
+          "pc_card_name": "Yoda, Master Of The Force",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6074710",
+          "pc_card_name": "Dagobah: Yoda's Hut [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "da_101_landing_claw_foil_limited",
+    "cardName": "Landing Claw",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074737",
+      "pc_card_name": "Landing Claw [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_219_coruscant-celebration_foil_limited",
+    "cardName": "Coruscant Celebration",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074709",
+      "pc_card_name": "Coruscant Celebration [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_208_death-star-plans_foil_limited",
+    "cardName": "Death Star Plans",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074716",
+      "pc_card_name": "Death Star Plans [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cc_114_haven_foil_limited",
+    "cardName": "Haven",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074729",
+      "pc_card_name": "Haven [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_216_lightsaber-proficiency_foil_limited",
+    "cardName": "Lightsaber Proficiency",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074741",
+      "pc_card_name": "Lightsaber Proficiency [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "se_232_mechanical-failure_foil_limited",
+    "cardName": "Mechanical Failure",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074745",
+      "pc_card_name": "Mechanical Failure [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_123_reflection_foil_limited",
+    "cardName": "Reflection",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074764",
+      "pc_card_name": "Reflection [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_224_revolution_foil_limited",
+    "cardName": "Revolution",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074766",
+      "pc_card_name": "Revolution [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cc_119_uncontrollable_fury_foil_limited",
+    "cardName": "Uncontrollable Fury",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074784",
+      "pc_card_name": "Uncontrollable Fury [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_132_what_is_thy_bidding_my_master_foil_limited",
+    "cardName": "What Is Thy Bidding, My Master?",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074791",
+      "pc_card_name": "What Is Thy Bidding, My Master? [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_123_attack-run_foil_limited",
+    "cardName": "Attack Run",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074686",
+      "pc_card_name": "Attack Run [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_244_all-wings-report-in_foil_limited",
+    "cardName": "All Wings Report In",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074683",
+      "pc_card_name": "All Wings Report In [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_272_skywalkers_foil_limited",
+    "cardName": "Skywalkers",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074770",
+      "pc_card_name": "Skywalkers [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "da_168_it_is_the_future_you_see_foil_limited",
+    "cardName": "It Is The Future You See",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074732",
+      "pc_card_name": "It Is The Future You See [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_108_cloud-city-downtown-plaza_foil_limited",
+    "cardName": "Cloud City: Downtown Plaza",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074704",
+      "pc_card_name": "Cloud City: Downtown Plaza [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_170_cloud_city_guest_quarters_foil_limited",
+    "cardName": "Cloud City: Guest Quarters",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074705",
+      "pc_card_name": "Cloud City: Guest Quarters [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_179_dagobah_yodas_hut_foil_limited",
+    "cardName": "Dagobah: Yoda's Hut",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074710",
+      "pc_card_name": "Dagobah: Yoda's Hut [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_062_death-star_foil_limited",
+    "cardName": "Death Star",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074872",
+      "pc_card_name": "Death Star II [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (17) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074714",
+          "pc_card_name": "Death Star [Dark Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074713",
+          "pc_card_name": "Death Squadron Star Destroyer [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6074873",
+          "pc_card_name": "Death Star II: Throne Room [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "anh_143_death-star-trench_foil_limited",
+    "cardName": "Death Star: Trench",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074717",
+      "pc_card_name": "Death Star: Trench [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_285_rendezvous-point_foil_limited",
+    "cardName": "Rendezvous Point",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074765",
+      "pc_card_name": "Rendezvous Point [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_305_millennium-falcon_foil_limited",
+    "cardName": "Millennium Falcon",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "5946617",
+      "pc_card_name": "Millennium Falcon [Limited]",
+      "pc_set_name": "Star Wars CCG Premiere",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074907",
+          "pc_card_name": "Lando In Millennium Falcon [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074746",
+          "pc_card_name": "Millennium Falcon [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "anh_151_red-2_foil_limited",
+    "cardName": "Red 2",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074760",
+      "pc_card_name": "Red 2 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_152_red-5_foil_limited",
+    "cardName": "Red 5",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074761",
+      "pc_card_name": "Red 5 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074852",
+          "pc_card_name": "Artoo-Deetoo In Red 5 [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cc_177_redemption_foil_limited",
+    "cardName": "Redemption",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074763",
+      "pc_card_name": "Redemption [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_311_spiral_foil_limited",
+    "cardName": "Spiral",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074774",
+      "pc_card_name": "Spiral [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_154_tantive-iv_foil_limited",
+    "cardName": "Tantive IV",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074778",
+      "pc_card_name": "Tantive IV [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_147_rogue-1_foil_limited",
+    "cardName": "Rogue 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074767",
+      "pc_card_name": "Rogue 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_149_rogue-3_foil_limited",
+    "cardName": "Rogue 3",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074768",
+      "pc_card_name": "Rogue 3 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_152_anakins-lightsaber_foil_limited",
+    "cardName": "Anakin's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074684",
+      "pc_card_name": "Anakin's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075061",
+          "pc_card_name": "Anakin's Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "pm_319_obi-wans-lightsaber_foil_limited",
+    "cardName": "Obi-Wan's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections I foil reprint",
+    "setName": "Reflections I",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075114",
+      "pc_card_name": "Obi-Wan's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (4) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074749",
+          "pc_card_name": "Obi-Wan's Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6075015",
+          "pc_card_name": "Obi-Wan's Lightsaber",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "5946631",
+          "pc_card_name": "Obi-Wan's Lightsaber [Limited]",
+          "pc_set_name": "Star Wars CCG Premiere"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ds2_003_fighters-coming-in_foil_limited",
+    "cardName": "Fighters Coming In",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074883",
+      "pc_card_name": "Fighters Coming In [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ecc_001_4-lom-with-concussion-rifle_foil_limited",
+    "cardName": "4-LOM With Concussion Rifle",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074848",
+      "pc_card_name": "4-LOM With Concussion Rifle [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_007_admiral-piett_foil_limited",
+    "cardName": "Admiral Piett",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074850",
+      "pc_card_name": "Admiral Piett [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_008_baron-soontir-fel_foil_limited",
+    "cardName": "Baron Soontir Fel",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074856",
+      "pc_card_name": "Baron Soontir Fel [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "epp_001_boba-fett-with-blaster-rifle_foil_limited",
+    "cardName": "Boba Fett With Blaster Rifle",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074948",
+      "pc_card_name": "Boba Fett With Blaster Rifle [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_006_boelo_foil_limited",
+    "cardName": "Boelo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074860",
+      "pc_card_name": "Boelo [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_001_bossk-with-mortar-gun_foil_limited",
+    "cardName": "Bossk With Mortar Gun",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074861",
+      "pc_card_name": "Bossk With Mortar Gun [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "otsd_001_chall-bekan_foil_limited",
+    "cardName": "Chall Bekan",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074864",
+      "pc_card_name": "Chall Bekan [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_004_commander-igar_foil_limited",
+    "cardName": "Commander Igar",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074868",
+      "pc_card_name": "Commander Igar [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "epp_002_darth-vader-with-lightsaber_foil_limited",
+    "cardName": "Darth Vader With Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074869",
+      "pc_card_name": "Darth Vader With Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_002_dengar-with-blaster-carbine_foil_limited",
+    "cardName": "Dengar With Blaster Carbine",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074875",
+      "pc_card_name": "Dengar With Blaster Carbine [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_009_djas-puhr_foil_limited",
+    "cardName": "Djas Puhr",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074876",
+      "pc_card_name": "Djas Puhr [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "ds2_018_emperor-palpatine_foil_limited",
+    "cardName": "Emperor Palpatine",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074880",
+      "pc_card_name": "Emperor Palpatine [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ecc_002_ig-88-with-riot-gun_foil_limited",
+    "cardName": "IG-88 With Riot Gun",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074898",
+      "pc_card_name": "IG-88 With Riot Gun [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_019_janus-greejatus_foil_limited",
+    "cardName": "Janus Greejatus",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074901",
+      "pc_card_name": "Janus Greejatus [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_003_jodo-kast_foil_limited",
+    "cardName": "Jodo Kast",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074902",
+      "pc_card_name": "Jodo Kast [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_022_lord-vader_foil_limited",
+    "cardName": "Lord Vader",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074712",
+      "pc_card_name": "Darth Vader, Dark Lord Of The Sith [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074912",
+          "pc_card_name": "Lord Vader [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ejp_004_mara-jade-the-emperors-hand_foil_limited",
+    "cardName": "Mara Jade, The Emperor's Hand",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074917",
+      "pc_card_name": "Mara Jade, The Emperor's Hand [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_026_moff-jerjerrod_foil_limited",
+    "cardName": "Moff Jerjerrod",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074920",
+      "pc_card_name": "Moff Jerjerrod [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_027_myn-kyneugh_foil_limited",
+    "cardName": "Myn Kyneugh",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074921",
+      "pc_card_name": "Myn Kyneugh [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_033_outer-rim-scout_foil_limited",
+    "cardName": "Outer Rim Scout",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074924",
+      "pc_card_name": "Outer Rim Scout [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_029_sim-aloo_foil_limited",
+    "cardName": "Sim Aloo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074933",
+      "pc_card_name": "Sim Aloo [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_26_bad_feeling_have_i_foil_limited",
+    "cardName": "Bad Feeling Have I",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074855",
+      "pc_card_name": "Bad Feeling Have I [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_060_lateral-damage_foil_limited",
+    "cardName": "Lateral Damage",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074908",
+      "pc_card_name": "Lateral Damage [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "jp_59_scum_and_villainy_foil_limited",
+    "cardName": "Scum And Villainy",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074930",
+      "pc_card_name": "Scum And Villainy [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_079_sienar-fleet-systems_foil_limited",
+    "cardName": "Sienar Fleet Systems",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074932",
+      "pc_card_name": "Sienar Fleet Systems [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_045_force-lightning_foil_limited",
+    "cardName": "Force Lightning",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074885",
+      "pc_card_name": "Force Lightning [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_057_trample_foil_limited",
+    "cardName": "Trample",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074939",
+      "pc_card_name": "Trample [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075148",
+          "pc_card_name": "Trample [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "p2p_002_vaders-obsession_foil_limited",
+    "cardName": "Vader's Obsession",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074940",
+      "pc_card_name": "Vader's Obsession [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "e2p_002_walker-garrison_foil_limited",
+    "cardName": "Walker Garrison",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074941",
+      "pc_card_name": "Walker Garrison [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_051_death-star-ii_foil_limited",
+    "cardName": "Death Star II",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074872",
+      "pc_card_name": "Death Star II [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074873",
+          "pc_card_name": "Death Star II: Throne Room [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "ds2_056_death-star-ii-throne-room_foil_limited",
+    "cardName": "Death Star II: Throne Room",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074873",
+      "pc_card_name": "Death Star II: Throne Room [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_71_executor_holotheatre_foil_limited",
+    "cardName": "Executor: Holotheatre",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074881",
+      "pc_card_name": "Executor: Holotheatre [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "da_73_executor_meditation_chamber_foil_limited",
+    "cardName": "Executor: Meditation Chamber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074882",
+      "pc_card_name": "Executor: Meditation Chamber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_069_hoth-wampa-cave_foil_limited",
+    "cardName": "Hoth: Wampa Cave",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074896",
+      "pc_card_name": "Hoth: Wampa Cave [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "anh_066_kiffex_foil_limited",
+    "cardName": "Kiffex",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074906",
+      "pc_card_name": "Kiffex [Light Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074905",
+          "pc_card_name": "Kiffex [Dark Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "otsd_007_black-squadron-tie_foil_limited",
+    "cardName": "Black Squadron TIE",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074857",
+      "pc_card_name": "Black Squadron TIE [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ecc_005_boba-fett-in-slave-i_foil_limited",
+    "cardName": "Boba Fett In Slave I",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074859",
+      "pc_card_name": "Boba Fett In Slave I [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_063_chimaera_foil_limited",
+    "cardName": "Chimaera",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074867",
+      "pc_card_name": "Chimaera [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ecc_006_dengar-in-punishing-one_foil_limited",
+    "cardName": "Dengar In Punishing One",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074874",
+      "pc_card_name": "Dengar In Punishing One [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "otsd_008_dreadnaught-class-heavy-cruiser_foil_limited",
+    "cardName": "Dreadnaught-Class Heavy Cruiser",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074878",
+      "pc_card_name": "Dreadnaught-Class Heavy Cruiser [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_066_flagship-executor_foil_limited",
+    "cardName": "Flagship Executor",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074884",
+      "pc_card_name": "Flagship Executor [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_005_ig-88-in-ig-2000_foil_limited",
+    "cardName": "IG-88 In IG-2000",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074897",
+      "pc_card_name": "IG-88 In IG-2000 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_081_the-emperors-shield_foil_limited",
+    "cardName": "The Emperor's Shield",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074937",
+      "pc_card_name": "The Emperor's Shield [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_082_the-emperors-sword_foil_limited",
+    "cardName": "The Emperor's Sword",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074938",
+      "pc_card_name": "The Emperor's Sword [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_006_zuckuss-in-mist-hunter_foil_limited",
+    "cardName": "Zuckuss In Mist Hunter",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074947",
+      "pc_card_name": "Zuckuss In Mist Hunter [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_082_tempest-scout-1_foil_limited",
+    "cardName": "Tempest Scout 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074936",
+      "pc_card_name": "Tempest Scout 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_087_darth-vaders-lightsaber_foil_limited",
+    "cardName": "Darth Vader's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074870",
+      "pc_card_name": "Darth Vader's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_007_maras-jades-lightsaber_foil_limited",
+    "cardName": "Mara Jade's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074918",
+      "pc_card_name": "Mara Jade's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_092_capital-support_foil_limited",
+    "cardName": "Capital Support",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074863",
+      "pc_card_name": "Capital Support [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_097_admiral-ackbar_foil_limited",
+    "cardName": "Admiral Ackbar",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074849",
+      "pc_card_name": "Admiral Ackbar [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "otsd_010_arleil-schous_foil_limited",
+    "cardName": "Arleil Schous",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074851",
+      "pc_card_name": "Arleil Schous [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ecc_007_chewie-with-blaster-rifle_foil_limited",
+    "cardName": "Chewie With Blaster Rifle",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074865",
+      "pc_card_name": "Chewie With Blaster Rifle [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_093_chief-chirpa_foil_limited",
+    "cardName": "Chief Chirpa",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074866",
+      "pc_card_name": "Chief Chirpa [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_104_general-calrissian_foil_limited",
+    "cardName": "General Calrissian",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074887",
+      "pc_card_name": "General Calrissian [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_104_general-crix-madine_foil_limited",
+    "cardName": "General Crix Madine",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074888",
+      "pc_card_name": "General Crix Madine [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_177_kalfalnl-cndros_foil_limited",
+    "cardName": "Kal'Falnl C'ndros",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074903",
+      "pc_card_name": "Kal'Falnl C'ndros [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "ds2_115_luke-skywalker-jedi-knight_foil_limited",
+    "cardName": "Luke Skywalker, Jedi Knight",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074913",
+      "pc_card_name": "Luke Skywalker, Jedi Knight [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "epp_005_luke-with-lightsaber_foil_limited",
+    "cardName": "Luke With Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074914",
+      "pc_card_name": "Luke With Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_194_melas_foil_limited",
+    "cardName": "Melas",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074919",
+      "pc_card_name": "Melas [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_113_orrimaarko_foil_limited",
+    "cardName": "Orrimaarko",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074923",
+      "pc_card_name": "Orrimaarko [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ejp_010_see-threepio_foil_limited",
+    "cardName": "See-Threepio",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074701",
+      "pc_card_name": "C-3PO (See-Threepio) [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074931",
+          "pc_card_name": "See-Threepio [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "se_206_tawss-khaa_foil_limited",
+    "cardName": "Tawss Khaa",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074935",
+      "pc_card_name": "Tawss Khaa [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_122_wedge-antilles-red-squadron-leader_foil_limited",
+    "cardName": "Wedge Antilles, Red Squadron Leader",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074942",
+      "pc_card_name": "Wedge Antilles, Red Squadron Leader [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_122_wicket_foil_limited",
+    "cardName": "Wicket",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074943",
+      "pc_card_name": "Wicket [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_113_bacta-tank_foil_limited",
+    "cardName": "Bacta Tank",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074854",
+      "pc_card_name": "Bacta Tank [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ht_115_echo-base-operations_foil_limited",
+    "cardName": "Echo Base Operations",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074879",
+      "pc_card_name": "Echo Base Operations [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_113_frozen_assets_foil_limited",
+    "cardName": "Frozen Assets",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074886",
+      "pc_card_name": "Frozen Assets [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_224_goo-nee-tay_foil_limited",
+    "cardName": "Goo Nee Tay",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074893",
+      "pc_card_name": "Goo Nee Tay [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_215_kessel-run_foil_limited",
+    "cardName": "Kessel Run",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074904",
+      "pc_card_name": "Kessel Run [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "pm_217_mantellian-savrip_foil_limited",
+    "cardName": "Mantellian Savrip",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074916",
+      "pc_card_name": "Mantellian Savrip [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "da_120_order_to_engage_foil_limited",
+    "cardName": "Order To Engage",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074922",
+      "pc_card_name": "Order To Engage [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_238_dont-get-cocky_foil_limited",
+    "cardName": "Don't Get Cocky",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074877",
+      "pc_card_name": "Don't Get Cocky [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "pm_244_gift-of-the-mentor_foil_limited",
+    "cardName": "Gift Of The Mentor",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074889",
+      "pc_card_name": "Gift Of The Mentor [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "e2p_006_lone-rogue_foil_limited",
+    "cardName": "Lone Rogue",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074911",
+      "pc_card_name": "Lone Rogue [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "p2p_005_run-luke-run_foil_limited",
+    "cardName": "Run Luke, Run!",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074929",
+      "pc_card_name": "Run Luke, Run! [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cc_159_smoke_screen_foil_limited",
+    "cardName": "Smoke Screen",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074934",
+      "pc_card_name": "Smoke Screen [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_300_yavin-4-massassi-throne-room_foil_limited",
+    "cardName": "Yavin 4: Massassi Throne Room",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074945",
+      "pc_card_name": "Yavin 4: Massassi Throne Room [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "3a_004_artoo-detoo-in-red-5_foil_limited",
+    "cardName": "Artoo-Detoo In Red 5",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074852",
+      "pc_card_name": "Artoo-Deetoo In Red 5 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_154_b-wing-attack-squadron_foil_limited",
+    "cardName": "B-wing Attack Squadron",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074853",
+      "pc_card_name": "B-wing Attack Squadron [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_157_blue-squadron-b-wing_foil_limited",
+    "cardName": "Blue Squadron B-wing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074858",
+      "pc_card_name": "Blue Squadron B-wing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "rl_001_gold-leader-in-gold-1_foil_limited",
+    "cardName": "Gold Leader In Gold 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074890",
+      "pc_card_name": "Gold Leader In Gold 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_159_gold-squadron-1_foil_limited",
+    "cardName": "Gold Squadron 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074891",
+      "pc_card_name": "Gold Squadron 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "otsd_016_gold-squadron-y-wing_foil_limited",
+    "cardName": "Gold Squadron Y-wing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074892",
+      "pc_card_name": "Gold Squadron Y-wing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_164_green-squadron-a-wing_foil_limited",
+    "cardName": "Green Squadron A-wing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074894",
+      "pc_card_name": "Green Squadron A-wing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_165_home-one_foil_limited",
+    "cardName": "Home One",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074895",
+      "pc_card_name": "Home One [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_166_independence_foil_limited",
+    "cardName": "Independence",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074900",
+      "pc_card_name": "Independence [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ecc_009_lando-in-millennium-falcon_foil_limited",
+    "cardName": "Lando In Millennium Falcon",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074907",
+      "pc_card_name": "Lando In Millennium Falcon [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_167_liberty_foil_limited",
+    "cardName": "Liberty",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074910",
+      "pc_card_name": "Liberty [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "rl_002_red-leader-in-red-1_foil_limited",
+    "cardName": "Red Leader In Red 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074926",
+      "pc_card_name": "Red Leader In Red 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_172_red-squadron-1_foil_limited",
+    "cardName": "Red Squadron 1",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074927",
+      "pc_card_name": "Red Squadron 1 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "otsd_017_red-squadron-x-wing_foil_limited",
+    "cardName": "Red Squadron X-wing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074928",
+      "pc_card_name": "Red Squadron X-wing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "1a_006_x-wing-assault-squadron_foil_limited",
+    "cardName": "X-wing Assault Squadron",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074944",
+      "pc_card_name": "X-wing Assault Squadron [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "otsd_018_z-95-headhunter_foil_limited",
+    "cardName": "Z-95 Headhunter",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074946",
+      "pc_card_name": "Z-95 Headhunter [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_181_lukes-lightsaber_foil_limited",
+    "cardName": "Luke's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections II foil reprint",
+    "setName": "Reflections II",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6074915",
+      "pc_card_name": "Luke's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_001_battle-deployment_foil_limited",
+    "cardName": "Battle Deployment",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075066",
+      "pc_card_name": "Battle Deployment [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_002_arica_foil_limited",
+    "cardName": "Arica",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075063",
+      "pc_card_name": "Arica [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_001_aurra-sing_foil_limited",
+    "cardName": "Aurra Sing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075065",
+      "pc_card_name": "Aurra Sing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "se_007_brangus-glee_foil_limited",
+    "cardName": "Brangus Glee",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075069",
+      "pc_card_name": "Brangus Glee [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_003_captain-gilead-pellaeon_foil_limited",
+    "cardName": "Captain Gilad Pallaeon",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075071",
+      "pc_card_name": "Captain Gilad Pellaeon [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (67) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074801",
+          "pc_card_name": "Captain Gilad Pellaeon",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074702",
+          "pc_card_name": "Captain Han Solo [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections"
+        },
+        {
+          "pc_id": "6075072",
+          "pc_card_name": "Captain Panaka [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "tat_003_darth-maul_foil_limited",
+    "cardName": "Darth Maul",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075076",
+      "pc_card_name": "Darth Maul [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075077",
+          "pc_card_name": "Darth Maul, Young Apprentice [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6074978",
+          "pc_card_name": "Darth Maul's Demise",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cor_005_darth-maul-young-apprentice_foil_limited",
+    "cardName": "Darth Maul, Young Apprentice",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075077",
+      "pc_card_name": "Darth Maul, Young Apprentice [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_007_destroyer-droid_foil_limited",
+    "cardName": "Destroyer Droid",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075079",
+      "pc_card_name": "Destroyer Droid [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_004_dr-evazan-ponda-baba_foil_limited",
+    "cardName": "Dr. Evazan & Ponda Baba",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075083",
+      "pc_card_name": "Dr. Evazan & Ponda Baba [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_005_grand-admiral-thrawn_foil_limited",
+    "cardName": "Grand Admiral Thrawn",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075087",
+      "pc_card_name": "Grand Admiral Thrawn [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_006_guri_foil_limited",
+    "cardName": "Guri",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075090",
+      "pc_card_name": "Guri [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cor_013_lott-dod_foil_limited",
+    "cardName": "Lott Dod",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075098",
+      "pc_card_name": "Lott Dod [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jpsd_001_mercenary-pilot_foil_limited",
+    "cardName": "Mercenary Pilot",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075106",
+      "pc_card_name": "Mercenary Pilot [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jpsd_002_mighty-jabba_foil_limited",
+    "cardName": "Mighty Jabba",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075107",
+      "pc_card_name": "Mighty Jabba [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_015_nute-gunray_foil_limited",
+    "cardName": "Nute Gunray",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075110",
+      "pc_card_name": "Nute Gunray [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_017_p-59_foil_limited",
+    "cardName": "P-59",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075118",
+      "pc_card_name": "P-59 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_018_p-60_foil_limited",
+    "cardName": "P-60",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075119",
+      "pc_card_name": "P-60 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_009_prince-xizor_foil_limited",
+    "cardName": "Prince Xizor",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075123",
+      "pc_card_name": "Prince Xizor [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_011_sith-probe-droid_foil_limited",
+    "cardName": "Sith Probe Droid",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075137",
+      "pc_card_name": "Sith Probe Droid [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_010_snoova_foil_limited",
+    "cardName": "Snoova",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075138",
+      "pc_card_name": "Snoova [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cor_022_tc-14_foil_limited",
+    "cardName": "TC-14",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075143",
+      "pc_card_name": "TC-14 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_012_vigo_foil_limited",
+    "cardName": "Vigo",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075150",
+      "pc_card_name": "Vigo [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_012_watto_foil_limited",
+    "cardName": "Watto",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075154",
+      "pc_card_name": "Watto [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tp_025_after-her_foil_limited",
+    "cardName": "After Her!",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075059",
+      "pc_card_name": "After Her! [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_052_disarmed_foil_limited",
+    "cardName": "Disarmed",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075081",
+      "pc_card_name": "Disarmed [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tp_029_naboo-occupation_foil_limited",
+    "cardName": "Naboo Occupation",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075109",
+      "pc_card_name": "Naboo Occupation [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "en_037_ominous-rumors_foil_limited",
+    "cardName": "Ominous Rumors",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075115",
+      "pc_card_name": "Ominous Rumors [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jpsd_005_power-of-the-hutt_foil_limited",
+    "cardName": "Power Of The Hutt",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075122",
+      "pc_card_name": "Power Of The Hutt [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_042_the-phantom-menace_foil_limited",
+    "cardName": "The Phantom Menace",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075145",
+      "pc_card_name": "The Phantom Menace [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_023_you-may-start-your-landing_foil_limited",
+    "cardName": "You May Start Your Landing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075157",
+      "pc_card_name": "You May Start Your Landing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_025_boonta-eve-podrace_foil_limited",
+    "cardName": "Boonta Eve Podrace",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075067",
+      "pc_card_name": "Boonta Eve Podrace [Light Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075068",
+          "pc_card_name": "Boonta Eve Podrace [Dark Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cor_049_dioxis_foil_limited",
+    "cardName": "Dioxis",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075080",
+      "pc_card_name": "Dioxis [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jp_004_gravity-shadow_foil_limited",
+    "cardName": "Gravity Shadow",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075089",
+      "pc_card_name": "Gravity Shadow [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "pm_086_i-have-you-now_foil_limited",
+    "cardName": "I Have You Now",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075093",
+      "pc_card_name": "I Have You Now [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cor_050_imperial-artillery_foil_limited",
+    "cardName": "Imperial Artillery",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075094",
+      "pc_card_name": "Imperial Artillery [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_046_imperial-command_foil_limited",
+    "cardName": "Imperial Command",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075095",
+      "pc_card_name": "Imperial Command [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_055_maul-strikes_foil_limited",
+    "cardName": "Maul Strikes",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075103",
+      "pc_card_name": "Maul Strikes [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tp_036_rolling-rolling-rolling_foil_limited",
+    "cardName": "Rolling, Rolling, Rolling",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075133",
+      "pc_card_name": "Rolling, Rolling, Rolling [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_064_vote-now_foil_limited",
+    "cardName": "Vote Now!",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075152",
+      "pc_card_name": "Vote Now! [Dark Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (2) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075153",
+          "pc_card_name": "Vote Now! [Light \\Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "tat_038_tatooine-desert-landing-site_foil_limited",
+    "cardName": "Tatooine: Desert Landing Site",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075142",
+      "pc_card_name": "Tatooine: Desert Landing Site [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_043_sebulbas-podracer_foil_limited",
+    "cardName": "Sebulba's Podracer",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075134",
+      "pc_card_name": "Sebulba's Podracer [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_084_mauls-sith-infiltrator_foil_limited",
+    "cardName": "Maul's Sith Infiltrator",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075105",
+      "pc_card_name": "Maul's Sith Infiltrator [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_026_stinger_foil_limited",
+    "cardName": "Stinger",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075139",
+      "pc_card_name": "Stinger [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_027_virago_foil_limited",
+    "cardName": "Virago",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075151",
+      "pc_card_name": "Virago [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_045_mauls-lightsaber_foil_limited",
+    "cardName": "Maul's Lightsaber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075104",
+      "pc_card_name": "Maul's Lightsaber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_029_artoo-threepio_foil_limited",
+    "cardName": "Artoo & Threepio",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075064",
+      "pc_card_name": "Artoo & Threepio [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cor_092_captain-panaka_foil_limited",
+    "cardName": "Captain Panaka",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075072",
+      "pc_card_name": "Captain Panaka [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_030_chewbacca-protector_foil_limited",
+    "cardName": "Chewbacca, Protector",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075073",
+      "pc_card_name": "Chewbacca, Protector [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_031_corran-horn_foil_limited",
+    "cardName": "Corran Horn",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075074",
+      "pc_card_name": "Corran Horn [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_032_dash-rendar_foil_limited",
+    "cardName": "Dash Rendar",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075078",
+      "pc_card_name": "Dash Rendar [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_049_jar-jar-binks_foil_limited",
+    "cardName": "Jar Jar Binks",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075096",
+      "pc_card_name": "Jar Jar Binks [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jpsd_010_lando-with-vibro-ax_foil_limited",
+    "cardName": "Lando With Vibro Axe",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "no-pricing",
+    "suggestion": null
+  },
+  {
+    "variantId": "r2_034_luke-skywalker-rebel-scout_foil_limited",
+    "cardName": "Luke Skywalker, Rebel Scout",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075100",
+      "pc_card_name": "Luke Skywalker, Rebel Scout [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cor_103_mace-windu_foil_limited",
+    "cardName": "Mace Windu",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075101",
+      "pc_card_name": "Mace Windu [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_105_master-qui-gon_foil_limited",
+    "cardName": "Master Qui-Gon",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075102",
+      "pc_card_name": "Master Qui-Gon [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_035_mirax-terrik_foil_limited",
+    "cardName": "Mirax Terrik",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075108",
+      "pc_card_name": "Mirax Terrik [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_051_obi-wan-kenobi-padawan-learner_foil_limited",
+    "cardName": "Obi-Wan Kenobi, Padawan Learner",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075112",
+      "pc_card_name": "Obi-Wan Kenobi, Padawan Learner [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_036_owen-lars-beru-lars_foil_limited",
+    "cardName": "Owen Lars & Beru Lars",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075117",
+      "pc_card_name": "Owen Lars & Beru Lars [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_052_padme-naberrie_foil_limited",
+    "cardName": "Padmé Naberrie",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "no-pricing",
+    "suggestion": null
+  },
+  {
+    "variantId": "jpsd_011_palace-raider_foil_limited",
+    "cardName": "Palace Raider",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075121",
+      "pc_card_name": "Palace Raider [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "3a_001_prisoner-2187_foil_limited",
+    "cardName": "Prisoner 2187",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075124",
+      "pc_card_name": "Prisoner 2187 [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_053_qui-gon-jinn_foil_limited",
+    "cardName": "Qui-Gon Jinn",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6075127",
+      "pc_card_name": "Qui-Gon Jinn [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Multiple matches (3) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6075023",
+          "pc_card_name": "Qui-Gon Jinn, Jedi Master",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6075128",
+          "pc_card_name": "Qui-Gon Jinn's Lightsaber [Foil]",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "cor_111_ric-olie_foil_limited",
+    "cardName": "Ric Olié",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "low",
+      "pc_id": "6074842",
+      "pc_card_name": "The Emperor",
+      "pc_set_name": "Star Wars CCG Reflections II",
+      "reason": "Multiple matches (57) - needs manual review",
+      "alternatives": [
+        {
+          "pc_id": "6074838",
+          "pc_card_name": "Stinger",
+          "pc_set_name": "Star Wars CCG Reflections II"
+        },
+        {
+          "pc_id": "6074977",
+          "pc_card_name": "Dark Rage",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        },
+        {
+          "pc_id": "6075012",
+          "pc_card_name": "No Escape",
+          "pc_set_name": "Star Wars CCG Reflections III"
+        }
+      ]
+    }
+  },
+  {
+    "variantId": "tat_054_shmi-skywalker_foil_limited",
+    "cardName": "Shmi Skywalker",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075136",
+      "pc_card_name": "Shmi Skywalker [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_116_supreme-chancellor-valorum_foil_limited",
+    "cardName": "Supreme Chancellor Valorum",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075140",
+      "pc_card_name": "Supreme Chancellor Valorum [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_037_talon-karrde_foil_limited",
+    "cardName": "Talon Karde",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075141",
+      "pc_card_name": "Talon Karrde [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "tat_055_threepio-with-his-parts-showing_foil_limited",
+    "cardName": "Threepio With His Parts Showing",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075147",
+      "pc_card_name": "Threepio With His Parts Showing [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_039_obi-wans-journal_foil_limited",
+    "cardName": "Obi-Wan's Journal",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075113",
+      "pc_card_name": "Obi-Wan's Journal [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "3a_002_a-new-secret-base_foil_limited",
+    "cardName": "A New Secret Base",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075058",
+      "pc_card_name": "A New Secret Base [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_057_brisky-morning-munchen_foil_limited",
+    "cardName": "Brisky Morning Munchen",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075070",
+      "pc_card_name": "Brisky Morning Munchen [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "3a_003_echo-base-garrison_foil_limited",
+    "cardName": "Echo Base Garrison",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075084",
+      "pc_card_name": "Echo Base Garrison [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "jpsd_013_seeking-an-audience_foil_limited",
+    "cardName": "Seeking An Audience",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075135",
+      "pc_card_name": "Seeking An Audience [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tp_091_they-win-this-round_foil_limited",
+    "cardName": "They Win This Round",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075146",
+      "pc_card_name": "They Win This Round [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_066_i-did-it_foil_limited",
+    "cardName": "I Did it!",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075092",
+      "pc_card_name": "I Did It! [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_074_end-of-a-reign_foil_limited",
+    "cardName": "End Of A Reign",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075085",
+      "pc_card_name": "End Of A Reign [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tp_096_gimme-a-lift_foil_limited",
+    "cardName": "Gimme A Lift",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075086",
+      "pc_card_name": "Gimme A Lift! [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "se_252_harvest_foil_limited",
+    "cardName": "Harvest",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075091",
+      "pc_card_name": "Harvest [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_150_rebel-artillery_foil_limited",
+    "cardName": "Rebel Artillery",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075130",
+      "pc_card_name": "Rebel Artillery [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "ds2_145_rebel-leadership_foil_limited",
+    "cardName": "Rebel Leadership",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075131",
+      "pc_card_name": "Rebel Leadership [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_160_coruscant-jedi-council-chamber_foil_limited",
+    "cardName": "Coruscant: Jedi Council Chamber",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075075",
+      "pc_card_name": "Coruscant: Jedi Council Chamber [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tat_088_anakins-podracer_foil_limited",
+    "cardName": "Anakin's Podracer",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075062",
+      "pc_card_name": "Anakin's Podracer [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "r2_053_outrider_foil_limited",
+    "cardName": "Outrider",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075116",
+      "pc_card_name": "Outrider [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "r2_054_pulsar-skate_foil_limited",
+    "cardName": "Pulsar Skate",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075125",
+      "pc_card_name": "Pulsar Skate [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Matched foil variant by set"
+    }
+  },
+  {
+    "variantId": "cor_175_queens-royal-starship_foil_limited",
+    "cardName": "Queen's Royal Starship",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075126",
+      "pc_card_name": "Queen's Royal Starship [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "cor_176_radiant-vii_foil_limited",
+    "cardName": "Radiant VII",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075129",
+      "pc_card_name": "Radiant VII [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  },
+  {
+    "variantId": "tp_116_amidala-blaster_foil_limited",
+    "cardName": "Amidala's Blaster",
+    "variantName": "Black Border Holo",
+    "variantCode": "BBH",
+    "variantDetails": "Reflections III foil reprint",
+    "setName": "Reflections III",
+    "status": "needs-mapping",
+    "suggestion": {
+      "confidence": "high",
+      "pc_id": "6075060",
+      "pc_card_name": "Amidala's Blaster [Foil]",
+      "pc_set_name": "Star Wars CCG Reflections III",
+      "reason": "Only one pricing record available"
+    }
+  }
+]

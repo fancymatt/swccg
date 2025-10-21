@@ -1,8 +1,9 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo, useCallback, useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { useTheme } from '../contexts/ThemeContext';
 import { CardVariantItem } from './CardVariantItem';
 import { CardTypeIcon } from './CardTypeIcon';
+import { getVariantPricing } from '../services/database';
 import type { Card } from '../types';
 
 // Icon mapping
@@ -29,6 +30,29 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
   showSetInfo = false,
 }) => {
   const { colors } = useTheme();
+  const [totalValue, setTotalValue] = useState<number>(0);
+  const [hasAnyPricing, setHasAnyPricing] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Calculate total value from all variants
+    async function calculateValue() {
+      let total = 0;
+      let foundPricing = false;
+
+      for (const variant of card.variants) {
+        const pricing = await getVariantPricing(variant.id);
+        if (pricing && pricing.ungraded_price) {
+          total += (pricing.ungraded_price / 100) * variant.quantity;
+          foundPricing = true;
+        }
+      }
+
+      setTotalValue(total);
+      setHasAnyPricing(foundPricing);
+    }
+
+    calculateValue();
+  }, [card.variants]);
 
   const getSideColor = (side: 'light' | 'dark') => {
     return side === 'light' ? colors.lightSide : colors.darkSide;
@@ -72,6 +96,13 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
     () => card.variants.reduce((sum, v) => sum + v.quantity, 0),
     [card.variants]
   );
+
+  const formattedTotalValue = useMemo(() => {
+    if (!hasAnyPricing) {
+      return 'No price available';
+    }
+    return `$${totalValue.toFixed(2)}`;
+  }, [totalValue, hasAnyPricing]);
 
   const handleVariantChange = useCallback(
     (variantId: string, newQuantity: number) => {
@@ -144,6 +175,11 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
     totalOwned: {
       fontSize: 14,
       color: colors.success,
+      fontWeight: '600',
+    },
+    totalValue: {
+      fontSize: 14,
+      color: colors.accent,
       fontWeight: '600',
     },
     setInfo: {
@@ -220,6 +256,8 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
             <>
               <Text style={styles.separator}>•</Text>
               <Text style={styles.totalOwned}>{totalQuantity} owned</Text>
+              <Text style={styles.separator}>•</Text>
+              <Text style={styles.totalValue}>{formattedTotalValue}</Text>
             </>
           )}
         </View>
