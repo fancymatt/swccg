@@ -486,7 +486,11 @@ export async function getCardsInSet(setId: string): Promise<Card[]> {
     // For each card, get ONLY the variants that appear in this set
     const cardsWithVariants: Card[] = await Promise.all(
       cards.map(async (card) => {
-        const variants = await encyclopediaDb!.getAllAsync(`
+        if (!encyclopediaDb || !collectionDb) {
+          throw new Error('Database became unavailable during operation');
+        }
+
+        const variants = await encyclopediaDb.getAllAsync(`
           SELECT
             v.id as variant_id,
             v.name as variant_name,
@@ -506,7 +510,11 @@ export async function getCardsInSet(setId: string): Promise<Card[]> {
         // Get quantities for each variant
         const variantsWithQuantity: CardVariant[] = await Promise.all(
           variants.map(async (variant) => {
-            const result = await collectionDb!.getFirstAsync(
+            if (!collectionDb) {
+              throw new Error('Collection database became unavailable');
+            }
+
+            const result = await collectionDb.getFirstAsync(
               'SELECT quantity FROM collection WHERE variant_id = ?',
               [variant.variant_id]
             ) as { quantity: number } | null;
@@ -569,7 +577,11 @@ export async function getCardsWithCollection(): Promise<Card[]> {
     // For each card, get its variants with quantities
     const cardsWithVariants: Card[] = await Promise.all(
       cards.map(async (card) => {
-        const variants = await encyclopediaDb!.getAllAsync(`
+        if (!encyclopediaDb || !collectionDb) {
+          throw new Error('Database became unavailable during operation');
+        }
+
+        const variants = await encyclopediaDb.getAllAsync(`
           SELECT
             v.id as variant_id,
             v.name as variant_name,
@@ -588,7 +600,11 @@ export async function getCardsWithCollection(): Promise<Card[]> {
         // Get quantities for each variant
         const variantsWithQuantity: CardVariant[] = await Promise.all(
           variants.map(async (variant) => {
-            const result = await collectionDb!.getFirstAsync(
+            if (!collectionDb) {
+              throw new Error('Collection database became unavailable');
+            }
+
+            const result = await collectionDb.getFirstAsync(
               'SELECT quantity FROM collection WHERE variant_id = ?',
               [variant.variant_id]
             ) as { quantity: number } | null;
@@ -747,8 +763,12 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
             const variantsWithQuantity: CardVariant[] = await Promise.all(
               variantsRaw.map(async (variant) => {
                 try {
+                  if (!encyclopediaDb || !collectionDb) {
+                    throw new Error('Database became unavailable during search');
+                  }
+
                   // Get the first set appearance for this variant (for display)
-                  const appearance = await encyclopediaDb!.getFirstAsync(`
+                  const appearance = await encyclopediaDb.getFirstAsync(`
                     SELECT
                       vsa.card_number,
                       s.name as set_name,
@@ -764,7 +784,7 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
                     set_abbr: string;
                   } | null;
 
-                  const result = await collectionDb!.getFirstAsync(
+                  const result = await collectionDb.getFirstAsync(
                     'SELECT quantity FROM collection WHERE variant_id = ?',
                     [variant.variant_id]
                   ) as { quantity: number } | null;

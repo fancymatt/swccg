@@ -23,6 +23,7 @@ interface CardListItemProps {
   pricingMap: Map<string, CardPricing>;
   onVariantQuantityChange: (cardId: string, variantId: string, newQuantity: number) => void;
   showSetInfo?: boolean;
+  loadingPricing?: boolean;
 }
 
 export const CardListItem: React.FC<CardListItemProps> = React.memo(({
@@ -30,6 +31,7 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
   pricingMap,
   onVariantQuantityChange,
   showSetInfo = false,
+  loadingPricing = false,
 }) => {
   const { colors } = useTheme();
   const [totalValue, setTotalValue] = useState<number>(0);
@@ -268,6 +270,7 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
             variant={variant}
             pricing={pricingMap.get(variant.id) || null}
             onQuantityChange={handleVariantChange}
+            loadingPricing={loadingPricing}
           />
         ))}
       </View>

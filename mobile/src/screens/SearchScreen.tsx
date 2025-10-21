@@ -13,55 +13,91 @@ export const SearchScreen: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
   const [pricingMap, setPricingMap] = useState<Map<string, CardPricing>>(new Map());
+  const [loadingPricing, setLoadingPricing] = useState<boolean>(false);
 
   // Debounced search effect
   useEffect(() => {
+    let isCancelled = false;
+
     const timeoutId = setTimeout(async () => {
       if (searchQuery.trim().length > 0) {
-        setLoading(true);
-        setHasSearched(true);
+        if (!isCancelled) setLoading(true);
+        if (!isCancelled) setHasSearched(true);
+
         try {
           const results = await searchCardsByName(searchQuery.trim());
-          setCards(results as Card[]);
+          if (!isCancelled) {
+            setCards(results as Card[]);
+          }
         } catch (error) {
           console.error('Failed to search cards:', error);
           // On error, show empty results instead of crashing
-          setCards([]);
+          if (!isCancelled) {
+            setCards([]);
+          }
         } finally {
-          setLoading(false);
+          if (!isCancelled) {
+            setLoading(false);
+          }
         }
       } else {
-        setCards([]);
-        setHasSearched(false);
-        setLoading(false);
+        if (!isCancelled) {
+          setCards([]);
+          setHasSearched(false);
+          setLoading(false);
+        }
       }
     }, 300); // 300ms debounce
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      isCancelled = true;
+      clearTimeout(timeoutId);
+    };
   }, [searchQuery]);
 
   // Fetch pricing whenever cards change
   useEffect(() => {
+    let isCancelled = false;
+
     async function fetchPricing() {
       if (cards.length === 0) {
-        setPricingMap(new Map());
+        if (!isCancelled) {
+          setPricingMap(new Map());
+          setLoadingPricing(false);
+        }
         return;
       }
 
-      // Collect all variant IDs from all cards
-      const variantIds: string[] = [];
-      for (const card of cards) {
-        for (const variant of card.variants) {
-          variantIds.push(variant.id);
-        }
+      if (!isCancelled) {
+        setLoadingPricing(true);
       }
 
-      // Fetch all pricing data in a single batch query
-      const pricing = await getBatchVariantPricing(variantIds);
-      setPricingMap(pricing);
+      try {
+        // Collect all variant IDs from all cards
+        const variantIds: string[] = [];
+        for (const card of cards) {
+          for (const variant of card.variants) {
+            variantIds.push(variant.id);
+          }
+        }
+
+        // Fetch all pricing data in a single batch query
+        const pricing = await getBatchVariantPricing(variantIds);
+        if (!isCancelled) {
+          setPricingMap(pricing);
+        }
+      } finally {
+        if (!isCancelled) {
+          setLoadingPricing(false);
+        }
+      }
     }
 
     fetchPricing();
+
+    return () => {
+      isCancelled = true;
+    };
   }, [cards]);
 
   const handleVariantQuantityChange = useCallback(async (
@@ -202,8 +238,9 @@ export const SearchScreen: React.FC = () => {
       pricingMap={pricingMap}
       onVariantQuantityChange={handleVariantQuantityChange}
       showSetInfo={true}
+      loadingPricing={loadingPricing}
     />
-  ), [handleVariantQuantityChange, pricingMap]);
+  ), [handleVariantQuantityChange, pricingMap, loadingPricing]);
 
   const keyExtractor = useCallback((item: Card) => item.id, []);
 

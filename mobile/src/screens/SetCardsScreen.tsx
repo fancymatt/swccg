@@ -23,6 +23,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   const [stats, setStats] = useState<SetCompletionStats | null>(null);
   const [totalValue, setTotalValue] = useState<number>(0);
   const [pricingMap, setPricingMap] = useState<Map<string, CardPricing>>(new Map());
+  const [loadingPricing, setLoadingPricing] = useState<boolean>(false);
   const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
     side: [],
     type: [],
@@ -31,29 +32,34 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
   });
 
   const calculateTotalValue = useCallback(async (cardsData: Card[]) => {
-    // Collect all variant IDs from all cards
-    const variantIds: string[] = [];
-    for (const card of cardsData) {
-      for (const variant of card.variants) {
-        variantIds.push(variant.id);
-      }
-    }
-
-    // Fetch all pricing data in a single batch query
-    const pricing = await getBatchVariantPricing(variantIds);
-    setPricingMap(pricing);
-
-    // Calculate total value using the pricing map
-    let total = 0;
-    for (const card of cardsData) {
-      for (const variant of card.variants) {
-        const variantPricing = pricing.get(variant.id);
-        if (variantPricing && variantPricing.ungraded_price) {
-          total += (variantPricing.ungraded_price / 100) * variant.quantity;
+    setLoadingPricing(true);
+    try {
+      // Collect all variant IDs from all cards
+      const variantIds: string[] = [];
+      for (const card of cardsData) {
+        for (const variant of card.variants) {
+          variantIds.push(variant.id);
         }
       }
+
+      // Fetch all pricing data in a single batch query
+      const pricing = await getBatchVariantPricing(variantIds);
+      setPricingMap(pricing);
+
+      // Calculate total value using the pricing map
+      let total = 0;
+      for (const card of cardsData) {
+        for (const variant of card.variants) {
+          const variantPricing = pricing.get(variant.id);
+          if (variantPricing && variantPricing.ungraded_price) {
+            total += (variantPricing.ungraded_price / 100) * variant.quantity;
+          }
+        }
+      }
+      setTotalValue(total);
+    } finally {
+      setLoadingPricing(false);
     }
-    setTotalValue(total);
   }, []);
 
   const loadCards = useCallback(async () => {
@@ -81,17 +87,30 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
     loadCards();
   }, [loadCards]);
 
+  // Helper function to normalize rarity codes to unified categories
+  const normalizeRarity = useCallback((rarity: string | undefined): 'common' | 'uncommon' | 'rare' | 'other' => {
+    if (!rarity) return 'other';
+    const rarityUpper = rarity.toUpperCase();
+    if (rarityUpper.startsWith('C')) return 'common';
+    if (rarityUpper.startsWith('U')) return 'uncommon';
+    if (rarityUpper.startsWith('R')) return 'rare';
+    return 'other';
+  }, []);
+
   const handleVariantQuantityChange = useCallback(async (
     cardId: string,
     variantId: string,
     newQuantity: number
   ) => {
-    // Store the old quantity for rollback if needed
+    // Store the old quantity and card details for rollback if needed
     let oldQuantity = 0;
+    let cardRarity: string | undefined = undefined;
+
     setCards((prevCards) => {
       const card = prevCards.find((card) => card.id === cardId);
       const variant = card?.variants.find((variant) => variant.id === variantId);
       oldQuantity = variant?.quantity ?? 0;
+      cardRarity = card?.rarity;
       return prevCards;
     });
 
@@ -116,18 +135,38 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       // Then update database in the background
       await updateVariantQuantity(variantId, newQuantity);
 
-      // Reload stats to update progress bars
-      const completionStats = await getSetCompletionStats(setId);
-      setStats(completionStats);
+      // Update stats incrementally instead of full recalc
+      const wasOwned = oldQuantity > 0;
+      const isOwned = newQuantity > 0;
+
+      if (wasOwned !== isOwned && stats) {
+        // Ownership changed - update stats incrementally
+        const rarityKey = normalizeRarity(cardRarity);
+        const delta = isOwned ? 1 : -1; // +1 if we gained ownership, -1 if we lost it
+
+        const updatedStats: SetCompletionStats = {
+          ...stats,
+          total: {
+            ...stats.total,
+            owned: stats.total.owned + delta,
+          },
+          [rarityKey]: {
+            ...stats[rarityKey],
+            owned: stats[rarityKey].owned + delta,
+          },
+        };
+
+        setStats(updatedStats);
+
+        // Update shared collection stats
+        updateSetStats(setId, updatedStats);
+      }
 
       // Recalculate total value with updated cards
       setCards((currentCards) => {
         calculateTotalValue(currentCards);
         return currentCards;
       });
-
-      // Update shared collection stats
-      updateSetStats(setId, completionStats);
     } catch (error) {
       console.error('Failed to update variant quantity:', error);
 
@@ -148,7 +187,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
         })
       );
     }
-  }, [setId, updateSetStats, calculateTotalValue]);
+  }, [setId, updateSetStats, calculateTotalValue, stats, normalizeRarity]);
 
   // Define filter categories
   const filterCategories: FilterCategory[] = useMemo(() => {
@@ -269,8 +308,9 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route, navigatio
       card={item}
       pricingMap={pricingMap}
       onVariantQuantityChange={handleVariantQuantityChange}
+      loadingPricing={loadingPricing}
     />
-  ), [handleVariantQuantityChange, pricingMap]);
+  ), [handleVariantQuantityChange, pricingMap, loadingPricing]);
 
   const renderListHeader = useCallback(() => {
     return (

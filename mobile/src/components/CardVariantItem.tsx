@@ -9,12 +9,14 @@ interface CardVariantItemProps {
   variant: CardVariant;
   pricing: CardPricing | null;
   onQuantityChange: (variantId: string, newQuantity: number) => void;
+  loadingPricing?: boolean;
 }
 
 export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
   variant,
   pricing,
   onQuantityChange,
+  loadingPricing = false,
 }) => {
   const { colors } = useTheme();
 
@@ -26,11 +28,14 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
   );
 
   const formattedPrice = useMemo(() => {
+    if (loadingPricing) {
+      return 'Loading price...';
+    }
     if (!pricing || pricing.ungraded_price === null) {
       return 'No price available';
     }
     return `$${(pricing.ungraded_price / 100).toFixed(2)}`;
-  }, [pricing]);
+  }, [pricing, loadingPricing]);
 
   const styles = useMemo(() => StyleSheet.create({
     container: {
