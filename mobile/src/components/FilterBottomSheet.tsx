@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useCallback, forwardRef, useMemo, useRef, useEffect } from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  Modal,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  ScrollView,
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { BottomSheetModal, BottomSheetBackdrop, BottomSheetView, BottomSheetScrollView } from '@gorhom/bottom-sheet';
+import type { BottomSheetBackdropProps } from '@gorhom/bottom-sheet';
 import { useTheme } from '../contexts/ThemeContext';
 
 export interface FilterOption {
@@ -16,7 +15,6 @@ export interface FilterOption {
 }
 
 interface FilterBottomSheetProps {
-  visible: boolean;
   title: string;
   options: FilterOption[];
   selectedValues: string[];
@@ -25,42 +23,61 @@ interface FilterBottomSheetProps {
   multiSelect?: boolean;
 }
 
-export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
-  visible,
+const FilterBottomSheetComponent = forwardRef(({
   title,
   options,
   selectedValues,
   onSelect,
   onClose,
   multiSelect = true,
-}) => {
+}: FilterBottomSheetProps, ref: React.Ref<BottomSheetModal>) => {
   const { colors } = useTheme();
 
-  const handleOptionPress = (value: string) => {
+  // Use refs to store latest values without triggering re-renders
+  const selectedValuesRef = useRef(selectedValues);
+  const onSelectRef = useRef(onSelect);
+  const onCloseRef = useRef(onClose);
+
+  // Keep refs up to date
+  useEffect(() => {
+    selectedValuesRef.current = selectedValues;
+    onSelectRef.current = onSelect;
+    onCloseRef.current = onClose;
+  }, [selectedValues, onSelect, onClose]);
+
+  console.log('FilterBottomSheet rendering with selectedValues:', selectedValues);
+
+  const handleOptionPress = useCallback((value: string) => {
+    console.log('handleOptionPress called:', value, 'multiSelect:', multiSelect);
     if (multiSelect) {
-      const newValues = selectedValues.includes(value)
-        ? selectedValues.filter((v) => v !== value)
-        : [...selectedValues, value];
-      onSelect(newValues);
+      const newValues = selectedValuesRef.current.includes(value)
+        ? selectedValuesRef.current.filter((v) => v !== value)
+        : [...selectedValuesRef.current, value];
+      console.log('Calling onSelect with:', newValues);
+      onSelectRef.current(newValues);
+      console.log('onSelect completed, NOT calling onClose');
     } else {
-      onSelect([value]);
-      onClose();
+      onSelectRef.current([value]);
+      onCloseRef.current();
     }
-  };
+  }, [multiSelect]);
+
+  const renderBackdrop = useCallback(
+    (props: BottomSheetBackdropProps) => (
+      <BottomSheetBackdrop
+        {...props}
+        disappearsOnIndex={-1}
+        appearsOnIndex={0}
+        opacity={0.5}
+        pressBehavior={multiSelect ? 'none' : 'close'}
+      />
+    ),
+    [multiSelect],
+  );
 
   const styles = StyleSheet.create({
-    overlay: {
-      flex: 1,
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      justifyContent: 'flex-end',
-    },
     container: {
-      backgroundColor: colors.bg,
-      borderTopLeftRadius: 20,
-      borderTopRightRadius: 20,
-      paddingTop: 20,
-      paddingBottom: 40,
-      maxHeight: '70%',
+      flex: 1,
     },
     header: {
       flexDirection: 'row',
@@ -85,7 +102,7 @@ export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
     },
     scrollView: {
       paddingTop: 8,
-      flex: 1,
+      maxHeight: 400,
     },
     option: {
       flexDirection: 'row',
@@ -124,57 +141,70 @@ export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
     },
   });
 
-  return (
-    <Modal
-      visible={visible}
-      transparent
-      animationType="slide"
-      onRequestClose={onClose}
+  const handleDismiss = useCallback(() => {
+    console.log('BottomSheetModal onDismiss called');
+    onCloseRef.current();
+  }, []);
+
+  const handleChange = useCallback((index: number) => {
+    console.log('BottomSheetModal onChange called with index:', index);
+  }, []);
+
+  return useMemo(() => (
+    <BottomSheetModal
+      ref={ref}
+      snapPoints={['60%']}
+      backdropComponent={renderBackdrop}
+      onChange={handleChange}
+      onDismiss={handleDismiss}
+      backgroundStyle={{ backgroundColor: colors.bg }}
+      handleIndicatorStyle={{ backgroundColor: colors.border }}
+      enablePanDownToClose={!multiSelect}
+      enableContentPanningGesture={false}
+      enableDynamicSizing={false}
+      enableHandlePanningGesture={!multiSelect}
+      enableOverDrag={false}
     >
-      <TouchableWithoutFeedback onPress={multiSelect ? undefined : onClose}>
-        <View style={styles.overlay}>
-          <TouchableWithoutFeedback>
-            <View style={styles.container}>
-              <View style={styles.header}>
-                <Text style={styles.title}>{title}</Text>
-                <TouchableOpacity
-                  style={styles.closeButton}
-                  onPress={onClose}
-                >
-                  <Text style={styles.closeText}>×</Text>
-                </TouchableOpacity>
-              </View>
-
-              <ScrollView style={styles.scrollView}>
-                {options.map((option) => {
-                  const isSelected = selectedValues.includes(option.value);
-                  return (
-                    <TouchableOpacity
-                      key={option.value}
-                      style={styles.option}
-                      onPress={() => handleOptionPress(option.value)}
-                    >
-                      <Text style={styles.optionText}>{option.label}</Text>
-                      {isSelected && <Text style={styles.checkmark}>✓</Text>}
-                    </TouchableOpacity>
-                  );
-                })}
-              </ScrollView>
-
-              {multiSelect && (
-                <View style={styles.footer}>
-                  <TouchableOpacity
-                    style={styles.doneButton}
-                    onPress={onClose}
-                  >
-                    <Text style={styles.doneButtonText}>Done</Text>
-                  </TouchableOpacity>
-                </View>
-              )}
-            </View>
-          </TouchableWithoutFeedback>
+      <BottomSheetView style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.title}>{title}</Text>
+          <TouchableOpacity
+            style={styles.closeButton}
+            onPress={() => onCloseRef.current()}
+          >
+            <Text style={styles.closeText}>×</Text>
+          </TouchableOpacity>
         </View>
-      </TouchableWithoutFeedback>
-    </Modal>
-  );
-};
+
+        <BottomSheetScrollView style={styles.scrollView}>
+          {options.map((option) => {
+            const isSelected = selectedValues.includes(option.value);
+            return (
+              <TouchableOpacity
+                key={option.value}
+                style={styles.option}
+                onPress={() => handleOptionPress(option.value)}
+              >
+                <Text style={styles.optionText}>{option.label}</Text>
+                {isSelected && <Text style={styles.checkmark}>✓</Text>}
+              </TouchableOpacity>
+            );
+          })}
+        </BottomSheetScrollView>
+
+        {multiSelect && (
+          <View style={styles.footer}>
+            <TouchableOpacity
+              style={styles.doneButton}
+              onPress={() => onCloseRef.current()}
+            >
+              <Text style={styles.doneButtonText}>Done</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+      </BottomSheetView>
+    </BottomSheetModal>
+  ), [ref, colors, title, options, multiSelect, renderBackdrop, handleChange, handleDismiss, handleOptionPress]);
+});
+
+export const FilterBottomSheet = FilterBottomSheetComponent;

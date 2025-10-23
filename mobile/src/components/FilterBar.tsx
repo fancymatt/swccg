@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
+import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { FilterChip } from './FilterChip';
 import { FilterBottomSheet, FilterOption } from './FilterBottomSheet';
 
@@ -22,6 +23,14 @@ export const FilterBar: React.FC<FilterBarProps> = ({
   onFiltersChange,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const sheetRef = useRef<BottomSheetModal>(null);
+
+  // Present sheet when a category is selected
+  useEffect(() => {
+    if (selectedCategory !== null) {
+      sheetRef.current?.present();
+    }
+  }, [selectedCategory]);
 
   const hasActiveFilters = Object.values(activeFilters).some(
     (values) => values.length > 0
@@ -76,17 +85,22 @@ export const FilterBar: React.FC<FilterBarProps> = ({
         </ScrollView>
       </View>
 
-      {currentCategory && (
-        <FilterBottomSheet
-          visible={selectedCategory !== null}
-          title={currentCategory.label}
-          options={currentCategory.options}
-          selectedValues={activeFilters[currentCategory.key] || []}
-          onSelect={(values) => handleFilterSelect(currentCategory.key, values)}
-          onClose={() => setSelectedCategory(null)}
-          multiSelect={currentCategory.multiSelect !== false}
-        />
-      )}
+      <FilterBottomSheet
+        ref={sheetRef}
+        title={currentCategory?.label || ''}
+        options={currentCategory?.options || []}
+        selectedValues={currentCategory ? (activeFilters[currentCategory.key] || []) : []}
+        onSelect={(values) => {
+          if (currentCategory) {
+            handleFilterSelect(currentCategory.key, values);
+          }
+        }}
+        onClose={() => {
+          setSelectedCategory(null);
+          sheetRef.current?.dismiss();
+        }}
+        multiSelect={currentCategory?.multiSelect !== false}
+      />
     </>
   );
 };
