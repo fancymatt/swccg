@@ -85,6 +85,7 @@ export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
     },
     scrollView: {
       paddingTop: 8,
+      flex: 1,
     },
     option: {
       flexDirection: 'row',
@@ -104,6 +105,23 @@ export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
       color: colors.accent,
       fontWeight: 'bold',
     },
+    footer: {
+      paddingHorizontal: 20,
+      paddingTop: 16,
+      borderTopWidth: 1,
+      borderTopColor: colors.border,
+    },
+    doneButton: {
+      backgroundColor: colors.accent,
+      paddingVertical: 14,
+      borderRadius: 10,
+      alignItems: 'center',
+    },
+    doneButtonText: {
+      color: colors.onAccent,
+      fontSize: 16,
+      fontWeight: '600',
+    },
   });
 
   return (
@@ -113,7 +131,7 @@ export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
       animationType="slide"
       onRequestClose={onClose}
     >
-      <TouchableWithoutFeedback onPress={onClose}>
+      <TouchableWithoutFeedback onPress={multiSelect ? undefined : onClose}>
         <View style={styles.overlay}>
           <TouchableWithoutFeedback>
             <View style={styles.container}>
@@ -142,6 +160,17 @@ export const FilterBottomSheet: React.FC<FilterBottomSheetProps> = ({
                   );
                 })}
               </ScrollView>
+
+              {multiSelect && (
+                <View style={styles.footer}>
+                  <TouchableOpacity
+                    style={styles.doneButton}
+                    onPress={onClose}
+                  >
+                    <Text style={styles.doneButtonText}>Done</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
             </View>
           </TouchableWithoutFeedback>
         </View>

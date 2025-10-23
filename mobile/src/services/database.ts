@@ -13,7 +13,7 @@ let isInitialized = false;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 29;
+const DB_VERSION = 31;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -27,7 +27,8 @@ const ENCYCLOPEDIA_SCHEMA = `
     name TEXT NOT NULL,
     release_date TEXT,
     abbreviation TEXT,
-    icon_path TEXT
+    icon_path TEXT,
+    category TEXT
   );
 
   CREATE TABLE IF NOT EXISTS cards (
@@ -223,7 +224,7 @@ async function checkDatabaseStatus(): Promise<DatabaseStatus> {
  * Returns the database status: 'first-time', 'migration', or 'up-to-date'
  */
 export async function seedEncyclopedia(
-  sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string; icon_path?: string }>,
+  sets: Array<{ id: string; name: string; abbreviation?: string; release_date?: string; icon_path?: string; category?: string }>,
   cards: Array<{ id: string; name: string; side: string; type: string; icon?: string }>,
   setCards: Array<{ set_id: string; card_id: string; card_number: string; rarity?: string }>,
   variants: Array<{ id: string; card_id: string; name: string; code: string; details?: string }>,
@@ -246,15 +247,21 @@ export async function seedEncyclopedia(
       console.log('Setting up card encyclopedia for the first time...');
     } else if (status === 'migration') {
       console.log('Migrating card encyclopedia to version ' + DB_VERSION + '...');
-      // Drop existing tables to recreate with new schema
-      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS card_pricing; DROP TABLE IF EXISTS variant_set_appearances; DROP TABLE IF EXISTS variants; DROP TABLE IF EXISTS set_cards; DROP TABLE IF EXISTS cards; DROP TABLE IF EXISTS sets;');
+
+      // Checkpoint WAL to ensure all changes are flushed
+      await encyclopediaDb.execAsync('PRAGMA wal_checkpoint(FULL);');
+
+      // Drop existing tables one by one to avoid locking issues
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS card_pricing;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS variant_set_appearances;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS variants;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS set_cards;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS cards;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS sets;');
+      await encyclopediaDb.execAsync('DROP TABLE IF EXISTS _metadata;');
+
       // Recreate tables with updated schema
       await encyclopediaDb.execAsync(ENCYCLOPEDIA_SCHEMA);
-    }
-
-    // Clear existing data (only needed for first-time setup since migration drops tables)
-    if (status === 'first-time') {
-      await encyclopediaDb.execAsync('DELETE FROM variants; DELETE FROM set_cards; DELETE FROM cards; DELETE FROM sets;');
     }
 
     // BEGIN TRANSACTION for atomic operations and better performance
@@ -262,99 +269,124 @@ export async function seedEncyclopedia(
     await encyclopediaDb.execAsync('BEGIN TRANSACTION');
 
     try {
-      // Batch insert sets
+      // Batch insert sets (in chunks to avoid SQLite variable limit)
       console.log(`Inserting ${sets.length} sets...`);
-      const setsPlaceholders = sets.map(() => '(?, ?, ?, ?, ?)').join(', ');
-      const setsValues = sets.flatMap(set => [
-        set.id,
-        set.name,
-        set.abbreviation || null,
-        set.release_date || null,
-        set.icon_path || null
-      ]);
-      await encyclopediaDb.runAsync(
-        `INSERT INTO sets (id, name, abbreviation, release_date, icon_path) VALUES ${setsPlaceholders}`,
-        setsValues
-      );
-
-      // Batch insert cards
-      console.log(`Inserting ${cards.length} cards...`);
-      const cardsPlaceholders = cards.map(() => '(?, ?, ?, ?, ?)').join(', ');
-      const cardsValues = cards.flatMap(card => [
-        card.id,
-        card.name,
-        card.side,
-        card.type,
-        card.icon || null
-      ]);
-      await encyclopediaDb.runAsync(
-        `INSERT OR REPLACE INTO cards (id, name, side, type, icon) VALUES ${cardsPlaceholders}`,
-        cardsValues
-      );
-
-      // Batch insert set_cards relationships
-      console.log(`Inserting ${setCards.length} set-card relationships...`);
-      const setCardsPlaceholders = setCards.map(() => '(?, ?, ?, ?)').join(', ');
-      const setCardsValues = setCards.flatMap(setCard => [
-        setCard.set_id,
-        setCard.card_id,
-        setCard.card_number,
-        setCard.rarity || null
-      ]);
-      await encyclopediaDb.runAsync(
-        `INSERT OR REPLACE INTO set_cards (set_id, card_id, card_number, rarity) VALUES ${setCardsPlaceholders}`,
-        setCardsValues
-      );
-
-      // Batch insert variants
-      console.log(`Inserting ${variants.length} variants...`);
-      const variantsPlaceholders = variants.map(() => '(?, ?, ?, ?, ?)').join(', ');
-      const variantsValues = variants.flatMap(variant => [
-        variant.id,
-        variant.card_id,
-        variant.name,
-        variant.code,
-        variant.details || null
-      ]);
-      await encyclopediaDb.runAsync(
-        `INSERT OR REPLACE INTO variants (id, card_id, name, code, details) VALUES ${variantsPlaceholders}`,
-        variantsValues
-      );
-
-      // Batch insert variant_set_appearances relationships
-      console.log(`Inserting ${variantSetAppearances.length} variant appearances...`);
-      const appearancesPlaceholders = variantSetAppearances.map(() => '(?, ?, ?, ?)').join(', ');
-      const appearancesValues = variantSetAppearances.flatMap(appearance => [
-        appearance.set_id,
-        appearance.variant_id,
-        appearance.card_number,
-        appearance.rarity || null
-      ]);
-      await encyclopediaDb.runAsync(
-        `INSERT OR REPLACE INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES ${appearancesPlaceholders}`,
-        appearancesValues
-      );
-
-      // Batch insert pricing data if provided
-      if (pricingData && pricingData.length > 0) {
-        console.log(`Inserting ${pricingData.length} pricing records...`);
-        const pricingPlaceholders = pricingData.map(() => '(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').join(', ');
-        const pricingValues = pricingData.flatMap(pricing => [
-          pricing.card_name,
-          pricing.pc_id,
-          pricing.pc_card_name,
-          pricing.pc_set_name,
-          pricing.ungraded_price,
-          pricing.grade_7_price,
-          pricing.grade_8_price,
-          pricing.grade_9_price,
-          pricing.grade_10_price,
-          pricing.pc_last_updated_time
+      const SETS_CHUNK_SIZE = 150; // 6 params per set = 900 variables (under 999 limit)
+      for (let i = 0; i < sets.length; i += SETS_CHUNK_SIZE) {
+        const chunk = sets.slice(i, i + SETS_CHUNK_SIZE);
+        const setsPlaceholders = chunk.map(() => '(?, ?, ?, ?, ?, ?)').join(', ');
+        const setsValues = chunk.flatMap(set => [
+          set.id,
+          set.name,
+          set.abbreviation || null,
+          set.release_date || null,
+          set.icon_path || null,
+          set.category || null
         ]);
         await encyclopediaDb.runAsync(
-          `INSERT OR REPLACE INTO card_pricing (card_name, pc_id, pc_card_name, pc_set_name, ungraded_price, grade_7_price, grade_8_price, grade_9_price, grade_10_price, pc_last_updated_time) VALUES ${pricingPlaceholders}`,
-          pricingValues
+          `INSERT INTO sets (id, name, abbreviation, release_date, icon_path, category) VALUES ${setsPlaceholders}`,
+          setsValues
         );
+      }
+
+      // Batch insert cards (in chunks to avoid SQLite variable limit)
+      console.log(`Inserting ${cards.length} cards...`);
+      const CARDS_CHUNK_SIZE = 150; // 5 params per card = 750 variables (under 999 limit)
+      for (let i = 0; i < cards.length; i += CARDS_CHUNK_SIZE) {
+        const chunk = cards.slice(i, i + CARDS_CHUNK_SIZE);
+        const cardsPlaceholders = chunk.map(() => '(?, ?, ?, ?, ?)').join(', ');
+        const cardsValues = chunk.flatMap(card => [
+          card.id,
+          card.name,
+          card.side,
+          card.type,
+          card.icon || null
+        ]);
+        await encyclopediaDb.runAsync(
+          `INSERT OR REPLACE INTO cards (id, name, side, type, icon) VALUES ${cardsPlaceholders}`,
+          cardsValues
+        );
+      }
+
+      // Batch insert set_cards relationships (in chunks to avoid SQLite variable limit)
+      console.log(`Inserting ${setCards.length} set-card relationships...`);
+      const SET_CARDS_CHUNK_SIZE = 200; // 4 params per relationship = 800 variables (under 999 limit)
+      for (let i = 0; i < setCards.length; i += SET_CARDS_CHUNK_SIZE) {
+        const chunk = setCards.slice(i, i + SET_CARDS_CHUNK_SIZE);
+        const setCardsPlaceholders = chunk.map(() => '(?, ?, ?, ?)').join(', ');
+        const setCardsValues = chunk.flatMap(setCard => [
+          setCard.set_id,
+          setCard.card_id,
+          setCard.card_number,
+          setCard.rarity || null
+        ]);
+        await encyclopediaDb.runAsync(
+          `INSERT OR REPLACE INTO set_cards (set_id, card_id, card_number, rarity) VALUES ${setCardsPlaceholders}`,
+          setCardsValues
+        );
+      }
+
+      // Batch insert variants (in chunks to avoid SQLite variable limit)
+      console.log(`Inserting ${variants.length} variants...`);
+      const VARIANTS_CHUNK_SIZE = 150; // 5 params per variant = 750 variables (under 999 limit)
+      for (let i = 0; i < variants.length; i += VARIANTS_CHUNK_SIZE) {
+        const chunk = variants.slice(i, i + VARIANTS_CHUNK_SIZE);
+        const variantsPlaceholders = chunk.map(() => '(?, ?, ?, ?, ?)').join(', ');
+        const variantsValues = chunk.flatMap(variant => [
+          variant.id,
+          variant.card_id,
+          variant.name,
+          variant.code,
+          variant.details || null
+        ]);
+        await encyclopediaDb.runAsync(
+          `INSERT OR REPLACE INTO variants (id, card_id, name, code, details) VALUES ${variantsPlaceholders}`,
+          variantsValues
+        );
+      }
+
+      // Batch insert variant_set_appearances relationships (in chunks to avoid SQLite variable limit)
+      console.log(`Inserting ${variantSetAppearances.length} variant appearances...`);
+      const APPEARANCES_CHUNK_SIZE = 200; // 4 params per appearance = 800 variables (under 999 limit)
+      for (let i = 0; i < variantSetAppearances.length; i += APPEARANCES_CHUNK_SIZE) {
+        const chunk = variantSetAppearances.slice(i, i + APPEARANCES_CHUNK_SIZE);
+        const appearancesPlaceholders = chunk.map(() => '(?, ?, ?, ?)').join(', ');
+        const appearancesValues = chunk.flatMap(appearance => [
+          appearance.set_id,
+          appearance.variant_id,
+          appearance.card_number,
+          appearance.rarity || null
+        ]);
+        await encyclopediaDb.runAsync(
+          `INSERT OR REPLACE INTO variant_set_appearances (set_id, variant_id, card_number, rarity) VALUES ${appearancesPlaceholders}`,
+          appearancesValues
+        );
+      }
+
+      // Batch insert pricing data if provided (in chunks to avoid SQLite variable limit)
+      if (pricingData && pricingData.length > 0) {
+        console.log(`Inserting ${pricingData.length} pricing records...`);
+        const PRICING_CHUNK_SIZE = 90; // 10 params per pricing record = 900 variables (under 999 limit)
+        for (let i = 0; i < pricingData.length; i += PRICING_CHUNK_SIZE) {
+          const chunk = pricingData.slice(i, i + PRICING_CHUNK_SIZE);
+          const pricingPlaceholders = chunk.map(() => '(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').join(', ');
+          const pricingValues = chunk.flatMap(pricing => [
+            pricing.card_name,
+            pricing.pc_id,
+            pricing.pc_card_name,
+            pricing.pc_set_name,
+            pricing.ungraded_price,
+            pricing.grade_7_price,
+            pricing.grade_8_price,
+            pricing.grade_9_price,
+            pricing.grade_10_price,
+            pricing.pc_last_updated_time
+          ]);
+          await encyclopediaDb.runAsync(
+            `INSERT OR REPLACE INTO card_pricing (card_name, pc_id, pc_card_name, pc_set_name, ungraded_price, grade_7_price, grade_8_price, grade_9_price, grade_10_price, pc_last_updated_time) VALUES ${pricingPlaceholders}`,
+            pricingValues
+          );
+        }
         console.log('Pricing data inserted successfully');
       }
 
@@ -477,7 +509,8 @@ export async function getAllSets(): Promise<Set[]> {
         name,
         abbreviation,
         release_date,
-        icon_path
+        icon_path,
+        category
       FROM sets
       ORDER BY release_date, name
     `) as Set[];
@@ -792,7 +825,8 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
               return null;
             }
 
-            // Get ALL variants for ALL instances of this card name
+            // Get ALL variants for this specific card (name + side combination)
+            // Important: Filter by both name AND side to avoid mixing light/dark variants
             const variantsRaw = await encyclopediaDb.getAllAsync(`
               SELECT DISTINCT
                 v.id as variant_id,
@@ -801,9 +835,9 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
                 v.details as variant_details
               FROM variants v
               JOIN cards c ON v.card_id = c.id
-              WHERE c.name = ?
+              WHERE c.name = ? AND c.side = ?
               ORDER BY v.code
-            `, [card.card_name]) as Array<{
+            `, [card.card_name, card.side]) as Array<{
               variant_id: string;
               variant_name: string;
               variant_code: string;
@@ -822,6 +856,7 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
                   const appearance = await encyclopediaDb.getFirstAsync(`
                     SELECT
                       vsa.card_number,
+                      vsa.rarity,
                       s.name as set_name,
                       s.abbreviation as set_abbr
                     FROM variant_set_appearances vsa
@@ -831,6 +866,7 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
                     LIMIT 1
                   `, [variant.variant_id]) as {
                     card_number: string;
+                    rarity: string | null;
                     set_name: string;
                     set_abbr: string;
                   } | null;
@@ -849,6 +885,7 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
                     setName: appearance?.set_name || '',
                     cardNumber: appearance?.card_number || '',
                     setAbbr: appearance?.set_abbr || '',
+                    rarity: appearance?.rarity || undefined,
                   };
                 } catch (variantError) {
                   console.error('Error fetching variant info:', variantError);
@@ -861,6 +898,7 @@ export async function searchCardsByName(searchQuery: string): Promise<Card[]> {
                     setName: '',
                     cardNumber: '',
                     setAbbr: '',
+                    rarity: undefined,
                   };
                 }
               })

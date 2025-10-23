@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { View, Text, StyleSheet, ScrollView, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, SectionList, ActivityIndicator, TouchableOpacity, Image, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { getAllSets, getSetCompletionStats } from '../services/database';
 import { ProgressBar } from '../components/ProgressBar';
-import { FilterBar, FilterCategory } from '../components/FilterBar';
 
 interface Set {
   id: string;
@@ -13,6 +12,7 @@ interface Set {
   abbreviation?: string;
   release_date?: string;
   icon_path?: string;
+  category?: string;
 }
 
 interface SetsListScreenProps {
@@ -31,10 +31,6 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
   const { setStats, setAllStats } = useCollectionStats();
   const [sets, setSets] = useState<Set[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
-    edition: [],
-    size: [],
-  });
 
   const getSetIcon = (iconPath?: string) => {
     if (iconPath && iconMap[iconPath]) {
@@ -77,56 +73,78 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
     });
   };
 
-  // Define filter categories
-  const filterCategories: FilterCategory[] = useMemo(() => [
-    {
-      key: 'edition',
-      label: 'Edition',
-      options: [
-        { value: 'limited', label: 'Limited' },
-        { value: 'unlimited', label: 'Unlimited' },
-      ],
-    },
-    {
-      key: 'size',
-      label: 'Size',
-      options: [
-        { value: 'major', label: 'Major (>100 cards)' },
-        { value: 'minor', label: 'Minor (≤100 cards)' },
-      ],
-    },
-  ], []);
 
-  // Filter sets based on active filters
-  const filteredSets = useMemo(() => {
-    let filtered = [...sets];
+  // Base set IDs in chronological order (for sorting within Base Sets category)
+  const BASE_SET_ORDER = [
+    'premiere-limited',
+    'a_new_hope-limited',
+    'hoth-limited',
+    'dagobah-limited',
+    'cloud_city-limited',
+    'jabbas_palace-limited',
+    'special_edition-limited',
+    'endor-limited',
+    'death_star_ii-limited',
+    'tatooine-limited',
+    'coruscant-limited',
+    'theed_palace-limited',
+  ];
 
-    // Apply edition filter
-    if (activeFilters.edition.length > 0) {
-      filtered = filtered.filter((set) => {
-        const isLimited = set.id.endsWith('-limited');
-        const isUnlimited = set.id.endsWith('-unlimited');
-        return activeFilters.edition.some((filter) =>
-          filter === 'limited' ? isLimited : isUnlimited
-        );
+  // Group sets into sections by category
+  const sectionedSets = useMemo(() => {
+    const grouped: Record<string, Set[]> = {
+      'Base Sets': [],
+      'Reflections': [],
+      'Unlimited Sets': [],
+      'Other Sets': [],
+    };
+
+    // Group sets by category from database
+    sets.forEach((set) => {
+      const category = set.category || 'Other Sets';
+      if (grouped[category]) {
+        grouped[category].push(set);
+      } else {
+        // If category doesn't exist in our predefined groups, add to Other Sets
+        grouped['Other Sets'].push(set);
+      }
+    });
+
+    // Sort each group
+    Object.keys(grouped).forEach((category) => {
+      grouped[category].sort((a, b) => {
+        // For base sets, use the predefined chronological order
+        if (category === 'Base Sets') {
+          const indexA = BASE_SET_ORDER.indexOf(a.id);
+          const indexB = BASE_SET_ORDER.indexOf(b.id);
+
+          // If both found in order array, sort by that order
+          if (indexA !== -1 && indexB !== -1) {
+            return indexA - indexB;
+          }
+
+          // If one is not in the array, sort by release date as fallback
+          const dateA = a.release_date ? new Date(a.release_date).getTime() : 0;
+          const dateB = b.release_date ? new Date(b.release_date).getTime() : 0;
+          return dateA - dateB;
+        }
+        // For all other categories, sort by release date
+        const dateA = a.release_date ? new Date(a.release_date).getTime() : 0;
+        const dateB = b.release_date ? new Date(b.release_date).getTime() : 0;
+        return dateA - dateB;
       });
-    }
+    });
 
-    // Apply size filter
-    if (activeFilters.size.length > 0) {
-      filtered = filtered.filter((set) => {
-        const stats = setStats[set.id];
-        if (!stats) return true; // Include if stats not loaded yet
-        const totalCards = stats.total.total;
-        const isMajor = totalCards > 100;
-        return activeFilters.size.some((filter) =>
-          filter === 'major' ? isMajor : !isMajor
-        );
-      });
-    }
+    // Convert to section format, only including non-empty sections
+    const sections = [
+      { title: 'Base Sets', data: grouped['Base Sets'] },
+      { title: 'Reflections', data: grouped['Reflections'] },
+      { title: 'Unlimited Sets', data: grouped['Unlimited Sets'] },
+      { title: 'Other Sets', data: grouped['Other Sets'] },
+    ].filter(section => section.data.length > 0);
 
-    return filtered;
-  }, [sets, activeFilters, setStats]);
+    return sections;
+  }, [sets]);
 
   const styles = StyleSheet.create({
     safeArea: {
@@ -153,12 +171,6 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
       fontSize: 16,
       color: colors.textSecondary,
     },
-    scrollView: {
-      flex: 1,
-    },
-    scrollContent: {
-      padding: 16,
-    },
     loadingContainer: {
       flex: 1,
       justifyContent: 'center',
@@ -168,6 +180,7 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
       backgroundColor: colors.bg,
       borderRadius: 12,
       padding: 20,
+      marginHorizontal: 16,
       marginBottom: 12,
       shadowColor: colors.shadowColor,
       shadowOffset: { width: 0, height: 2 },
@@ -211,6 +224,24 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
       borderTopWidth: 1,
       borderTopColor: colors.border,
     },
+    sectionHeader: {
+      backgroundColor: colors.widgetBg,
+      paddingHorizontal: 16,
+      paddingVertical: 12,
+      marginBottom: 12,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border,
+    },
+    sectionHeaderText: {
+      fontSize: 18,
+      fontWeight: '700',
+      color: colors.accent,
+      textTransform: 'uppercase',
+      letterSpacing: 0.5,
+    },
+    sectionListContent: {
+      paddingBottom: 16,
+    },
   });
 
   if (loading) {
@@ -231,27 +262,20 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
 
   return (
     <SafeAreaView style={styles.safeArea} edges={['top']}>
+      <StatusBar barStyle="dark-content" backgroundColor={colors.bg} />
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Collection</Text>
           <Text style={styles.subtitle}>Select a Set</Text>
         </View>
 
-        <FilterBar
-          categories={filterCategories}
-          activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
-        />
-
-        <ScrollView
-          style={styles.scrollView}
-          contentContainerStyle={styles.scrollContent}
-        >
-          {filteredSets.map((set) => {
+        <SectionList
+          sections={sectionedSets}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item: set }) => {
             const stats = setStats[set.id];
             return (
               <TouchableOpacity
-                key={set.id}
                 style={styles.setCard}
                 onPress={() => handleSetPress(set)}
                 activeOpacity={0.7}
@@ -287,8 +311,15 @@ export const SetsListScreen: React.FC<SetsListScreenProps> = ({ navigation }) =>
                 )}
               </TouchableOpacity>
             );
-          })}
-        </ScrollView>
+          }}
+          renderSectionHeader={({ section: { title } }) => (
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionHeaderText}>{title}</Text>
+            </View>
+          )}
+          contentContainerStyle={styles.sectionListContent}
+          stickySectionHeadersEnabled={true}
+        />
       </View>
     </SafeAreaView>
   );

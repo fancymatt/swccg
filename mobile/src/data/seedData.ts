@@ -63,21 +63,51 @@ const allSetsData = [
   promotionalFoilsCardsData,
 ];
 
+// Define set categories
+// NOTE: Set IDs are inconsistent in source data - some use hyphens, some use underscores
+const BASE_SET_IDS = [
+  'premiere',
+  'a_new_hope',           // underscore
+  'hoth',
+  'dagobah',
+  'cloud_city',           // underscore
+  'jabbas_palace',        // underscore
+  'special-edition',      // hyphen!
+  'endor',
+  'death-star-ii',        // hyphen!
+  'tatooine',
+  'coruscant',
+  'theed-palace',         // hyphen!
+];
+
+const REFLECTIONS_SET_IDS = [
+  'reflections-i',        // hyphen!
+  'reflections-ii',       // hyphen!
+  'reflections-iii',      // hyphen!
+];
+
 // Export sets - split into Limited and Unlimited editions
 // Only Premiere, A New Hope, Hoth, and Dagobah had Unlimited (white border) versions
 // Cloud City was the first set to NOT have an Unlimited version
 export const SEED_SETS = allSetsData.flatMap((setData) => {
+  const setId = setData.set.id;
+
+  // Determine category
+  const isBaseSet = BASE_SET_IDS.includes(setId);
+  const isReflections = REFLECTIONS_SET_IDS.includes(setId);
+
   const limitedSet = {
-    id: `${setData.set.id}-limited`,
+    id: `${setId}-limited`,
     name: setData.set.name,
     abbreviation: setData.set.abbreviation,
     release_date: setData.set.releaseDate,
     icon_path: (setData.set as any).iconPath || 'icon_set_default',
+    category: isBaseSet ? 'Base Sets' : isReflections ? 'Reflections' : 'Other Sets',
   };
 
   // Only these four sets had Unlimited versions (white border)
-  const setsWithUnlimited = ['premiere', 'a-new-hope', 'hoth', 'dagobah'];
-  const hasUnlimited = setsWithUnlimited.includes(setData.set.id);
+  const setsWithUnlimited = ['premiere', 'a_new_hope', 'hoth', 'dagobah'];
+  const hasUnlimited = setsWithUnlimited.includes(setId);
 
   if (!hasUnlimited) {
     return [limitedSet];
@@ -85,7 +115,7 @@ export const SEED_SETS = allSetsData.flatMap((setData) => {
 
   // Create Unlimited version for sets that had them
   const unlimitedSet = {
-    id: `${setData.set.id}-unlimited`,
+    id: `${setId}-unlimited`,
     name: `${setData.set.name} Unlimited`,
     abbreviation: `${setData.set.abbreviation}-U`,
     // Unlimited sets released approximately 6 months after Limited
@@ -93,6 +123,7 @@ export const SEED_SETS = allSetsData.flatMap((setData) => {
       new Date(new Date(setData.set.releaseDate).getTime() + 180 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
       : setData.set.releaseDate,
     icon_path: (setData.set as any).iconPath || 'icon_set_default',
+    category: 'Unlimited Sets',
   };
 
   return [limitedSet, unlimitedSet];

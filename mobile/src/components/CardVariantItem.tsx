@@ -4,6 +4,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { CardCounter } from './CardCounter';
 import type { CardPricing } from '../services/database';
 import type { CardVariant } from '../types';
+import { getRarityDisplayName } from '../utils/rarityUtils';
 
 interface CardVariantItemProps {
   variant: CardVariant;
@@ -67,11 +68,21 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
       fontStyle: 'italic',
       marginTop: 2,
     },
+    priceRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginTop: 4,
+      gap: 8,
+    },
+    rarityText: {
+      fontSize: 14,
+      color: colors.textSecondary,
+      fontWeight: '500',
+    },
     priceText: {
       fontSize: 14,
       color: colors.success,
       fontWeight: '600',
-      marginTop: 4,
     },
   }), [colors]);
 
@@ -87,7 +98,13 @@ export const CardVariantItem: React.FC<CardVariantItemProps> = React.memo(({
         {variant.details && (
           <Text style={styles.variantDetails}>{variant.details}</Text>
         )}
-        <Text style={styles.priceText}>{formattedPrice}</Text>
+        <View style={styles.priceRow}>
+          {variant.rarity && (
+            <Text style={styles.rarityText}>{getRarityDisplayName(variant.rarity)}</Text>
+          )}
+          {variant.rarity && <Text style={styles.rarityText}>•</Text>}
+          <Text style={styles.priceText}>{formattedPrice}</Text>
+        </View>
       </View>
 
       <CardCounter

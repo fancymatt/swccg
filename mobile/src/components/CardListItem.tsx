@@ -124,14 +124,13 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
       fontSize: 14,
       fontWeight: '600',
     },
-    totalOwned: {
+    ownedRow: {
+      marginTop: 6,
+      marginLeft: 12,
+    },
+    ownedText: {
       fontSize: 14,
       color: colors.success,
-      fontWeight: '600',
-    },
-    totalValue: {
-      fontSize: 14,
-      color: colors.accent,
       fontWeight: '600',
     },
     setInfo: {
@@ -204,15 +203,14 @@ export const CardListItem: React.FC<CardListItemProps> = React.memo(({
               </View>
             </>
           )}
-          {totalQuantity > 0 && (
-            <>
-              <Text style={styles.separator}>•</Text>
-              <Text style={styles.totalOwned}>{totalQuantity} owned</Text>
-              <Text style={styles.separator}>•</Text>
-              <Text style={styles.totalValue}>{formattedTotalValue}</Text>
-            </>
-          )}
         </View>
+        {totalQuantity > 0 && (
+          <View style={styles.ownedRow}>
+            <Text style={styles.ownedText}>
+              {totalQuantity} owned ({formattedTotalValue})
+            </Text>
+          </View>
+        )}
       </View>
 
       <View style={styles.variantsContainer}>

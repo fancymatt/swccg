@@ -4,6 +4,7 @@ export interface Set {
   abbreviation: string | null;
   release_date: string | null;
   icon_path: string | null;
+  category: string | null;
 }
 
 export interface CardVariant {
@@ -15,6 +16,7 @@ export interface CardVariant {
   setName?: string; // Set name where this variant appears (for search results)
   cardNumber?: string; // Card number in the set (for search results)
   setAbbr?: string; // Set abbreviation (for search results)
+  rarity?: string; // Rarity of this variant in the set (for search results)
 }
 
 // New: Represents where a specific variant appears (can be in multiple sets)
