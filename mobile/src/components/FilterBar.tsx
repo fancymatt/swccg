@@ -99,7 +99,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({
           setSelectedCategory(null);
           sheetRef.current?.dismiss();
         }}
-        multiSelect={currentCategory?.multiSelect !== false}
+        multiSelect={Boolean(currentCategory?.multiSelect !== false)}
       />
     </>
   );
