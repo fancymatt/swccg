@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as SystemUI from 'expo-system-ui';
 import { lightColors, darkColors, ThemeColors } from '../theme/colors';
 
 type ThemeMode = 'system' | 'light' | 'dark';
@@ -64,6 +65,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     }
   }, [themeMode, systemColorScheme, isLoaded]);
 
+  // Compute colors based on color scheme
+  const colors = colorScheme === 'dark' ? darkColors : lightColors;
+  const isDark = colorScheme === 'dark';
+
+  // Update system UI background color when color scheme changes
+  useEffect(() => {
+    if (isLoaded) {
+      SystemUI.setBackgroundColorAsync(colors.bg).catch((error) => {
+        console.warn('Failed to set system UI background color:', error);
+      });
+    }
+  }, [colorScheme, isLoaded]);
+
   // Persist theme mode when it changes
   const setThemeMode = async (mode: ThemeMode) => {
     try {
@@ -73,9 +87,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       console.error('Failed to save theme mode:', error);
     }
   };
-
-  const colors = colorScheme === 'dark' ? darkColors : lightColors;
-  const isDark = colorScheme === 'dark';
 
   return (
     <ThemeContext.Provider value={{ colors, colorScheme, isDark, themeMode, setThemeMode }}>

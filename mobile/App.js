@@ -6,7 +6,7 @@ import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { useFonts, ZenDots_400Regular } from '@expo-google-fonts/zen-dots';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { ThemeProvider } from './src/contexts/ThemeContext';
+import { ThemeProvider, useTheme } from './src/contexts/ThemeContext';
 import { CollectionStatsProvider } from './src/contexts/CollectionStatsContext';
 import { TabNavigator } from './src/navigation/TabNavigator';
 import { LoadingScreen } from './src/components/LoadingScreen';
@@ -17,6 +17,30 @@ import VARIANT_PRICING_MAPPINGS from './src/data/variant-pricing-mappings.json';
 
 // Keep the native splash screen visible while we load resources
 SplashScreen.preventAutoHideAsync();
+
+// Loading screen wrapper with theme-aware StatusBar
+function LoadingScreenWithStatusBar({ message }) {
+  const { isDark } = useTheme();
+
+  return (
+    <>
+      <LoadingScreen message={message} />
+      <StatusBar style={isDark ? 'light' : 'dark'} />
+    </>
+  );
+}
+
+// Inner app component that uses theme
+function AppContent() {
+  const { isDark } = useTheme();
+
+  return (
+    <>
+      <TabNavigator />
+      <StatusBar style={isDark ? 'light' : 'dark'} />
+    </>
+  );
+}
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -77,7 +101,7 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <ThemeProvider>
-          <LoadingScreen message={loadingMessage} />
+          <LoadingScreenWithStatusBar message={loadingMessage} />
         </ThemeProvider>
       </SafeAreaProvider>
     );
@@ -90,9 +114,8 @@ export default function App() {
           <BottomSheetModalProvider>
             <CollectionStatsProvider>
               <NavigationContainer>
-                <TabNavigator />
+                <AppContent />
               </NavigationContainer>
-              <StatusBar style="auto" />
             </CollectionStatsProvider>
           </BottomSheetModalProvider>
         </ThemeProvider>
