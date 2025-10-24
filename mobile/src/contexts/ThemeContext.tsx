@@ -59,11 +59,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   // Update color scheme when theme mode or system color scheme changes
   useEffect(() => {
-    if (isLoaded) {
-      const newColorScheme = getColorScheme(themeMode, systemColorScheme);
-      setColorScheme(newColorScheme);
-    }
-  }, [themeMode, systemColorScheme, isLoaded]);
+    const newColorScheme = getColorScheme(themeMode, systemColorScheme);
+    setColorScheme(newColorScheme);
+  }, [themeMode, systemColorScheme]);
 
   // Compute colors based on color scheme
   const colors = colorScheme === 'dark' ? darkColors : lightColors;
