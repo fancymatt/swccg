@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../contexts/ThemeContext';
 import { useCollectionStats } from '../contexts/CollectionStatsContext';
 import { CardListItem } from '../components/CardListItem';
 import { ProgressBar } from '../components/ProgressBar';
-import { FilterBar, FilterCategory } from '../components/FilterBar';
+import { FilterableList, FilterConfig } from '../components/Core/FilterableList';
 import { getCardsInSet, updateVariantQuantity, getSetCompletionStats, getBatchVariantPricing, SetCompletionStats, CardPricing } from '../services/database';
 import type { Card } from '../types';
 import { normalizeRarity } from '../utils/rarityUtils';
@@ -25,12 +25,6 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
   const [totalValue, setTotalValue] = useState<number>(0);
   const [pricingMap, setPricingMap] = useState<Map<string, CardPricing>>(new Map());
   const [loadingPricing, setLoadingPricing] = useState<boolean>(false);
-  const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({
-    side: [],
-    type: [],
-    rarity: [],
-    owned: [],
-  });
 
   const calculateTotalValue = useCallback(async (cardsData: Card[]) => {
     setLoadingPricing(true);
@@ -180,8 +174,8 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
     }
   }, [setId, updateSetStats, calculateTotalValue, stats]);
 
-  // Define filter categories
-  const filterCategories: FilterCategory[] = useMemo(() => {
+  // Define filter configurations
+  const filterConfigs: FilterConfig[] = useMemo(() => {
     // Get unique values from cards
     const sides = Array.from(new Set(cards.map((c) => c.side))).sort();
     const types = Array.from(new Set(cards.map((c) => c.type))).sort();
@@ -193,18 +187,24 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
         label: 'Side',
         options: sides.map((s) => ({ value: s, label: s === 'dark' ? 'Dark Side' : 'Light Side' })),
         multiSelect: true,
+        filterFn: (card: Card, selectedValues: string[]) =>
+          selectedValues.includes(card.side),
       },
       {
         key: 'type',
         label: 'Type',
         options: types.map((t) => ({ value: t, label: t })),
         multiSelect: true,
+        filterFn: (card: Card, selectedValues: string[]) =>
+          selectedValues.includes(card.type),
       },
       {
         key: 'rarity',
         label: 'Rarity',
         options: rarities.map((r) => ({ value: r, label: r })),
         multiSelect: true,
+        filterFn: (card: Card, selectedValues: string[]) =>
+          selectedValues.includes(card.rarity || 'Unknown'),
       },
       {
         key: 'owned',
@@ -214,43 +214,15 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
           { value: 'unowned', label: 'Not Owned' },
         ],
         multiSelect: true,
+        filterFn: (card: Card, selectedValues: string[]) => {
+          const isOwned = card.variants.some((v) => v.quantity > 0);
+          return selectedValues.some((filter) =>
+            filter === 'owned' ? isOwned : !isOwned
+          );
+        },
       },
     ];
   }, [cards]);
-
-  // Filter cards based on active filters
-  const filteredCards = useMemo(() => {
-    let filtered = [...cards];
-
-    // Apply side filter
-    if (activeFilters.side.length > 0) {
-      filtered = filtered.filter((card) => activeFilters.side.includes(card.side));
-    }
-
-    // Apply type filter
-    if (activeFilters.type.length > 0) {
-      filtered = filtered.filter((card) => activeFilters.type.includes(card.type));
-    }
-
-    // Apply rarity filter
-    if (activeFilters.rarity.length > 0) {
-      filtered = filtered.filter((card) =>
-        activeFilters.rarity.includes(card.rarity || 'Unknown')
-      );
-    }
-
-    // Apply owned filter
-    if (activeFilters.owned.length > 0) {
-      filtered = filtered.filter((card) => {
-        const isOwned = card.variants.some((v) => v.quantity > 0);
-        return activeFilters.owned.some((filter) =>
-          filter === 'owned' ? isOwned : !isOwned
-        );
-      });
-    }
-
-    return filtered;
-  }, [cards, activeFilters]);
 
   const styles = useMemo(() => StyleSheet.create({
     safeArea: {
@@ -298,78 +270,74 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
     },
   }), [colors]);
 
-  const renderCard = useCallback(({ item }: { item: Card }) => (
-    <CardListItem
-      card={item}
-      pricingMap={pricingMap}
-      onVariantQuantityChange={handleVariantQuantityChange}
-      loadingPricing={loadingPricing}
-    />
-  ), [handleVariantQuantityChange, pricingMap, loadingPricing]);
+  const renderCard = useCallback(
+    ({ item }: { item: Card }) => (
+      <CardListItem
+        card={item}
+        pricingMap={pricingMap}
+        onVariantQuantityChange={handleVariantQuantityChange}
+        loadingPricing={loadingPricing}
+      />
+    ),
+    [handleVariantQuantityChange, pricingMap, loadingPricing]
+  );
 
-  const renderListHeader = useCallback(() => {
+  const renderListHeader = useMemo(() => {
+    if (!stats) return null;
+
     return (
-      <>
-        {stats && (
-          <View style={styles.summarySection}>
-            <Text style={[styles.summaryTitle, { color: colors.fg }]}>
-              Collection Progress
+      <View style={styles.summarySection}>
+        <Text style={[styles.summaryTitle, { color: colors.fg }]}>
+          Collection Progress
+        </Text>
+        <ProgressBar
+          label="Total"
+          owned={stats.total.owned}
+          total={stats.total.total}
+          color={colors.accent}
+        />
+        {stats.common.total > 0 && (
+          <ProgressBar
+            label="Common"
+            owned={stats.common.owned}
+            total={stats.common.total}
+            color="#10b981"
+          />
+        )}
+        {stats.uncommon.total > 0 && (
+          <ProgressBar
+            label="Uncommon"
+            owned={stats.uncommon.owned}
+            total={stats.uncommon.total}
+            color="#3b82f6"
+          />
+        )}
+        {stats.rare.total > 0 && (
+          <ProgressBar
+            label="Rare"
+            owned={stats.rare.owned}
+            total={stats.rare.total}
+            color="#f59e0b"
+          />
+        )}
+        {stats.other.total > 0 && (
+          <ProgressBar
+            label="Other"
+            owned={stats.other.owned}
+            total={stats.other.total}
+            color="#8b5cf6"
+          />
+        )}
+        {totalValue > 0 && (
+          <View style={styles.totalValueContainer}>
+            <Text style={styles.totalValueText}>
+              Total Value: ${totalValue.toFixed(2)}
             </Text>
-            <ProgressBar
-              label="Total"
-              owned={stats.total.owned}
-              total={stats.total.total}
-              color={colors.accent}
-            />
-            {stats.common.total > 0 && (
-              <ProgressBar
-                label="Common"
-                owned={stats.common.owned}
-                total={stats.common.total}
-                color="#10b981"
-              />
-            )}
-            {stats.uncommon.total > 0 && (
-              <ProgressBar
-                label="Uncommon"
-                owned={stats.uncommon.owned}
-                total={stats.uncommon.total}
-                color="#3b82f6"
-              />
-            )}
-            {stats.rare.total > 0 && (
-              <ProgressBar
-                label="Rare"
-                owned={stats.rare.owned}
-                total={stats.rare.total}
-                color="#f59e0b"
-              />
-            )}
-            {stats.other.total > 0 && (
-              <ProgressBar
-                label="Other"
-                owned={stats.other.owned}
-                total={stats.other.total}
-                color="#8b5cf6"
-              />
-            )}
-            {totalValue > 0 && (
-              <View style={styles.totalValueContainer}>
-                <Text style={styles.totalValueText}>
-                  Total Value: ${totalValue.toFixed(2)}
-                </Text>
-              </View>
-            )}
           </View>
         )}
-        <FilterBar
-          categories={filterCategories}
-          activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
-        />
-      </>
+      </View>
     );
-  }, [stats, colors, styles, filterCategories, activeFilters, totalValue]);
+  }, [stats, colors, styles, totalValue]);
 
   const keyExtractor = useCallback((item: Card) => item.id, []);
 
@@ -388,17 +356,22 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
   return (
     <SafeAreaView style={styles.safeArea} edges={[]}>
       <View style={styles.container}>
-        <FlatList
-          data={filteredCards}
+        <FilterableList<Card>
+          items={cards}
           renderItem={renderCard}
           keyExtractor={keyExtractor}
+          filters={filterConfigs}
+          storageKey={`set_${setId}_filters`}
           ListHeaderComponent={renderListHeader}
-          contentContainerStyle={styles.listContent}
-          removeClippedSubviews={true}
-          maxToRenderPerBatch={10}
-          updateCellsBatchingPeriod={50}
-          initialNumToRender={10}
-          windowSize={5}
+          contentPaddingTop={16}
+          contentPaddingBottom={16}
+          scrollProps={{
+            removeClippedSubviews: true,
+            maxToRenderPerBatch: 10,
+            updateCellsBatchingPeriod: 50,
+            initialNumToRender: 10,
+            windowSize: 5,
+          }}
         />
       </View>
     </SafeAreaView>
