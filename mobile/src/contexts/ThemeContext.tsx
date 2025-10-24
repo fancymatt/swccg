@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as SystemUI from 'expo-system-ui';
+// import * as SystemUI from 'expo-system-ui'; // Disabled until native rebuild
 import { lightColors, darkColors, ThemeColors } from '../theme/colors';
 
 type ThemeMode = 'system' | 'light' | 'dark';
@@ -65,15 +65,15 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const isDark = colorScheme === 'dark';
 
   // Update system UI background color when color scheme changes
-  useEffect(() => {
-    if (isLoaded && colors.bg) {
-      // Only update if we have a valid color string
-      const bgColor = String(colors.bg);
-      SystemUI.setBackgroundColorAsync(bgColor).catch((error) => {
-        console.warn('Failed to set system UI background color:', error);
-      });
-    }
-  }, [colorScheme, isLoaded, colors.bg]);
+  // Disabled until native rebuild after expo-system-ui installation
+  // useEffect(() => {
+  //   if (isLoaded && colors.bg) {
+  //     const bgColor = String(colors.bg);
+  //     SystemUI.setBackgroundColorAsync(bgColor).catch((error) => {
+  //       console.warn('Failed to set system UI background color:', error);
+  //     });
+  //   }
+  // }, [colorScheme, isLoaded, colors.bg]);
 
   // Persist theme mode when it changes
   const setThemeMode = async (mode: ThemeMode) => {
