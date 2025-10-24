@@ -111,13 +111,14 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <ThemeProvider>
-          <BottomSheetModalProvider>
+          {/* BottomSheetModalProvider temporarily disabled until native rebuild */}
+          {/* <BottomSheetModalProvider> */}
             <CollectionStatsProvider>
               <NavigationContainer>
                 <AppContent />
               </NavigationContainer>
             </CollectionStatsProvider>
-          </BottomSheetModalProvider>
+          {/* </BottomSheetModalProvider> */}
         </ThemeProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
