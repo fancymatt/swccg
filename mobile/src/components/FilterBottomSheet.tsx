@@ -33,6 +33,9 @@ const FilterBottomSheetComponent = forwardRef(({
 }: FilterBottomSheetProps, ref: React.Ref<BottomSheetModal>) => {
   const { colors } = useTheme();
 
+  // Ensure multiSelect is a boolean
+  const isMultiSelect = Boolean(multiSelect);
+
   // Use refs to store latest values without triggering re-renders
   const selectedValuesRef = useRef(selectedValues);
   const onSelectRef = useRef(onSelect);
@@ -48,8 +51,8 @@ const FilterBottomSheetComponent = forwardRef(({
   console.log('FilterBottomSheet rendering with selectedValues:', selectedValues);
 
   const handleOptionPress = useCallback((value: string) => {
-    console.log('handleOptionPress called:', value, 'multiSelect:', multiSelect);
-    if (multiSelect) {
+    console.log('handleOptionPress called:', value, 'multiSelect:', isMultiSelect);
+    if (isMultiSelect) {
       const newValues = selectedValuesRef.current.includes(value)
         ? selectedValuesRef.current.filter((v) => v !== value)
         : [...selectedValuesRef.current, value];
@@ -60,7 +63,7 @@ const FilterBottomSheetComponent = forwardRef(({
       onSelectRef.current([value]);
       onCloseRef.current();
     }
-  }, [multiSelect]);
+  }, [isMultiSelect]);
 
   const renderBackdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
@@ -69,10 +72,10 @@ const FilterBottomSheetComponent = forwardRef(({
         disappearsOnIndex={-1}
         appearsOnIndex={0}
         opacity={0.5}
-        pressBehavior={multiSelect ? 'none' : 'close'}
+        pressBehavior={isMultiSelect ? 'none' : 'close'}
       />
     ),
-    [multiSelect],
+    [isMultiSelect],
   );
 
   const styles = StyleSheet.create({
@@ -159,10 +162,10 @@ const FilterBottomSheetComponent = forwardRef(({
       onDismiss={handleDismiss}
       backgroundStyle={{ backgroundColor: colors.bg }}
       handleIndicatorStyle={{ backgroundColor: colors.border }}
-      enablePanDownToClose={!multiSelect}
+      enablePanDownToClose={!isMultiSelect}
       enableContentPanningGesture={false}
       enableDynamicSizing={false}
-      enableHandlePanningGesture={!multiSelect}
+      enableHandlePanningGesture={!isMultiSelect}
       enableOverDrag={false}
     >
       <BottomSheetView style={styles.container}>
@@ -192,7 +195,7 @@ const FilterBottomSheetComponent = forwardRef(({
           })}
         </BottomSheetScrollView>
 
-        {multiSelect && (
+        {isMultiSelect && (
           <View style={styles.footer}>
             <TouchableOpacity
               style={styles.doneButton}
@@ -204,7 +207,7 @@ const FilterBottomSheetComponent = forwardRef(({
         )}
       </BottomSheetView>
     </BottomSheetModal>
-  ), [ref, colors, title, options, multiSelect, renderBackdrop, handleChange, handleDismiss, handleOptionPress]);
+  ), [ref, colors, title, options, isMultiSelect, renderBackdrop, handleChange, handleDismiss, handleOptionPress]);
 });
 
 export const FilterBottomSheet = FilterBottomSheetComponent;

@@ -30,10 +30,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   // Determine the actual color scheme based on theme mode and system settings
   const getColorScheme = (mode: ThemeMode, system: 'light' | 'dark' | null | undefined): ColorScheme => {
-    if (mode === 'system') {
-      return system === 'dark' ? 'dark' : 'light';
-    }
-    return mode;
+    return mode === 'system' ? (system === 'dark' ? 'dark' : 'light') : mode;
   };
 
   const [colorScheme, setColorScheme] = useState<ColorScheme>(
@@ -69,12 +66,14 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   // Update system UI background color when color scheme changes
   useEffect(() => {
-    if (isLoaded) {
-      SystemUI.setBackgroundColorAsync(colors.bg).catch((error) => {
+    if (isLoaded && colors.bg) {
+      // Only update if we have a valid color string
+      const bgColor = String(colors.bg);
+      SystemUI.setBackgroundColorAsync(bgColor).catch((error) => {
         console.warn('Failed to set system UI background color:', error);
       });
     }
-  }, [colorScheme, isLoaded]);
+  }, [colorScheme, isLoaded, colors.bg]);
 
   // Persist theme mode when it changes
   const setThemeMode = async (mode: ThemeMode) => {
