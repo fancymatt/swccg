@@ -162,11 +162,11 @@ const FilterBottomSheetComponent = forwardRef(({
       onDismiss={handleDismiss}
       backgroundStyle={{ backgroundColor: colors.bg }}
       handleIndicatorStyle={{ backgroundColor: colors.border }}
-      enablePanDownToClose={!isMultiSelect}
-      enableContentPanningGesture={false}
-      enableDynamicSizing={false}
-      enableHandlePanningGesture={!isMultiSelect}
-      enableOverDrag={false}
+      enablePanDownToClose={Boolean(!isMultiSelect)}
+      enableContentPanningGesture={Boolean(false)}
+      enableDynamicSizing={Boolean(false)}
+      enableHandlePanningGesture={Boolean(!isMultiSelect)}
+      enableOverDrag={Boolean(false)}
     >
       <BottomSheetView style={styles.container}>
         <View style={styles.header}>
