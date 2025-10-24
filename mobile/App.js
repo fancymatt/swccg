@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { useFonts, ZenDots_400Regular } from '@expo-google-fonts/zen-dots';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
@@ -82,15 +84,19 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <ThemeProvider>
-        <CollectionStatsProvider>
-          <NavigationContainer>
-            <TabNavigator />
-          </NavigationContainer>
-          <StatusBar style="auto" />
-        </CollectionStatsProvider>
-      </ThemeProvider>
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <ThemeProvider>
+          <BottomSheetModalProvider>
+            <CollectionStatsProvider>
+              <NavigationContainer>
+                <TabNavigator />
+              </NavigationContainer>
+              <StatusBar style="auto" />
+            </CollectionStatsProvider>
+          </BottomSheetModalProvider>
+        </ThemeProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }

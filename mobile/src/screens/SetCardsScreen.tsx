@@ -192,16 +192,19 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
         key: 'side',
         label: 'Side',
         options: sides.map((s) => ({ value: s, label: s === 'dark' ? 'Dark Side' : 'Light Side' })),
+        multiSelect: true,
       },
       {
         key: 'type',
         label: 'Type',
         options: types.map((t) => ({ value: t, label: t })),
+        multiSelect: true,
       },
       {
         key: 'rarity',
         label: 'Rarity',
         options: rarities.map((r) => ({ value: r, label: r })),
+        multiSelect: true,
       },
       {
         key: 'owned',
@@ -210,6 +213,7 @@ export const SetCardsScreen: React.FC<SetCardsScreenProps> = ({ route }) => {
           { value: 'owned', label: 'Owned' },
           { value: 'unowned', label: 'Not Owned' },
         ],
+        multiSelect: true,
       },
     ];
   }, [cards]);

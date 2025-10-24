@@ -13,7 +13,7 @@ let isInitialized = false;
 
 // Database version for tracking migrations
 // Increment this to trigger a reseed of the encyclopedia database
-const DB_VERSION = 31;
+const DB_VERSION = 34;
 
 // Encyclopedia database schema
 const ENCYCLOPEDIA_SCHEMA = `
@@ -412,7 +412,9 @@ export async function seedEncyclopedia(
         const caseStatements: string[] = [];
 
         for (const [variantId, pcId] of Object.entries(variantPricingMappings)) {
-          const internalId = pcIdToInternalId.get(pcId);
+          // Parse pcId as number since JSON stores it as string but DB has it as number
+          const pcIdNumber = typeof pcId === 'string' ? parseInt(pcId, 10) : pcId;
+          const internalId = pcIdToInternalId.get(pcIdNumber);
           if (internalId) {
             variantIds.push(variantId);
             caseStatements.push(`WHEN '${variantId}' THEN ${internalId}`);
@@ -449,6 +451,29 @@ export async function seedEncyclopedia(
       console.log('Encyclopedia setup complete!');
     } else if (status === 'migration') {
       console.log('Encyclopedia migration complete!');
+
+      // DIAGNOSTIC: Check variant IDs and pricing_id values
+      console.log('=== DIAGNOSTIC: Checking variant IDs and pricing ===');
+
+      // Get sample variant IDs from database
+      const sampleVariants = await encyclopediaDb.getAllAsync<{ id: string; pricing_id: number | null }>(
+        'SELECT id, pricing_id FROM variants LIMIT 10'
+      );
+      console.log('Sample variant IDs from database:', sampleVariants);
+
+      // Count variants with pricing_id set
+      const pricingStats = await encyclopediaDb.getFirstAsync<{ total: number; with_pricing: number }>(
+        'SELECT COUNT(*) as total, SUM(CASE WHEN pricing_id IS NOT NULL THEN 1 ELSE 0 END) as with_pricing FROM variants'
+      );
+      console.log('Pricing stats:', pricingStats);
+
+      // Get sample Hoth variants specifically
+      const hothVariants = await encyclopediaDb.getAllAsync<{ id: string; pricing_id: number | null }>(
+        "SELECT id, pricing_id FROM variants WHERE id LIKE 'ht_%' LIMIT 5"
+      );
+      console.log('Sample Hoth variant IDs:', hothVariants);
+
+      console.log('=== END DIAGNOSTIC ===');
 
       // Clean up orphaned collection entries after migration
       // Remove any collection entries for variants that no longer exist in the encyclopedia
@@ -1247,6 +1272,8 @@ export async function getBatchVariantPricing(variantIds: string[]): Promise<Map<
   }
 
   try {
+    console.log(`getBatchVariantPricing: Requesting pricing for ${variantIds.length} variants. Sample IDs:`, variantIds.slice(0, 3));
+
     // Create placeholders for IN clause
     const placeholders = variantIds.map(() => '?').join(',');
 
@@ -1258,6 +1285,8 @@ export async function getBatchVariantPricing(variantIds: string[]): Promise<Map<
        WHERE v.id IN (${placeholders})`,
       variantIds
     ) as Array<CardPricing & { variant_id: string }>;
+
+    console.log(`getBatchVariantPricing: Requested ${variantIds.length} variants, got ${results.length} pricing records`);
 
     // Build the map
     for (const result of results) {
